@@ -325,39 +325,39 @@ setupSplits();
 </script> -->
 <script>
   //text animation
-  gsap.config({ trialWarn: false });
-  console.clear();
-  gsap.registerPlugin(ScrollTrigger, SplitText);
-  let split = new SplitText("h1", { type: "lines" });
+//   gsap.config({ trialWarn: false });
+//   console.clear();
+//   gsap.registerPlugin(ScrollTrigger, SplitText);
+//   let split = new SplitText("h1", { type: "lines" });
 
-  function makeItHappen() {
-  split.lines.forEach((target) => {
-    gsap.to(target, {
-      backgroundPositionX: 0,
-      ease: "none",
-      scrollTrigger: {
-        trigger: target,
-        markers:false,
-        scrub: 1,
-        start: "80% 90%",
-        end: "90% 100%"
-      }
-    });
-  });
-}
+//   function makeItHappen() {
+//   split.lines.forEach((target) => {
+//     gsap.to(target, {
+//       backgroundPositionX: 0,
+//       ease: "none",
+//       scrollTrigger: {
+//         trigger: target,
+//         markers:false,
+//         scrub: 1,
+//         start: "80% 90%",
+//         end: "90% 100%"
+//       }
+//     });
+//   });
+// }
 
-let someDelay = gsap.delayedCall(0.2, newTriggers).pause();
-window.addEventListener("resize", () => someDelay.restart(true));
+// let someDelay = gsap.delayedCall(0.2, newTriggers).pause();
+// window.addEventListener("resize", () => someDelay.restart(true));
 
-function newTriggers() {
-  ScrollTrigger.getAll().forEach((trigger) => {
-    trigger.kill();
-  });
-  split.split();
-  makeItHappen();
-}
+// function newTriggers() {
+//   ScrollTrigger.getAll().forEach((trigger) => {
+//     trigger.kill();
+//   });
+//   split.split();
+//   makeItHappen();
+// }
 
-makeItHappen();
+// makeItHappen();
 
 
 // pin the section
