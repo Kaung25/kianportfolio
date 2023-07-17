@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../tailwind.config.js">
+    <!-- skranji font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Skranji:wght@400;700&display=swap" rel="stylesheet">
+    <!-- skranji font -->
+    <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://assets.codepen.io/16327/SplitText3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=cahcebustin"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
+    <script src="https://codepen.io/GreenSock/pen/7ba936b34824fefdccfe2c6d9f0b740b.js"></script>
+    <script src="https://assets.codepen.io/16327/gsap-latest-beta.min.js"></script>
+    <script src="https://assets.codepen.io/16327/ScrollTrigger.min.js?v=40"></script>
+
+    <style>
+        body {
+            color: #07377E;
+            text-align: center;
+            font-family: Skranji;
+            /* font-size: 16px; */
+            font-style: normal;
+            /* font-weight: 100; */
+            line-height: 112.336%;
+         }
+
+       
+
+         .split-line {
+           overflow: hidden;
+         }
+
+        .split-parent {
+          overflow: hidden;
+        }
+        
+        .about > h1 > div {
+        	background: linear-gradient(
+	        to right,
+	      #07377E 50%,
+	      #F15F30 50%
+	      );
+	        background-size: 200% 100%;
+	        background-position-x: 100%;
+	        color: transparent;
+	        background-clip: text;
+	        -webkit-background-clip: text;
+        }
+
+        section{
+          font-family: 'SF Pro Display', sans-serif;
+        }
+
+        
+    </style>
+</head>
+<body>
+    
+    
+<nav class="navBar backdrop-blur-lg border-b-2 border-b-white border-opacity-50 bg-white/80 border-gray-200 dark:bg-gray-900 w-full fixed px-32 z-20">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4 px-0">
+      <a href="#" class="flex items-center">
+          <img src="./img/logo.svg" class="h-7" alt="Logo" />
+      </a>
+      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul class="text-base flex">
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-darkBlue">About</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-darkBlue">Works</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-darkBlue">Experiences</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-darkBlue">Contact</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-darkBlue">Resume</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+<!-- navigation bar end-->
+
+
+<div class=" bg-[url('./img/hero_bg.png')] bg-repeat bg-cover flex justify-center items-center h-screen">
+  <div class="socialIcons absolute right-9">
+    <img class="p-1" src="./img/linkedin.svg" alt="linkedin">
+    <img class="p-1" src="./img/behance.svg" alt="behance">
+    <img class="p-1" src="./img/dribbble.svg" alt="dribble">
+  </div>
+  <div class="relative w-[600px] h-[600px]">
+        <div class="relative mt-2">
+            <img src="./img/sketch.svg" class="right-16 top-20 absolute" alt="">
+            <img src="./img/Figma.svg" class="left-0 top-[17.3rem] absolute" alt="">
+            <img src="./img/PS.svg" class="-left-10 top-96 absolute" alt="">
+            <img src="./img/AI.svg" class="-right-5 top-[16.5rem] absolute" alt="">
+        </div>
+  </div>
+    
+  <div class=" absolute text-[130px] leading-[6rem] font-bold">
+        <h1 class=" h-10 flex justify-center items-center text-darkBlue text-4xl font-normal">Hello, I am Kaung Myat Moee Htoon,</h1>
+        <div class="relative mt-2">
+            <span class="text-orange relative">your</span><br>
+            <span class="text-green relative">favourite</span><br>
+            <span class="text-blue relative z-10">digital</span><br>
+            <span class="text-orange relative">product</span><br>
+            <span class="text-yellow relative">designer</span><br>
+        </div>
+  </div>
+</div>
+<!-- hero section end -->
+<div class="px-32 justify-center items-center h-screen">
+  <div class="py-32">
+    <h1 class="text-3xl text-grey text-left">
+        About me
+    </h1>
+    <!-- <p class="about text-4xl text-darkBlue text-left pr-48 leading-relaxed mt-4 " id="about">
+        <span class="text-orange">Hey there!</span> I am an enthusiastic, passionate, and talented UI/UX designer extraordinaire, currently building experiences at Waso Tech! With my solid skills and unwavering passion, I create stunning designs that make hearts skip a beat. But wait, there's more! I also unleash my creativity through illustrations and motion graphics, adding that extra touch of magic. Let's bring your projects to life with a dash of excitement and a whole lot of design awesomeness!
+    </p> -->
+    <div class="text about text-4xl text-darkBlue text-left pr-48 leading-relaxed mt-4">
+      <h1>Hey there! I am an enthusiastic, passionate, and talented UI/UX designer extraordinaire, currently building experiences at Waso Tech! With my solid skills and unwavering passion, I create stunning designs that make hearts skip a beat. But wait, there's more! I also unleash my creativity through illustrations and motion graphics, adding that extra touch of magic. Let's bring your projects to life with a dash of excitement and a whole lot of design awesomeness!</h1>
+    </div>
+  </div>
+</div>
+<!-- about me end -->
+<div class="bg-[url('./img/dots.png')] bg-repeat bg-cover flex justify-normal items-center h-screen">
+<div class="px-32">
+  <div class="grid grid-cols-2 gap-x-28  gap-y-40">
+    <div class="bg-orange text-left w-[500px] h-fit relative p-5 rounded-2xl">
+      <div class="text-2xl text-white leading-normal w-[390px]">I am a lively and energetic person who brings excitement and creativity to everything I do, making life more fun and vibrant.</div>
+      <img class="absolute -top-[55%] -right-20 w-36" src="./img/char-orange.svg" alt="">
+    </div>
+    <div class="bg-yellow text-left w-[500px] h-fit relative p-5 rounded-2xl">
+      <div class="text-2xl text-white leading-normal w-[390px]">My positive and joyful nature uplifts those around me, spreading happiness and optimism wherever I go.</div>
+      <img class="absolute -top-[55%] -right-20 w-36" src="./img/char-yellow.svg" alt="">
+    </div>
+    <div class="bg-blue text-left w-[500px] h-fit relative p-5 rounded-2xl">
+      <div class="text-2xl text-white leading-normal  w-[390px]">As a reliable individual, I provide thoughtful and intelligent insights, earning the trust of others as a dependable friend and confidant.</div>
+      <img class="absolute -top-[55%] -right-20 w-36" src="./img/char-blue.svg" alt="">
+    </div>
+    <div class="bg-green text-left w-[500px] h-fit relative p-5 rounded-2xl">
+      <div class="text-2xl text-white leading-normal w-[390px]">Plus, I am also an environmentalist who values growth and harmony in my personal and professional life.</div>
+      <img class="absolute -top-[55%] -right-20 w-36" src="./img/char-green.svg" alt="">
+    </div>
+  </div>
+</div>
+</div>
+<!-- personality end -->
+
+<div class="px-32 justify-center items-center">
+  <div class="py-32">
+    <h1 class="text-3xl text-grey text-left">
+      Project showcase
+    </h1>
+    <!-- <p class="about text-4xl text-darkBlue text-left pr-48 leading-relaxed mt-4 " id="about">
+        <span class="text-orange">Hey there!</span> I am an enthusiastic, passionate, and talented UI/UX designer extraordinaire, currently building experiences at Waso Tech! With my solid skills and unwavering passion, I create stunning designs that make hearts skip a beat. But wait, there's more! I also unleash my creativity through illustrations and motion graphics, adding that extra touch of magic. Let's bring your projects to life with a dash of excitement and a whole lot of design awesomeness!
+    </p> -->
+    <div class="text about text-4xl text-darkBlue text-left pr-48 leading-relaxed mt-4">
+      <h1>Dive into a handpicked selection of my best work, where exceptional design meets outstanding outcomes. Experience the essence of my creativity, passion, and unwavering commitment to exceeding expectations.</h1>
+    </div>
+  </div>
+</div>
+<!-- showcase text end -->
+
+
+
+<div class="showcase snap-mandatory snap-y">
+<section class="panel snap-center">
+<div class="bg-[#0B3F8B] h-screen flex justify-center items-center text-left">
+  <div class="pl-32 w-1/2 h-screen flex flex-col justify-center ">
+    <h1 class="text-white font-bold text-3xl">Waso Learn Mobile App</h1>
+    <p class="text-white leading-normal font-normal text-xl mt-6 w-3/4">Waso Learn is one of the Strategy First Education Group’s social businesses. Students from KG to  Grade (12) can learn the lessons which support their curriculum studies online, taught by veteran experienced teachers. Waso Learn application is intended to be used as a teaching aid by the teachers and students.</p>
+    <div class="flex gap-2 mt-3">
+      <span class="py-3 px-5 bg-white/25 font-light text-white rounded-lg w-fit">UX</span>
+      <span class="py-3 px-5 bg-white/25 font-light text-white rounded-lg w-fit">UI</span>
+      <span class="py-3 px-5 bg-white/25 font-light text-white rounded-lg w-fit">Interaction</span>
+      <span class="py-3 px-5 bg-white/25 font-light text-white rounded-lg w-fit">Art Direction</span>
+    </div>
+    <div class="flex gap-5 mt-6">
+      <img src="./img/playstore.svg" alt="">
+      <img src="./img/appstore.svg" alt="">
+    </div>
+  </div>
+  <div class="w-1/2 bg-[#0F294F] h-screen flex items-center">
+    <img class="absolute right-0 w-[600px]" src="./img/Wasoscreen.png" alt="">
+  </div>
+</div>
+</section>
+<!-- wasolearn -->
+
+<section class="panel snap-center">
+  <div class="bg-[#F51E2B] h-screen flex justify-center items-center text-left">
+    <div class="pl-32 w-1/2 h-screen flex flex-col justify-center ">
+      <h1 class="text-white font-bold text-3xl">Waso Learn Mobile App</h1>
+      <p class="text-white leading-normal font-normal text-xl mt-6 w-3/4">Slash POS System by Slash Myanmar is  the fastest and most user-friendly point-of-sale solution in the market. Tailored specifically for the unique demands of Myanmar's vibrant market, Slash POS empowers merchants to effortlessly manage sales, inventory, and customer data through its intuitive and user-friendly interface. Its streamlined interface guarantees effortless navigation, making it exceptionally easy-to-use for both merchants and staff.</p>
+      <div class="flex gap-2 mt-3">
+        <span class="py-3 px-5 bg-white/25 font-light text-white rounded-lg w-fit">UX</span>
+        <span class="py-3 px-5 bg-white/25 font-light text-white rounded-lg w-fit">Interaction</span>
+        <span class="py-3 px-5 bg-white/25 font-light text-white rounded-lg w-fit">Lead the UI team</span>
+      </div>
+      <div class="flex gap-5 mt-6">
+        <img src="./img/playstore.svg" alt="">
+        <img src="./img/appstore.svg" alt="">
+      </div>
+    </div>
+    <div class="w-1/2 bg-[#D70A26] h-screen">
+      <img class="absolute right-0 bottom-0 w-[600px]" src="./img/sfulearn.png" alt="">
+    </div>
+  </div>
+</section>
+<!-- sfu learn -->
+
+<section class="panel snap-center">
+  <div class="bg-[#DFE2F3] h-screen flex justify-center items-center text-left">
+    <div class="pl-32 w-1/2 h-screen flex flex-col justify-center ">
+      <h1 class="text-darkBlue font-bold text-3xl">Slash POS</h1>
+      <p class="text-darkBlue leading-normal font-normal text-xl mt-6 w-3/4">Slash POS System by Slash Myanmar is  the fastest and most user-friendly point-of-sale solution in the market. Tailored specifically for the unique demands of Myanmar's vibrant market, Slash POS empowers merchants to effortlessly manage sales, inventory, and customer data through its intuitive and user-friendly interface. Its streamlined interface guarantees effortless navigation, making it exceptionally easy-to-use for both merchants and staff.</p>
+      <div class="flex gap-2 mt-3">
+        <span class="py-3 px-5 bg-white/50 font-light text-darkBlue rounded-lg w-fit">Team Lead</span>
+        <span class="py-3 px-5 bg-white/50 font-light text-darkBlue rounded-lg w-fit">UX</span>
+        <span class="py-3 px-5 bg-white/50 font-light text-darkBlue rounded-lg w-fit">UI</span>
+        <span class="py-3 px-5 bg-white/50 font-light text-darkBlue rounded-lg w-fit">Interaction</span>
+      </div>
+      <div class="flex gap-5 mt-6">
+        <img src="./img/playstore.svg" alt="">
+        <img src="./img/appstore.svg" alt="">
+      </div>
+    </div>
+    <div class="w-1/2 bg-[#9EA5CF] h-screen flex items-center overflow-hidden">
+      <img class="object-cover w-full" src="./img/slashpos.png" alt="">
+    </div>
+  </div>
+</section>
+<!-- slash pos -->
+
+
+
+<section class="endpanel bg-white">
+  <div class="bg-white h-screen flex justify-center items-center text-left">
+    dfsfjlkfjldsfjlsflsfjlsfls;flsfl;sd;f
+    <div class="w-1/2 bg-white h-screen flex items-center">
+      fklsfklsdjfslf;slf;
+    </div>
+  </div>
+</section>
+</div>
+
+
+
+
+
+<!-- <script>
+const about = document.querySelectorAll(".about");
+
+function setupSplits() {
+  $(document).ready(function(){
+    $(".split-line").wrap('<div class="split-parent"></div>');
+  });
+  
+about.forEach(about => {
+
+    about.split = new SplitText(about, { 
+        type: "words,chars",
+        linesClass: "split-words"
+    });
+
+    // Set up the anim
+    // about.anim = gsap.from(about.split.words, {
+    //   scrollTrigger: {
+    //     trigger: about,
+    //     toggleActions: "restart pause resume reverse",
+    //     start: "10% 90%",
+    //     markers: false,
+    //   },
+    //   duration: 0.1,
+    //   autoAlpha: 0,
+    //   ease: "circ.out", 
+    //   yPercent: 100, 
+    //   stagger: 0.2,
+    // });
+
+    about.anim=gsap.from(about.split.chars, {
+      scrollTrigger: {
+        trigger: about,
+        toggleActions: "restart pause resume reverse",
+        start: "10% 90%",
+        markers: false,
+      },
+        duration: 0.2,
+        opacity: 0,
+        scale: 0,
+        y: 80,
+        rotationX: 180,
+        transformOrigin: "0% 50% -50",
+        ease: "back",
+        stagger: 0.01
+    });
+
+  });
+}
+
+// ScrollTrigger.addEventListener("refresh", setupSplits);
+setupSplits();
+
+</script> -->
+<script>
+  //text animation
+  gsap.config({ trialWarn: false });
+  console.clear();
+  gsap.registerPlugin(ScrollTrigger, SplitText);
+  let split = new SplitText("h1", { type: "lines" });
+
+  function makeItHappen() {
+  split.lines.forEach((target) => {
+    gsap.to(target, {
+      backgroundPositionX: 0,
+      ease: "none",
+      scrollTrigger: {
+        trigger: target,
+        markers:false,
+        scrub: 1,
+        start: "80% 90%",
+        end: "90% 100%"
+      }
+    });
+  });
+}
+
+let someDelay = gsap.delayedCall(0.2, newTriggers).pause();
+window.addEventListener("resize", () => someDelay.restart(true));
+
+function newTriggers() {
+  ScrollTrigger.getAll().forEach((trigger) => {
+    trigger.kill();
+  });
+  split.split();
+  makeItHappen();
+}
+
+makeItHappen();
+
+
+// pin the section
+gsap.registerPlugin(ScrollTrigger);
+    gsap.utils.toArray(".panel").forEach((panel, i) => {
+        ScrollTrigger.create({
+            trigger: panel,
+            start: "bottom bottom",
+            endTrigger:".endpanel",
+            end:"top bottom",
+            pin: true, 
+            pinSpacing: false,
+            markers:false,
+            snap: {
+            snapTo: 1 / 2,
+            duration: 0.3
+            }
+        });
+    });
+
+    // ScrollTrigger.create({
+    // snap: 0.33,
+    // trigger:".showcase",
+    // target:".showcase", // snap whole page to the closest section!
+    // toggleActions: "play none none reverse",
+    // });
+    
+    // ScrollTrigger.create({
+    //   start:"top -80",
+    //   end:"99999",
+    //   toggleClass: {className: 'navBar--scrolled', targets: '.navBar'},
+    //   markers:true
+    // }
+
+    // );
+
+    gsap.to('.navBar', { 
+    autoAlpha: 0,
+    duration: 0.2,
+    ease: "none",
+    scrollTrigger: {
+        start: "50% 20%",
+        endTrigger:".endpanel",
+        end: "top button",
+        toggleActions: "play reverse play reverse",
+        markers:false,
+      }
+    });
+
+// gsap.to('.navBar', { 
+//   autoAlpha: 1,
+//   duration: 0.2,
+//   ease: "none",
+//   scrollTrigger: {
+//     target:".endpanel",
+//     start: "50% 50%",
+//     end: "top 80%",
+//     toggleActions: "play none none reverse",
+//     markers:true,
+//   }
+// });
+
+    
+</script>
+
+</body>
+
+</html>

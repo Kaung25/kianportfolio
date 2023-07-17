@@ -1,0 +1,12 @@
+.panel.orange {
+	height: 200vh;
+	display: flex;
+	flex-direction: column;
+  }
+  
+  .panel.orange > * {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+  }

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./test.css">
+    <!-- <link rel="stylesheet" href="https://codepen.io/GreenSock/pen/7ba936b34824fefdccfe2c6d9f0b740b.css"> -->
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=cahcebustin"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
+    <script src="https://codepen.io/GreenSock/pen/7ba936b34824fefdccfe2c6d9f0b740b.js"></script>
+
+</head>
+<body>
+    <section class="panel">
+        <div class="bg-[#0B3F8B] h-screen flex justify-center items-center text-left">
+          <div class="pl-32 w-1/2 h-screen flex flex-col justify-center ">
+            <h1 class="text-white font-bold text-3xl">Waso Learn Mobile App</h1>
+            <p class="text-white leading-normal font-normal text-xl mt-6 w-3/4">Waso Learn is one of the Strategy First Education Group’s social businesses. Students from KG to  Grade (12) can learn the lessons which support their curriculum studies online, taught by veteran experienced teachers. Waso Learn application is intended to be used as a teaching aid by the teachers and students.</p>
+            <div class="flex gap-2 mt-3">
+              <span class="py-3 px-5 bg-white/25 font-light text-white rounded-lg w-fit">UX</span>
+              <span class="py-3 px-5 bg-white/25 font-light text-white rounded-lg w-fit">UI</span>
+              <span class="py-3 px-5 bg-white/25 font-light text-white rounded-lg w-fit">Interaction</span>
+              <span class="py-3 px-5 bg-white/25 font-light text-white rounded-lg w-fit">Art Direction</span>
+            </div>
+            <div class="flex gap-5 mt-6">
+              <img src="./img/playstore.svg" alt="">
+              <img src="./img/appstore.svg" alt="">
+            </div>
+          </div>
+          <div class="w-1/2 bg-darkBlue h-screen flex items-center">
+            <img class="absolute right-0 w-[600px]" src="./img/Wasoscreen.png" alt="">
+          </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <div class="bg-orange h-screen flex justify-center items-center text-left">
+          <div class="pl-32 w-1/2 h-screen flex flex-col justify-center ">
+            <h1 class="text-white font-bold text-3xl">Waso Learn Mobile App</h1>
+            <p class="text-white leading-normal font-normal text-xl mt-6 w-3/4">Waso Learn is one of the Strategy First Education Group’s social businesses. Students from KG to  Grade (12) can learn the lessons which support their curriculum studies online, taught by veteran experienced teachers. Waso Learn application is intended to be used as a teaching aid by the teachers and students.</p>
+            <div class="flex gap-2 mt-3">
+              <span class="py-3 px-5 bg-white/25 font-light text-white rounded-lg w-fit">UX</span>
+              <span class="py-3 px-5 bg-white/25 font-light text-white rounded-lg w-fit">UI</span>
+              <span class="py-3 px-5 bg-white/25 font-light text-white rounded-lg w-fit">Interaction</span>
+              <span class="py-3 px-5 bg-white/25 font-light text-white rounded-lg w-fit">Art Direction</span>
+            </div>
+            <div class="flex gap-5 mt-6">
+              <img src="./img/playstore.svg" alt="">
+              <img src="./img/appstore.svg" alt="">
+            </div>
+          </div>
+          <div class="w-1/2 bg-orange h-screen flex items-center">
+            <img class="absolute right-0 w-[600px]" src="./img/Wasoscreen.png" alt="">
+          </div>
+        </div>
+    </section>
+    
+    
+    <section class="panel">
+        <div class="bg-green h-screen flex justify-center items-center text-left">
+          <div class="pl-32 w-1/2 h-screen flex flex-col justify-center ">
+            <h1 class="text-white font-bold text-3xl">Waso Learn Mobile App</h1>
+            <p class="text-white leading-normal font-normal text-xl mt-6 w-3/4">Waso Learn is one of the Strategy First Education Group’s social businesses. Students from KG to  Grade (12) can learn the lessons which support their curriculum studies online, taught by veteran experienced teachers. Waso Learn application is intended to be used as a teaching aid by the teachers and students.</p>
+            <div class="flex gap-2 mt-3">
+              <span class="py-3 px-5 bg-white/25 font-light text-white rounded-lg w-fit">UX</span>
+              <span class="py-3 px-5 bg-white/25 font-light text-white rounded-lg w-fit">UI</span>
+              <span class="py-3 px-5 bg-white/25 font-light text-white rounded-lg w-fit">Interaction</span>
+              <span class="py-3 px-5 bg-white/25 font-light text-white rounded-lg w-fit">Art Direction</span>
+            </div>
+            <div class="flex gap-5 mt-6">
+              <img src="./img/playstore.svg" alt="">
+              <img src="./img/appstore.svg" alt="">
+            </div>
+          </div>
+          <div class="w-1/2 bg-green h-screen flex items-center">
+            <img class="absolute right-0 w-[600px]" src="./img/Wasoscreen.png" alt="">
+          </div>
+        </div>
+    </section>
+      
+      
+      
+      
+      
+    <script>
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.utils.toArray(".panel").forEach((panel, i) => {
+        ScrollTrigger.create({
+            trigger: panel,
+            start: "bottom bottom", 
+            pin: true, 
+            pinSpacing: false 
+        });
+    });
+
+
+    ScrollTrigger.create({
+    snap: 1 / 5 // snap whole page to the closest section!
+    });
+
+
+
+
+    </script>
+</body>
+</html>
