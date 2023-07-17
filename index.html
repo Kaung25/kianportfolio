@@ -14,14 +14,17 @@
     <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <!-- <script src="https://assets.codepen.io/16327/SplitText3.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/jquery.gsap.min.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=cahcebustin"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
+    
+    <!-- <script src="https://assets.codepen.io/16327/SplitText3.min.js"></script> -->
     <!-- <script src="https://codepen.io/GreenSock/pen/7ba936b34824fefdccfe2c6d9f0b740b.js"></script>
     <script src="https://assets.codepen.io/16327/gsap-latest-beta.min.js"></script>
     <script src="https://assets.codepen.io/16327/ScrollTrigger.min.js?v=40"></script> -->
+
+    
 
     <style>
         body {
@@ -44,7 +47,7 @@
           overflow: hidden;
         }
         
-        .about > h1 > div {
+        .about > p {
         	background: linear-gradient(
 	        to right,
 	      #07377E 50%,
@@ -138,7 +141,15 @@
         <span class="text-orange">Hey there!</span> I am an enthusiastic, passionate, and talented UI/UX designer extraordinaire, currently building experiences at Waso Tech! With my solid skills and unwavering passion, I create stunning designs that make hearts skip a beat. But wait, there's more! I also unleash my creativity through illustrations and motion graphics, adding that extra touch of magic. Let's bring your projects to life with a dash of excitement and a whole lot of design awesomeness!
     </p> -->
     <div class="text about text-4xl text-darkBlue text-left pr-48 leading-relaxed mt-4">
-      <h1>Hey there! I am an enthusiastic, passionate, and talented UI/UX designer extraordinaire, currently building experiences at Waso Tech! With my solid skills and unwavering passion, I create stunning designs that make hearts skip a beat. But wait, there's more! I also unleash my creativity through illustrations and motion graphics, adding that extra touch of magic. Let's bring your projects to life with a dash of excitement and a whole lot of design awesomeness!</h1>
+      <p>Hey there! I am an enthusiastic, passionate, and talented</p>
+      <p>UI/UX designer extraordinaire, currently building</p>
+      <p>experiences at Waso Tech! With my solid skills and</p>
+      <p>unwavering passion, I create stunning designs that make</p>
+      <p> hearts skip a beat. But wait, there's more! I also unleash</p>
+      <p>my creativity through illustrations and motion graphics,</p>
+      <p>adding that extra touch of magic. Let's bring your</p>
+      <p>projects to life with a dash of excitement and a whole</p>
+      <p>lot of design awesomeness!</p> 
     </div>
   </div>
 </div>
@@ -175,8 +186,11 @@
     <!-- <p class="about text-4xl text-darkBlue text-left pr-48 leading-relaxed mt-4 " id="about">
         <span class="text-orange">Hey there!</span> I am an enthusiastic, passionate, and talented UI/UX designer extraordinaire, currently building experiences at Waso Tech! With my solid skills and unwavering passion, I create stunning designs that make hearts skip a beat. But wait, there's more! I also unleash my creativity through illustrations and motion graphics, adding that extra touch of magic. Let's bring your projects to life with a dash of excitement and a whole lot of design awesomeness!
     </p> -->
-    <div class="text about text-4xl text-darkBlue text-left pr-48 leading-relaxed mt-4">
-      <h1>Dive into a handpicked selection of my best work, where exceptional design meets outstanding outcomes. Experience the essence of my creativity, passion, and unwavering commitment to exceeding expectations.</h1>
+    <div class="text2 about text-4xl text-darkBlue text-left pr-48 leading-relaxed mt-4">
+      <p>Dive into a handpicked selection of my best work,</p>
+      <p>where exceptional design meets outstanding outcomes.</p>
+      <p>Experience the essence of my creativity, passion, and</p>
+      <p>unwavering commitment to exceeding expectations.</p>
     </div>
   </div>
 </div>
@@ -345,6 +359,35 @@ setupSplits();
 //     });
 //   });
 // }
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to(".text p", {
+  backgroundPositionX: "0%",
+  ease:"none",
+  stagger: 1,
+  scrollTrigger: {
+    trigger: ".text p",
+    markers: true,
+    scrub: 1,
+    start: "top 90%",
+    end: "400% 30%"
+  }
+});
+
+gsap.to(".text2 p", {
+  backgroundPositionX: "0%",
+  ease:"none",
+  stagger: 1,
+  scrollTrigger: {
+    trigger: ".text2 p",
+    markers: true,
+    scrub: 1,
+    start: "top 90%",
+    end: "400% 30%"
+  }
+});
+
 
 // let someDelay = gsap.delayedCall(0.2, newTriggers).pause();
 // window.addEventListener("resize", () => someDelay.restart(true));
