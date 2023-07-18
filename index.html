@@ -511,8 +511,8 @@
 
 <!-- skill text end -->
 
-
-<div class="endpanel px-32 flex justify-center items-center bg-orange">
+<div class="green bg-green">
+<div class="px-32 flex justify-center items-center">
   <div class="py-32 w-full ">
     <div class=" w-[90%] text-4xl text-white text-left leading-relaxed mt-4">
       <p>In my career, I've had the chance to work on some amazing projects that allowed me to express my creativity and make a difference.</p>
@@ -567,8 +567,36 @@
   </div>
   </div>
 </div>
-
 <!-- expreriences -->
+<div class="love">
+  <div class="px-32 flex justify-center items-center">
+    <div class="pt-32 pb-12 w-full">
+      <h1 class="lovetitle text-3xl text-[#595959] text-left">
+        What I love to
+      </h1>
+      <!-- <p class="about text-4xl text-darkBlue text-left pr-48 leading-relaxed mt-4 " id="about">
+          <span class="text-orange">Hey there!</span> I am an enthusiastic, passionate, and talented UI/UX designer extraordinaire, currently building experiences at Waso Tech! With my solid skills and unwavering passion, I create stunning designs that make hearts skip a beat. But wait, there's more! I also unleash my creativity through illustrations and motion graphics, adding that extra touch of magic. Let's bring your projects to life with a dash of excitement and a whole lot of design awesomeness!
+      </p> -->
+      <div class="text2 about w-[100%] text-4xl text-white text-left leading-relaxed mt-4">
+        <p>I love storytelling for brands and products. And, I also have a passion for motion design, filmmaking, video editing, and creating stylized character portraits and illustrations. Here are some of my artworks.</p>
+      </div>
+    </div>
+  </div>
+  <!-- what I love to -->
+  <div class="px-32 grid grid-cols-3 gap-6">
+    <div class="overflow-hidden rounded-2xl grayscale hover:grayscale-0 transition duration-500"><img class="object-cover w-full" src="./img/artworks/girl2.png" alt=""></div>
+    <div class="overflow-hidden rounded-2xl grayscale hover:grayscale-0 transition duration-500 col-span-2"><img class="object-cover w-full" src="./img/artworks/moana.png" alt=""></div>
+    <div class="overflow-hidden rounded-2xl grayscale hover:grayscale-0 transition duration-500"><img class="object-cover w-full" src="./img/artworks/girl1.png" alt=""></div>
+    <div class="overflow-hidden rounded-2xl grayscale hover:grayscale-0 transition duration-500"><img class="object-cover w-full" src="./img/artworks/collapse.png" alt=""></div>
+    <div class="overflow-hidden rounded-2xl grayscale hover:grayscale-0 transition duration-500"><img class="object-cover w-full" src="./img/artworks/dtiys.png" alt=""></div>
+    <div class="overflow-hidden rounded-2xl grayscale hover:grayscale-0 transition duration-500 col-span-2"><img class="object-cover w-full" src="./img/artworks/loki.png" alt=""></div>
+    <div class="overflow-hidden rounded-2xl grayscale hover:grayscale-0 transition duration-500"><img class="object-cover w-full" src="./img/artworks/love.png" alt=""></div>
+  </div>
+
+</div>
+</div>
+
+
 
 
 
@@ -744,6 +772,28 @@ gsap.registerPlugin(ScrollTrigger);
         markers:false,
       }
     });
+
+
+  // backgroundColor change
+  ScrollTrigger.create({
+   
+   trigger: 'div.love',
+   markers:false,
+   start:"top 50%",
+   end:"bottom 0%", 
+ 
+   onEnter: () => {
+     gsap.to('.green', { duration: 0.5, backgroundColor: '#1D1D1D'});
+     gsap.to('.lovetitle', { duration: 0.5, color:'#595959'})
+   },
+   
+   onLeaveBack: () => {
+     gsap.to('.green', { duration: 0.5, backgroundColor: '#4AB848'});
+     gsap.to('.lovetitle', { duration: 0.5, color:'white', opacity:0.6})
+   },
+ 
+   
+ })
 
 // gsap.to('.navBar', { 
 //   autoAlpha: 1,
