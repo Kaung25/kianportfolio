@@ -633,23 +633,26 @@
   </div>
 </div>
 <div class="text-white pt-32 pb-14">
-  <ul class="text-base flex justify-center items-center">
+  <ul id="buttonnavlist" class="buttonnavlist text-base flex justify-center items-center">
     <li>
-      <a href="#" class="block py-2 pl-3 pr-4">About</a>
+      <a href="#section1" class=" buttonnavlist block py-2 pl-3 pr-4">About</a>
     </li>
     <li>
-      <a href="#" class="block py-2 pl-3 pr-4">Works</a>
+      <a href="#section2" class=" buttonnavlist block py-2 pl-3 pr-4">Works</a>
     </li>
     <li>
-      <a href="#" class="block py-2 pl-3 pr-4">Experiences</a>
+      <a href="#section3" class=" buttonnavlist block py-2 pl-3 pr-4">Experiences</a>
     </li>
     <li>
-      <a href="#" class="block py-2 pl-3 pr-4">Contact</a>
+      <a href="#section4" class=" buttonnavlist block py-2 pl-3 pr-4">Contact</a>
     </li>
     <li>
-      <a href="#" class="block py-2 pl-3 pr-4">Resume</a>
+      <a href="#" class=" block py-2 pl-3 pr-4">Resume</a>
     </li>
   </ul>
+
+
+  
 
   <p class="text-base mt-16 text-white/60">Copyright © 2023 Kaung Myat Moee Htoon. Made with ❤️ in Myanmar</p>
 </div>
@@ -862,6 +865,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 
  document.querySelectorAll(".navlist a").forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    gsap.to(window, {duration: 0.5, scrollTo:{y:"#section" + (index + 1), offsetY:70}});
+  });
+});
+
+document.querySelectorAll(".buttonnavlist a").forEach((btn, index) => {
   btn.addEventListener("click", () => {
     gsap.to(window, {duration: 0.5, scrollTo:{y:"#section" + (index + 1), offsetY:70}});
   });
