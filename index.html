@@ -70,7 +70,7 @@
 <body>
     
     
-<nav class="navBar backdrop-blur-lg border-b-2 border-b-white border-opacity-50 bg-white/80 border-gray-200 dark:bg-gray-900 w-full fixed px-32 z-20">
+<nav class="navBar backdrop-blur-lg bg-white/80 border-gray-200 dark:bg-gray-900 w-full fixed px-32 z-20">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4 px-0">
       <a href="#" class="flex items-center">
           <img src="./img/logo.svg" class="h-7" alt="Logo" />
@@ -82,21 +82,21 @@
           </svg>
       </button>
       <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-        <ul class="text-base flex">
+        <ul class="navlist text-base flex">
           <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-darkBlue">About</a>
+            <a href="#" class="navlist block py-2 pl-3 pr-4 text-darkBlue">About</a>
           </li>
           <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-darkBlue">Works</a>
+            <a href="#" class="navlist block py-2 pl-3 pr-4 text-darkBlue">Works</a>
           </li>
           <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-darkBlue">Experiences</a>
+            <a href="#" class="navlist block py-2 pl-3 pr-4 text-darkBlue">Experiences</a>
           </li>
           <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-darkBlue">Contact</a>
+            <a href="#" class="navlist block py-2 pl-3 pr-4 text-darkBlue">Contact</a>
           </li>
           <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-darkBlue">Resume</a>
+            <a href="#" class="navlist block py-2 pl-3 pr-4 text-darkBlue">Resume</a>
           </li>
         </ul>
       </div>
@@ -583,7 +583,7 @@
     </div>
   </div>
   <!-- what I love to -->
-  <div class="px-32 grid grid-cols-3 gap-6">
+  <div class="px-32 pb-32 grid grid-cols-3 gap-6">
     <div class="overflow-hidden rounded-2xl grayscale hover:grayscale-0 transition duration-500"><img class="object-cover w-full" src="./img/artworks/girl2.png" alt=""></div>
     <div class="overflow-hidden rounded-2xl grayscale hover:grayscale-0 transition duration-500 col-span-2"><img class="object-cover w-full" src="./img/artworks/moana.png" alt=""></div>
     <div class="overflow-hidden rounded-2xl grayscale hover:grayscale-0 transition duration-500"><img class="object-cover w-full" src="./img/artworks/girl1.png" alt=""></div>
@@ -593,6 +593,32 @@
     <div class="overflow-hidden rounded-2xl grayscale hover:grayscale-0 transition duration-500"><img class="object-cover w-full" src="./img/artworks/love.png" alt=""></div>
   </div>
 
+</div>
+<div class="pt-32 pb-16 flex flex-col justify-center items-center">
+  <img src="./img/kaung.svg" alt="">
+  <h1 class="text-6xl text-yellow leading-tight mt-5">Have an awesome idea?<br>
+  <span class="text-white">Well, here I am.</span></h1>
+</div>
+<div class="text-white pt-32 pb-14">
+  <ul class="text-base flex justify-center items-center">
+    <li>
+      <a href="#" class="block py-2 pl-3 pr-4">About</a>
+    </li>
+    <li>
+      <a href="#" class="block py-2 pl-3 pr-4">Works</a>
+    </li>
+    <li>
+      <a href="#" class="block py-2 pl-3 pr-4">Experiences</a>
+    </li>
+    <li>
+      <a href="#" class="block py-2 pl-3 pr-4">Contact</a>
+    </li>
+    <li>
+      <a href="#" class="block py-2 pl-3 pr-4">Resume</a>
+    </li>
+  </ul>
+
+  <p class="text-base mt-16 text-white/60">Copyright © 2023 Kaung Myat Moee Htoon. Made with ❤️ in Myanmar</p>
 </div>
 </div>
 
@@ -784,12 +810,16 @@ gsap.registerPlugin(ScrollTrigger);
  
    onEnter: () => {
      gsap.to('.green', { duration: 0.5, backgroundColor: '#1D1D1D'});
-     gsap.to('.lovetitle', { duration: 0.5, color:'#595959'})
+     gsap.to('.lovetitle', { duration: 0.5, color:'#595959'});
+     gsap.to('.navBar', { duration: 0.5, backgroundColor: '#1D1D1D'});
+     gsap.to('.navlist', { color:"#ffffff"});
    },
    
    onLeaveBack: () => {
      gsap.to('.green', { duration: 0.5, backgroundColor: '#4AB848'});
      gsap.to('.lovetitle', { duration: 0.5, color:'white', opacity:0.6})
+     gsap.to('.navBar', { duration: 0.5, backgroundColor: 'rgb(255,255,255/0.8)'});
+     gsap.to('.navlist', { color:"#07377E"});
    },
  
    
