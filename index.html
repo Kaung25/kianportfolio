@@ -633,18 +633,18 @@
   </div>
 </div>
 <div class="text-white pt-32 pb-14">
-  <ul id="buttonnavlist" class="buttonnavlist text-base flex justify-center items-center">
+  <ul id="bottomnav" class="bottomnav text-base flex justify-center items-center">
     <li>
-      <a href="#section1" class=" buttonnavlist block py-2 pl-3 pr-4">About</a>
+      <a href="#section1" class=" bottomnav block py-2 pl-3 pr-4">About</a>
     </li>
     <li>
-      <a href="#section2" class=" buttonnavlist block py-2 pl-3 pr-4">Works</a>
+      <a href="#section2" class=" bottomnav block py-2 pl-3 pr-4">Works</a>
     </li>
     <li>
-      <a href="#section3" class=" buttonnavlist block py-2 pl-3 pr-4">Experiences</a>
+      <a href="#section3" class=" bottomnav block py-2 pl-3 pr-4">Experiences</a>
     </li>
     <li>
-      <a href="#section4" class=" buttonnavlist block py-2 pl-3 pr-4">Contact</a>
+      <a href="#section4" class=" bottomnav block py-2 pl-3 pr-4">Contact</a>
     </li>
     <li>
       <a href="#" class=" block py-2 pl-3 pr-4">Resume</a>
@@ -870,7 +870,7 @@ gsap.registerPlugin(ScrollTrigger);
   });
 });
 
-document.querySelectorAll(".buttonnavlist a").forEach((btn, index) => {
+document.querySelectorAll(".bottomnav a").forEach((btn, index) => {
   btn.addEventListener("click", () => {
     gsap.to(window, {duration: 0.5, scrollTo:{y:"#section" + (index + 1), offsetY:70}});
   });
