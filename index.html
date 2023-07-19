@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,11 +18,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/jquery.gsap.min.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=cahcebustin"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollToPlugin3.min.js"></script>
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
     
     <!-- <script src="https://assets.codepen.io/16327/SplitText3.min.js"></script> -->
     <!-- <script src="https://codepen.io/GreenSock/pen/7ba936b34824fefdccfe2c6d9f0b740b.js"></script>
     <script src="https://assets.codepen.io/16327/gsap-latest-beta.min.js"></script>
     <script src="https://assets.codepen.io/16327/ScrollTrigger.min.js?v=40"></script> -->
+
+    <!-- Calendly link widget begin -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<!-- Calendly link widget end -->
 
     
 
@@ -64,10 +72,23 @@
           font-family: 'SF Pro Display', sans-serif;
         }
 
+        .btn {
+          top:0%;
+          transition:0.3s;
+        }
+
+        .btn1 {
+          transition:0.3s;
+        }
+
+        .btn1:hover .btn{
+          top: -100%;
+        }
+
         
     </style>
 </head>
-<body>
+<body class="wrapper" id="wrapper">
     
     
 <nav class="navBar backdrop-blur-lg bg-white/80 border-gray-200 dark:bg-gray-900 w-full fixed px-32 z-20">
@@ -82,18 +103,18 @@
           </svg>
       </button>
       <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-        <ul class="navlist text-base flex">
+        <ul id="navlist" class="navlist text-base flex">
           <li>
-            <a href="#" class="navlist block py-2 pl-3 pr-4 text-darkBlue">About</a>
+            <a href="#about" class="navlist block py-2 pl-3 pr-4 text-darkBlue">About</a>
           </li>
           <li>
-            <a href="#" class="navlist block py-2 pl-3 pr-4 text-darkBlue">Works</a>
+            <a href="#works" class="navlist block py-2 pl-3 pr-4 text-darkBlue">Works</a>
           </li>
           <li>
-            <a href="#" class="navlist block py-2 pl-3 pr-4 text-darkBlue">Experiences</a>
+            <a href="#experience" class="navlist block py-2 pl-3 pr-4 text-darkBlue">Experiences</a>
           </li>
           <li>
-            <a href="#" class="navlist block py-2 pl-3 pr-4 text-darkBlue">Contact</a>
+            <a href="#contact" class="navlist block py-2 pl-3 pr-4 text-darkBlue">Contact</a>
           </li>
           <li>
             <a href="#" class="navlist block py-2 pl-3 pr-4 text-darkBlue">Resume</a>
@@ -107,9 +128,9 @@
 
 <div class=" bg-[url('./img/hero_bg.png')] bg-repeat bg-cover flex justify-center items-center h-screen">
   <div class="socialIcons absolute right-9">
-    <img class="p-1" src="./img/linkedin.svg" alt="linkedin">
-    <img class="p-1" src="./img/behance.svg" alt="behance">
-    <img class="p-1" src="./img/dribbble.svg" alt="dribble">
+    <a href="https://www.linkedin.com/in/kaungmyatmoeehtoon/" target="_blank"><img class="p-1" src="./img/linkedin.svg" alt="linkedin"></a>
+    <a href="https://www.behance.net/kaung16" target="_blank"><img class="p-1" src="./img/behance.svg" alt="behance"></a>
+    <a href="https://dribbble.com/kaung255716" target="_blank"><img class="p-1" src="./img/dribbble.svg" alt="dribble"></a>
   </div>
   <div class="relative w-[600px] h-[600px]">
         <div class="relative mt-2">
@@ -132,7 +153,7 @@
   </div>
 </div>
 <!-- hero section end -->
-<div class="px-32 flex justify-center items-center h-screen">
+<div id="section1"  class="px-32 flex justify-center items-center h-screen">
   <div class="py-32">
     <h1 class="text-3xl text-grey text-left">
         About me
@@ -178,7 +199,7 @@
 </div>
 <!-- personality end -->
 
-<div class="px-32 flex justify-center items-center">
+<div id="section2" class="px-32 flex justify-center items-center">
   <div class="py-32 w-full">
     <h1 class="text-3xl text-grey text-left">
       Project showcase
@@ -435,8 +456,8 @@
 <section class="panel snap-center">
   <div class="bg-[#CAE436] h-screen flex justify-center items-center text-left">
     <div class="pl-32 w-1/2 h-screen flex flex-col justify-center ">
-      <h1 class="text-[#3D4703] font-bold text-3xl">Waso Tech Website</h1>
-      <p class="text-[#3D4703] leading-normal font-normal text-xl mt-4 w-3/4">Waso Tech was established in 2022 as a Tech Business Solutions provider under Strategy First Education Group. Waso Tech takes pride in being the premier software solution provider in the Myanmar market, with a focus on developing high-performance software solutions for various applications.</p>
+      <h1 class="text-[#3D4703] font-bold text-3xl">Lin Lat San Application</h1>
+      <p class="text-[#3D4703] leading-normal font-normal text-xl mt-4 w-3/4">Lin Lat San is a ticket-selling app designed for sellers. It makes selling digital tickets easy and hassle-free. With a user-friendly interface and customized features, sellers can efficiently manage their ticket sales. Lin Lat San streamlines the whole process, making ticket-selling convenient and efficient for sellers. Say goodbye to complications and hello to smooth ticket sales with Lin Lat San!</p>
       <div class="flex gap-2 mt-3">
         <span class="py-3 px-5 bg-[#E8FD71] font-light text-[#3D4703] rounded-lg w-fit">UX</span>
         <span class="py-3 px-5 bg-[#E8FD71] font-light text-[#3D4703] rounded-lg w-fit">UI</span>
@@ -452,7 +473,7 @@
     </div>
   </div>
 </section>
-<!-- waso tech -->
+<!-- linlatsan -->
 
 
 
@@ -513,7 +534,7 @@
 
 <div class="green bg-green">
 <div class="px-32 flex justify-center items-center">
-  <div class="py-32 w-full ">
+  <div id="section3" class="py-32 w-full ">
     <div class=" w-[90%] text-4xl text-white text-left leading-relaxed mt-4">
       <p>In my career, I've had the chance to work on some amazing projects that allowed me to express my creativity and make a difference.</p>
     </div>
@@ -594,10 +615,22 @@
   </div>
 
 </div>
-<div class="pt-32 pb-16 flex flex-col justify-center items-center">
+<div id="section4" class="pt-32 pb-16 flex flex-col justify-center items-center">
   <img src="./img/kaung.svg" alt="">
   <h1 class="text-6xl text-yellow leading-tight mt-5">Have an awesome idea?<br>
   <span class="text-white">Well, here I am.</span></h1>
+  <div class="buttongroup flex gap-5 mt-5">
+    <div class="group btn1 bg-yellow h-16 w-52 leading-[4rem] text-[#1d1d1d] text-xl text-center rounded-lg inline-block overflow-hidden relative transition-all duration-300">
+      <a class="btn  block relative h-full" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/kmmh/30min?hide_gdpr_banner=1&text_color=07377e&primary_color=f15f30'});return false;">Schedule a meeting</a>
+      <a class="btn  block relative h-full" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/kmmh/30min?hide_gdpr_banner=1&text_color=07377e&primary_color=f15f30'});return false;">Schedule a meeting</a>
+    </div>
+    
+    <div class="btn1 bg-transparent border-2 border-yellow leading-[4rem] h-16 w-52 text-yellow text-xl text-center rounded-lg inline-block overflow-hidden relative transition-all duration-300">
+      <a href="mailto:kaungmyatmoeehtoon@gmail.com" class="btn block relative h-full">or Just email me</a>
+      <a href="mailto:kaungmyatmoeehtoon@gmail.com" class="btn block relative h-full">or Just email me</a>
+    </div>
+
+  </div>
 </div>
 <div class="text-white pt-32 pb-14">
   <ul class="text-base flex justify-center items-center">
@@ -621,6 +654,7 @@
   <p class="text-base mt-16 text-white/60">Copyright © 2023 Kaung Myat Moee Htoon. Made with ❤️ in Myanmar</p>
 </div>
 </div>
+
 
 
 
@@ -824,6 +858,14 @@ gsap.registerPlugin(ScrollTrigger);
  
    
  })
+
+
+
+ document.querySelectorAll(".navlist a").forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    gsap.to(window, {duration: 0.5, scrollTo:{y:"#section" + (index + 1), offsetY:70}});
+  });
+});
 
 // gsap.to('.navBar', { 
 //   autoAlpha: 1,
