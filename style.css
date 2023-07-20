@@ -1074,6 +1074,10 @@ video {
   padding: 0.5rem;
 }
 
+.p-4 {
+  padding: 1rem;
+}
+
 .p-5 {
   padding: 1.25rem;
 }
@@ -1249,11 +1253,6 @@ video {
 .text-\[\#4F0E00\] {
   --tw-text-opacity: 1;
   color: rgb(79 14 0 / var(--tw-text-opacity));
-}
-
-.text-\[\#595959\] {
-  --tw-text-opacity: 1;
-  color: rgb(89 89 89 / var(--tw-text-opacity));
 }
 
 .text-blue {
