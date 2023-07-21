@@ -91,7 +91,7 @@
 <body class="wrapper" id="wrapper">
     
     
-<nav class="navBar backdrop-blur-lg bg-white/80 border-gray-200 dark:bg-gray-900 w-full fixed px-32 z-20">
+<nav class="navBar backdrop-blur-lg bg-white/80 border-gray-200 w-full fixed px-32 z-20">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4 px-0">
       <a href="#" class="flex items-center">
           <img src="./img/logo.svg" class="h-7" alt="Logo" />
@@ -126,23 +126,23 @@
 <!-- navigation bar end-->
 
 
-<div class=" bg-[url('./img/hero_bg.png')] bg-repeat bg-cover flex justify-center items-center h-screen">
-  <div class="socialIcons absolute right-9">
+<div class=" bg-[url('./img/hero_bg.png')] bg-repeat bg-cover flex justify-center items-center h-[60%] lg:h-screen">
+  <div class="hidden md:block socialIcons absolute right-9">
     <a href="https://www.linkedin.com/in/kaungmyatmoeehtoon/" target="_blank"><img class="p-1" src="./img/linkedin.svg" alt="linkedin"></a>
     <a href="https://www.behance.net/kaung16" target="_blank"><img class="p-1" src="./img/behance.svg" alt="behance"></a>
     <a href="https://dribbble.com/kaung255716" target="_blank"><img class="p-1" src="./img/dribbble.svg" alt="dribble"></a>
   </div>
-  <div class="relative w-[600px] h-[600px]">
+  <div class="relative w-[300px] h-[500px] lg:w-[600px] lg:h-[600px]">
         <div class="relative mt-2">
-            <img src="./img/sketch.svg" class="right-16 top-20 absolute" alt="">
-            <img src="./img/Figma.svg" class="left-0 top-[17.3rem] absolute" alt="">
-            <img src="./img/PS.svg" class="-left-10 top-96 absolute" alt="">
-            <img src="./img/AI.svg" class="-right-5 top-[16.5rem] absolute" alt="">
+            <img src="./img/sketch.svg" class="w-10 lg:w-20 right-7 top-[8.7rem] md:right-16 md:top-20 absolute" alt="">
+            <img src="./img/Figma.svg" class="w-12 lg:w-[5.3rem] -left-2 top-[15.5rem] md:left-0 md:top-[17.3rem] absolute" alt="">
+            <img src="./img/PS.svg" class="w-10 lg:w-20 -left-8 top-[19rem] md:-left-10 md:top-96 absolute" alt="">
+            <img src="./img/AI.svg" class="w-10 lg:w-[5.3rem] -right-1 top-[15.2rem] md:-right-5 md:top-[16.5rem] absolute" alt="">
         </div>
   </div>
     
-  <div class=" absolute text-[130px] leading-[6rem] font-bold">
-        <h1 class=" h-10 flex justify-center items-center text-darkBlue text-4xl font-normal">Hello, I am Kaung Myat Moee Htoon,</h1>
+  <div class=" absolute text-[70px] lg:text-[130px] leading-[3.2rem] lg:leading-[6rem] font-bold">
+        <h1 class=" h-10 flex justify-center items-center text-darkBlue text-xl lg:text-4xl font-normal">Hello, I am Kaung Myat Moee Htoon,</h1>
         <div class="relative mt-2">
             <span class="text-orange relative">your</span><br>
             <span class="text-green relative">favourite</span><br>
@@ -153,15 +153,15 @@
   </div>
 </div>
 <!-- hero section end -->
-<div id="section1"  class="px-32 flex justify-center items-center h-screen">
-  <div class="py-32">
-    <h1 class="text-3xl text-grey text-left">
+<div id="section1"  class=" px-5 lg:px-32 flex justify-center items-center h-screen">
+  <div class="py-16 lg:py-32">
+    <h1 class="text-base lg:text-3xl text-grey text-left">
         About me
     </h1>
     <!-- <p class="about text-4xl text-darkBlue text-left pr-48 leading-relaxed mt-4 " id="about">
         <span class="text-orange">Hey there!</span> I am an enthusiastic, passionate, and talented UI/UX designer extraordinaire, currently building experiences at Waso Tech! With my solid skills and unwavering passion, I create stunning designs that make hearts skip a beat. But wait, there's more! I also unleash my creativity through illustrations and motion graphics, adding that extra touch of magic. Let's bring your projects to life with a dash of excitement and a whole lot of design awesomeness!
     </p> -->
-    <div class="text about text-4xl text-darkBlue text-left pr-48 leading-relaxed mt-4">
+    <div class="text about text-xl lg:text-4xl text-darkBlue text-left leading-relaxed mt-4">
       <span>Hey there! I am an enthusiastic, passionate, and talented</span>
       <span>UI/UX designer extraordinaire, currently building</span>
       <span>experiences at Waso Tech! With my solid skills and</span>
@@ -177,37 +177,37 @@
 <!-- about me end -->
 <div class="bg-[url('./img/dots.png')] bg-repeat bg-cover flex justify-center items-center h-screen">
 <div class="">
-  <div class="grid grid-cols-2 gap-x-28  gap-y-40">
-    <div class="bg-orange text-left w-[500px] h-fit relative p-5 rounded-2xl">
-      <div class="text-2xl text-white leading-normal w-[390px]">I am a lively and energetic person who brings excitement and creativity to everything I do, making life more fun and vibrant.</div>
-      <img class="absolute -top-[55%] -right-20 w-36" src="./img/char-orange.svg" alt="">
+  <div class="flex flex-col md:grid md:grid-cols-2 gap-x-28 gap-y-16 lg:gap-y-40">
+    <div class="bg-orange text-left w-[300px] md:w-[500px] h-fit relative p-2 md:p-5 rounded-md lg:rounded-2xl">
+      <div class="text-sm lg:text-2xl text-white leading-normal w-[270px] md:w-[390px]">I am a lively and energetic person who brings excitement and creativity to everything I do, making life more fun and vibrant.</div>
+      <img class="absolute -top-[55%] -right-6 lg:-right-20 w-14 lg:w-36" src="./img/char-orange.svg" alt="">
     </div>
-    <div class="bg-yellow text-left w-[500px] h-fit relative p-5 rounded-2xl">
-      <div class="text-2xl text-white leading-normal w-[390px]">My positive and joyful nature uplifts those around me, spreading happiness and optimism wherever I go.</div>
-      <img class="absolute -top-[55%] -right-20 w-36" src="./img/char-yellow.svg" alt="">
+    <div class="bg-yellow text-left w-[300px] md:w-[500px] h-fit relative p-2 md:p-5 rounded-md lg:rounded-2xl">
+      <div class="text-sm lg:text-2xl text-white leading-normal w-[270px] md:w-[390px]">My positive and joyful nature uplifts those around me, spreading happiness and optimism wherever I go.</div>
+      <img class="absolute -top-[55%] -right-6 lg:-right-20 w-14 lg:w-36" src="./img/char-yellow.svg" alt="">
     </div>
-    <div class="bg-blue text-left w-[500px] h-fit relative p-5 rounded-2xl">
-      <div class="text-2xl text-white leading-normal  w-[390px]">As a reliable individual, I provide thoughtful and intelligent insights, earning the trust of others as a dependable friend and confidant.</div>
-      <img class="absolute -top-[55%] -right-20 w-36" src="./img/char-blue.svg" alt="">
+    <div class="bg-blue text-left w-[300px] md:w-[500px] h-fit relative p-2 md:p-5 rounded-md lg:rounded-2xl">
+      <div class="text-sm lg:text-2xl text-white leading-normal  w-[270px] md:w-[390px]">As a reliable individual, I provide thoughtful and intelligent insights, earning the trust of others as a dependable friend and confidant.</div>
+      <img class="absolute -top-[55%] -right-6 lg:-right-20 w-14 lg:w-36" src="./img/char-blue.svg" alt="">
     </div>
-    <div class="bg-green text-left w-[500px] h-fit relative p-5 rounded-2xl">
-      <div class="text-2xl text-white leading-normal w-[390px]">Plus, I am also an environmentalist who values growth and harmony in my personal and professional life.</div>
-      <img class="absolute -top-[55%] -right-20 w-36" src="./img/char-green.svg" alt="">
+    <div class="bg-green text-left w-[300px] md:w-[500px] h-fit relative p-2 md:p-5 rounded-md lg:rounded-2xl">
+      <div class="text-sm lg:text-2xl text-white leading-normal w-[270px] md:w-[390px]">Plus, I am also an environmentalist who values growth and harmony in my personal and professional life.</div>
+      <img class="absolute -top-[55%] -right-6 lg:-right-20 w-14 lg:w-36" src="./img/char-green.svg" alt="">
     </div>
   </div>
 </div>
 </div>
 <!-- personality end -->
 
-<div id="section2" class="px-32 flex justify-center items-center">
-  <div class="py-32 w-full">
-    <h1 class="text-3xl text-grey text-left">
+<div id="section2" class="px-5 lg:px-32 flex justify-center items-center">
+  <div class="py-16 lg:py-32 w-full">
+    <h1 class="text-base lg:text-3xl text-grey text-left">
       Project showcase
     </h1>
     <!-- <p class="about text-4xl text-darkBlue text-left pr-48 leading-relaxed mt-4 " id="about">
         <span class="text-orange">Hey there!</span> I am an enthusiastic, passionate, and talented UI/UX designer extraordinaire, currently building experiences at Waso Tech! With my solid skills and unwavering passion, I create stunning designs that make hearts skip a beat. But wait, there's more! I also unleash my creativity through illustrations and motion graphics, adding that extra touch of magic. Let's bring your projects to life with a dash of excitement and a whole lot of design awesomeness!
     </p> -->
-    <div class="text2 about w-[100%] text-4xl text-darkBlue text-left leading-relaxed mt-4">
+    <div class="text2 about w-[100%] text-xl lg:text-4xl text-darkBlue text-left leading-relaxed mt-4">
       <span>Dive into a handpicked selection of my best work,</span>
       <span>where exceptional design meets outstanding outcomes.</span>
       <span>Experience the essence of my creativity, passion, and</span>
@@ -219,7 +219,7 @@
 
 
 
-<div class="showcase snap-mandatory snap-y">
+<div class="showcase Desktop hidden md:block snap-mandatory snap-y">
 <section class="startpanel panel snap-center">
 <div class="bg-[#0B3F8B] h-screen flex justify-center items-center text-left">
   <div class="pl-32 w-1/2 h-screen flex flex-col justify-center ">
@@ -474,6 +474,56 @@
   </div>
 </section>
 <!-- linlatsan -->
+</div>
+<!-- desktop showcase end -->
+
+<div class="mobileshowcase block md:hidden">
+  <section class="startpanel panel snap-center">
+    <div class="bg-[#0B3F8B] pb-10 h-fit flex flex-col-reverse justify-center items-center text-left">
+      <div class="p-5 w-full h-1/2 flex flex-col justify-center ">
+        <h1 class="text-white font-bold text-xl">Waso Learn Mobile App</h1>
+        <p class="text-white leading-normal font-normal text-base mt-3 w-full">Waso Learn is one of the Strategy First Education Group’s social businesses. Students from KG to  Grade (12) can learn the lessons which support their curriculum studies online, taught by veteran experienced teachers. Waso Learn application is intended to be used as a teaching aid by the teachers and students.</p>
+        <div class="flex flex-wrap gap-2 mt-3">
+          <span class="py-3 px-5 bg-white/25 font-light text-white rounded-md w-fit">UX</span>
+          <span class="py-3 px-5 bg-white/25 font-light text-white rounded-lg w-fit">UI</span>
+          <span class="py-3 px-5 bg-white/25 font-light text-white rounded-md w-fit">Interaction</span>
+          <span class="py-3 px-5 bg-white/25 font-light text-white rounded-md w-fit">Art Direction</span>
+        </div>
+        <div class="flex gap-5 mt-6">
+         <a target="_blank" href="https://play.google.com/store/apps/details?id=com.sfu.waso_learn&hl=en_US"><img src="./img/playstore.svg" alt=""></a>
+         <a target="_blank" href="https://apps.apple.com/us/app/waso-learn-kg-12/id1531073432"><img src="./img/appstore.svg" alt=""></a>
+        </div>
+      </div>
+      <div class="w-full bg-[#0F294F] h-1/2 flex items-center overflow-hidden">
+        <img class="object-cover w-full" src="./img/Wasoscreen.png" alt="">
+      </div>
+    </div>
+    </section>
+    <!-- wasolearn -->
+
+    <section class="startpanel panel snap-center">
+      <div class="bg-[#0B3F8B] pb-10 h-fit flex flex-col-reverse justify-center items-center text-left">
+        <div class="p-5 w-full h-1/2 flex flex-col justify-center ">
+          <h1 class="text-white font-bold text-xl">Waso Learn Mobile App</h1>
+          <p class="text-white leading-normal font-normal text-base mt-3 w-full">Waso Learn is one of the Strategy First Education Group’s social businesses. Students from KG to  Grade (12) can learn the lessons which support their curriculum studies online, taught by veteran experienced teachers. Waso Learn application is intended to be used as a teaching aid by the teachers and students.</p>
+          <div class="flex flex-wrap gap-2 mt-3">
+            <span class="py-3 px-5 bg-white/25 font-light text-white rounded-md w-fit">UX</span>
+            <span class="py-3 px-5 bg-white/25 font-light text-white rounded-lg w-fit">UI</span>
+            <span class="py-3 px-5 bg-white/25 font-light text-white rounded-md w-fit">Interaction</span>
+            <span class="py-3 px-5 bg-white/25 font-light text-white rounded-md w-fit">Art Direction</span>
+          </div>
+          <div class="flex gap-5 mt-6">
+           <a target="_blank" href="https://play.google.com/store/apps/details?id=com.sfu.waso_learn&hl=en_US"><img src="./img/playstore.svg" alt=""></a>
+           <a target="_blank" href="https://apps.apple.com/us/app/waso-learn-kg-12/id1531073432"><img src="./img/appstore.svg" alt=""></a>
+          </div>
+        </div>
+        <div class="w-full bg-[#0F294F] h-1/2 flex items-center overflow-hidden">
+          <img class="object-cover w-full" src="./img/Wasoscreen.png" alt="">
+        </div>
+      </div>
+      </section>
+      <!-- wasolearn -->
+</div>
 
 
 
@@ -515,7 +565,7 @@
       in various areas, including <span class="text-orange">Character Illustration, Digital
       Painting, Motion Graphics, and Building Static Websites.</span></p>
     </div>
-    <div class="softwareLogos w-full mt-4 flex gap-3">
+    <div class="softwareLogos w-full mt-4 flex flex-wrap gap-3">
       <img class="" src="./img/Software icons/Photoshop Logomark.svg" alt="">
       <img class="" src="./img/Software icons/Illustrator Logomark.svg" alt="">
       <img class="" src="./img/Software icons/Figma.svg" alt="">
