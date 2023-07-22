@@ -85,10 +85,42 @@
           top: -100%;
         }
 
+        /* .overlay{
+          transition: all 0.3s;
+        }
+
+        .fullmenu{
+          border-radius: 0;
+          background-color:#F15F30;
+          transition: all 0.3s;
+        } */
+
         
     </style>
 </head>
 <body class="wrapper" id="wrapper">
+
+<!-- <div class="lg:hidden z-50 absolute overlay bg-yellow text-center h-10 w-10 flex justify-center items-center" id="overlay">
+  <nav class="overlay-menu ">
+    <ul class="text-4xl text-white">
+      <li>
+        <a href="#about" class="navlist block py-2 p-14">About</a>
+      </li>
+      <li>
+        <a href="#works" class="navlist block py-2 p-14">Works</a>
+      </li>
+      <li>
+        <a href="#experience" class="navlist block py-2 p-14">Experiences</a>
+      </li>
+      <li>
+        <a href="#contact" class="navlist block py-2 p-14">Contact</a>
+      </li>
+      <li>
+        <a href="#" class="navlist block py-2 p-14">Resume</a>
+      </li>
+    </ul>
+  </nav>
+</div> -->
     
     
 <nav class="navBar backdrop-blur-lg bg-white/80 border-gray-200 w-full fixed px-6 lg:px-32 z-20">
@@ -96,13 +128,43 @@
       <a href="#" class="flex items-center">
           <img src="./img/logo.svg" class="h-7" alt="Logo" />
       </a>
-      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+      <button  type="button" class="burger inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
           <span class="sr-only">Open main menu</span>
-          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          <svg class="menuicon" width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.773926" y="0.485382" width="31.0737" height="5.00974" rx="2" fill="#07377E"/>
+            <rect x="0.773926" y="9.49512" width="31.0737" height="5.00974" rx="2" fill="#07377E"/>
+            <rect x="0.773926" y="18.5049" width="31.0737" height="5.00974" rx="2" fill="#07377E"/>
           </svg>
+            
+          
       </button>
-      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+      
+      <div class="absolute overlay w-0 h-screen top-0 right-0 text-center" id="overlay">
+        <div class="hidden opacity-0 close z-60 absolute top-5 right-5 p-2 w-10 h-10 items-center justify-center">
+          <img class="" src="./img/close.svg" alt="">
+        </div>
+        <nav class="overlay-menu relative top-[20%] justify-center items-center">
+          <ul id="mobilenav" class="mobilenav opacity-0 text-4xl text-center flex flex-col gap-[38px]  text-white">
+            <li>
+              <a href="#about" class="mobilenav block py-2 p-14">About</a>
+            </li>
+            <li>
+              <a href="#works" class="mobilenav block py-2 p-14">Works</a>
+            </li>
+            <li>
+              <a href="#experience" class="mobilenav block py-2 p-14">Experiences</a>
+            </li>
+            <li>
+              <a href="#contact" class="mobilenav block py-2 p-14">Contact</a>
+            </li>
+            <li>
+              <a href="#" class="mobilenav block py-2 p-14">Resume</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      
+      <div class=" hidden w-full md:block md:w-auto" id="navbar-default">
         <ul id="navlist" class="navlist text-base flex">
           <li>
             <a href="#about" class="navlist block py-2 p-4 text-darkBlue">About</a>
@@ -1139,6 +1201,7 @@ gsap.registerPlugin(ScrollTrigger);
      gsap.to('.lovetitle', { duration: 0.5, color:'#595959'});
      gsap.to('.navBar', { duration: 0.5, backgroundColor: '#1D1D1D'});
      gsap.to('.navlist', { color:"#ffffff"});
+     gsap.to('.menuicon rect', { fill: "#ffffff"});
    },
    
    onLeaveBack: () => {
@@ -1146,6 +1209,7 @@ gsap.registerPlugin(ScrollTrigger);
      gsap.to('.lovetitle', { duration: 0.5, color:'white', opacity:0.6})
      gsap.to('.navBar', { duration: 0.5, backgroundColor: 'rgb(255,255,255/0.8)'});
      gsap.to('.navlist', { color:"#07377E"});
+     gsap.to('.menuicon rect', { fill: "#07377E"});
    },
  
    
@@ -1165,6 +1229,15 @@ document.querySelectorAll(".bottomnav a").forEach((btn, index) => {
   });
 });
 
+document.querySelectorAll(".mobilenav a").forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    gsap.to(window, {duration: 0.5, scrollTo:{y:"#section" + (index + 1), offsetY:70}});
+    gsap.to(overlay, { width: "0px", height: "100vh", duration: 0.5 });
+    closebtn.classList.add("hidden");
+
+  });
+});
+
 
 
 // seeallbtn
@@ -1176,6 +1249,27 @@ const seeAllBtn = document.querySelector(".seeAllBtn");
     seeAllBtn.classList.toggle("hidden");
   });
 
+const burger = document.querySelector(".burger");
+const overlay = document.querySelector(".overlay");
+const closebtn = document.querySelector(".close");
+const mobilenav = document.querySelector(".mobilenav");
+
+burger.addEventListener("click", function() {
+  gsap.to(overlay, { width: "100%", height: "100vh", top: "0", right: "0", duration: 0.5,ease: "power2.inOut" });
+  gsap.to(mobilenav, { delay:0.3, opacity:1, duration: 1,ease: "power2.inOut" });
+  gsap.to(closebtn, { delay:0.3, display:"block", opacity:1, duration: 1,ease: "power2.inOut" });
+    // closebtn.classList.remove("hidden");
+    // overlay.classList.remove("rounded-full");
+    overlay.classList.add("bg-darkBlue");
+    // overlay.classList.add("open");
+});
+
+closebtn.addEventListener("click", function() {
+  gsap.to(overlay, { width: "0px", height: "100vh", duration: 0.5,ease: "power2.inOut" });
+  gsap.to(mobilenav, { opacity:0, duration: 1 });
+  gsap.to(closebtn, { display:"none", opacity:0});
+    // closebtn.classList.add("hidden");
+});
 
 // gsap.to('.navBar', { 
 //   autoAlpha: 1,
