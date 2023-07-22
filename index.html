@@ -581,14 +581,15 @@
           </section>
           <!-- Waso Learn TV -->
 
-          <!-- <div class="w-full flex justify-center items-center">
-            <div class="btn1 mt-9 bg-[#1d1d1d] border-2 leading-[4rem] h-14 w-52 justify-center items-center text-yellow text-base lg:text-xl text-center rounded-lg inline-block overflow-hidden relative transition-all duration-300">
-              Just email me
-            </div>
-          </div> -->
+          <div class="flex justify-center ">
+          <div class="seeAllBtn w-[90%] flex items-center justify-center mt-6 mb-6 bg-orange h-14 text-white text-base lg:text-xl text-center rounded-lg overflow-hidden relative transition-all duration-300">
+              See all projects
+          </div>
+          </div>
+          
 
           
-          <div class="showall block">
+          <div class="showall hidden">
           <section class="snap-center">
             <div class="bg-[#4AB848] pb-10 h-fit flex flex-col-reverse justify-center items-center text-left">
               <div class="text-white p-5 w-full h-1/2 flex flex-col justify-center ">
@@ -1163,6 +1164,18 @@ document.querySelectorAll(".bottomnav a").forEach((btn, index) => {
     gsap.to(window, {duration: 0.5, scrollTo:{y:"#section" + (index + 1), offsetY:70}});
   });
 });
+
+
+
+// seeallbtn
+const seeAllBtn = document.querySelector(".seeAllBtn");
+  const showall = document.querySelector(".showall");
+
+  seeAllBtn.addEventListener("click", function() {
+    showall.classList.toggle("hidden");
+    seeAllBtn.classList.toggle("hidden");
+  });
+
 
 // gsap.to('.navBar', { 
 //   autoAlpha: 1,
