@@ -950,7 +950,7 @@
           <span class="text-orange">Hey there!</span> I am an enthusiastic, passionate, and talented UI/UX designer extraordinaire, currently building experiences at Waso Tech! With my solid skills and unwavering passion, I create stunning designs that make hearts skip a beat. But wait, there's more! I also unleash my creativity through illustrations and motion graphics, adding that extra touch of magic. Let's bring your projects to life with a dash of excitement and a whole lot of design awesomeness!
       </p> -->
       <div class="text2 about w-[100%] text-xl lg:text-4xl text-white text-left leading-relaxed mt-4">
-        <p>I love storytelling for brands and products. And, I also have a passion for motion design, filmmaking, video editing, and creating stylized character portraits and illustrations. <span class="text-yellow">Here are some of my artworks.</span></p>
+        <p>I love storytelling for brands and products. And, I also have a passion for motion design, filmmaking, video editing, and creating stylized character portraits and illustrations. <span class="myarts">Here are some of my artworks.</span></p>
       </div>
     </div>
   </div>
@@ -967,7 +967,7 @@
 
 </div>
 <div id="section4" class="pt-32 pb-16 flex flex-col justify-center items-center">
-  <img src="./img/kaung.svg" alt="">
+      <img src="./img/kaung.svg" alt="">
   <h1 class="text-3xl lg:text-6xl text-yellow leading-tight mt-5">Have an awesome idea?<br>
   <span class="text-white">Well, here I am.</span></h1>
   <div class="buttongroup flex flex-col md:flex-row gap-5 mt-5">
@@ -1178,8 +1178,8 @@ gsap.registerPlugin(ScrollTrigger);
     duration: 0.2,
     ease: "power4",
     scrollTrigger: {
-        trigger:".startpanel"
-,       start: "top 10%",
+        trigger:".startpanel",
+        start: "top 10%",
         endTrigger:".endpanel",
         end: "top",
         toggleActions: "play reverse play reverse",
@@ -1191,10 +1191,10 @@ gsap.registerPlugin(ScrollTrigger);
   // backgroundColor change
   ScrollTrigger.create({
    
-   trigger: 'div .love',
-   markers:false,
+   trigger: ".love",
    start:"top 50%",
    end:"bottom 0%", 
+   markers:false,
  
    onEnter: () => {
      gsap.to('.green', { duration: 0.5, backgroundColor: '#1D1D1D'});
@@ -1202,6 +1202,7 @@ gsap.registerPlugin(ScrollTrigger);
      gsap.to('.navBar', { duration: 0.5, backgroundColor: '#1D1D1D'});
      gsap.to('.navlist', { color:"#ffffff"});
      gsap.to('.menuicon rect', { fill: "#ffffff"});
+     gsap.to('.myarts', { color: "#FEC425"});
    },
    
    onLeaveBack: () => {
@@ -1210,6 +1211,7 @@ gsap.registerPlugin(ScrollTrigger);
      gsap.to('.navBar', { duration: 0.5, backgroundColor: 'rgb(255,255,255/0.8)'});
      gsap.to('.navlist', { color:"#07377E"});
      gsap.to('.menuicon rect', { fill: "#07377E"});
+     gsap.to('.myarts', { color: "#ffffff"});
    },
  
    
@@ -1233,7 +1235,7 @@ document.querySelectorAll(".mobilenav a").forEach((btn, index) => {
   btn.addEventListener("click", () => {
     gsap.to(window, {duration: 0.5, scrollTo:{y:"#section" + (index + 1), offsetY:70}});
     gsap.to(overlay, { width: "0px", height: "100vh", duration: 0.5 });
-    closebtn.classList.add("hidden");
+    gsap.to(closebtn, { display:"none", opacity:0});
 
   });
 });
@@ -1247,6 +1249,7 @@ const seeAllBtn = document.querySelector(".seeAllBtn");
   seeAllBtn.addEventListener("click", function() {
     showall.classList.toggle("hidden");
     seeAllBtn.classList.toggle("hidden");
+    ScrollTrigger.refresh();
   });
 
 const burger = document.querySelector(".burger");
@@ -1284,7 +1287,6 @@ closebtn.addEventListener("click", function() {
 //   }
 // });
 
-    
 </script>
 
 </body>
