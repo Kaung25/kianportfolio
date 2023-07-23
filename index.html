@@ -95,6 +95,52 @@
           transition: all 0.3s;
         } */
 
+        .mousediv{
+          position: absolute;
+          /* bottom: 20px; */
+          font-family: 'SF Pro Display', sans-serif;
+        }
+
+        .mouse {
+          width:22px;
+          height:35px;
+          border:1.5px solid #4AB848;
+          border-radius:10px;
+          position:relative;
+          margin:0px auto;
+        }
+
+        .mouse:after {
+          content:"";
+          position:absolute;
+          width:4px;
+          height:6px;
+          border-radius:2px;
+          background: #26BBD3;
+          display:block;
+          left:50%;
+          transform:translateX(-50%);
+          top:5px;
+          animation: control 1.5s infinite;
+        }
+
+        @keyframes control {
+           0% {
+            opacity:1;
+            top:5px;
+          }
+          60% {
+            opacity:1;
+          }
+          90%{
+            top:20px;
+          }
+          100%{
+            opacity:0
+          }
+        }
+
+
         
     </style>
 </head>
@@ -189,7 +235,7 @@
 
 
 <div class=" bg-[url('./img/hero_bg.png')] bg-repeat bg-cover flex justify-center items-center h-[60%] md:h-screen">
-  <div class="hidden md:block socialIcons absolute right-9">
+  <div class="hidden lg:block socialIcons absolute right-9">
     <a href="https://www.linkedin.com/in/kaungmyatmoeehtoon/" target="_blank"><img class="p-1" src="./img/linkedin.svg" alt="linkedin"></a>
     <a href="https://www.behance.net/kaung16" target="_blank"><img class="p-1" src="./img/behance.svg" alt="behance"></a>
     <a href="https://dribbble.com/kaung255716" target="_blank"><img class="p-1" src="./img/dribbble.svg" alt="dribble"></a>
@@ -212,6 +258,10 @@
             <span class="text-orange relative">product</span><br>
             <span class="text-yellow relative">designer</span><br>
         </div>
+  </div>
+  <div id="mousediv" class="mousediv hidden bottom-0 md:bottom-8 lg:bottom-5 md:flex flex-col gap-1">
+  <div class="mouse"></div>
+  <p class="text-blue">Scroll</p>
   </div>
 </div>
 <!-- hero section end -->
@@ -1183,7 +1233,7 @@ gsap.registerPlugin(ScrollTrigger);
         endTrigger:".endpanel",
         end: "top",
         toggleActions: "play reverse play reverse",
-        markers:true,
+        markers:false,
       }
     });
   };
@@ -1286,6 +1336,20 @@ closebtn.addEventListener("click", function() {
 //     markers:true,
 //   }
 // });
+
+gsap.to(".mousediv", {
+      scrollTrigger: {
+        trigger: ".wrapper",
+        start: "top top",
+        endTrigger: "#wrapper",
+        end: "bottom 10%",
+        toggleActions: "play reverse play reverse",
+        markers: false,
+      },
+      autoAlpha: 0,
+      duration: 0.2,
+      ease: "power4",
+    });
 
 </script>
 
