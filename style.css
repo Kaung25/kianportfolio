@@ -594,6 +594,10 @@ video {
   top: 1.25rem;
 }
 
+.top-9 {
+  top: 2.25rem;
+}
+
 .top-\[15\.2rem\] {
   top: 15.2rem;
 }
@@ -620,6 +624,10 @@ video {
 
 .z-20 {
   z-index: 20;
+}
+
+.z-40 {
+  z-index: 40;
 }
 
 .z-50 {
@@ -705,6 +713,10 @@ video {
 
 .h-10 {
   height: 2.5rem;
+}
+
+.h-12 {
+  height: 3rem;
 }
 
 .h-14 {

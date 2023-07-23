@@ -99,6 +99,7 @@
           position: absolute;
           /* bottom: 20px; */
           font-family: 'SF Pro Display', sans-serif;
+          z-index: 40;
         }
 
         .mouse {
@@ -140,12 +141,40 @@
           }
         }
 
+      
+        .load{position:relative;top:50%;left:50%;transform:translate(-50%, -50%);
+          /*change these sizes to fit into your project*/
+          /* width:50px;
+          height:50px; */
+        }
+        .load hr{border:0;margin:0;width:40%;height:40%;position:absolute;border-radius:50%;animation:spin 2s ease infinite}
 
+        .load :first-child{background:#4AB848;animation-delay:-1.5s}
+        .load :nth-child(2){background:#F15F30;animation-delay:-1s}
+        .load :nth-child(3){background:#FEC425;animation-delay:-0.5s}
+        .load :last-child{background:#26BBD3}
+
+        @keyframes spin{
+          0%,100%{transform:translate(0)}
+          25%{transform:translate(160%)}
+          50%{transform:translate(160%, 160%)}
+          75%{transform:translate(0, 160%)}
+        }
         
     </style>
+
 </head>
+
 <body class="wrapper" id="wrapper">
 
+<div id="loadingScreen" class="loading-screen z-50 fixed bg-darkBlue right-0 w-full h-screen flex flex-col justify-center items-center">
+  <div class="almost-there w-fit h-fit ">
+    <div class="load z-50 w-12 h-12 ">
+      <hr/><hr/><hr/><hr/>
+    </div>
+    <p class="text-center relative text-white top-9">Almost there!</p>
+  </div>
+</div>
 <!-- <div class="lg:hidden z-50 absolute overlay bg-yellow text-center h-10 w-10 flex justify-center items-center" id="overlay">
   <nav class="overlay-menu ">
     <ul class="text-4xl text-white">
@@ -186,7 +215,7 @@
       </button>
       
       <div class="absolute overlay w-0 h-screen top-0 right-0 text-center" id="overlay">
-        <div class="hidden opacity-0 close z-60 absolute top-5 right-5 p-2 w-10 h-10 items-center justify-center">
+        <div class="hidden opacity-0 close z-50 absolute top-5 right-5 p-2 w-10 h-10 items-center justify-center">
           <img class="" src="./img/close.svg" alt="">
         </div>
         <nav class="overlay-menu relative top-[20%] justify-center items-center">
@@ -259,7 +288,7 @@
             <span class="text-yellow relative">designer</span><br>
         </div>
   </div>
-  <div id="mousediv" class="mousediv hidden bottom-0 md:bottom-8 lg:bottom-5 md:flex flex-col gap-1">
+  <div id="mousediv" class="z-40 mousediv hidden bottom-0 md:bottom-8 lg:bottom-5 md:flex flex-col gap-1">
   <div class="mouse"></div>
   <p class="text-blue">Scroll</p>
   </div>
@@ -1306,6 +1335,7 @@ const burger = document.querySelector(".burger");
 const overlay = document.querySelector(".overlay");
 const closebtn = document.querySelector(".close");
 const mobilenav = document.querySelector(".mobilenav");
+// const loading = document.querySelector(".loading-screen");
 
 burger.addEventListener("click", function() {
   gsap.to(overlay, { width: "100%", height: "100vh", top: "0", right: "0", duration: 0.5,ease: "power2.inOut" });
@@ -1351,6 +1381,25 @@ gsap.to(".mousediv", {
       ease: "power4",
     });
 
+
+ // Function to hide the loading screen
+ function hideLoadingScreen() {
+    gsap.to(".loading-screen", {
+      // autoAlpha: 0, // Fades the loading screen out by setting its opacity to 0
+      duration: 1, // Duration of the fade-out animation (in seconds)
+      onComplete: function() {
+        // After the animation is complete, hide the loading screen
+        gsap.to(".loading-screen", {delay:0.3, width: "0px", height: "100vh", duration: 1,ease: "circ",backgroundColor:"#07377E" });
+        gsap.to(".almost-there", {opacity:0, duration: 0.3});
+      }
+    });
+  }
+
+  // Wait for the page to fully load
+  window.addEventListener("load", function () {
+    // Show the loading screen for 2 seconds (2000 milliseconds)
+    setTimeout(hideLoadingScreen, 4000);
+  });
 </script>
 
 </body>
