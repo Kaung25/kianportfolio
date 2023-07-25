@@ -809,8 +809,8 @@ video {
   width: 100%;
 }
 
-.max-w-screen-xl {
-  max-width: 1536px;
+.max-w-screen-2xl {
+  max-width: 1920px;
 }
 
 .-scale-x-1 {
@@ -1558,6 +1558,10 @@ video {
 
   .lg\:block {
     display: block;
+  }
+
+  .lg\:grid {
+    display: grid;
   }
 
   .lg\:hidden {
