@@ -179,6 +179,20 @@
           75%{transform:translate(0, 160%)}
         }
         
+        .kaungimg img {
+          transition: all 0.2s ease-out;
+          box-sizing: border-box;
+          max-width: 100%;
+        }
+
+        .kaungimg{
+          background-color: #26BBD3;
+          border-radius:50%;
+        }
+        
+        /* .kaung2 {
+          transition: all 0.2s ease-in-out;
+        } */
     </style>
 
 </head>
@@ -1064,10 +1078,14 @@
 
 </div>
 <div id="section4" class="pt-32 pb-16 flex flex-col justify-center items-center">
-      <img src="./img/kaung.svg" alt="">
-  <h1 class="text-3xl lg:text-6xl text-yellow leading-tight mt-5">Have an awesome idea?<br>
+  <div class="group relative justify-center items-center">
+  <div class="kaungimg my-0 mx-auto w-48 h-48 flex flex-col relative overflow-hidden">    
+    <img class="group-hover:rotate-[360deg] group-hover:scale-125 group-hover:opacity-0 w-full absolute z-10" src="./img/kaung.svg" alt="">
+    <img class="w-full absolute kaung2 opacity-0 group-hover:rotate-[360deg] group-hover:opacity-100 transform-gpu" src="./img/kaung2.png" alt="">
+  </div>
+  <h1 class="text-3xl group lg:text-6xl text-yellow leading-tight mt-5">Have an awesome idea?<br>
   <span class="text-white">Well, here I am.</span></h1>
-  <div class="buttongroup flex flex-col md:flex-row gap-5 mt-5">
+  <div class="buttongroup flex flex-col md:flex-row gap-5 w-fit mx-auto mt-5">
     <div class="group btn1 bg-yellow h-16 w-52 leading-[4rem] text-[#1d1d1d] text-base lg:text-xl text-center rounded-lg inline-block overflow-hidden relative transition-all duration-300">
       <a class="btn  block relative h-full" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/kmmh/30min?hide_gdpr_banner=1&text_color=07377e&primary_color=f15f30'});return false;">Schedule a meeting</a>
       <a class="btn  block relative h-full" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/kmmh/30min?hide_gdpr_banner=1&text_color=07377e&primary_color=f15f30'});return false;">Schedule a meeting</a>
@@ -1079,6 +1097,7 @@
     </div>
 
   </div>
+</div>
 </div>
 <div class="text-white pt-10 lg:pt-32 pb-8 lg:pb-14">
   <ul id="bottomnav" class="hidden bottomnav text-base md:flex justify-center items-center">
@@ -1416,7 +1435,7 @@ gsap.to(".mousediv", {
   // Wait for the page to fully load
   window.addEventListener("load", function () {
     // Show the loading screen for 2 seconds (2000 milliseconds)
-    setTimeout(hideLoadingScreen, 4000);
+    setTimeout(hideLoadingScreen, 2000);
   });
 </script>
 
