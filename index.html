@@ -152,7 +152,7 @@
         .mouse {
           width:22px;
           height:35px;
-          border:1.5px solid #4AB848;
+          border:1.5px solid #316AFE;
           border-radius:10px;
           position:relative;
           margin:0px auto;
@@ -164,7 +164,7 @@
           width:4px;
           height:6px;
           border-radius:2px;
-          background: #26BBD3;
+          background: #FF553E;
           display:block;
           left:50%;
           transform:translateX(-50%);
@@ -196,10 +196,10 @@
         }
         .load hr{border:0;margin:0;width:40%;height:40%;position:absolute;border-radius:50%;animation:spin 2s ease infinite}
 
-        .load :first-child{background:#4AB848;animation-delay:-1.5s}
-        .load :nth-child(2){background:#BDC7CF;animation-delay:-1s}
-        .load :nth-child(3){background:#FEC425;animation-delay:-0.5s}
-        .load :last-child{background:#26BBD3}
+        .load :first-child{background:#12E37F;animation-delay:-1.5s}
+        .load :nth-child(2){background:#FF553E;animation-delay:-1s}
+        .load :nth-child(3){background:#FEC426;animation-delay:-0.5s}
+        .load :last-child{background:#316AFE}
 
         @keyframes spin{
           0%,100%{transform:translate(0)}
@@ -229,14 +229,14 @@
 
 <body class="wrapper" id="wrapper">
 
-<!-- <div id="loadingScreen" class="right-0 loading-screen z-50 fixed bg-dark mx-0 my-auto w-full h-screen flex flex-col justify-center items-center">
+<div id="loadingScreen" class="right-0 loading-screen z-50 fixed bg-dark mx-0 my-auto w-full h-screen flex flex-col justify-center items-center">
   <div class="almost-there">
     <div class="load z-50 w-12 h-12 ">
       <hr/><hr/><hr/><hr/>
     </div>
     <div class="text-center relative text-white top-9">Almost there!</div>
   </div>
-</div> -->
+</div>
 <!-- <div class="lg:hidden z-50 absolute overlay bg-yellow text-center h-10 w-10 flex justify-center items-center" id="overlay">
   <nav class="overlay-menu ">
     <ul class="text-4xl text-white">
@@ -257,7 +257,7 @@
       </li>
     </ul>
   </nav>
-</div> -->
+</div>-->
     
     
 <nav class="navBar bg-transparent border-gray-200 w-full fixed px-6 md:px-9 lg:px-32 z-20">
@@ -296,7 +296,7 @@
               <a href="#contact" class="mobilenav block py-2 p-14">Contact</a>
             </li>
             <li>
-              <a target="_blank" href="https://drive.google.com/file/d/1qYFs3EQ76Pp8NMkg3KFRwNnoxdrvYfTl/view?usp=sharing" class="mobilenav block py-2 p-14">Resume</a>
+              <a target="_blank" href="https://drive.google.com/file/d/1O7RC9v4tBApE52kdAFHp_J0LR5JsfukU/view?usp=sharing" class="mobilenav block py-2 p-14">Resume</a>
             </li>
           </ul>
         </nav>
@@ -317,7 +317,7 @@
             <a href="#contact" class="navlist block py-2 p-4 text-dark">Contact</a>
           </li>
           <li>
-            <a target="_blank" href="https://drive.google.com/file/d/1qYFs3EQ76Pp8NMkg3KFRwNnoxdrvYfTl/view?usp=sharing" class="navlist block py-2 pl-3 text-dark">Resume</a>
+            <a target="_blank" href="https://drive.google.com/file/d/1O7RC9v4tBApE52kdAFHp_J0LR5JsfukU/view?usp=sharing" class="navlist block py-2 pl-3 text-dark">Resume</a>
           </li>
         </ul>
       </div>
@@ -331,7 +331,7 @@
   <div class="hidden lg:block socialIcons absolute right-9">
     <a href="https://www.linkedin.com/in/kaungmyatmoeehtoon/" target="_blank"><img class="p-1" src="./img/linkedin.svg" alt="linkedin"></a>
     <a href="https://www.behance.net/kaung16" target="_blank"><img class="p-1" src="./img/behance.svg" alt="behance"></a>
-    <a href="https://dribbble.com/kaung255716" target="_blank"><img class="p-1" src="./img/dribbble.svg" alt="dribble"></a>
+    <a href="https://medium.com/@kaung16" target="_blank"><img class="p-1" src="./img/medium.svg" alt="medium"></a>
   </div>
   <canvas id="canvas" class="hidden md:block">
 
@@ -361,7 +361,7 @@
   </div> -->
   <div id="mousediv" class="z-40 mousediv hidden bottom-0 md:bottom-8 lg:bottom-5 md:flex flex-col gap-1">
   <div class="mouse"></div>
-  <p class="text-blue">Scroll</p>
+  <p class="text-dark">Scroll</p>
   </div>
 </div>
 <!-- hero section end -->
@@ -1187,7 +1187,7 @@
       <a href="#section4" class=" bottomnav block py-2 pl-3 pr-4">Contact</a>
     </li>
     <li>
-      <a target="_blank" href="https://drive.google.com/file/d/1qYFs3EQ76Pp8NMkg3KFRwNnoxdrvYfTl/view?usp=sharing" class=" block py-2 pl-3 pr-4">Resume</a>
+      <a target="_blank" href="https://drive.google.com/file/d/1O7RC9v4tBApE52kdAFHp_J0LR5JsfukU/view?usp=sharing" class=" block py-2 pl-3 pr-4">Resume</a>
     </li>
   </ul>
 
@@ -1567,23 +1567,23 @@ gsap.to(".mousediv", {
 
 
  // Function to hide the loading screen
-//  function hideLoadingScreen() {
-//     gsap.to(".loading-screen", {
-//       // autoAlpha: 0, // Fades the loading screen out by setting its opacity to 0
-//       duration: 1, // Duration of the fade-out animation (in seconds)
-//       onComplete: function() {
-//         // After the animation is complete, hide the loading screen
-//         gsap.to(".loading-screen", {delay:0.3, width: "0px", height: "100vh", duration: 1,ease: "circ",backgroundColor:"#2B2B2B" });
-//         gsap.to(".almost-there", {opacity:0, duration: 0.3});
-//       }
-//     });
-//   }
+ function hideLoadingScreen() {
+     gsap.to(".loading-screen", {
+       autoAlpha: 0, // Fades the loading screen out by setting its opacity to 0
+       duration: 0, // Duration of the fade-out animation (in seconds)
+       onComplete: function() {
+       // After the animation is complete, hide the loading screen
+         gsap.to(".loading-screen", {delay:0.3, width: "0px", height: "100vh", duration: 1,ease: "circ",backgroundColor:"#2B2B2B" });
+         gsap.to(".almost-there", {opacity:0});
+       }
+     });
+   }
 
   // Wait for the page to fully load
-  // window.addEventListener("load", function () {
-  //   // Show the loading screen for 2 seconds (2000 milliseconds)
-  //   setTimeout(hideLoadingScreen, 2000);
-  // });
+   window.addEventListener("load", function () {
+     //Show the loading screen for 2 seconds (2000 milliseconds)
+     setTimeout(hideLoadingScreen, 1000);
+   });
 </script>
 
 <script src="rive.js"></script>
