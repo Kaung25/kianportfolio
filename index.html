@@ -40,7 +40,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Skranji:wght@400;700&display=swap" rel="stylesheet">
-    <!-- skranji font -->
+    <!-- skranji font-->
+
+    <!-- Alfa Slab One font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+
+    <!-- SF Pro Font -->
     <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
@@ -51,6 +58,7 @@
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollToPlugin3.min.js"></script>
     <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+    <script src="https://unpkg.com/@rive-app/canvas@2.9.1"></script>
     
     <!-- <script src="https://assets.codepen.io/16327/SplitText3.min.js"></script> -->
     <!-- <script src="https://codepen.io/GreenSock/pen/7ba936b34824fefdccfe2c6d9f0b740b.js"></script>
@@ -66,16 +74,24 @@
 
     <style>
         body {
-            color: #07377E;
+            color: #2B2B2B;
             text-align: center;
-            font-family: Skranji;
+            font-family: "Skranji", serif;
+            /* font-weight: 400; */
             /* font-size: 16px; */
             font-style: normal;
             /* font-weight: 100; */
             line-height: 112.336%;
          }
 
-       
+
+        .bodyTitle{
+          font-family: "Alfa Slab One", serif;
+        }
+
+         canvas {
+          width: 100%;
+         }
 
          .split-line {
            overflow: hidden;
@@ -88,9 +104,10 @@
         .about > span {
         	background: linear-gradient(
 	        to right,
-	      #07377E 50%,
-	      #F15F30 50%
+	      #2B2B2B 50%,
+	      #BDC7CF 50%
 	      );
+          font-family: 'Skranji', sans-serif;
 	        background-size: 200% 100%;
 	        background-position-x: 100%;
 	        color: transparent;
@@ -121,7 +138,7 @@
 
         .fullmenu{
           border-radius: 0;
-          background-color:#F15F30;
+          background-color:#BDC7CF;
           transition: all 0.3s;
         } */
 
@@ -180,7 +197,7 @@
         .load hr{border:0;margin:0;width:40%;height:40%;position:absolute;border-radius:50%;animation:spin 2s ease infinite}
 
         .load :first-child{background:#4AB848;animation-delay:-1.5s}
-        .load :nth-child(2){background:#F15F30;animation-delay:-1s}
+        .load :nth-child(2){background:#BDC7CF;animation-delay:-1s}
         .load :nth-child(3){background:#FEC425;animation-delay:-0.5s}
         .load :last-child{background:#26BBD3}
 
@@ -212,14 +229,14 @@
 
 <body class="wrapper" id="wrapper">
 
-<div id="loadingScreen" class="right-0 loading-screen z-50 fixed bg-darkBlue mx-0 my-auto w-full h-screen flex flex-col justify-center items-center">
+<!-- <div id="loadingScreen" class="right-0 loading-screen z-50 fixed bg-dark mx-0 my-auto w-full h-screen flex flex-col justify-center items-center">
   <div class="almost-there">
     <div class="load z-50 w-12 h-12 ">
       <hr/><hr/><hr/><hr/>
     </div>
     <div class="text-center relative text-white top-9">Almost there!</div>
   </div>
-</div>
+</div> -->
 <!-- <div class="lg:hidden z-50 absolute overlay bg-yellow text-center h-10 w-10 flex justify-center items-center" id="overlay">
   <nav class="overlay-menu ">
     <ul class="text-4xl text-white">
@@ -243,17 +260,18 @@
 </div> -->
     
     
-<nav class="navBar backdrop-blur-lg bg-white/80 border-gray-200 w-full fixed px-6 md:px-9 lg:px-32 z-20">
+<nav class="navBar bg-transparent border-gray-200 w-full fixed px-6 md:px-9 lg:px-32 z-20">
     <div class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto py-4 px-0">
       <a href="#" class="flex items-center">
-          <img src="./img/logo.svg" class="h-7" alt="Logo" />
+        <img src="./img/logo_black.svg" class=" absolute logoblack" alt="Logo" />
+        <img src="./img/logo.svg" class=" logowhite" alt="Logo" />
       </a>
       <button  type="button" class="burger inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
           <span class="sr-only">Open main menu</span>
           <svg class="menuicon" width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0.773926" y="0.485382" width="31.0737" height="5.00974" rx="2" fill="#07377E"/>
-            <rect x="0.773926" y="9.49512" width="31.0737" height="5.00974" rx="2" fill="#07377E"/>
-            <rect x="0.773926" y="18.5049" width="31.0737" height="5.00974" rx="2" fill="#07377E"/>
+            <rect x="0.773926" y="0.485382" width="31.0737" height="5.00974" rx="2" fill="#2B2B2B"/>
+            <rect x="0.773926" y="9.49512" width="31.0737" height="5.00974" rx="2" fill="#2B2B2B"/>
+            <rect x="0.773926" y="18.5049" width="31.0737" height="5.00974" rx="2" fill="#2B2B2B"/>
           </svg>
             
           
@@ -287,19 +305,19 @@
       <div class=" hidden w-full lg:block lg:w-auto" id="navbar-default">
         <ul id="navlist" class="navlist text-base flex">
           <li>
-            <a href="#about" class="navlist block py-2 p-4 text-darkBlue">About</a>
+            <a href="#about" class="navlist block py-2 p-4 text-dark">About</a>
           </li>
           <li>
-            <a href="#works" class="navlist block py-2 p-4 text-darkBlue">Works</a>
+            <a href="#works" class="navlist block py-2 p-4 text-dark">Works</a>
           </li>
           <li>
-            <a href="#experience" class="navlist block py-2 p-4 text-darkBlue">Experiences</a>
+            <a href="#experience" class="navlist block py-2 p-4 text-dark">Experiences</a>
           </li>
           <li>
-            <a href="#contact" class="navlist block py-2 p-4 text-darkBlue">Contact</a>
+            <a href="#contact" class="navlist block py-2 p-4 text-dark">Contact</a>
           </li>
           <li>
-            <a target="_blank" href="https://drive.google.com/file/d/1qYFs3EQ76Pp8NMkg3KFRwNnoxdrvYfTl/view?usp=sharing" class="navlist block py-2 pl-3 text-darkBlue">Resume</a>
+            <a target="_blank" href="https://drive.google.com/file/d/1qYFs3EQ76Pp8NMkg3KFRwNnoxdrvYfTl/view?usp=sharing" class="navlist block py-2 pl-3 text-dark">Resume</a>
           </li>
         </ul>
       </div>
@@ -308,51 +326,64 @@
 <!-- navigation bar end-->
 
 
-<div class=" bg-[url('./img/hero_bg.png')] bg-repeat bg-cover flex justify-center items-center h-[60%] md:h-screen">
+<!-- hero section start -->
+<div class="hero bg-[url('./img/hero_bg.png')] bg-contain bg-no-repeat bg-bottom flex justify-center items-center h-fit md:h-screen">
   <div class="hidden lg:block socialIcons absolute right-9">
     <a href="https://www.linkedin.com/in/kaungmyatmoeehtoon/" target="_blank"><img class="p-1" src="./img/linkedin.svg" alt="linkedin"></a>
     <a href="https://www.behance.net/kaung16" target="_blank"><img class="p-1" src="./img/behance.svg" alt="behance"></a>
     <a href="https://dribbble.com/kaung255716" target="_blank"><img class="p-1" src="./img/dribbble.svg" alt="dribble"></a>
   </div>
-  <div class="relative w-[300px] h-[500px] md:w-[600px] md:h-[600px]">
+  <canvas id="canvas" class="hidden md:block">
+
+  </canvas>
+
+  <canvas id="canvasMobile" class="block md:hidden h-[60vh] mt-16">
+
+  </canvas>
+  <!-- <div class="relative w-[300px] h-[500px] md:w-[600px] md:h-[600px]">
         <div class="relative mt-2">
             <img src="./img/sketch.svg" class="w-10 md:w-20 right-7 top-[8.7rem] md:right-16 md:top-20 absolute" alt="">
             <img src="./img/Figma.svg" class="w-12 md:w-[5.3rem] -left-2 top-[15.5rem] md:left-0 md:top-[17.3rem] absolute" alt="">
             <img src="./img/PS.svg" class="w-10 md:w-20 -left-8 top-[19rem] md:-left-10 md:top-96 absolute" alt="">
             <img src="./img/AI.svg" class="w-10 md:w-[5.3rem] -right-1 top-[15.2rem] md:-right-5 md:top-[16.5rem] absolute" alt="">
         </div>
-  </div>
+  </div> -->
     
-  <div class=" absolute text-[70px] md:text-[130px] leading-[3.2rem] md:leading-[6rem] font-bold">
-        <h1 class=" h-10 flex justify-center items-center text-darkBlue text-xl md:text-4xl font-normal">Hello, I am Kaung Myat Moee Htoon,</h1>
+  <!-- <div class=" absolute text-[70px] md:text-[130px] leading-[3.2rem] md:leading-[6rem] font-bold">
+        <h1 class=" h-10 flex justify-center items-center text-dark text-xl md:text-4xl font-normal">Hello, I am Kaung Myat Moee Htoon,</h1>
         <div class="relative mt-2">
             <span class="text-orange relative">your</span><br>
-            <span class="text-green relative">favourite</span><br>
-            <span class="text-blue relative z-10">digital</span><br>
-            <span class="text-orange relative">product</span><br>
+            <span class="text-green relative">friendly</span><br>
+            <span class="text-blue relative z-10">neighborhood</span><br>
+            <span class="text-orange relative">digital product</span><br>
             <span class="text-yellow relative">designer</span><br>
         </div>
-  </div>
+  </div> -->
   <div id="mousediv" class="z-40 mousediv hidden bottom-0 md:bottom-8 lg:bottom-5 md:flex flex-col gap-1">
   <div class="mouse"></div>
   <p class="text-blue">Scroll</p>
   </div>
 </div>
 <!-- hero section end -->
-<div id="section1"  class="max-w-screen-2xl mx-auto px-5 md:px-9 lg:px-32 flex justify-center items-center h-fit lg:h-screen">
+<div id="section1"  class="about max-w-screen-2xl mx-auto px-5 md:px-9 lg:px-32 flex justify-center items-center h-fit lg:h-screen">
   <div class="py-16 lg:py-32">
-    <h1 class="text-base lg:text-3xl text-grey text-left">
-        About me
+    <div class="bodyTitle">
+      <h1 class="text-base lg:text-4xl text-orange text-left absolute z-10">
+        ABOUT ME
     </h1>
-    <!-- <p class="about text-4xl text-darkBlue text-left pr-48 leading-relaxed mt-4 " id="about">
+    <h1 class="text-3xl lg:text-7xl text-left text-grey/10 relative">
+        ABOUT ME
+    </h1>
+    </div>
+    <!-- <p class="about text-4xl text-dark text-left pr-48 leading-relaxed mt-4 " id="about">
         <span class="text-orange">Hey there!</span> I am an enthusiastic, passionate, and talented UI/UX designer extraordinaire, currently building experiences at Waso Tech! With my solid skills and unwavering passion, I create stunning designs that make hearts skip a beat. But wait, there's more! I also unleash my creativity through illustrations and motion graphics, adding that extra touch of magic. Let's bring your projects to life with a dash of excitement and a whole lot of design awesomeness!
     </p> -->
-    <div class="text about text-xl lg:text-4xl text-darkBlue text-left leading-relaxed mt-4">
+    <div class="text about text-xl lg:text-4xl text-dark text-left leading-normal mt-4 lg:mt-12">
       <span>Hey there! I am an enthusiastic, passionate, and talented</span>
-      <span>UI/UX designer extraordinaire, currently building</span>
-      <span>experiences at Waso Tech. With my solid skills and</span>
+      <span>UI/UX designer extraordinaire.</span>
+      <span>With my solid skills and</span>
       <span>unwavering passion, I create stunning designs that make</span>
-      <span> hearts skip a beat. But wait, there's more! I also unleash</span>
+      <span> hearts skip a beat. But wait, there's more. I also unleash</span>
       <span>my creativity through illustrations and motion graphics,</span>
       <span>adding that extra touch of magic. Let's bring your</span>
       <span>projects to life with a dash of excitement and a whole</span>
@@ -364,20 +395,20 @@
 <div class="bg-[url('./img/dots.png')] bg-repeat bg-cover flex justify-center items-center h-fit lg:h-screen">
 <div class="py-16">
   <div class="flex flex-wrap lg:grid grid-cols-2 gap-x-28 gap-y-16 lg:gap-y-40 justify-center items-center">
-    <div class="bg-orange text-left w-[310px] md:w-[440px] lg:w-[500px] h-fit relative p-2 md:p-5 rounded-md lg:rounded-2xl">
+    <div class="bg-orange text-left w-[310px] md:w-[440px] lg:w-[500px] h-fit relative p-2 md:p-5 border-2 lg:border-4 border-dark shadow-bgDarkSm lg:shadow-bgDark">
       <div class="ml-4 md:ml-0 text-sm lg:text-2xl text-white leading-normal w-[270px] md:w-[400px]">I am a lively and energetic person who brings excitement and creativity to everything I do, making life more fun and vibrant.</div>
       <img class="absolute -top-[55%] right-[284px] md:-right-8 lg:-right-20 w-14 lg:w-36 transform -scale-x-1 md:scale-100" src="./img/char-orange.svg" alt="">
     </div>
-    <div class="bg-yellow text-left w-[310px] md:w-[440px] lg:w-[500px] h-fit relative p-2 md:p-5 rounded-md lg:rounded-2xl">
-      <div class="ml-4 md:ml-0 text-sm lg:text-2xl text-white leading-normal w-[270px] md:w-[400px]">My positive and joyful nature uplifts those around me, spreading happiness and optimism wherever I go.</div>
+    <div class="bg-yellow text-left w-[310px] md:w-[440px] lg:w-[500px] h-fit relative p-2 md:p-5 border-2 lg:border-4 border-dark shadow-bgDarkSm lg:shadow-bgDark">
+      <div class="ml-4 md:ml-0 text-sm lg:text-2xl text-dark leading-normal w-[270px] md:w-[400px]">My positive and joyful nature uplifts those around me, spreading happiness and optimism wherever I go.</div>
       <img class="absolute -top-[55%] right-[284px] md:-right-8 lg:-right-20 w-14 lg:w-36 transform -scale-x-1 md:scale-100" src="./img/char-yellow.svg" alt="">
     </div>
-    <div class="bg-blue text-left w-[310px] md:w-[440px] lg:w-[500px] h-fit relative p-2 md:p-5 rounded-md lg:rounded-2xl">
+    <div class="bg-blue text-left w-[310px] md:w-[440px] lg:w-[500px] h-fit relative p-2 md:p-5 border-2 lg:border-4 border-dark shadow-bgDarkSm lg:shadow-bgDark">
       <div class="ml-4 md:ml-0 text-sm lg:text-2xl text-white leading-normal  w-[270px] md:w-[400px]">As a reliable individual, I provide thoughtful and intelligent insights, earning the trust of others as a dependable friend and confidant.</div>
       <img class="absolute -top-[55%] right-[284px] md:-right-8 lg:-right-20 w-14 lg:w-36 transform -scale-x-1 md:scale-100" src="./img/char-blue.svg" alt="">
     </div>
-    <div class="bg-green text-left w-[310px] md:w-[440px] lg:w-[500px] h-fit relative p-2 md:p-5 rounded-md lg:rounded-2xl">
-      <div class="ml-4 md:ml-0 text-sm lg:text-2xl text-white leading-normal w-[270px] md:w-[400px]">Plus, I am also an environmentalist who values growth and harmony in my personal and professional life.</div>
+    <div class="bg-green text-left w-[310px] md:w-[440px] lg:w-[500px] h-fit relative p-2 md:p-5 border-2 lg:border-4 border-dark shadow-bgDarkSm lg:shadow-bgDark">
+      <div class="ml-4 md:ml-0 text-sm lg:text-2xl text-dark leading-normal w-[270px] md:w-[400px]">Plus, I am also an environmentalist who values growth and harmony in my personal and professional life.</div>
       <img class="absolute -top-[55%] right-[284px] md:-right-8 lg:-right-20 w-14 lg:w-36 transform -scale-x-1 md:scale-100" src="./img/char-green.svg" alt="">
     </div>
   </div>
@@ -387,13 +418,18 @@
 
 <div id="section2" class="max-w-screen-2xl mx-auto px-5 md:px-9 lg:px-32 flex justify-center items-center">
   <div class="py-16 lg:py-32 w-full">
-    <h1 class="text-base lg:text-3xl text-grey text-left">
-      Project showcase
+    <div class="bodyTitle">
+      <h1 class="text-base lg:text-4xl text-orange text-left absolute z-10">
+      PROJECT SHOWCASE
     </h1>
-    <!-- <p class="about text-4xl text-darkBlue text-left pr-48 leading-relaxed mt-4 " id="about">
+    <h1 class="text-3xl lg:text-7xl text-left text-grey/10 relative">
+      PROJECT SHOWCASE
+    </h1>
+    </div>
+<!-- <p class="about text-4xl text-dark text-left pr-48 leading-relaxed mt-4 " id="about">
         <span class="text-orange">Hey there!</span> I am an enthusiastic, passionate, and talented UI/UX designer extraordinaire, currently building experiences at Waso Tech! With my solid skills and unwavering passion, I create stunning designs that make hearts skip a beat. But wait, there's more! I also unleash my creativity through illustrations and motion graphics, adding that extra touch of magic. Let's bring your projects to life with a dash of excitement and a whole lot of design awesomeness!
     </p> -->
-    <div class="text2 about w-[100%] text-xl lg:text-4xl text-darkBlue text-left leading-relaxed mt-4">
+    <div class="text2 about w-[100%] text-xl lg:text-4xl text-dark text-left leading-relaxed mt-4 lg:mt-12">
       <span>Dive into a handpicked selection of my best work,</span>
       <span>where exceptional design meets outstanding outcomes.</span>
       <span>Experience the essence of my creativity, passion, and</span>
@@ -456,13 +492,13 @@
 <section class="panel snap-center">
   <div class="bg-[#DFE2F3] h-screen flex justify-center items-center text-left">
     <div class="pl-32 w-1/2 h-screen flex flex-col justify-center ">
-      <h1 class="text-[#07377E] font-bold text-3xl">Slash POS</h1>
-      <p class="text-[#07377E] leading-normal font-normal text-xl mt-4 w-3/4">Slash POS System by Slash Myanmar is  the fastest and most user-friendly point-of-sale solution in the market. Tailored specifically for the unique demands of Myanmar's vibrant market, Slash POS empowers merchants to effortlessly manage sales, inventory, and customer data through its intuitive and user-friendly interface. Its streamlined interface guarantees effortless navigation, making it exceptionally easy-to-use for both merchants and staff.</p>
+      <h1 class="text-[#2B2B2B] font-bold text-3xl">Slash POS</h1>
+      <p class="text-[#2B2B2B] leading-normal font-normal text-xl mt-4 w-3/4">Slash POS System by Slash Myanmar is  the fastest and most user-friendly point-of-sale solution in the market. Tailored specifically for the unique demands of Myanmar's vibrant market, Slash POS empowers merchants to effortlessly manage sales, inventory, and customer data through its intuitive and user-friendly interface. Its streamlined interface guarantees effortless navigation, making it exceptionally easy-to-use for both merchants and staff.</p>
       <div class="flex gap-2 mt-3">
-        <span class="py-3 px-5 bg-white/50 font-light text-[#07377E] rounded-lg w-fit">Team Lead</span>
-        <span class="py-3 px-5 bg-white/50 font-light text-[#07377E] rounded-lg w-fit">UX</span>
-        <span class="py-3 px-5 bg-white/50 font-light text-[#07377E] rounded-lg w-fit">UI</span>
-        <span class="py-3 px-5 bg-white/50 font-light text-[#07377E] rounded-lg w-fit">Interaction</span>
+        <span class="py-3 px-5 bg-white/50 font-light text-[#2B2B2B] rounded-lg w-fit">Team Lead</span>
+        <span class="py-3 px-5 bg-white/50 font-light text-[#2B2B2B] rounded-lg w-fit">UX</span>
+        <span class="py-3 px-5 bg-white/50 font-light text-[#2B2B2B] rounded-lg w-fit">UI</span>
+        <span class="py-3 px-5 bg-white/50 font-light text-[#2B2B2B] rounded-lg w-fit">Interaction</span>
       </div>
       <!-- <div class="flex gap-5 mt-6">
         <img src="./img/Google Play Black.svg" alt="">
@@ -720,7 +756,7 @@
 
       <section class="snap-center">
         <div class="bg-[#DFE2F3] pb-10 h-fit flex flex-col-reverse justify-center items-center text-left">
-          <div class="text-[#07377E] p-5 md:p-9 w-full h-1/2 flex flex-col justify-center ">
+          <div class="text-[#2B2B2B] p-5 md:p-9 w-full h-1/2 flex flex-col justify-center ">
             <h1 class="font-bold mt-4 text-xl">Slash POS</h1>
             <p class="leading-normal font-normal text-base mt-3 w-full">Slash POS System by Slash Myanmar is  the fastest and most user-friendly point-of-sale solution in the market. Tailored specifically for the unique demands of Myanmar's vibrant market, Slash POS empowers merchants to effortlessly manage sales, inventory, and customer data through its intuitive and user-friendly interface. Its streamlined interface guarantees effortless navigation, making it exceptionally easy-to-use for both merchants and staff.</p>
             <div class="flex flex-wrap gap-2 mt-3">
@@ -769,7 +805,7 @@
 
           <div class="flex justify-center ">
           <div class="seeAllBtn w-[90%] flex items-center justify-center mt-6 mb-6 bg-orange h-14 text-white text-base lg:text-xl text-center rounded-lg overflow-hidden relative transition-all duration-300">
-              See all projects
+              See more projects
           </div>
           </div>
           
@@ -958,7 +994,7 @@
       Skills and software expertise
     </h1>
     
-    <div class="text3 about w-[100%] text-4xl text-darkBlue text-left leading-relaxed mt-4">
+    <div class="text3 about w-[100%] text-4xl text-dark text-left leading-relaxed mt-4">
       <p>Welcome to the mastery world! Apart from crafting</p>
       <p>captivating visuals for websites and apps, I bring a diverse</p>
       <p>skill set to the table. With a strong passion for learning and</p>
@@ -971,15 +1007,19 @@
 <!-- skill text end -->
 
 
+
 <div class="max-w-screen-2xl mx-auto endpanel px-5 md:px-9 lg:px-32 flex justify-center items-center">
   <div class="py-16 lg:py-32 w-full ">
-    <h1 class="text-base lg:text-3xl text-grey text-left">
-      Skills and software expertise
-    </h1>
-    <!-- <p class="about text-4xl text-darkBlue text-left pr-48 leading-relaxed mt-4 " id="about">
+    <div class="bodyTitle">
+      <h1 class="text-base lg:text-4xl text-orange text-left absolute z-10">
+        SKILLS & EXPERTISE
+      </h1>
+      <h1 class=" text-3xl lg:text-7xl text-left text-grey/10 relative">SKILLS & EXPERTISE</h1>
+    </div>
+    <!-- <p class="about text-4xl text-dark text-left pr-48 leading-relaxed mt-4 " id="about">
         <span class="text-orange">Hey there!</span> I am an enthusiastic, passionate, and talented UI/UX designer extraordinaire, currently building experiences at Waso Tech! With my solid skills and unwavering passion, I create stunning designs that make hearts skip a beat. But wait, there's more! I also unleash my creativity through illustrations and motion graphics, adding that extra touch of magic. Let's bring your projects to life with a dash of excitement and a whole lot of design awesomeness!
     </p> -->
-    <div class=" w-[90%] text-xl lg:text-4xl text-darkBlue text-left leading-relaxed mt-4">
+    <div class=" w-[90%] text-xl lg:text-4xl text-dark text-left leading-relaxed mt-4 lg:mt-12">
       <p>Welcome to the mastery world! Apart from crafting
       captivating visuals for websites and apps, I bring a diverse
       skill set to the table. With a strong passion for learning and
@@ -1004,23 +1044,26 @@
 
 <!-- skill text end -->
 
-<div class="green bg-green">
+<div class="green bg-[#1ABD6F]">
 <div class="max-w-screen-2xl mx-auto px-5 md:px-9 lg:px-32 flex justify-center items-center">
   <div id="section3" class="py-16 lg:py-32 w-full ">
-    <h1 class="text-base lg:text-3xl text-white/60 text-left">
-      Career History
-    </h1>
-    <div class=" w-[90%] text-xl lg:text-4xl text-white text-left leading-relaxed mt-4">
+    <div class="bodyTitle">
+      <h1 class="text-base lg:text-4xl text-white text-left absolute z-10">
+        CAREER HISTORY
+      </h1>
+      <h1 class=" text-3xl lg:text-7xl text-left text-white/10 relative">CAREER HISTORY</h1>
+    </div>
+    <div class=" w-[90%] text-xl lg:text-4xl text-white text-left leading-relaxed mt-4 lg:mt-12">
       <p>In my career, I've had the chance to work on some amazing projects that allowed me to express my creativity and make a difference.</p>
     </div>
     <div class="flex flex-col md:grid grid-cols-2 gap-x-20 gap-y-0">
       <div class="text-left flex flex-col gap-2 lg:gap-6">
         <div class="mt-10 md:mt-24 text-white flex flex-col gap-0 lg:gap-4">
          <h1 class="text-base lg:text-3xl">Dev Engine</h1>
-         <p class="text-sm lg:text-xl opacity-60">Co-Founder | Nov 2022 – Present</p>
+         <p class="text-sm lg:text-xl opacity-70">Co-Founder | Nov 2022 – Present</p>
         </div>
         <div class="text-white">
-          <p class="text-sm lg:text-xl opacity-60 leading-normal w-[90%]">
+          <p class="text-sm lg:text-xl opacity-70 leading-normal w-[90%]">
             Co-founding Dev Engine, a digital agency with my friends, has been an exciting journey in my professional career. Our primary focus is to deliver innovative and customized digital solutions to our valued clients.
           </p>
         </div>
@@ -1028,11 +1071,23 @@
 
       <div class="text-left flex flex-col gap-2 lg:gap-6">
         <div class="mt-10 md:mt-24 text-white flex flex-col gap-0 lg:gap-4">
-         <h1 class="text-base lg:text-3xl">Strategy First Education Group</h1>
-         <p class="text-sm lg:text-xl opacity-60">UI/UX Designer | Nov 2021 – Sep 2023</p>
+         <h1 class="text-base lg:text-3xl">Visible One</h1>
+         <p class="text-sm lg:text-xl opacity-70">UI/UX Designer | Sep 2023 – Present</p>
         </div>
         <div class="text-white">
-          <p class="text-sm lg:text-xl opacity-60 leading-normal  w-[90%]">
+          <p class="text-sm lg:text-xl opacity-70 leading-normal w-[90%]">
+            Responsible for conducting comprehensive UX research to address design challenges, creating intuitive UI designs for websites and mobile applications, and translating conceptual ideas into user-centric interfaces.
+          </p>
+        </div>
+      </div>
+
+      <div class="text-left flex flex-col gap-2 lg:gap-6">
+        <div class="mt-10 md:mt-24 text-white flex flex-col gap-0 lg:gap-4">
+         <h1 class="text-base lg:text-3xl">Strategy First Education Group</h1>
+         <p class="text-sm lg:text-xl opacity-70">UI/UX Designer | Nov 2021 – Sep 2023</p>
+        </div>
+        <div class="text-white">
+          <p class="text-sm lg:text-xl opacity-70 leading-normal  w-[90%]">
           As a UI/UX Designer at Strategy First Education Group, I create user-centered designs for apps and websites by understanding user needs through research and documentation.
           </p>
         </div>
@@ -1041,21 +1096,21 @@
       <div class="text-left flex flex-col gap-2 lg:gap-6">
         <div class="mt-10 md:mt-24 text-white flex flex-col gap-0 lg:gap-4">
          <h1 class="text-base lg:text-3xl">Recycle Myanmar</h1>
-         <p class="text-sm lg:text-xl opacity-60">Lead Designer - Remote | Jun 2019 – Jan 2021</p>
+         <p class="text-sm lg:text-xl opacity-70">Lead Designer - Remote | Jun 2019 – Jan 2021</p>
         </div>
         <div class="text-white">
-          <p class="text-sm lg:text-xl opacity-60 leading-normal w-[90%]">
-            At Recycle Myanmar, I took the lead in designing social ads, branding materials, and providing guidance on app and web UI designs. It was rewarding to contribute to their mission of promoting recycling and sustainability.
+          <p class="text-sm lg:text-xl opacity-70 leading-normal w-[90%]">
+            I took the lead in designing social ads, branding materials, and providing guidance on app and web UI designs. It was rewarding to contribute to their mission of promoting recycling and sustainability.
         </div>
       </div>
 
       <div class="text-left flex flex-col gap-2 lg:gap-6">
         <div class="mt-10 md:mt-24 text-white flex flex-col gap-0 lg:gap-4">
          <h1 class="text-base lg:text-3xl">Sri Ksetra Student Exhibition Series</h1>
-         <p class="text-sm lg:text-xl opacity-60">Lead Designer - Volunteer | Nov 2017 – Feb 2020</p>
+         <p class="text-sm lg:text-xl opacity-70">Lead Designer - Volunteer | Nov 2017 – Feb 2020</p>
         </div>
         <div class="text-white">
-          <p class="text-sm lg:text-xl opacity-60 leading-normal  w-[90%]">
+          <p class="text-sm lg:text-xl opacity-70 leading-normal  w-[90%]">
             As a designer for the Sri Ksetra Student Exhibition Series, I created visually captivating designs and videos to promote the exhibition and engage the public, government, and donors with innovative ideas.
           </p>
         </div>
@@ -1067,13 +1122,16 @@
 <div class="love max-w-screen-2xl mx-auto">
   <div class="px-5 md:px-9 lg:px-32 flex justify-center items-center">
     <div class="pt-16 lg:pt-32 pb-12 w-full">
-      <h1 class="lovetitle text-base lg:text-3xl text-white/60 text-left">
-        What I love to
-      </h1>
-      <!-- <p class="about text-4xl text-darkBlue text-left pr-48 leading-relaxed mt-4 " id="about">
+      <div class="bodyTitle">
+        <h1 class="lovetitle text-base lg:text-4xl text-white text-left absolute z-10">
+          WHAT I LOVE TO
+        </h1>
+        <h1 class=" text-3xl lg:text-7xl text-left text-white/10 relative">WHAT I LOVE TO</h1>
+      </div>
+      <!-- <p class="about text-4xl text-dark text-left pr-48 leading-relaxed mt-4 " id="about">
           <span class="text-orange">Hey there!</span> I am an enthusiastic, passionate, and talented UI/UX designer extraordinaire, currently building experiences at Waso Tech! With my solid skills and unwavering passion, I create stunning designs that make hearts skip a beat. But wait, there's more! I also unleash my creativity through illustrations and motion graphics, adding that extra touch of magic. Let's bring your projects to life with a dash of excitement and a whole lot of design awesomeness!
       </p> -->
-      <div class="text2 about w-[100%] text-xl lg:text-4xl text-white text-left leading-relaxed mt-4">
+      <div class="text2 about w-[100%] text-xl lg:text-4xl text-white text-left leading-relaxed mt-4 lg:mt-12">
         <p>I love storytelling for brands and products. And, I also have a passion for motion design, filmmaking, video editing, and creating stylized character portraits and illustrations. <span class="myarts">Here are some of my artworks.</span></p>
       </div>
     </div>
@@ -1096,12 +1154,14 @@
     <img class="group-hover:rotate-[360deg] group-hover:scale-125 group-hover:opacity-0 w-full absolute z-10" src="./img/kaung.svg" alt="">
     <img class="w-full absolute kaung2 opacity-0 group-hover:rotate-[360deg] group-hover:opacity-100 transform-gpu" src="./img/kaung3.png" alt="">
   </div>
-  <h1 class="text-3xl group lg:text-6xl text-yellow leading-tight mt-5">Have an awesome idea?<br>
-  <span class="text-white">Well, here I am.</span></h1>
+  <div class="">
+    <h1 class="text-3xl group lg:text-6xl text-yellow leading-tight mt-5">Have an awesome idea?<br>
+    <span class="text-white">Well, here I am.</span></h1>
+  </div>
   <div class="buttongroup flex flex-col md:flex-row gap-5 w-fit mx-auto mt-5">
     <div class="group btn1 bg-yellow h-16 w-52 leading-[4rem] text-[#1d1d1d] text-base lg:text-xl text-center rounded-lg inline-block overflow-hidden relative transition-all duration-300">
-      <a class="btn  block relative h-full" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/kmmh/30min?hide_gdpr_banner=1&text_color=07377e&primary_color=f15f30'});return false;">Schedule a meeting</a>
-      <a class="btn  block relative h-full" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/kmmh/30min?hide_gdpr_banner=1&text_color=07377e&primary_color=f15f30'});return false;">Schedule a meeting</a>
+      <a class="btn  block relative h-full" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/kmmh/30min?hide_gdpr_banner=1&text_color=2B2B2B&primary_color=BDC7CF'});return false;">Schedule a meeting</a>
+      <a class="btn  block relative h-full" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/kmmh/30min?hide_gdpr_banner=1&text_color=2B2B2B&primary_color=BDC7CF'});return false;">Schedule a meeting</a>
     </div>
     
     <div class="btn1 bg-transparent border-2 border-yellow leading-[4rem] h-16 w-52 text-yellow text-base lg:text-xl text-center rounded-lg inline-block overflow-hidden relative transition-all duration-300">
@@ -1134,7 +1194,7 @@
 
   
 
-  <p class="text-base px-6 mt-0 md:mt-8 lg:mt-16 text-white/60">Copyright © 2023 Kaung Myat Moee Htoon. Made with ❤️ in Myanmar</p>
+  <p class="text-base px-6 mt-0 md:mt-8 lg:mt-16 text-white/60">Copyright © 2024 Kaung Myat Moee Htoon. Made with ❤️ in Myanmar</p>
 </div>
 </div>
 
@@ -1200,7 +1260,53 @@ about.forEach(about => {
 setupSplits();
 
 </script> -->
+
+
+
 <script>
+
+
+    const r= new rive.Rive({
+        src: "Neighborhood.riv",
+        // OR the path to a discoverable and public Rive asset
+        // src: '/public/example.riv',
+        canvas: document.getElementById("canvas"),
+        autoplay: true,
+        stateMachines: "State Machine 1",
+        onLoad: () => {
+          r.resizeDrawingSurfaceToCanvas();
+        },
+    });
+
+
+    const riveMobile = new rive.Rive({
+        src: "Neighborhood_mobile.riv",
+        // OR the path to a discoverable and public Rive asset
+        // src: '/public/example.riv',
+        canvas: document.getElementById("canvasMobile"),
+        autoplay: true,
+        stateMachines: "State Machine 1",
+        onLoad: () => {
+          riveMobile.resizeDrawingSurfaceToCanvas();
+        },
+    });
+
+    
+
+
+// const rive = require("@rive-app/canvas");
+
+// const r = new rive.Rive({
+//   src: "./img/Neighborhood.riv",
+//   canvas: document.getElementById("canvas"),
+//   stateMachines: "State Machine 1",
+//   autoplay: true,
+//   automaticallyHandleEvents: true,
+//   onLoad: () => {
+//     r.resizeDrawingSurfaceToCanvas();
+//   },
+// });
+
   //text animation
 //   gsap.config({ trialWarn: false });
 //   console.clear();
@@ -1234,7 +1340,7 @@ gsap.to(".text span", {
     markers: false,
     scrub: 1,
     start: "top 90%",
-    end: "400% 30%"
+    end: "400% 65%"
   }
 });
 
@@ -1247,7 +1353,7 @@ gsap.to(".text2 span", {
     markers: false,
     scrub: 1,
     start: "top 90%",
-    end: "400% 30%"
+    end: "400% 65%"
   }
 });
 
@@ -1327,24 +1433,52 @@ gsap.registerPlugin(ScrollTrigger);
  
    onEnter: () => {
      gsap.to('.green', { duration: 0.5, backgroundColor: '#1D1D1D'});
-     gsap.to('.lovetitle', { duration: 0.5, color:'#595959'});
+     gsap.to('.lovetitle', { duration: 0.5, color:'#FEC426'});
      gsap.to('.navBar', { duration: 0.5, backgroundColor: '#1D1D1D'});
      gsap.to('.navlist', { color:"#ffffff"});
      gsap.to('.menuicon rect', { fill: "#ffffff"});
      gsap.to('.myarts', { color: "#FEC425"});
+     gsap.to('.logowhite', { duration:0.5, opacity: 1});
+     gsap.to('.logoblack', { duration:0.5, opacity: 0});
    },
    
    onLeaveBack: () => {
-     gsap.to('.green', { duration: 0.5, backgroundColor: '#4AB848'});
-     gsap.to('.lovetitle', { duration: 0.5, color:'white', opacity:0.6})
-     gsap.to('.navBar', { duration: 0.5, backgroundColor: 'rgb(255,255,255/0.8)'});
-     gsap.to('.navlist', { color:"#07377E"});
-     gsap.to('.menuicon rect', { fill: "#07377E"});
+     gsap.to('.green', { duration: 0.5, backgroundColor: '#1ABD6F'});
+     gsap.to('.lovetitle', { duration: 0.5, color:'white'})
+     gsap.to('.navBar', { duration: 0.5, backgroundColor: 'rgb(255,255,255)'});
+     gsap.to('.navlist', { color:"#2B2B2B"});
+     gsap.to('.menuicon rect', { fill: "#2B2B2B"});
      gsap.to('.myarts', { color: "#ffffff"});
+     gsap.to('.logowhite', { duration:0.5, opacity: 0});
+     gsap.to('.logoblack', { duration:0.5, opacity: 1});
    },
  
    
  })
+
+
+ // navbar change
+ ScrollTrigger.create({
+   
+   trigger: ".hero",
+   start:"top 0%",
+   end:"bottom 20%", 
+   markers:false,
+ 
+   onEnter: () => {
+     gsap.to('.navBar', { duration: 0.0, backgroundColor: '#ffffff'});
+    //  gsap.to('.navBar', { duration: 0.1, borderBottom: '1px solid #E8EBED'});
+   },
+   
+   onLeaveBack: () => {
+     gsap.to('.navBar', { duration: 0.1, backgroundColor: 'rgb(255,255,255/0.0)'});
+    //  gsap.to('.navBar', { duration: 0.1, borderBottom: '0px solid #E8EBED'});
+   },
+ 
+   
+ })
+
+
 
 
 
@@ -1393,7 +1527,7 @@ burger.addEventListener("click", function() {
   gsap.to(closebtn, { delay:0.3, display:"block", opacity:1, duration: 1,ease: "power2.inOut" });
     // closebtn.classList.remove("hidden");
     // overlay.classList.remove("rounded-full");
-    overlay.classList.add("bg-darkBlue");
+    overlay.classList.add("bg-dark");
     // overlay.classList.add("open");
 });
 
@@ -1433,24 +1567,26 @@ gsap.to(".mousediv", {
 
 
  // Function to hide the loading screen
- function hideLoadingScreen() {
-    gsap.to(".loading-screen", {
-      // autoAlpha: 0, // Fades the loading screen out by setting its opacity to 0
-      duration: 1, // Duration of the fade-out animation (in seconds)
-      onComplete: function() {
-        // After the animation is complete, hide the loading screen
-        gsap.to(".loading-screen", {delay:0.3, width: "0px", height: "100vh", duration: 1,ease: "circ",backgroundColor:"#07377E" });
-        gsap.to(".almost-there", {opacity:0, duration: 0.3});
-      }
-    });
-  }
+//  function hideLoadingScreen() {
+//     gsap.to(".loading-screen", {
+//       // autoAlpha: 0, // Fades the loading screen out by setting its opacity to 0
+//       duration: 1, // Duration of the fade-out animation (in seconds)
+//       onComplete: function() {
+//         // After the animation is complete, hide the loading screen
+//         gsap.to(".loading-screen", {delay:0.3, width: "0px", height: "100vh", duration: 1,ease: "circ",backgroundColor:"#2B2B2B" });
+//         gsap.to(".almost-there", {opacity:0, duration: 0.3});
+//       }
+//     });
+//   }
 
   // Wait for the page to fully load
-  window.addEventListener("load", function () {
-    // Show the loading screen for 2 seconds (2000 milliseconds)
-    setTimeout(hideLoadingScreen, 2000);
-  });
+  // window.addEventListener("load", function () {
+  //   // Show the loading screen for 2 seconds (2000 milliseconds)
+  //   setTimeout(hideLoadingScreen, 2000);
+  // });
 </script>
+
+<script src="rive.js"></script>
 
 </body>
 
