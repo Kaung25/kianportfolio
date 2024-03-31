@@ -145,6 +145,10 @@
           transition: all 0.3s;
         } */
 
+        .copyright{
+          font-family: 'SF Pro Display',sans-serif;
+        }
+
         .mousediv{
           position: absolute;
           /* bottom: 20px; */
@@ -225,6 +229,10 @@
         /* .kaung2 {
           transition: all 0.2s ease-in-out;
         } */
+
+        .navlist:hover{
+          color: var(--hover-color, #FF553E) !important;
+        }
     </style>
 
 </head>
@@ -308,19 +316,19 @@
       <div class=" hidden w-full lg:block lg:w-auto" id="navbar-default">
         <ul id="navlist" class="navlist text-base flex">
           <li>
-            <a href="#about" class="navlist block py-2 p-4 text-dark">About</a>
+            <a href="#about" class=" navlist block py-2 p-4 text-dark">About</a>
           </li>
           <li>
-            <a href="#works" class="navlist block py-2 p-4 text-dark">Works</a>
+            <a href="#works" class=" navlist block py-2 p-4 text-dark">Works</a>
           </li>
           <li>
-            <a href="#experience" class="navlist block py-2 p-4 text-dark">Experiences</a>
+            <a href="#experience" class=" navlist block py-2 p-4 text-dark">Experiences</a>
           </li>
           <li>
-            <a href="#contact" class="navlist block py-2 p-4 text-dark">Contact</a>
+            <a href="#contact" class=" navlist block py-2 p-4 text-dark">Contact</a>
           </li>
           <li>
-            <a target="_blank" href="https://drive.google.com/file/d/1O7RC9v4tBApE52kdAFHp_J0LR5JsfukU/view?usp=sharing" class="navlist block py-2 pl-3 text-dark">Resume</a>
+            <a target="_blank" href="https://drive.google.com/file/d/1O7RC9v4tBApE52kdAFHp_J0LR5JsfukU/view?usp=sharing" class=" navlist block py-2 pl-3 text-dark">Resume</a>
           </li>
         </ul>
       </div>
@@ -1178,33 +1186,31 @@
 <div class="text-white pt-10 lg:pt-32 pb-8 lg:pb-14">
   <ul id="bottomnav" class="hidden bottomnav text-base md:flex justify-center items-center">
     <li>
-      <a href="#section1" class=" bottomnav block py-2 pl-3 pr-4">About</a>
+      <a href="#section1" class="hover:text-green bottomnav block py-2 pl-3 pr-4">About</a>
     </li>
     <li>
-      <a href="#section2" class=" bottomnav block py-2 pl-3 pr-4">Works</a>
+      <a href="#section2" class="hover:text-green bottomnav block py-2 pl-3 pr-4">Works</a>
     </li>
     <li>
-      <a href="#section3" class=" bottomnav block py-2 pl-3 pr-4">Experiences</a>
+      <a href="#section3" class="hover:text-green bottomnav block py-2 pl-3 pr-4">Experiences</a>
     </li>
     <li>
-      <a href="#section4" class=" bottomnav block py-2 pl-3 pr-4">Contact</a>
+      <a href="#section4" class="hover:text-green bottomnav block py-2 pl-3 pr-4">Contact</a>
     </li>
     <li>
-      <a target="_blank" href="https://drive.google.com/file/d/1O7RC9v4tBApE52kdAFHp_J0LR5JsfukU/view?usp=sharing" class=" block py-2 pl-3 pr-4">Resume</a>
+      <a target="_blank" href="https://drive.google.com/file/d/1O7RC9v4tBApE52kdAFHp_J0LR5JsfukU/view?usp=sharing" class="hover:text-green block py-2 pl-3 pr-4">Resume</a>
     </li>
   </ul>
 
 
   
 
-  <p class="text-base px-6 mt-0 md:mt-8 lg:mt-16 text-white/60">Copyright © 2024 Kaung Myat Moee Htoon. Made with ❤️ in Myanmar</p>
+  <p class="copyright text-[12px] px-6 mt-0 md:mt-8 lg:mt-16 text-white/60">Copyright © 2024. Developed by Kaung Myat Moee Htoon.<br class="block lg:hidden"> Made with ❤️ in Myanmar</p>
 </div>
 </div>
 
 <!-- Medium article embed -->
 <!-- <div class='sk-ww-medium-publication-feed' data-embed-id='25389346'></div> -->
-
-
 
 
 
@@ -1445,6 +1451,7 @@ gsap.registerPlugin(ScrollTrigger);
      gsap.to('.myarts', { color: "#FEC425"});
      gsap.to('.logowhite', { duration:0.5, opacity: 1});
      gsap.to('.logoblack', { duration:0.5, opacity: 0});
+     gsap.to('.navlist', { duration: 0.5, "--hover-color": "#FEC426" });
    },
    
    onLeaveBack: () => {
@@ -1456,11 +1463,9 @@ gsap.registerPlugin(ScrollTrigger);
      gsap.to('.myarts', { color: "#ffffff"});
      gsap.to('.logowhite', { duration:0.5, opacity: 0});
      gsap.to('.logoblack', { duration:0.5, opacity: 1});
+     gsap.to('.navlist', { duration: 0.5, "--hover-color": "#FF553E" });
    },
- 
-   
  })
-
 
  // navbar change
  ScrollTrigger.create({

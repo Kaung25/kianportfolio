@@ -1309,6 +1309,10 @@ video {
   font-size: 2.441rem;
 }
 
+.text-\[12px\] {
+  font-size: 12px;
+}
+
 .text-\[70px\] {
   font-size: 70px;
 }
@@ -1468,6 +1472,11 @@ video {
 
 .duration-500 {
   transition-duration: 500ms;
+}
+
+.hover\:text-green:hover {
+  --tw-text-opacity: 1;
+  color: rgb(18 227 127 / var(--tw-text-opacity));
 }
 
 .hover\:grayscale-0:hover {
