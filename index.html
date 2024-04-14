@@ -964,6 +964,10 @@ gsap.to(".mousediv", {
 
   function click(event) {
     cursorButton.classList.remove('noclick');
+    cursorButton.classList.add('hidden');
+  }
+
+  function redirect(event) {
     window.location.href = 'waso.html';
   }
 
@@ -991,6 +995,10 @@ function showButton2(event) {
 
   function click2(event) {
     cursorButton2.classList.remove('noclick');
+    cursorButton2.classList.add('hidden');
+  }
+
+  function redirect2(event) {
     window.location.href = 'wasotv.html';
   }
 
@@ -1018,6 +1026,10 @@ function showButton2(event) {
 
   function click3(event) {
     cursorButton3.classList.remove('noclick');
+    cursorButton3.classList.add('hidden');
+  }
+
+  function redirect3(event) {
     alert('Page is under contruction!');
   }
 
@@ -1046,6 +1058,10 @@ function showButton2(event) {
 
   function click4(event) {
     cursorButton4.classList.remove('noclick');
+    cursorButton4.classList.add('hidden');
+  }
+
+  function redirect4(event) {
     window.location.href = 'sfulearn.html';
   }
 
@@ -1073,6 +1089,10 @@ function showButton2(event) {
 
   function click5(event) {
     cursorButton5.classList.remove('noclick');
+    cursorButton5.classList.add('hidden');
+  }
+  
+  function redirect5(event) {
     window.location.href = 'slash.html';
   }
 
@@ -1100,8 +1120,12 @@ function hideButton6() {
 
 function click6(event) {
     cursorButton6.classList.remove('noclick');
-    alert('Page is under contruction!');
+    cursorButton6.classList.add('hidden');
 }
+
+function redirect6(event) {
+    alert('Page is under contruction!');
+  }
 
 function noclick6(event) {
     cursorButton6.classList.add('noclick');
@@ -1132,36 +1156,42 @@ function moveButton6(event) {
   wasoapp.addEventListener('mouseenter', showButton);
   wasoapp.addEventListener('mouseleave', hideButton);
   wasoapp.addEventListener('click', click);
+  wasoapp.addEventListener('click', redirect);
   wasoapp.addEventListener('mouseleave', noclick);
 
   const wasotv = document.getElementById('wasotv');
   wasotv.addEventListener('mouseenter', showButton2);
   wasotv.addEventListener('mouseleave', hideButton2);
   wasotv.addEventListener('click', click2);
+  wasotv.addEventListener('click', redirect2);
   wasotv.addEventListener('mouseleave', noclick2);
 
   const mdsapp = document.getElementById('mdsapp');
   mdsapp.addEventListener('mouseenter', showButton3);
   mdsapp.addEventListener('mouseleave', hideButton3);
   mdsapp.addEventListener('click', click3);
+  mdsapp.addEventListener('click', redirect3);
   mdsapp.addEventListener('mouseleave', noclick3);
 
   const sfulearn = document.getElementById('sfulearn');
   sfulearn.addEventListener('mouseenter', showButton4);
   sfulearn.addEventListener('mouseleave', hideButton4);
   sfulearn.addEventListener('click', click4);
+  sfulearn.addEventListener('click', redirect4);
   sfulearn.addEventListener('mouseleave', noclick4);
 
   const slash = document.getElementById('slash');
   slash.addEventListener('mouseenter', showButton5);
   slash.addEventListener('mouseleave', hideButton5);
   slash.addEventListener('click', click5);
+  slash.addEventListener('click', redirect5);
   slash.addEventListener('mouseleave', noclick5);
 6
   const lycweb = document.getElementById('lycweb');
   lycweb.addEventListener('mouseenter', showButton6);
   lycweb.addEventListener('mouseleave', hideButton6);
   lycweb.addEventListener('click', click6);
+  lycweb.addEventListener('click', redirect6);
   lycweb.addEventListener('mouseleave', noclick6);
 
   ////////////////////////////////////////////////////////////////
