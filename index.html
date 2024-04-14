@@ -76,6 +76,10 @@
     
 
     <style>
+        /* *{
+          cursor:none;
+        } */
+        
         body {
             color: #2B2B2B;
             text-align: center;
@@ -233,42 +237,50 @@
         .navlist:hover{
           color: var(--hover-color, #FF553E) !important;
         }
+
+        .noclick{
+          pointer-events: none;
+        }
+
+        #cursorButton,
+        #cursorButton2,
+        #cursorButton3,
+        #cursorButton4,
+        #cursorButton5,
+        #cursorButton6 {
+          position: fixed;
+          z-index: 9999;
+          transform: translate(-50%, -50%);
+        }
+        
+        /* #cursor {
+          position: fixed;
+          z-index: 9999;
+          transform: translate(-50%, 0%);
+          pointer-events: none;
+        } */
+        
+        .viewCase{
+          font-family: 'Alfa Slab One', serif;
+        }
     </style>
 
 </head>
 
 
 <body class="wrapper" id="wrapper">
+<!-- <div id="cursor" class="hidden lg:block"><img src="./img/Pointer.svg" alt="" class=""> -->
+</div>
 
-<div id="loadingScreen" class="right-0 loading-screen z-50 fixed bg-dark mx-0 my-auto w-full h-screen flex flex-col justify-center items-center">
+<!-- <div id="loadingScreen" class="right-0 loading-screen z-50 fixed bg-dark mx-0 my-auto w-full h-screen flex flex-col justify-center items-center">
   <div class="almost-there">
     <div class="load z-50 w-12 h-12 ">
       <hr/><hr/><hr/><hr/>
     </div>
     <div class="text-center relative text-white top-9">Almost there!</div>
   </div>
-</div>
-<!-- <div class="lg:hidden z-50 absolute overlay bg-yellow text-center h-10 w-10 flex justify-center items-center" id="overlay">
-  <nav class="overlay-menu ">
-    <ul class="text-4xl text-white">
-      <li>
-        <a href="#about" class="navlist block py-2 p-14">About</a>
-      </li>
-      <li>
-        <a href="#works" class="navlist block py-2 p-14">Works</a>
-      </li>
-      <li>
-        <a href="#experience" class="navlist block py-2 p-14">Experiences</a>
-      </li>
-      <li>
-        <a href="#contact" class="navlist block py-2 p-14">Contact</a>
-      </li>
-      <li>
-        <a href="#" class="navlist block py-2 p-14">Resume</a>
-      </li>
-    </ul>
-  </nav>
-</div>-->
+</div> -->
+
     
     
 <nav class="navBar bg-transparent border-gray-200 w-full fixed px-6 md:px-9 lg:px-32 z-20">
@@ -293,7 +305,7 @@
           <img class="" src="./img/close.svg" alt="">
         </div>
         <nav class="overlay-menu relative top-[20%] justify-center items-center">
-          <ul id="mobilenav" class="mobilenav opacity-0 text-4xl text-center flex flex-col gap-[38px]  text-white">
+          <ul id="mobilenav" class="mobilenav opacity-0 text-4xl text-center flex flex-col gap-[38px] text-white">
             <li>
               <a href="#about" class="mobilenav block py-2 p-14">About</a>
             </li>
@@ -428,7 +440,7 @@
 <!-- personality end -->
 
 <div id="section2" class="max-w-screen-2xl mx-auto px-5 md:px-9 lg:px-32 flex justify-center items-center">
-  <div class="py-16 lg:py-32 w-full">
+  <div class="pt-16 lg:pt-32 w-full">
     <div class="bodyTitle">
       <h1 class="text-base lg:text-4xl text-orange text-left absolute z-10">
       PROJECT SHOWCASE
@@ -452,570 +464,93 @@
 
 
 
-<div class="showcase Desktop hidden lg:block snap-mandatory snap-y">
-<section class="startpanel panel snap-center">
-<div class="bg-[#0B3F8B] h-screen flex justify-center items-center text-left">
-  <div class="pl-32 w-1/2 h-screen flex flex-col justify-center ">
-    <h1 class="text-white font-bold text-3xl">Waso Learn Mobile App</h1>
-    <p class="text-white leading-normal font-normal text-xl mt-6 w-3/4">Waso Learn is one of the Strategy First Education Group’s social businesses. Students from KG to  Grade (12) can learn the lessons which support their curriculum studies online, taught by veteran experienced teachers. Waso Learn application is intended to be used as a teaching aid by the teachers and students.</p>
-    <div class="flex gap-2 mt-3">
-      <span class="py-3 px-5 bg-white/25 font-light text-white rounded-lg w-fit">UX</span>
-      <span class="py-3 px-5 bg-white/25 font-light text-white rounded-lg w-fit">UI</span>
-      <span class="py-3 px-5 bg-white/25 font-light text-white rounded-lg w-fit">Interaction</span>
-      <span class="py-3 px-5 bg-white/25 font-light text-white rounded-lg w-fit">Art Direction</span>
-    </div>
-    <div class="flex gap-5 mt-6">
-     <a target="_blank" href="https://play.google.com/store/apps/details?id=com.sfu.waso_learn&hl=en_US"><img src="./img/playstore.svg" alt=""></a>
-     <a target="_blank" href="https://apps.apple.com/us/app/waso-learn-kg-12/id1531073432"><img src="./img/appstore.svg" alt=""></a>
-    </div>
-  </div>
-  <div class="w-1/2 bg-[#0F294F] h-screen flex items-center overflow-hidden">
-    <img class="object-cover w-full" src="./img/Wasoscreen.png" alt="">
-  </div>
-</div>
-</section>
-<!-- wasolearn -->
-
-<section class="panel snap-center">
-  <div class="bg-[#F51E2B] h-screen flex justify-center items-center text-left">
-    <div class="pl-32 w-1/2 h-screen flex flex-col justify-center ">
-      <h1 class="text-white font-bold text-3xl">SFU Learn Application</h1>
-      <p class="text-white leading-normal font-normal text-xl mt-4 w-3/4">SFU Learn is the ultimate super app for Strategy First University students! With this app, students have everything they need in one place. They can easily access their digital ID card, payment info, class details, and grades hassle-free. Plus, SFU Learn offers discounts from partner businesses, saving students money while they study. It's a convenient and powerful tool to make university life easier and more enjoyable.</p>
-      <div class="flex gap-2 mt-3">
-        <span class="py-3 px-5 bg-white/25 font-light text-white rounded-lg w-fit">UX</span>
-        <span class="py-3 px-5 bg-white/25 font-light text-white rounded-lg w-fit">UI</span>
-        <span class="py-3 px-5 bg-white/25 font-light text-white rounded-lg w-fit">Interaction</span>
-        <span class="py-3 px-5 bg-white/25 font-light text-white rounded-lg w-fit">Illustration</span>
-        <span class="py-3 px-5 bg-white/25 font-light text-white rounded-lg w-fit">Animation</span>
-      </div>
-      <div class="flex gap-5 mt-6">
-        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.sfu.studentapp&hl=en&gl=US"><img src="./img/playstore.svg" alt=""></a>
-        <a target="_blank" href="https://apps.apple.com/sg/app/sfu-learn/id6444846287"><img src="./img/appstore.svg" alt=""></a>
-      </div>
-    </div>
-    <div class="w-1/2 bg-[#D70A26] h-screen flex items-center overflow-hidden">
-      <img class="object-cover w-full" src="./img/sfulearn.png" alt="">
-    </div>
-  </div>
-</section>
-<!-- sfu learn -->
-
-<section class="panel snap-center">
-  <div class="bg-[#DFE2F3] h-screen flex justify-center items-center text-left">
-    <div class="pl-32 w-1/2 h-screen flex flex-col justify-center ">
-      <h1 class="text-[#2B2B2B] font-bold text-3xl">Slash POS</h1>
-      <p class="text-[#2B2B2B] leading-normal font-normal text-xl mt-4 w-3/4">Slash POS System by Slash Myanmar is  the fastest and most user-friendly point-of-sale solution in the market. Tailored specifically for the unique demands of Myanmar's vibrant market, Slash POS empowers merchants to effortlessly manage sales, inventory, and customer data through its intuitive and user-friendly interface. Its streamlined interface guarantees effortless navigation, making it exceptionally easy-to-use for both merchants and staff.</p>
-      <div class="flex gap-2 mt-3">
-        <span class="py-3 px-5 bg-white/50 font-light text-[#2B2B2B] rounded-lg w-fit">Team Lead</span>
-        <span class="py-3 px-5 bg-white/50 font-light text-[#2B2B2B] rounded-lg w-fit">UX</span>
-        <span class="py-3 px-5 bg-white/50 font-light text-[#2B2B2B] rounded-lg w-fit">UI</span>
-        <span class="py-3 px-5 bg-white/50 font-light text-[#2B2B2B] rounded-lg w-fit">Interaction</span>
-      </div>
-      <!-- <div class="flex gap-5 mt-6">
-        <img src="./img/Google Play Black.svg" alt="">
-        <img src="./img/App Store Black.svg" alt="">
-      </div> -->
-    </div>
-    <div class="w-1/2 bg-[#9EA5CF] h-screen flex items-center overflow-hidden">
-      <img class="object-cover w-full" src="./img/slashpos.png" alt="">
-    </div>
-  </div>
-</section>
-<!-- slash pos -->
-
-
-<section class="panel snap-center">
-  <div class="bg-[#FEC426] h-screen flex justify-center items-center text-left">
-    <div class="pl-32 w-1/2 h-screen flex flex-col justify-center ">
-      <h1 class="text-[#4B3905] font-bold text-3xl">Waso Learn for Android TV</h1>
-      <p class="text-[#4B3905] leading-normal font-normal text-xl mt-4 w-3/4">Waso Learn is an innovative online learning platform that provides students from KG to Grade 12 with the opportunity to learn curriculum-related lessons. However, its current mobile application limits users in terms of screen size and usability. To address this issue and provide a more immersive learning experience for our users, we were developing a TV application for Waso Learn which will enable students to take advantage of larger screens on their TVs and enjoy enhanced interactivity during their lessons. We believe this new TV app will help make Waso Learn even more accessible while providing an improved user experience overall.</p>
-      <div class="flex gap-2 mt-3">
-        <span class="py-3 px-5 bg-white/50 font-light text-[#4B3905] rounded-lg w-fit">UX</span>
-        <span class="py-3 px-5 bg-white/50 font-light text-[#4B3905] rounded-lg w-fit">UI</span>
-        <span class="py-3 px-5 bg-white/50 font-light text-[#4B3905] rounded-lg w-fit">Interaction</span>
-        <span class="py-3 px-5 bg-white/50 font-light text-[#4B3905] rounded-lg w-fit">Art Direction</span>
-      </div>
-      <div class="flex gap-5 mt-6">
-        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.waso.tv"><img src="./img/playstore.svg" alt=""></a>
-        <!-- <img src="./img/appstore.svg" alt=""> -->
-      </div>
-    </div>
-    <div class="w-1/2 bg-[#F6B504] h-screen flex items-center overflow-hidden">
-      <img class="object-cover w-full" src="./img/Wasotv.png" alt="">
-    </div>
-  </div>
-</section>
-<!-- wasotv -->
-
-
-<section class="panel snap-center">
-  <div class="bg-[#4AB848] h-screen flex justify-center items-center text-left">
-    <div class="pl-32 w-1/2 h-screen flex flex-col justify-center ">
-      <h1 class="text-white font-bold text-3xl">Lin Yaung Chi Website</h1>
-      <p class="text-white leading-normal font-normal text-xl mt-4 w-3/4">Introducing the Lin Yaung Chi Specialist Clinic Booking Website - a user-friendly platform designed to help patients easily book appointments with specialist doctors at the Lin Yaung Chi Clinic. With a simple interface, patients can quickly schedule appointments for various medical needs making healthcare more accessible and convenient for everyone.</p>
-      <div class="flex gap-2 mt-3">
-        <span class="py-3 px-5 bg-[#20991D] font-light text-white rounded-lg w-fit">UX</span>
-        <span class="py-3 px-5 bg-[#20991D] font-light text-white rounded-lg w-fit">UI</span>
-        <span class="py-3 px-5 bg-[#20991D] font-light text-white rounded-lg w-fit">Interaction</span>
-      </div>
-      <!-- <div class="flex gap-5 mt-6">
-        <img src="./img/playstore.svg" alt="">
-        <img src="./img/appstore.svg" alt="">
-      </div> -->
-    </div>
-    <div class="w-1/2 bg-[#00A651] h-screen flex items-center overflow-hidden">
-      <img class="object-cover w-full" src="./img/lyc.png" alt="">
-    </div>
-  </div>
-</section>
-<!-- lyc -->
-
-
-<section class="panel snap-center">
-  <div class="bg-[#CBF3FF] h-screen flex justify-center items-center text-left">
-    <div class="pl-32 w-1/2 h-screen flex flex-col justify-center ">
-      <h1 class="text-[#1A1A1A] font-bold text-3xl">Putet Comics 2.0</h1>
-      <p class="text-[#1A1A1A] leading-normal font-normal text-xl mt-4 w-3/4">Putet Comics is a beloved publisher of Myanmar comics, featuring some of the most iconic characters in Myanmar. Unfortunately, without proper maintenance over time, the application's usability has become outdated and inefficient. To ensure that fans continue to enjoy these classic comics for years to come, we are conducting research and redesigning the platform with an updated user interface. This will make it easier for readers to access their favorite content from Putet Comics while also ensuring that all new releases can be enjoyed as well!</p>
-      <div class="flex gap-2 mt-3">
-        <span class="py-3 px-5 bg-[#A6E5F8] font-light text-[#1A1A1A] rounded-lg w-fit">UX</span>
-        <span class="py-3 px-5 bg-[#A6E5F8] font-light text-[#1A1A1A] rounded-lg w-fit">UI</span>
-        <span class="py-3 px-5 bg-[#A6E5F8] font-light text-[#1A1A1A] rounded-lg w-fit">Interaction</span>
-      </div>
-      <div class="flex gap-5 mt-6">
-        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.putet.comic&hl=en&gl=US"><img src="./img/Google Play Black.svg" alt=""></a>
-        <a target="_blank" href="https://apps.apple.com/mm/app/putet-comics-2-0/id1559173511"><img src="./img/App Store Black.svg" alt=""></a>
-      </div>
-    </div>
-    <div class="w-1/2 bg-[#A6E5F8] h-screen flex items-center overflow-hidden">
-      <img class="object-cover w-full" src="./img/putet.png" alt="">
-    </div>
-  </div>
-</section>
-<!-- putet comics -->
-
-
-<section class="panel snap-center">
-  <div class="bg-[#F99D36] h-screen flex justify-center items-center text-left">
-    <div class="pl-32 w-1/2 h-screen flex flex-col justify-center ">
-      <h1 class="text-white font-bold text-3xl">MyDemocracy School</h1>
-      <p class="text-white leading-normal font-normal text-xl mt-4 w-3/4">MyDemocracy School is an application that helps you build political knowledge and skills. The aim of the app is to empower youth, women, and ethnic leaders and Alumni of the Democracy School in Myanmar, who are interested in politics with the knowledge and skills to mindfully participate in political processes. Users will have unlimited online and offline access to expertly curated, interactive contents from training handbooks and publications of MyDemocracy School for free.</p>
-      <div class="flex gap-2 mt-3">
-        <span class="py-3 px-5 bg-white/20 font-light text-white rounded-lg w-fit">UX</span>
-        <span class="py-3 px-5 bg-white/20 font-light text-white rounded-lg w-fit">UI</span>
-        <span class="py-3 px-5 bg-white/20 font-light text-white rounded-lg w-fit">Interaction</span>
-      </div>
-      <div class="flex gap-5 mt-6">
-         <a target="_blank" href="https://play.google.com/store/apps/details?id=com.nimd.link_learn"><img src="./img/playstore.svg" alt=""></a>
-         <a target="_blank" href="https://apps.apple.com/us/app/mydemocracy-school/id1639677600"><img src="./img/appstore.svg" alt=""></a>
-      </div>
-    </div>
-    <div class="w-1/2 bg-[#F77C06] h-screen flex items-center overflow-hidden">
-      <img class="object-cover w-full" src="./img/mydemocracy.png" alt="">
-    </div>
-  </div>
-</section>
-<!-- mydemocracyschool -->
-
-<section class="panel snap-center">
-  <div class="bg-[#5A58D1] h-screen flex justify-center items-center text-left">
-    <div class="pl-32 w-1/2 h-screen flex flex-col justify-center ">
-      <h1 class="text-white font-bold text-3xl">BBCollagen Mini Webpage</h1>
-      <p class="text-white leading-normal font-normal text-xl mt-4 w-3/4">This is an immersive online platform designed to bring festive joy and excitement to users during Christmas and Chinese New Year! With a user-friendly interface and festive designs tailored for each occasion, users can participate in lucky draw promotions using exclusive promo codes.</p>
-      <div class="flex gap-2 mt-3">
-        <span class="py-3 px-5 bg-white/20 font-light text-white rounded-lg w-fit">UX</span>
-        <span class="py-3 px-5 bg-white/20 font-light text-white rounded-lg w-fit">UI</span>
-        <span class="py-3 px-5 bg-white/20 font-light text-white rounded-lg w-fit">Interaction</span>
-      </div>
-      <!-- <div class="flex gap-5 mt-6">
-        <img src="./img/playstore.svg" alt="">
-        <img src="./img/appstore.svg" alt="">
-      </div> -->
-    </div>
-    <div class="w-1/2 bg-[#4947B4] h-screen flex items-center overflow-hidden">
-      <img class="object-cover w-full" src="./img/bbcollagen.png" alt="">
-    </div>
-  </div>
-</section>
-<!-- bbcollagen -->
-
-
-<section class="panel snap-center">
-  <div class="bg-[#FFEFEB] h-screen flex justify-center items-center text-left">
-    <div class="pl-32 w-1/2 h-screen flex flex-col justify-center ">
-      <h1 class="text-[#4F0E00] font-bold text-3xl">FlyEase Flight Tickets</h1>
-      <p class="text-[#4F0E00] leading-normal font-normal text-xl mt-4 w-3/4">Meet FlyEase, your convenient online platform for booking flight tickets easily on both mobile and the web. FlyEase is all about simplifying the process, ensuring travelers can find and book their flights effortlessly. But that's not all - with FlyEase, users can also indulge in inspiring travel blogs, adding to the excitement of their journey.</p>
-      <div class="flex gap-2 mt-3">
-        <span class="py-3 px-5 bg-[#FFD4CA]/40 font-light text-[#4F0E00] rounded-lg w-fit">UX</span>
-        <span class="py-3 px-5 bg-[#FFD4CA]/40 font-light text-[#4F0E00] rounded-lg w-fit">UI</span>
-        <span class="py-3 px-5 bg-[#FFD4CA]/40 font-light text-[#4F0E00] rounded-lg w-fit">Interaction</span>
-      </div>
-      <!-- <div class="flex gap-5 mt-6">
-        <img src="./img/playstore.svg" alt="">
-        <img src="./img/appstore.svg" alt="">
-      </div> -->
-    </div>
-    <div class="w-1/2 bg-[#FFD4CA] h-screen flex items-center overflow-hidden">
-      <img class="object-cover w-full" src="./img/flyease.png" alt="">
-    </div>
-  </div>
-</section>
-<!-- flyease-->
-
-
-<section class="panel snap-center">
-  <div class="bg-[#02A7F6] h-screen flex justify-center items-center text-left">
-    <div class="pl-32 w-1/2 h-screen flex flex-col justify-center ">
-      <h1 class="text-white font-bold text-3xl">Waso Tech Website</h1>
-      <p class="text-white leading-normal font-normal text-xl mt-4 w-3/4">Waso Tech was established in 2022 as a Tech Business Solutions provider under Strategy First Education Group. Waso Tech takes pride in being the premier software solution provider in the Myanmar market, with a focus on developing high-performance software solutions for various applications.</p>
-      <div class="flex gap-2 mt-3">
-        <span class="py-3 px-5 bg-white/20 font-light text-white rounded-lg w-fit">UX</span>
-        <span class="py-3 px-5 bg-white/20 font-light text-white rounded-lg w-fit">UI</span>
-        <span class="py-3 px-5 bg-white/20 font-light text-white rounded-lg w-fit">Interaction</span>
-      </div>
-      <!-- <div class="flex gap-5 mt-6">
-        <img src="./img/playstore.svg" alt="">
-        <img src="./img/appstore.svg" alt="">
-      </div> -->
-    </div>
-    <div class="w-1/2 bg-[#078ADF] h-screen flex items-center overflow-hidden">
-      <img class="object-cover w-full" src="./img/wasotech.png" alt="">
-    </div>
-  </div>
-</section>
-<!-- waso tech -->
-
-
-
-<section class="panel snap-center">
-  <div class="bg-[#CAE436] h-screen flex justify-center items-center text-left">
-    <div class="pl-32 w-1/2 h-screen flex flex-col justify-center ">
-      <h1 class="text-[#3D4703] font-bold text-3xl">Lin Lat San Application</h1>
-      <p class="text-[#3D4703] leading-normal font-normal text-xl mt-4 w-3/4">Lin Lat San is a ticket-selling app designed for sellers. It makes selling digital tickets easy and hassle-free. With a user-friendly interface and customized features, sellers can efficiently manage their ticket sales. Lin Lat San streamlines the whole process, making ticket-selling convenient and efficient for sellers. Say goodbye to complications and hello to smooth ticket sales with Lin Lat San!</p>
-      <div class="flex gap-2 mt-3">
-        <span class="py-3 px-5 bg-[#E8FD71] font-light text-[#3D4703] rounded-lg w-fit">UX</span>
-        <span class="py-3 px-5 bg-[#E8FD71] font-light text-[#3D4703] rounded-lg w-fit">UI</span>
-        <span class="py-3 px-5 bg-[#E8FD71] font-light text-[#3D4703] rounded-lg w-fit">Interaction</span>
-      </div>
-      <!-- <div class="flex gap-5 mt-6">
-        <img src="./img/playstore.svg" alt="">
-        <img src="./img/appstore.svg" alt="">
-      </div> -->
-    </div>
-    <div class="w-1/2 bg-[#ADCA0A] h-screen flex items-center overflow-hidden">
-      <img class="object-cover w-full" src="./img/linlatsan.png" alt="">
-    </div>
-  </div>
-</section>
-<!-- linlatsan -->
-</div>
-<!-- desktop showcase end -->
-
-
-
-
-
-
-
-
-<div class=" mobileshowcase block lg:hidden">
-  <section class="startpanel-mobile snap-center">
-    <div class="bg-[#0B3F8B] pb-10 h-fit flex flex-col-reverse justify-center items-center text-left">
-      <div class="p-5 md:p-9 w-full h-1/2 flex flex-col justify-center ">
-        <h1 class="text-white font-bold mt-4 text-xl">Waso Learn Mobile App</h1>
-        <p class="text-white leading-normal font-normal text-base mt-3 w-full">Waso Learn is one of the Strategy First Education Group’s social businesses. Students from KG to  Grade (12) can learn the lessons which support their curriculum studies online, taught by veteran experienced teachers. Waso Learn application is intended to be used as a teaching aid by the teachers and students.</p>
-        <div class="flex flex-wrap gap-2 mt-3">
-          <span class="py-3 px-5 bg-white/25 font-light text-white rounded-md w-fit">UX</span>
-          <span class="py-3 px-5 bg-white/25 font-light text-white rounded-lg w-fit">UI</span>
-          <span class="py-3 px-5 bg-white/25 font-light text-white rounded-md w-fit">Interaction</span>
-          <span class="py-3 px-5 bg-white/25 font-light text-white rounded-md w-fit">Art Direction</span>
-        </div>
-        <div class="flex gap-5 mt-6">
-         <a target="_blank" href="https://play.google.com/store/apps/details?id=com.sfu.waso_learn&hl=en_US"><img src="./img/playstore.svg" alt=""></a>
-         <a target="_blank" href="https://apps.apple.com/us/app/waso-learn-kg-12/id1531073432"><img src="./img/appstore.svg" alt=""></a>
+<!-- showcase -->
+<section class="pt-10 lg:pt-20">
+  <div class="flex flex-col md:grid grid-cols-2 gap-10 md:gap-16 px-5 md:px-9 lg:px-32 ">
+    <div id="wasoapp" class="cursor-none">
+      <div class="text-center md:text-left">
+        <img src="./img/wasocard.png" alt="">
+        <h1 class="mt-5 md:mt-10 text-dark font-bold text-xl lg:text-3xl">Waso Learn Mobile App</h1>
+        <div class="justify-center md:justify-normal flex flex-wrap gap-2 mt-3 md:mt-6 text-sm md:text-base">
+            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">UX</span>
+            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">UI</span>
+            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">Interaction</span>
+            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">Art Direction</span>
         </div>
       </div>
-      <div class="w-full bg-[#0F294F] h-1/2 flex items-center overflow-hidden">
-        <img class="object-cover w-full" src="./img/Wasoscreen.png" alt="">
-      </div>
+      <button id="cursorButton" class="viewCase hidden w-28 h-28 rounded-full bg-[#619B22] border-[6px] border-white text-center text-xl leading-none text-white drop-shadow">VIEW CASE</button>
     </div>
-    </section>
-    <!-- wasolearn -->
-
-    <section class="snap-center">
-      <div class="bg-[#F51E2B] pb-10 h-fit flex flex-col-reverse justify-center items-center text-left">
-        <div class="p-5 md:p-9 w-full h-1/2 flex flex-col justify-center ">
-          <h1 class="text-white font-bold mt-4 text-xl">SFU Learn Application</h1>
-          <p class="text-white leading-normal font-normal text-base mt-3 w-full">SFU Learn is the ultimate super app for Strategy First University students! With this app, students have everything they need in one place. They can easily access their digital ID card, payment info, class details, and grades hassle-free. Plus, SFU Learn offers discounts from partner businesses, saving students money while they study. It's a convenient and powerful tool to make university life easier and more enjoyable.</p>
-          <div class="flex flex-wrap gap-2 mt-3">
-            <span class="py-3 px-5 bg-white/25 font-light text-white rounded-md w-fit">UX</span>
-            <span class="py-3 px-5 bg-white/25 font-light text-white rounded-lg w-fit">UI</span>
-            <span class="py-3 px-5 bg-white/25 font-light text-white rounded-md w-fit">Interaction</span>
-            <span class="py-3 px-5 bg-white/25 font-light text-white rounded-md w-fit">illustrations</span>
-            <span class="py-3 px-5 bg-white/25 font-light text-white rounded-md w-fit">Art Direction</span>
-          </div>
-          <div class="flex gap-5 mt-6">
-           <a target="_blank" href="https://play.google.com/store/apps/details?id=com.sfu.studentapp&hl=en&gl=US"><img src="./img/playstore.svg" alt=""></a>
-           <a target="_blank" href="https://apps.apple.com/sg/app/sfu-learn/id6444846287"><img src="./img/appstore.svg" alt=""></a>
-          </div>
-        </div>
-        <div class="w-full bg-[#D70A26] h-1/2 flex items-center overflow-hidden">
-          <img class="object-cover w-full" src="./img/sfulearn.png" alt="">
-        </div>
-      </div>
-      </section>
-      <!-- SFU learn -->
-
-      <section class="snap-center">
-        <div class="bg-[#DFE2F3] pb-10 h-fit flex flex-col-reverse justify-center items-center text-left">
-          <div class="text-[#2B2B2B] p-5 md:p-9 w-full h-1/2 flex flex-col justify-center ">
-            <h1 class="font-bold mt-4 text-xl">Slash POS</h1>
-            <p class="leading-normal font-normal text-base mt-3 w-full">Slash POS System by Slash Myanmar is  the fastest and most user-friendly point-of-sale solution in the market. Tailored specifically for the unique demands of Myanmar's vibrant market, Slash POS empowers merchants to effortlessly manage sales, inventory, and customer data through its intuitive and user-friendly interface. Its streamlined interface guarantees effortless navigation, making it exceptionally easy-to-use for both merchants and staff.</p>
-            <div class="flex flex-wrap gap-2 mt-3">
-              <span class="py-3 px-5 bg-white/50 font-light rounded-md w-fit">Team Lead</span>
-              <span class="py-3 px-5 bg-white/50 font-light rounded-md w-fit">UX</span>
-              <span class="py-3 px-5 bg-white/50 font-light rounded-lg w-fit">UI</span>
-              <span class="py-3 px-5 bg-white/50 font-light rounded-md w-fit">Interaction</span>
-            </div>
-            <!-- <div class="flex gap-5 mt-6">
-             <a target="_blank" href="https://play.google.com/store/apps/details?id=com.sfu.waso_learn&hl=en_US"><img src="./img/playstore.svg" alt=""></a>
-             <a target="_blank" href="https://apps.apple.com/us/app/waso-learn-kg-12/id1531073432"><img src="./img/appstore.svg" alt=""></a>
-            </div> -->
-          </div>
-          <div class="w-full bg-[#9EA5CF] h-1/2 flex items-center overflow-hidden">
-            <img class="object-cover w-full" src="./img/slashpos.png" alt="">
-          </div>
-        </div>
-        </section>
-        <!-- Slash POS -->
-
-
-
-        <section class="snap-center">
-          <div class="bg-[#FEC426] pb-10 h-fit flex flex-col-reverse justify-center items-center text-left">
-            <div class="text-[#4B3905] p-5 md:p-9 w-full h-1/2 flex flex-col justify-center ">
-              <h1 class="font-bold mt-4 text-xl">Waso Learn for Android TV</h1>
-              <p class="leading-normal font-normal text-base mt-3 w-full">Waso Learn is an innovative online learning platform that provides students from KG to Grade 12 with the opportunity to learn curriculum-related lessons. However, its current mobile application limits users in terms of screen size and usability. To address this issue and provide a more immersive learning experience for our users, we were developing a TV application for Waso Learn which will enable students to take advantage of larger screens on their TVs and enjoy enhanced interactivity during their lessons. We believe this new TV app will help make Waso Learn even more accessible while providing an improved user experience overall.</p>
-              <div class="flex flex-wrap gap-2 mt-3">
-                
-                <span class="py-3 px-5 bg-white/50 font-light rounded-md w-fit">UX</span>
-                <span class="py-3 px-5 bg-white/50 font-light rounded-lg w-fit">UI</span>
-                <span class="py-3 px-5 bg-white/50 font-light rounded-md w-fit">Interaction</span>
-                <span class="py-3 px-5 bg-white/50 font-light rounded-md w-fit">Art Direction</span>
-              </div>
-              <div class="flex gap-5 mt-6">
-               <a target="_blank" href="https://play.google.com/store/apps/details?id=com.waso.tv"><img src="./img/playstore.svg" alt=""></a>
-               <!-- <a target="_blank" href="https://apps.apple.com/us/app/waso-learn-kg-12/id1531073432"><img src="./img/appstore.svg" alt=""></a> -->
-              </div>
-            </div>
-            <div class="w-full bg-[#F6B504] h-1/2 flex items-center overflow-hidden">
-              <img class="object-cover w-full" src="./img/Wasotv.png" alt="">
-            </div>
-          </div>
-          </section>
-          <!-- Waso Learn TV -->
-
-          <div class="flex justify-center ">
-          <div class="seeAllBtn w-[90%] flex items-center justify-center mt-6 mb-6 bg-orange h-14 text-white text-base lg:text-xl text-center rounded-lg overflow-hidden relative transition-all duration-300">
-              See more projects
-          </div>
-          </div>
-          
-
-          
-          <div class="showall hidden">
-          <section class="snap-center">
-            <div class="bg-[#4AB848] pb-10 h-fit flex flex-col-reverse justify-center items-center text-left">
-              <div class="text-white p-5 md:p-9 w-full h-1/2 flex flex-col justify-center ">
-                <h1 class="font-bold mt-4 text-xl">Lin Yaung Chi Website</h1>
-                <p class="leading-normal font-normal text-base mt-3 w-full">Introducing the Lin Yaung Chi Specialist Clinic Booking Website - a user-friendly platform designed to help patients easily book appointments with specialist doctors at the Lin Yaung Chi Clinic. With a simple interface, patients can quickly schedule appointments for various medical needs making healthcare more accessible and convenient for everyone.</p>
-                <div class="flex flex-wrap gap-2 mt-3">
-                  <span class="py-3 px-5 bg-[#20991D] font-light rounded-md w-fit">UX</span>
-                  <span class="py-3 px-5 bg-[#20991D] font-light rounded-lg w-fit">UI</span>
-                  <span class="py-3 px-5 bg-[#20991D] font-light rounded-md w-fit">Interaction</span>
-                </div>
-                <!-- <div class="flex gap-5 mt-6">
-                 <a target="_blank" href="https://play.google.com/store/apps/details?id=com.sfu.waso_learn&hl=en_US"><img src="./img/playstore.svg" alt=""></a>
-                 <a target="_blank" href="https://apps.apple.com/us/app/waso-learn-kg-12/id1531073432"><img src="./img/appstore.svg" alt=""></a>
-                </div> -->
-              </div>
-              <div class="w-full bg-[#00A651] h-1/2 flex items-center overflow-hidden">
-                <img class="object-cover w-full" src="./img/lyc.png" alt="">
-              </div>
-            </div>
-            </section>
-            <!-- LYC WEB -->
-
-
-            <section class="snap-center">
-              <div class="bg-[#CBF3FF] pb-10 h-fit flex flex-col-reverse justify-center items-center text-left">
-                <div class="text-[#1A1A1A] p-5 md:p-9 w-full h-1/2 flex flex-col justify-center ">
-                  <h1 class="font-bold mt-4 text-xl">Putet Comics 2.0</h1>
-                  <p class="leading-normal font-normal text-base mt-3 w-full">Putet Comics is a beloved publisher of Myanmar comics, featuring some of the most iconic characters in Myanmar. Unfortunately, without proper maintenance over time, the application's usability has become outdated and inefficient. To ensure that fans continue to enjoy these classic comics for years to come, we are conducting research and redesigning the platform with an updated user interface. This will make it easier for readers to access their favorite content from Putet Comics while also ensuring that all new releases can be enjoyed as well!</p>
-                  <div class="flex flex-wrap gap-2 mt-3">
-                    <span class="py-3 px-5 bg-[#A6E5F8] font-light rounded-md w-fit">UX</span>
-                    <span class="py-3 px-5 bg-[#A6E5F8] font-light rounded-lg w-fit">UI</span>
-                    <span class="py-3 px-5 bg-[#A6E5F8] font-light rounded-md w-fit">Interaction</span>
-                  </div>
-                  <div class="flex gap-5 mt-6">
-                   <a target="_blank" href="https://play.google.com/store/apps/details?id=com.putet.comic&hl=en&gl=US"><img src="./img/Google Play Black.svg" alt=""></a>
-                   <a target="_blank" href="https://apps.apple.com/mm/app/putet-comics-2-0/id1559173511"><img src="./img/App Store Black.svg" alt=""></a>
-                  </div>
-                </div>
-                <div class="w-full bg-[#A6E5F8] h-1/2 flex items-center overflow-hidden">
-                  <img class="object-cover w-full" src="./img/putet.png" alt="">
-                </div>
-              </div>
-              </section>
-              <!-- Putet Comics-->
-
-
-              <section class="snap-center">
-                <div class="bg-[#F99D36] pb-10 h-fit flex flex-col-reverse justify-center items-center text-left">
-                  <div class="text-white p-5 md:p-9 w-full h-1/2 flex flex-col justify-center ">
-                    <h1 class="font-bold mt-4 text-xl">MyDemocracy School</h1>
-                    <p class="leading-normal font-normal text-base mt-3 w-full">MyDemocracy School is an application that helps you build political knowledge and skills. The aim of the app is to empower youth, women, and ethnic leaders and Alumni of the Democracy School in Myanmar, who are interested in politics with the knowledge and skills to mindfully participate in political processes. Users will have unlimited online and offline access to expertly curated, interactive contents from training handbooks and publications of MyDemocracy School for free.</p>
-                    <div class="flex flex-wrap gap-2 mt-3">
-                      <!-- <span class="py-3 px-5 bg-white/50 font-light rounded-md w-fit">Team Lead</span> -->
-                      <span class="py-3 px-5 bg-white/20 font-light rounded-md w-fit">UX</span>
-                      <span class="py-3 px-5 bg-white/20 font-light rounded-lg w-fit">UI</span>
-                      <span class="py-3 px-5 bg-white/20 font-light rounded-md w-fit">Interaction</span>
-                    </div>
-                    <div class="flex gap-5 mt-6">
-                     <a target="_blank" href="https://play.google.com/store/apps/details?id=com.nimd.link_learn"><img src="./img/playstore.svg" alt=""></a>
-                     <a target="_blank" href="https://apps.apple.com/us/app/mydemocracy-school/id1639677600"><img src="./img/appstore.svg" alt=""></a>
-                    </div>
-                  </div>
-                  <div class="w-full bg-[#F77C06] h-1/2 flex items-center overflow-hidden">
-                    <img class="object-cover w-full" src="./img/mydemocracy.png" alt="">
-                  </div>
-                </div>
-                </section>
-                <!-- MyDemocracy -->
-
-
-                <section class="snap-center">
-                  <div class="bg-[#5A58D1] pb-10 h-fit flex flex-col-reverse justify-center items-center text-left">
-                    <div class="text-white p-5 md:p-9 w-full h-1/2 flex flex-col justify-center ">
-                      <h1 class="font-bold mt-4 text-xl">BBCollagen Mini Webpage</h1>
-                      <p class="leading-normal font-normal text-base mt-3 w-full">This is an immersive online platform designed to bring festive joy and excitement to users during Christmas and Chinese New Year! With a user-friendly interface and festive designs tailored for each occasion, users can participate in lucky draw promotions using exclusive promo codes.</p>
-                      <div class="flex flex-wrap gap-2 mt-3">
-                        <!-- <span class="py-3 px-5 bg-white/50 font-light rounded-md w-fit">Team Lead</span> -->
-                        <span class="py-3 px-5 bg-white/20 font-light rounded-md w-fit">UX</span>
-                        <span class="py-3 px-5 bg-white/20 font-light rounded-lg w-fit">UI</span>
-                        <span class="py-3 px-5 bg-white/20 font-light rounded-md w-fit">Interaction</span>
-                        <span class="py-3 px-5 bg-white/20 font-light rounded-md w-fit">Animation</span>
-                      </div>
-                      <!-- <div class="flex gap-5 mt-6">
-                       <a target="_blank" href="https://play.google.com/store/apps/details?id=com.sfu.waso_learn&hl=en_US"><img src="./img/playstore.svg" alt=""></a>
-                       <a target="_blank" href="https://apps.apple.com/us/app/waso-learn-kg-12/id1531073432"><img src="./img/appstore.svg" alt=""></a>
-                      </div> -->
-                    </div>
-                    <div class="w-full bg-[#4947B4] h-1/2 flex items-center overflow-hidden">
-                      <img class="object-cover w-full" src="./img/bbcollagen.png" alt="">
-                    </div>
-                  </div>
-                  </section>
-                  <!-- BB Collagen -->
-
-
-                  <section class="snap-center">
-                    <div class="bg-[#FFEFEB] pb-10 h-fit flex flex-col-reverse justify-center items-center text-left">
-                      <div class="text-[#4F0E00] p-5 md:p-9 w-full h-1/2 flex flex-col justify-center ">
-                        <h1 class="font-bold mt-4 text-xl">FlyEase- Flight Tickets</h1>
-                        <p class="leading-normal font-normal text-base mt-3 w-full">Meet FlyEase, your convenient online platform for booking flight tickets easily on both mobile and the web. FlyEase is all about simplifying the process, ensuring travelers can find and book their flights effortlessly. But that's not all - with FlyEase, users can also indulge in inspiring travel blogs, adding to the excitement of their journey.</p>
-                        <div class="flex flex-wrap gap-2 mt-3">
-                          <!-- <span class="py-3 px-5 bg-white/50 font-light rounded-md w-fit">Team Lead</span> -->
-                          <span class="py-3 px-5 bg-[#FFD4CA]/40 font-light rounded-md w-fit">UX</span>
-                          <span class="py-3 px-5 bg-[#FFD4CA]/40 font-light rounded-lg w-fit">UI</span>
-                          <span class="py-3 px-5 bg-[#FFD4CA]/40 font-light rounded-md w-fit">Interaction</span>
-                          <!-- <span class="py-3 px-5 bg-white/20 font-light rounded-md w-fit">Animation</span> -->
-                        </div>
-                        <!-- <div class="flex gap-5 mt-6">
-                         <a target="_blank" href="https://play.google.com/store/apps/details?id=com.sfu.waso_learn&hl=en_US"><img src="./img/playstore.svg" alt=""></a>
-                         <a target="_blank" href="https://apps.apple.com/us/app/waso-learn-kg-12/id1531073432"><img src="./img/appstore.svg" alt=""></a>
-                        </div> -->
-                      </div>
-                      <div class="w-full bg-[#FFD4CA] h-1/2 flex items-center overflow-hidden">
-                        <img class="object-cover w-full" src="./img/flyease.png" alt="">
-                      </div>
-                    </div>
-                    </section>
-                    <!-- Fly Ease -->
-
-
-                    <section class="snap-center">
-                      <div class="bg-[#02A7F6] pb-10 h-fit flex flex-col-reverse justify-center items-center text-left">
-                        <div class="text-white p-5 md:p-9 w-full h-1/2 flex flex-col justify-center ">
-                          <h1 class="font-bold mt-4 text-xl">Waso Tech Website</h1>
-                          <p class="leading-normal font-normal text-base mt-3 w-full">Waso Tech was established in 2022 as a Tech Business Solutions provider under Strategy First Education Group. Waso Tech takes pride in being the premier software solution provider in the Myanmar market, with a focus on developing high-performance software solutions for various applications.</p>
-                          <div class="flex flex-wrap gap-2 mt-3">
-                            <!-- <span class="py-3 px-5 bg-white/50 font-light rounded-md w-fit">Team Lead</span> -->
-                            <span class="py-3 px-5 bg-white/20 font-light rounded-md w-fit">UX</span>
-                            <span class="py-3 px-5 bg-white/20 font-light rounded-lg w-fit">UI</span>
-                            <span class="py-3 px-5 bg-white/20 font-light rounded-md w-fit">Interaction</span>
-                            <span class="py-3 px-5 bg-white/20 font-light rounded-md w-fit">Animation</span>
-                          </div>
-                          <!-- <div class="flex gap-5 mt-6">
-                           <a target="_blank" href="https://play.google.com/store/apps/details?id=com.sfu.waso_learn&hl=en_US"><img src="./img/playstore.svg" alt=""></a>
-                           <a target="_blank" href="https://apps.apple.com/us/app/waso-learn-kg-12/id1531073432"><img src="./img/appstore.svg" alt=""></a>
-                          </div> -->
-                        </div>
-                        <div class="w-full bg-[#078ADF] h-1/2 flex items-center overflow-hidden">
-                          <img class="object-cover w-full" src="./img/wasotech.png" alt="">
-                        </div>
-                      </div>
-                      </section>
-                      <!-- Waso Tech -->
-
-
-                      <section class="snap-center">
-                        <div class="bg-[#CAE436] pb-10 h-fit flex flex-col-reverse justify-center items-center text-left">
-                          <div class="text-[#3D4703] p-5 md:p-9 w-full h-1/2 flex flex-col justify-center ">
-                            <h1 class="font-bold mt-4 text-xl">Lin Lat San Application</h1>
-                            <p class="leading-normal font-normal text-base mt-3 w-full">Lin Lat San is a ticket-selling app designed for sellers. It makes selling digital tickets easy and hassle-free. With a user-friendly interface and customized features, sellers can efficiently manage their ticket sales. Lin Lat San streamlines the whole process, making ticket-selling convenient and efficient for sellers. Say goodbye to complications and hello to smooth ticket sales with Lin Lat San!</p>
-                            <div class="flex flex-wrap gap-2 mt-3">
-                              <!-- <span class="py-3 px-5 bg-white/50 font-light rounded-md w-fit">Team Lead</span> -->
-                              <span class="py-3 px-5 bg-[#E8FD71] font-light rounded-md w-fit">UX</span>
-                              <span class="py-3 px-5 bg-[#E8FD71] font-light rounded-lg w-fit">UI</span>
-                              <span class="py-3 px-5 bg-[#E8FD71] font-light rounded-md w-fit">Interaction</span>
-                              <!-- <span class="py-3 px-5 bg-white/20 font-light rounded-md w-fit">Animation</span> -->
-                            </div>
-                            <!-- <div class="flex gap-5 mt-6">
-                             <a target="_blank" href="https://play.google.com/store/apps/details?id=com.sfu.waso_learn&hl=en_US"><img src="./img/playstore.svg" alt=""></a>
-                             <a target="_blank" href="https://apps.apple.com/us/app/waso-learn-kg-12/id1531073432"><img src="./img/appstore.svg" alt=""></a>
-                            </div> -->
-                          </div>
-                          <div class="w-full bg-[#ADCA0A] h-1/2 flex items-center overflow-hidden">
-                            <img class="object-cover w-full" src="./img/linlatsan.png" alt="">
-                          </div>
-                        </div>
-                        </section>
-                        <!-- Lin Lat San -->
-          </div>
-</div>
-
-
-
-
-
-
-<!-- <div class="px-32 flex justify-center items-center">
-  <div class="py-32 w-full">
-    <h1 class="text-3xl text-grey text-left">
-      Skills and software expertise
-    </h1>
     
-    <div class="text3 about w-[100%] text-4xl text-dark text-left leading-relaxed mt-4">
-      <p>Welcome to the mastery world! Apart from crafting</p>
-      <p>captivating visuals for websites and apps, I bring a diverse</p>
-      <p>skill set to the table. With a strong passion for learning and</p>
-      <p>a knack for picking up new skills, I've acquired proficiency</p>
-      <p>in various areas, including Character Illustration, Digital</p>
-      <p>Painting, Motion Graphics, and Building Static Websites.</p>
+    <div id="wasotv" class="cursor-none">
+      <div class="text-center md:text-left">
+        <img src="./img/wasotvcard.png" alt="">
+        <h1 class="mt-5 md:mt-10 text-dark font-bold text-xl lg:text-3xl">Waso Learn for Android TV</h1>
+        <div class="justify-center md:justify-normal flex flex-wrap gap-2 mt-3 md:mt-6 text-sm md:text-base">
+            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">UX</span>
+            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">UI</span>
+            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">Interaction</span>
+            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">Art Direction</span>
+        </div>
+      </div>
+      <button id="cursorButton2" class="viewCase hidden w-28 h-28 rounded-full bg-[#9B6A1F] border-[6px] border-white text-center text-xl leading-none text-white drop-shadow">VIEW CASE</button>
+    </div>
+
+    <div id="mdsapp" class="cursor-none">
+      <div class="text-center md:text-left">
+        <img src="./img/mdscard.png" alt="">
+        <h1 class="mt-5 md:mt-10 text-dark font-bold text-xl lg:text-3xl">MyDemocracy School</h1>
+        <div class="justify-center md:justify-normal flex flex-wrap gap-2 mt-3 md:mt-6 text-sm md:text-base">
+            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">UX</span>
+            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">UI</span>
+            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">Interaction</span>
+            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">Art Direction</span>
+        </div>
+      </div>
+      <button id="cursorButton3" class="viewCase hidden w-28 h-28 rounded-full bg-[#EF7402] border-[6px] border-white text-center text-xl leading-none text-white drop-shadow">VIEW CASE</button>
+    </div>
+
+    <div id="sfulearn" class="cursor-none">
+      <div class="text-center md:text-left">
+        <img src="./img/sfulearncard.png" alt="">
+        <h1 class="mt-5 md:mt-10 text-dark font-bold text-xl lg:text-3xl">SFU Learn Application</h1>
+        <div class="justify-center md:justify-normal flex flex-wrap gap-2 mt-3 md:mt-6 text-sm md:text-base">
+            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">UX</span>
+            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">UI</span>
+            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">Interaction</span>
+            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">Illustration</span>
+            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">Animation</span>
+        </div>
+      </div>
+      <button id="cursorButton4" class="viewCase hidden w-28 h-28 rounded-full bg-[#F63042] border-[6px] border-white text-center text-xl leading-none text-white drop-shadow">VIEW CASE</button>
+    </div>
+
+    <div id="slash" class="cursor-none">
+      <div class="text-center md:text-left">
+        <img src="./img/slashposcard.png" alt="">
+        <h1 class="mt-5 md:mt-10 text-dark font-bold text-xl lg:text-3xl">Slash POS</h1>
+        <div class="justify-center md:justify-normal flex flex-wrap gap-2 mt-3 md:mt-6 text-sm md:text-base">
+            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">UX</span>
+            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">Lead the UI Team</span>
+            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">Interaction</span>
+        </div>
+      </div>
+      <button id="cursorButton5" class="viewCase hidden w-28 h-28 rounded-full bg-[#6981EE] border-[6px] border-white text-center text-xl leading-none text-white drop-shadow">VIEW CASE</button>
+    </div>
+
+    <div id="lycweb" class="cursor-none">
+      <div class="text-center md:text-left">
+        <img src="./img/lyccard.png" alt="">
+        <h1 class="mt-5 md:mt-10 text-dark font-bold text-xl lg:text-3xl">LYC Clinic Booink Website</h1>
+        <div class="justify-center md:justify-normal flex flex-wrap gap-2 mt-3 md:mt-6 text-sm md:text-base">
+            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">UX</span>
+            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">UI</span>
+            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">Interaction</span>
+        </div>
+      </div>
+      <button id="cursorButton6" class="viewCase hidden w-28 h-28 rounded-full bg-[#10850E] border-[6px] border-white text-center text-xl leading-none text-white drop-shadow">VIEW CASE</button>
     </div>
   </div>
-</div> -->
-<!-- skill text end -->
+</section>
 
 
 
@@ -1213,70 +748,8 @@
 <!-- <div class='sk-ww-medium-publication-feed' data-embed-id='25389346'></div> -->
 
 
-
-
-
-
-<!-- <script>
-const about = document.querySelectorAll(".about");
-
-function setupSplits() {
-  $(document).ready(function(){
-    $(".split-line").wrap('<div class="split-parent"></div>');
-  });
-  
-about.forEach(about => {
-
-    about.split = new SplitText(about, { 
-        type: "words,chars",
-        linesClass: "split-words"
-    });
-
-    // Set up the anim
-    // about.anim = gsap.from(about.split.words, {
-    //   scrollTrigger: {
-    //     trigger: about,
-    //     toggleActions: "restart pause resume reverse",
-    //     start: "10% 90%",
-    //     markers: false,
-    //   },
-    //   duration: 0.1,
-    //   autoAlpha: 0,
-    //   ease: "circ.out", 
-    //   yPercent: 100, 
-    //   stagger: 0.2,
-    // });
-
-    about.anim=gsap.from(about.split.chars, {
-      scrollTrigger: {
-        trigger: about,
-        toggleActions: "restart pause resume reverse",
-        start: "10% 90%",
-        markers: false,
-      },
-        duration: 0.2,
-        opacity: 0,
-        scale: 0,
-        y: 80,
-        rotationX: 180,
-        transformOrigin: "0% 50% -50",
-        ease: "back",
-        stagger: 0.01
-    });
-
-  });
-}
-
-// ScrollTrigger.addEventListener("refresh", setupSplits);
-setupSplits();
-
-</script> -->
-
-
-<!-- <script src='https://widgets.sociablekit.com/medium-publication-feed/widget.js' async defer></script> -->
-
 <script>
-
+    
     const r= new rive.Rive({
         src: "Neighborhood.riv",
         // OR the path to a discoverable and public Rive asset
@@ -1302,43 +775,7 @@ setupSplits();
         },
     });
 
-    
 
-
-// const rive = require("@rive-app/canvas");
-
-// const r = new rive.Rive({
-//   src: "./img/Neighborhood.riv",
-//   canvas: document.getElementById("canvas"),
-//   stateMachines: "State Machine 1",
-//   autoplay: true,
-//   automaticallyHandleEvents: true,
-//   onLoad: () => {
-//     r.resizeDrawingSurfaceToCanvas();
-//   },
-// });
-
-  //text animation
-//   gsap.config({ trialWarn: false });
-//   console.clear();
-//   gsap.registerPlugin(ScrollTrigger, SplitText);
-//   let split = new SplitText("h1", { type: "lines" });
-
-//   function makeItHappen() {
-//   split.lines.forEach((target) => {
-//     gsap.to(target, {
-//       backgroundPositionX: 0,
-//       ease: "none",
-//       scrollTrigger: {
-//         trigger: target,
-//         markers:false,
-//         scrub: 1,
-//         start: "80% 90%",
-//         end: "90% 100%"
-//       }
-//     });
-//   });
-// }
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -1371,68 +808,6 @@ gsap.to(".text2 span", {
 
 
 
-// let someDelay = gsap.delayedCall(0.2, newTriggers).pause();
-// window.addEventListener("resize", () => someDelay.restart(true));
-
-// function newTriggers() {
-//   ScrollTrigger.getAll().forEach((trigger) => {
-//     trigger.kill();
-//   });
-//   split.split();
-//   makeItHappen();
-// }
-
-// makeItHappen();
-
-
-// pin the section
-gsap.registerPlugin(ScrollTrigger);
-    gsap.utils.toArray(".panel").forEach((panel, i) => {
-        ScrollTrigger.create({
-            trigger: panel,
-            start: "bottom bottom",
-            endTrigger:".endpanel",
-            end:"top bottom",
-            pin: true, 
-            pinSpacing: false,
-            markers:false,
-            // snap: {
-            // snapTo: 1 / 2,
-            // duration: 0.3
-            // }
-        });
-    });
-
-    // ScrollTrigger.create({
-    // snap: 0.33,
-    // trigger:".showcase",
-    // target:".showcase", // snap whole page to the closest section!
-    // toggleActions: "play none none reverse",
-    // });
-    
-    // ScrollTrigger.create({
-    //   start:"top -80",
-    //   end:"99999",
-    //   toggleClass: {className: 'navBar--scrolled', targets: '.navBar'},
-    //   markers:true
-    // }
-
-    // );
-    if (window.innerWidth > 820) {
-    gsap.to('.navBar', { 
-    autoAlpha: 0,
-    duration: 0.2,
-    ease: "power4",
-    scrollTrigger: {
-        trigger:".startpanel",
-        start: "top 10%",
-        endTrigger:".endpanel",
-        end: "top",
-        toggleActions: "play reverse play reverse",
-        markers:false,
-      }
-    });
-  };
 
   // backgroundColor change
   ScrollTrigger.create({
@@ -1504,26 +879,11 @@ document.querySelectorAll(".bottomnav a").forEach((btn, index) => {
   });
 });
 
-document.querySelectorAll(".mobilenav a").forEach((btn, index) => {
-  btn.addEventListener("click", () => {
-    gsap.to(window, {duration: 0.5, scrollTo:{y:"#section" + (index + 1), offsetY:70}});
-    gsap.to(overlay, { width: "0px", height: "100vh", duration: 0.5 });
-    gsap.to(closebtn, { display:"none", opacity:0});
-
-  });
-});
 
 
 
-// seeallbtn
-const seeAllBtn = document.querySelector(".seeAllBtn");
-  const showall = document.querySelector(".showall");
 
-  seeAllBtn.addEventListener("click", function() {
-    showall.classList.toggle("hidden");
-    seeAllBtn.classList.toggle("hidden");
-    ScrollTrigger.refresh();
-  });
+
 
 const burger = document.querySelector(".burger");
 const overlay = document.querySelector(".overlay");
@@ -1548,18 +908,6 @@ closebtn.addEventListener("click", function() {
     // closebtn.classList.add("hidden");
 });
 
-// gsap.to('.navBar', { 
-//   autoAlpha: 1,
-//   duration: 0.2,
-//   ease: "none",
-//   scrollTrigger: {
-//     target:".endpanel",
-//     start: "50% 50%",
-//     end: "top 80%",
-//     toggleActions: "play none none reverse",
-//     markers:true,
-//   }
-// });
 
 gsap.to(".mousediv", {
       scrollTrigger: {
@@ -1577,26 +925,275 @@ gsap.to(".mousediv", {
 
 
  // Function to hide the loading screen
- function hideLoadingScreen() {
-     gsap.to(".loading-screen", {
-       autoAlpha: 0, // Fades the loading screen out by setting its opacity to 0
-       duration: 0, // Duration of the fade-out animation (in seconds)
-       onComplete: function() {
-       // After the animation is complete, hide the loading screen
-         gsap.to(".loading-screen", {delay:0.3, width: "0px", height: "100vh", duration: 1,ease: "circ",backgroundColor:"#2B2B2B" });
-         gsap.to(".almost-there", {opacity:0});
-       }
-     });
-   }
+//  function hideLoadingScreen() {
+//      gsap.to(".loading-screen", {
+//        autoAlpha: 0, // Fades the loading screen out by setting its opacity to 0
+//        duration: 0, // Duration of the fade-out animation (in seconds)
+//        onComplete: function() {
+//        // After the animation is complete, hide the loading screen
+//          gsap.to(".loading-screen", {delay:0.3, width: "0px", height: "100vh", duration: 1,ease: "power2.inOut",backgroundColor:"#2B2B2B" });
+//          gsap.to(".almost-there", {opacity:0});
+//        }
+//      });
+//    }
 
-  // Wait for the page to fully load
-   window.addEventListener("load", function () {
-     //Show the loading screen for 2 seconds (2000 milliseconds)
-     setTimeout(hideLoadingScreen, 1000);
-   });
+//   // Wait for the page to fully load
+//    window.addEventListener("load", function () {
+//      //Show the loading screen for 2 seconds (2000 milliseconds)
+//      setTimeout(hideLoadingScreen, 1000);
+//    });
+
+
+  //  cursorButton
+  const cursorButton = document.getElementById('cursorButton');
+  const cursorButton2 = document.getElementById('cursorButton2');
+  const cursorButton3 = document.getElementById('cursorButton3');
+  const cursorButton4 = document.getElementById('cursorButton4');
+  const cursorButton5 = document.getElementById('cursorButton5');
+  const cursorButton6 = document.getElementById('cursorButton6');
+  
+
+  function showButton(event) {
+    cursorButton.classList.remove('hidden');
+    moveButton(event);
+  }
+
+  function hideButton() {
+    cursorButton.classList.add('hidden');
+  }
+
+  function click(event) {
+    cursorButton.classList.remove('noclick');
+    window.location.href = 'waso.html';
+  }
+
+  function noclick(event) {
+    cursorButton.classList.add('noclick');
+  }
+
+  function moveButton(event) {
+    const x = event.clientX;
+    const y = event.clientY;
+    cursorButton.style.left = x + 'px';
+    cursorButton.style.top = y+ 'px';
+  }
+
+////////////////////////////////////////////////////////////////
+
+function showButton2(event) {
+    cursorButton2.classList.remove('hidden');
+    moveButton2(event);
+  }
+
+  function hideButton2() {
+    cursorButton2.classList.add('hidden');
+  }
+
+  function click2(event) {
+    cursorButton2.classList.remove('noclick');
+    window.location.href = 'wasotv.html';
+  }
+
+  function noclick2(event) {
+    cursorButton2.classList.add('noclick');
+  }
+
+  function moveButton2(event) {
+    const x = event.clientX;
+    const y = event.clientY;
+    cursorButton2.style.left = x + 'px';
+    cursorButton2.style.top = y+ 'px';
+  }
+
+  ////////////////////////////////////////////////////////////////
+
+  function showButton3(event) {
+    cursorButton3.classList.remove('hidden');
+    moveButton3(event);
+  }
+
+  function hideButton3() {
+    cursorButton3.classList.add('hidden');
+  }
+
+  function click3(event) {
+    cursorButton3.classList.remove('noclick');
+    alert('Page is under contruction!');
+  }
+
+  function noclick3(event) {
+    cursorButton3.classList.add('noclick');
+  }
+
+  function moveButton3(event) {
+    const x = event.clientX;
+    const y = event.clientY;
+    cursorButton3.style.left = x + 'px';
+    cursorButton3.style.top = y+ 'px';
+  }
+
+  ////////////////////////////////////////////////////////////////
+
+
+  function showButton4(event) {
+    cursorButton4.classList.remove('hidden');
+    moveButton4(event);
+  }
+
+  function hideButton4() {
+    cursorButton4.classList.add('hidden');
+  }
+
+  function click4(event) {
+    cursorButton4.classList.remove('noclick');
+    window.location.href = 'sfulearn.html';
+  }
+
+  function noclick4(event) {
+    cursorButton4.classList.add('noclick');
+  }
+
+  function moveButton4(event) {
+    const x = event.clientX;
+    const y = event.clientY;
+    cursorButton4.style.left = x + 'px';
+    cursorButton4.style.top = y+ 'px';
+  }
+
+  ////////////////////////////////////////////////////////////////
+
+  function showButton5(event) {
+    cursorButton5.classList.remove('hidden');
+    moveButton5(event);
+  }
+
+  function hideButton5() {
+    cursorButton5.classList.add('hidden');
+  }
+
+  function click5(event) {
+    cursorButton5.classList.remove('noclick');
+    window.location.href = 'slash.html';
+  }
+
+  function noclick5(event) {
+    cursorButton5.classList.add('noclick');
+  }
+
+  function moveButton5(event) {
+    const x = event.clientX;
+    const y = event.clientY;
+    cursorButton5.style.left = x + 'px';
+    cursorButton5.style.top = y + 'px';
+  }
+
+  ////////////////////////////////////////////////////////////////
+
+  function showButton6(event) {
+    cursorButton6.classList.remove('hidden');
+    moveButton6(event);
+}
+
+function hideButton6() {
+    cursorButton6.classList.add('hidden');
+}
+
+function click6(event) {
+    cursorButton6.classList.remove('noclick');
+    alert('Page is under contruction!');
+}
+
+function noclick6(event) {
+    cursorButton6.classList.add('noclick');
+}
+
+function moveButton6(event) {
+    const x = event.clientX;
+    const y = event.clientY;
+    cursorButton6.style.left = x + 'px';
+    cursorButton6.style.top = y + 'px';
+}
+
+////////////////////////////////////////////////////////////////
+
+
+ 
+ 
+
+  document.addEventListener('mousemove', moveButton);
+  document.addEventListener('mousemove', moveButton2);
+  document.addEventListener('mousemove', moveButton3);
+  document.addEventListener('mousemove', moveButton4);
+  document.addEventListener('mousemove', moveButton5);
+  document.addEventListener('mousemove', moveButton6);
+
+
+  const wasoapp = document.getElementById('wasoapp');
+  wasoapp.addEventListener('mouseenter', showButton);
+  wasoapp.addEventListener('mouseleave', hideButton);
+  wasoapp.addEventListener('click', click);
+  wasoapp.addEventListener('mouseleave', noclick);
+
+  const wasotv = document.getElementById('wasotv');
+  wasotv.addEventListener('mouseenter', showButton2);
+  wasotv.addEventListener('mouseleave', hideButton2);
+  wasotv.addEventListener('click', click2);
+  wasotv.addEventListener('mouseleave', noclick2);
+
+  const mdsapp = document.getElementById('mdsapp');
+  mdsapp.addEventListener('mouseenter', showButton3);
+  mdsapp.addEventListener('mouseleave', hideButton3);
+  mdsapp.addEventListener('click', click3);
+  mdsapp.addEventListener('mouseleave', noclick3);
+
+  const sfulearn = document.getElementById('sfulearn');
+  sfulearn.addEventListener('mouseenter', showButton4);
+  sfulearn.addEventListener('mouseleave', hideButton4);
+  sfulearn.addEventListener('click', click4);
+  sfulearn.addEventListener('mouseleave', noclick4);
+
+  const slash = document.getElementById('slash');
+  slash.addEventListener('mouseenter', showButton5);
+  slash.addEventListener('mouseleave', hideButton5);
+  slash.addEventListener('click', click5);
+  slash.addEventListener('mouseleave', noclick5);
+6
+  const lycweb = document.getElementById('lycweb');
+  lycweb.addEventListener('mouseenter', showButton6);
+  lycweb.addEventListener('mouseleave', hideButton6);
+  lycweb.addEventListener('click', click6);
+  lycweb.addEventListener('mouseleave', noclick6);
+
+  ////////////////////////////////////////////////////////////////
+
+  // const cursor = document.getElementById('cursor');
+  // cursor.style.left = '-100px';
+  // cursor.style.top = '-100px';
+
+  // function moveCursor(event) {
+  //   const x = event.clientX;
+  //   const y = event.clientY;
+  //   cursor.style.left = x + 'px';
+  //   cursor.style.top = y + 'px';
+  // }
+  
+
+  // window.addEventListener('mousemove', moveCursor);
+
+
+  ////////////////////////////////////////////////////////////////
+
+  window.addEventListener('mousemove', noclick);
+  window.addEventListener('mousemove', noclick2);
+  window.addEventListener('mousemove', noclick3);
+  window.addEventListener('mousemove', noclick4);
+  window.addEventListener('mousemove', noclick5);
+  window.addEventListener('mousemove', noclick6);
 </script>
 
 <script src="rive.js"></script>
+
+
 
 </body>
 
