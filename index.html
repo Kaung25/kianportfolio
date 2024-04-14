@@ -955,13 +955,13 @@ gsap.to(".mousediv", {
 
   function showButton(event) {
     cursorButton.classList.remove('hidden');
-    cursorButton.classList.add('lg:block');
+    cursorButton.classList.add('hidden lg:block');
     moveButton(event);
   }
 
   function hideButton() {
     cursorButton.classList.add('hidden');
-    cursorButton.classList.remove('lg:block');
+    cursorButton.classList.remove('hidden lg:block');
 
   }
 
