@@ -954,14 +954,18 @@ gsap.to(".mousediv", {
   
 
   function showButton(event) {
+  if (window.innerWidth >= 1280 && event.target === wasoapp) {
     cursorButton.classList.remove('hidden');
-    cursorButton.classList.add('hidden lg:block');
     moveButton(event);
+  } else {
+    cursorButton.classList.add('hidden');
   }
+  }
+
 
   function hideButton() {
     cursorButton.classList.add('hidden');
-    cursorButton.classList.remove('hidden lg:block');
+    // cursorButton.classList.remove('hidden lg:block');
 
   }
 
@@ -978,19 +982,27 @@ gsap.to(".mousediv", {
     cursorButton.classList.add('noclick');
   }
 
-  function moveButton(event) {
+  
+function moveButton(event) {
+  if (window.innerWidth >= 1280) {
     const x = event.clientX;
     const y = event.clientY;
     cursorButton.style.left = x + 'px';
-    cursorButton.style.top = y+ 'px';
+    cursorButton.style.top = y + 'px';
   }
+}
 
 ////////////////////////////////////////////////////////////////
 
 function showButton2(event) {
+  if (window.innerWidth >= 1280 && event.target === wasotv) {
     cursorButton2.classList.remove('hidden');
     moveButton2(event);
+  } else {
+    cursorButton2.classList.add('hidden');
   }
+  }
+
 
   function hideButton2() {
     cursorButton2.classList.add('hidden');
@@ -1010,18 +1022,25 @@ function showButton2(event) {
   }
 
   function moveButton2(event) {
+    if (window.innerWidth >= 1280) {
     const x = event.clientX;
     const y = event.clientY;
     cursorButton2.style.left = x + 'px';
-    cursorButton2.style.top = y+ 'px';
+    cursorButton2.style.top = y + 'px';
   }
+}
 
   ////////////////////////////////////////////////////////////////
 
   function showButton3(event) {
+    if (window.innerWidth >= 1280 && event.target === mdsapp) {
     cursorButton3.classList.remove('hidden');
     moveButton3(event);
+  } else {
+    cursorButton3.classList.add('hidden');
   }
+  }
+
 
   function hideButton3() {
     cursorButton3.classList.add('hidden');
@@ -1041,18 +1060,24 @@ function showButton2(event) {
   }
 
   function moveButton3(event) {
+    if (window.innerWidth >= 1280) {
     const x = event.clientX;
     const y = event.clientY;
     cursorButton3.style.left = x + 'px';
-    cursorButton3.style.top = y+ 'px';
+    cursorButton3.style.top = y + 'px';
   }
+}
 
   ////////////////////////////////////////////////////////////////
 
 
   function showButton4(event) {
+    if (window.innerWidth >= 1280 && event.target === sfulearn) {
     cursorButton4.classList.remove('hidden');
     moveButton4(event);
+  } else {
+    cursorButton4.classList.add('hidden');
+  }
   }
 
   function hideButton4() {
@@ -1073,17 +1098,24 @@ function showButton2(event) {
   }
 
   function moveButton4(event) {
+    if (window.innerWidth >= 1280) {
     const x = event.clientX;
     const y = event.clientY;
     cursorButton4.style.left = x + 'px';
-    cursorButton4.style.top = y+ 'px';
+    cursorButton4.style.top = y + 'px';
   }
+}
+
 
   ////////////////////////////////////////////////////////////////
 
   function showButton5(event) {
+    if (window.innerWidth >= 1280 && event.target === slash) {
     cursorButton5.classList.remove('hidden');
     moveButton5(event);
+  } else {
+    cursorButton5.classList.add('hidden');
+  }
   }
 
   function hideButton5() {
@@ -1104,18 +1136,24 @@ function showButton2(event) {
   }
 
   function moveButton5(event) {
+    if (window.innerWidth >= 1280) {
     const x = event.clientX;
     const y = event.clientY;
     cursorButton5.style.left = x + 'px';
     cursorButton5.style.top = y + 'px';
   }
+}
 
   ////////////////////////////////////////////////////////////////
 
   function showButton6(event) {
+    if (window.innerWidth >= 1280 && event.target === lycweb) {
     cursorButton6.classList.remove('hidden');
     moveButton6(event);
-}
+  } else {
+    cursorButton6.classList.add('hidden');
+  }
+  }
 
 function hideButton6() {
     cursorButton6.classList.add('hidden');
@@ -1135,10 +1173,12 @@ function noclick6(event) {
 }
 
 function moveButton6(event) {
+  if (window.innerWidth >= 1280) {
     const x = event.clientX;
     const y = event.clientY;
     cursorButton6.style.left = x + 'px';
     cursorButton6.style.top = y + 'px';
+  }
 }
 
 ////////////////////////////////////////////////////////////////
