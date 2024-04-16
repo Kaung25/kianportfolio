@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-85Q9W9880B"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+    
+          gtag('config', 'G-85Q9W9880B');
+        </script>
+        <!-- Google tag (gtag.js) -->
+    
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kaung-Portfolio</title>
+        <meta name="description" content="I am Kaung Myat Moee Htoon, an enthusiastic, passionate, and experienced UI/UX designer from Myanmar, currently building experiences at Waso Tech! I am currently offering web and mobile design services as a freelance UI/UX Designer. Explore my portfolio and contact me for your design needs.">
+    
+        <!-- thumbs -->
+    
+        <!-- Other meta tags and head content -->
+    
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="Kaung - Digital product designer">
+        <meta property="og:description" content="The enthusiastic, passionate, and experienced designer">
+        <meta property="og:image" content="https://i.ibb.co/RSLc4L0/thumb.png">
+        <meta property="og:url" content="https://www.kaung.me">
+        <meta property="og:type" content="website">
+    
+        <!-- Twitter Card Meta Tags (Optional but recommended) -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Kaung - Digital Product Designer">
+        <meta name="twitter:description" content="The enthusiastic, passionate, and experienced designer">
+        <meta name="twitter:image" content="https://i.ibb.co/RSLc4L0/thumb.png">
+    
+        <!-- thumbs -->
+        <link rel="icon" type="image/x-icon" href="./img/favicon.png">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../tailwind.config.js">
+        <!-- skranji font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Skranji:wght@400;700&display=swap" rel="stylesheet">
+        <!-- skranji font-->
+    
+        <!-- Alfa Slab One font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    
+        <!-- SF Pro Font -->
+        <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/ScrollTrigger.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/jquery.gsap.min.js"></script>
+        <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=cahcebustin"></script>
+        <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
+        <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+        <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollToPlugin3.min.js"></script>
+        <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+        <script src="https://unpkg.com/@rive-app/canvas@2.9.1"></script>
+        
+        <!-- <script src="https://assets.codepen.io/16327/SplitText3.min.js"></script> -->
+        <!-- <script src="https://codepen.io/GreenSock/pen/7ba936b34824fefdccfe2c6d9f0b740b.js"></script>
+        <script src="https://assets.codepen.io/16327/gsap-latest-beta.min.js"></script>
+        <script src="https://assets.codepen.io/16327/ScrollTrigger.min.js?v=40"></script> -->
+    
+        <!-- Calendly link widget begin -->
+        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+        <!-- Calendly link widget end -->
+    
+        
+    
+        <style>
+            /* *{
+              cursor:none;
+            } */
+            body {
+                color: #2B2B2B;
+                text-align: center;
+                font-family: 'SF Pro Display', sans-serif;
+                /* font-weight: 400; */
+                /* font-size: 16px; */
+                font-style: normal;
+                /* font-weight: 100; */
+                line-height: 112.336%;
+             }
+
+             .footer{
+                font-family: 'Skranji',serif;;
+             }
+
+             .kaungimg img {
+                transition: all 0.2s ease-out;
+                box-sizing: border-box;
+                max-width: 100%;
+              }
+
+            .kaungimg{
+              background-color: #26BBD3;
+              border-radius:50%;
+            }
+
+            .copyright{
+              font-family: 'SF Pro Display',sans-serif;
+            }
+
+            .btn {
+          top:0%;
+          transition:0.3s;
+        }
+
+        .btn1 {
+          transition:0.3s;
+        }
+
+        .btn1:hover .btn{
+          top: -100%;
+        }
+
+        .icon {
+    position: relative; /* Ensure the absolute positioning works correctly */
+    transition: transform 0.3s ease; /* Smooth transition for rotation */
+}
+
+.navlist:hover .icon {
+    transform: rotate(180deg); /* Rotate the icon 360 degrees on hover */
+}
+
+        /* #cursor {
+          position: fixed;
+          z-index: 9999;
+          transform: translate(-50%, 0%);
+          pointer-events: none;
+        } */
+
+        </style>
+    
+    </head>
+    <body class="body">
+      <!-- <div id="cursor" class="hidden lg:block"><img src="./img/Pointer.svg" alt="" class=""></div> -->
+    <!-- navbar -->
+    <section>
+    <nav class="navBar md:pt-6 w-full fixed px-6 md:px-9 lg:px-24 z-20 bg-grey/5 md:bg-white border-b-[1px] md:border-0 backdrop-blur-lg border-grey/20">
+        <div class="max-w-screen-2xl md:pl-8 md:pr-4 md:bg-grey/5 md:border-[1px] backdrop-blur-lg md:border-grey/20  md:rounded-full flex flex-wrap items-center justify-between mx-auto py-4 px-0">
+          <a href="./index.html" class="flex items-center">
+            <img src="./img/logo_black.svg" class=" absolute logoblack" alt="Logo" />
+            <img src="./img/logo.svg" class=" logowhite" alt="Logo" />
+          </a>
+          
+          
+          <div class="w-auto" id="navbar-default">
+            <ul id="navlist" class="navlist text-base flex">
+              <li>
+                <a href="./index.html" class=" navlist block text-dark">
+                  <div class="flex flex-row gap-2 items-center">
+                    <p class="hidden md:block">Close</p>
+                    <div class="icon">
+                      <img class="w-6 absolute close" src="./img/closeCircle.svg" alt="">
+                      <img class="w-6 closeWhite" src="./img/closeCircleWhite.svg" alt="">
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    </section>
+    <!-- navbar End -->
+
+    <section class="w-full px-6 md:px-9 lg:px-32 pt-44 justify-center items-center">
+        <div>
+            <h1 class="text-dark leading-tight font-bold text-2xl lg:text-3xl">LYC Clinic Booink Website</h1>
+            <div class="flex gap-2 mt-5 justify-center text-sm lg:text-base">
+                <span class="py-2 px-3 lg:py-3  lg:px-5 bg-grey/10 font-light text-[#6f6f6f] rounded-lg w-fit">UX</span>
+                <span class="py-2 px-3 lg:py-3  lg:px-5 bg-grey/10 font-light text-[#6f6f6f] rounded-lg w-fit">UI</span>
+                <span class="py-2 px-3 lg:py-3  lg:px-5 bg-grey/10 font-light text-[#6f6f6f] rounded-lg w-fit">Interaction</span>
+              
+            </div>
+        </div>
+        <div class="mt-8 relative">
+            <img class="rounded-xl h-64 object-cover md:h-full" src="./img/LYC/banner.png" alt="banner image">
+        </div>
+    </section>
+
+    <section class="w-full py-20 px-6 md:px-9 lg:px-32">
+        <div class="text-left">
+                <h1 class="text-dark font-bold text-xl">About</h1>
+                <p class="mt-4 text-lightgrey leading-normal text-base font-normal">
+                  Introducing Lin Yaung Chi Specialist Clinic Website, a platform designed to streamline the process of booking appointments with doctors at the Lin Yaung Chi Clinic. This platform makes it super easy to book appointments with the doctors. With a user-friendly interface, users can navigate the website effortlessly and schedule appointments for all their medical needs. From consultations with renowned specialists to diagnostic tests and follow-up visits, our platform offers a seamless experience, making healthcare more accessible and convenient for everyone. By leveraging technology, we aim to empower patients with the ability to manage their healthcare appointments efficiently, ultimately improving the overall healthcare experience for both patients and healthcare providers.
+                </p>
+        </div>
+        <div class="flex flex-col md:grid grid-cols-2 gap-10 md:gap-16 mt-10">
+            <div class="text-left">
+                <h1 class="text-dark font-bold text-xl">Problem Statement</h1>
+                <p class="mt-4 text-lightgrey leading-normal text-base font-normal">
+                  The current manual system faces significant challenges in terms of appointment scheduling for doctors. Patients often encounter difficulties in booking appointments due to long waiting times, complicated processes, and limited availability of specialists. This leads to delayed access to healthcare services, frustration among patients, and inefficiencies in the healthcare system. Additionally, healthcare providers struggle to manage appointment schedules effectively, resulting in suboptimal patient care and increased administrative burden. These challenges highlight the need for a more streamlined and accessible approach to booking appointments with specialist doctors.
+                </p>
+            </div>
+            <div class="text-left">
+                <h1 class="text-dark font-bold text-xl">My Responsibility</h1>
+                <p class="mt-4 text-lightgrey leading-normal text-base font-normal">
+                  My responsibilities revolve around UX, UI, and Interaction design. I am tasked with creating an intuitive and visually appealing user interface that prioritizes ease of navigation and accessibility for patients booking appointments. This includes designing interactive elements that enhance user engagement and contribute to a seamless booking experience. Furthermore, I provide the website's visual elements to align with the clinic's brand identity and maintain consistency across all design elements. By focusing on these, I aim to enhance patient satisfaction and streamline the appointment booking process.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="w-full px-6 md:px-9 lg:px-32 justify-center items-center ">
+        <div class="">
+            <img class="rounded-xl h-64 object-cover md:h-full" src="./img/LYC/photo.png" alt="banner image">
+        </div>
+    </section>
+
+
+  <section class="w-full py-10 md:py-20 px-6 md:px-9 lg:px-32">
+    <div class="text-left">
+            <h1 class="text-dark font-bold text-xl">Solution</h1>
+            <p class="mt-4 flex flex-col space-y-2 text-lightgrey leading-normal text-base font-normal">
+              Lin Yaung Chi Specialist Clinic’s booking website offers a comprehensive solution to the challenges faced in appointment scheduling for specialist doctors. The platform simplifies the process of booking appointments, allowing patients to easily navigate through the website and schedule appointments for various medical needs. With a wide range of specialists available, patients can quickly find and book appointments with the right healthcare provider. Providing a seamless and accessible booking experience improves patient satisfaction, enhances healthcare outcomes, and alleviates the administrative burden on healthcare providers.
+            </p>
+    </div>
+  </section>
+
+  <section class="w-full pb-10 md:pb-20 px-6 md:px-9 lg:px-32 justify-center items-center ">
+    <div class="">
+        <img class="rounded-xl object-cover " src="./img/LYC/screen.png" alt="banner image">
+    </div>
+  </section>
+
+
+
+<section class="footer">
+  
+    <div id="section4" class="pt-32 pb-16 flex flex-col justify-center items-center">
+      <div class="group relative justify-center items-center">
+      <div class="kaungimg my-0 mx-auto w-48 h-48 flex flex-col relative overflow-hidden">
+        <img class="group-hover:rotate-[360deg] group-hover:scale-125 group-hover:opacity-0 w-full absolute z-10" src="./img/kaung.svg" alt="">
+        <img class="w-full absolute kaung2 opacity-0 group-hover:rotate-[360deg] group-hover:opacity-100 transform-gpu" src="./img/kaung3.png" alt="">
+      </div>
+      <div class="">
+        <h1 class="text-3xl group lg:text-6xl text-yellow leading-tight mt-5">Have an awesome idea?<br>
+        <span class="text-white">Well, here I am.</span></h1>
+      </div>
+      <div class="buttongroup flex flex-col md:flex-row gap-5 w-fit mx-auto mt-5">
+        <div class="group btn1 bg-yellow h-16 w-52 leading-[4rem] text-dark text-base lg:text-xl text-center rounded-lg inline-block overflow-hidden relative transition-all duration-300">
+          <a class="btn  block relative h-full" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/kmmh/30min?hide_gdpr_banner=1&text_color=2B2B2B&primary_color=BDC7CF'});return false;">Schedule a meeting</a>
+          <a class="btn  block relative h-full" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/kmmh/30min?hide_gdpr_banner=1&text_color=2B2B2B&primary_color=BDC7CF'});return false;">Schedule a meeting</a>
+        </div>
+  
+        <div class="btn1 bg-transparent border-2 border-yellow leading-[4rem] h-16 w-52 text-yellow text-base lg:text-xl text-center rounded-lg inline-block overflow-hidden relative transition-all duration-300">
+          <a href="mailto:kaungmyatmoeehtoon@gmail.com" class="btn block relative h-full">Just email me</a>
+          <a href="mailto:kaungmyatmoeehtoon@gmail.com" class="btn block relative h-full">Just email me</a>
+        </div>
+  
+      </div>
+    </div>
+    </div>
+    <div class="text-white/60 py-8">
+      <p class="copyright text-[12px] px-6 mt-0 md:mt-8 lg:mt-16 ">Copyright © 2024. Developed by Kaung Myat Moee Htoon.<br class="block lg:hidden"> Made with ❤️ in Myanmar</p>
+    </div>
+</section>
+
+<script>
+  // const cursor = document.getElementById('cursor');
+  // cursor.style.left = '-100px';
+  // cursor.style.top = '-100px';
+
+  // function moveCursor(event) {
+  //   const x = event.clientX;
+  //   const y = event.clientY;
+  //   cursor.style.left = x + 'px';
+  //   cursor.style.top = y + 'px';
+  // }
+
+  // window.addEventListener('mousemove', moveCursor);
+
+
+    // backgroundColor change
+    ScrollTrigger.create({
+   
+   trigger: ".footer",
+   start:"top 50%",
+   end:"bottom 0%", 
+   markers:false,
+ 
+   onEnter: () => {
+     gsap.to('.body', { duration: 0.5, backgroundColor: '#1D1D1D'});
+     gsap.to('.footertitle', { duration: 0.5, color:'#FEC426'});
+     gsap.to('.navBar', { duration: 0.5, backgroundColor: '#1D1D1D'});
+     gsap.to('.navlist', { color:'rgba(255, 255, 255, 0.6)'});
+     gsap.to('.menuicon rect', { fill: "#ffffff"});
+     gsap.to('.logowhite', { duration:0.5, opacity: 1});
+     gsap.to('.logoblack', { duration:0.5, opacity: 0});
+     gsap.to('.closeWhite', { duration:0.5, opacity: 1});
+     gsap.to('.close', { duration:0.5, opacity: 0});
+     
+   },
+   
+   onLeaveBack: () => {
+     gsap.to('.body', { duration: 0.5, backgroundColor: '#ffffff'});
+     gsap.to('.footertitle', { duration: 0.5, color:'white'})
+     gsap.to('.navBar', { duration: 0.5, backgroundColor: 'rgb(255,255,255)'});
+     gsap.to('.navlist', { color:"#2B2B2B"});
+     gsap.to('.menuicon rect', { fill: "#2B2B2B"});
+     gsap.to('.logowhite', { duration:0.5, opacity: 0});
+     gsap.to('.logoblack', { duration:0.5, opacity: 1});
+     gsap.to('.closeWhite', { duration:0.5, opacity: 0});
+     gsap.to('.close', { duration:0.5, opacity: 1});
+     
+   },
+ })
+
+ // navbar change
+ ScrollTrigger.create({
+   
+   trigger: ".hero",
+   start:"top 0%",
+   end:"bottom 20%", 
+   markers:false,
+ 
+   onEnter: () => {
+     gsap.to('.navBar', { duration: 0.0, backgroundColor: '#ffffff'});
+    //  gsap.to('.navBar', { duration: 0.1, borderBottom: '1px solid #E8EBED'});
+   },
+   
+   onLeaveBack: () => {
+     gsap.to('.navBar', { duration: 0.1, backgroundColor: 'rgb(255,255,255/0.0)'});
+    //  gsap.to('.navBar', { duration: 0.1, borderBottom: '0px solid #E8EBED'});
+   },
+ 
+   
+ })
+
+</script>
+
+    
+</body>
+</html>
