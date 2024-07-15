@@ -1037,14 +1037,14 @@ video {
   background-color: rgb(16 133 14 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#1ABD6F\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(26 189 111 / var(--tw-bg-opacity));
-}
-
 .bg-\[\#252626\] {
   --tw-bg-opacity: 1;
   background-color: rgb(37 38 38 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#316AFE\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(49 106 254 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#619B22\] {
