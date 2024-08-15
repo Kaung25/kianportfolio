@@ -313,7 +313,7 @@
               <a href="#works" class="mobilenav block py-2 p-14">Works</a>
             </li>
             <li>
-              <a href="#experience" class="mobilenav block py-2 p-14">Experiences</a>
+              <a href="#experiences" class="mobilenav block py-2 p-14">Experiences</a>
             </li>
             <li>
               <a href="#contact" class="mobilenav block py-2 p-14">Contact</a>
@@ -334,7 +334,7 @@
             <a href="#works" class=" navlist block py-2 p-4 text-dark">Works</a>
           </li>
           <li>
-            <a href="#experience" class=" navlist block py-2 p-4 text-dark">Experiences</a>
+            <a href="#experiences" class=" navlist block py-2 p-4 text-dark">Experiences</a>
           </li>
           <li>
             <a href="#contact" class=" navlist block py-2 p-4 text-dark">Contact</a>
@@ -738,16 +738,16 @@
 <div class="text-white pt-10 lg:pt-32 pb-8 lg:pb-14">
   <ul id="bottomnav" class="hidden bottomnav text-base md:flex justify-center items-center">
     <li>
-      <a href="#section1" class="hover:text-green bottomnav block py-2 pl-3 pr-4">About</a>
+      <a href="#about" class="hover:text-green bottomnav block py-2 pl-3 pr-4">About</a>
     </li>
     <li>
-      <a href="#section2" class="hover:text-green bottomnav block py-2 pl-3 pr-4">Works</a>
+      <a href="#works" class="hover:text-green bottomnav block py-2 pl-3 pr-4">Works</a>
     </li>
     <li>
-      <a href="#section3" class="hover:text-green bottomnav block py-2 pl-3 pr-4">Experiences</a>
+      <a href="#experiences" class="hover:text-green bottomnav block py-2 pl-3 pr-4">Experiences</a>
     </li>
     <li>
-      <a href="#section4" class="hover:text-green bottomnav block py-2 pl-3 pr-4">Contact</a>
+      <a href="#contact" class="hover:text-green bottomnav block py-2 pl-3 pr-4">Contact</a>
     </li>
     <li>
       <a target="_blank" href="https://drive.google.com/file/d/1_BKU5i3Kdhafqi7utfyRFtI2Tcirhei3/view" class="hover:text-green block py-2 pl-3 pr-4">Resume</a>
@@ -896,6 +896,12 @@ document.querySelectorAll(".bottomnav a").forEach((btn, index) => {
   });
 });
 
+document.querySelectorAll(".mobilenav a").forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    gsap.to(window, {duration: 0.5, scrollTo:{y:"#section" + (index + 1), offsetY:70}});
+  });
+});
+
 
 
 
@@ -919,6 +925,13 @@ burger.addEventListener("click", function() {
 });
 
 closebtn.addEventListener("click", function() {
+  gsap.to(overlay, { width: "0px", height: "100vh", duration: 0.5,ease: "power2.inOut" });
+  gsap.to(mobilenav, { opacity:0, duration: 1 });
+  gsap.to(closebtn, { display:"none", opacity:0});
+    // closebtn.classList.add("hidden");
+});
+
+mobilenav.addEventListener("click", function() {
   gsap.to(overlay, { width: "0px", height: "100vh", duration: 0.5,ease: "power2.inOut" });
   gsap.to(mobilenav, { opacity:0, duration: 1 });
   gsap.to(closebtn, { display:"none", opacity:0});
