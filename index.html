@@ -347,20 +347,15 @@
 <!-- Hero Section -->
     <section id="section1" class="hero pb-16 bg-[#000000] flex flex-col relative justify-center h-fit">
     
-      <div class="static w-full h-fit place-content-center top-0 z-30">
+      <div class="relative md:static w-full h-fit place-content-center top-0 z-30">
         <div class="relative w-full">
           <div class="relative flex flex-col items-center md:mx-auto z-10 w-full">
             <!-- Canvas -->
-            <canvas id="canvas" class="hidden md:block relative top-24"></canvas>
-            <div class="px-5 pt-16">
-            <canvas id="canvasMobile" class="block z-30 md:hidden h-[50vh]"></canvas>
-            </div>
-    
-           
+            <canvas id="canvas" class="hidden md:block relative top-16"></canvas>
           </div>
             
             <!-- Text Block -->
-            <div class="w-full px-5 md:px-0 text-base lg:text-lg text-white text-left md:text-center leading-normal -mt-16 md:mt-8">
+            <div class="hidden md:block w-full px-5 md:px-0 text-base lg:text-lg text-white text-left md:text-center leading-normal -mt-16 md:mt-8">
               <p class="font-light">
                 <span>I am a product and visual designer</span>
                 <span class="text-blue">based in Bangkok</span>
@@ -369,9 +364,22 @@
                 <span>who combines strategic thinking with <br class="hidden md:block"> creative execution to deliver high-impact digital experiences.</span>
               </p>
             </div>
-          </div>
-         
-          <!-- Background Image -->    
+          </div>  
+      </div>
+      <div class="static h-auto px-5 pt-24 overflow-hidden">
+      <div class="w-[150%]">
+        <canvas id="canvasMobile" class="block z-30 w-full h-full object-cover md:hidden"></canvas>
+      </div>
+      </div>
+
+      <div class="block static md:hidden mt-4 w-full px-5 text-base text-white text-left leading-normal">
+          <p class="font-light">
+            <span>I am a product and visual designer</span>
+            <span class="text-blue">based in Bangkok</span>
+            <span>with</span><br class="hidden md:block">
+            <span class="text-orange">6+ years of experience</span>
+            <span>who combines strategic thinking with <br class="hidden md:block"> creative execution to deliver high-impact digital experiences.</span>
+          </p>
         </div>
         <img src="./img/Background.png" class="absolute hidden md:block -z-0 -top-[0px] left-1/2 transform -translate-x-1/2" alt="">
         <!-- Embedded Video -->
@@ -385,7 +393,6 @@
     title="Showreel Dark">
   </iframe>
         
-    </iframe>
        
     </div>
       
@@ -1284,12 +1291,12 @@ window.addEventListener("resize", () => {
 
 
     const riveMobile = new rive.Rive({
-    src: "friendly_neighborhood_mobile.riv",
+    src: "friendly_neighborhood2.riv",
     canvas: document.getElementById("canvasMobile"),
     autoplay: true,
     stateMachines: "MobileStartanimate",
-    fit: rive.Fit.Cover, // Ensures the animation covers the canvas while maintaining aspect ratio
-    alignment: rive.Alignment.TopLeft, // Aligns the animation to the top-left corner of the canvas
+    fit: rive.Fit.Contain, // Ensures the animation fits within the canvas
+    alignment: rive.Alignment.TopLeft, // Aligns the animation to the top-left corner
     onLoad: () => {
         riveMobile.resizeDrawingSurfaceToCanvas();
     },

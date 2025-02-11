@@ -599,8 +599,8 @@ video {
   top: 0px;
 }
 
-.top-24 {
-  top: 6rem;
+.top-16 {
+  top: 4rem;
 }
 
 .top-4 {
@@ -775,8 +775,8 @@ video {
   height: 380px;
 }
 
-.h-\[50vh\] {
-  height: 50vh;
+.h-auto {
+  height: auto;
 }
 
 .h-fit {
@@ -866,6 +866,10 @@ video {
 
 .w-80 {
   width: 20rem;
+}
+
+.w-\[150\%\] {
+  width: 150%;
 }
 
 .w-\[270px\] {
@@ -1395,8 +1399,8 @@ video {
   padding-top: 2.5rem;
 }
 
-.pt-16 {
-  padding-top: 4rem;
+.pt-24 {
+  padding-top: 6rem;
 }
 
 .pt-32 {
@@ -1665,6 +1669,10 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:static {
+    position: static;
+  }
+
   .md\:-right-8 {
     right: -2rem;
   }
