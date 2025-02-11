@@ -40,18 +40,27 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../tailwind.config.js">
     <!-- skranji font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Skranji:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Skranji:wght@400;700&display=swap" rel="stylesheet"> -->
     <!-- skranji font-->
+
+    <!-- DM Sans font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
     <!-- Alfa Slab One font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
 
+    <!-- Cocogoosefont -->
+    <link href="https://fonts.cdnfonts.com/css/cocogoose" rel="stylesheet">
+                
+
     <!-- SF Pro Font -->
-    <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+    <!-- <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet"> -->
 
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
@@ -62,7 +71,11 @@
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollToPlugin3.min.js"></script>
     <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
-    <script src="https://unpkg.com/@rive-app/canvas@2.9.1"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- rive -->
+    <script src="https://unpkg.com/@rive-app/canvas"></script>
     
     <!-- <script src="https://assets.codepen.io/16327/SplitText3.min.js"></script> -->
     <!-- <script src="https://codepen.io/GreenSock/pen/7ba936b34824fefdccfe2c6d9f0b740b.js"></script>
@@ -70,8 +83,8 @@
     <script src="https://assets.codepen.io/16327/ScrollTrigger.min.js?v=40"></script> -->
 
     <!-- Calendly link widget begin -->
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 <!-- Calendly link widget end -->
 
     
@@ -84,21 +97,30 @@
         body {
             color: #2B2B2B;
             text-align: center;
-            font-family: "Skranji", serif;
+            font-family: "DM Sans", serif;
+            font-optical-sizing: auto;
             /* font-weight: 400; */
             /* font-size: 16px; */
             font-style: normal;
             /* font-weight: 100; */
-            line-height: 112.336%;
+            line-height: 150%;
          }
 
 
-        .bodyTitle{
-          font-family: "Alfa Slab One", serif;
+        .bodyTitle,.invite,.mobilenav{
+          font-family: 'COCOGOOSE', sans-serif;
         }
 
-         canvas {
+         #canvas {
+          width: 76%;
+          margin: 0;
+          padding: 0;
+         }
+
+         #canvasMobile{
           width: 100%;
+          margin: 0;
+          padding: 0;
          }
 
          .split-line {
@@ -112,113 +134,24 @@
         .about > span {
         	background: linear-gradient(
 	        to right,
-	      #2B2B2B 50%,
-	      #BDC7CF 50%
+	      #ffffff 50%,
+	      #696969 50%
 	      );
-          font-family: 'Skranji', sans-serif;
+          font-family: 'DM Sans', sans-serif;
 	        background-size: 200% 100%;
 	        background-position-x: 100%;
 	        color: transparent;
 	        background-clip: text;
 	        -webkit-background-clip: text;
+          line-height: 150%;
         }
 
-        section{
-          font-family: 'SF Pro Display', sans-serif;
-        }
-
-        .btn {
-          top:0%;
-          transition:0.3s;
-        }
-
-        .btn1 {
-          transition:0.3s;
-        }
-
-        .btn1:hover .btn{
-          top: -100%;
-        }
-
-        /* .overlay{
-          transition: all 0.3s;
-        }
-
-        .fullmenu{
-          border-radius: 0;
-          background-color:#BDC7CF;
-          transition: all 0.3s;
-        } */
+        
 
         .copyright{
-          font-family: 'SF Pro Display',sans-serif;
+          font-family: 'DM Sans', sans-serif;
         }
 
-        .mousediv{
-          position: absolute;
-          /* bottom: 20px; */
-          font-family: 'SF Pro Display', sans-serif;
-          z-index: 40;
-        }
-
-        .mouse {
-          width:22px;
-          height:35px;
-          border:1.5px solid #316AFE;
-          border-radius:10px;
-          position:relative;
-          margin:0px auto;
-        }
-
-        .mouse:after {
-          content:"";
-          position:absolute;
-          width:4px;
-          height:6px;
-          border-radius:2px;
-          background: #FF553E;
-          display:block;
-          left:50%;
-          transform:translateX(-50%);
-          top:5px;
-          animation: control 1.5s infinite;
-        }
-
-        @keyframes control {
-           0% {
-            opacity:1;
-            top:5px;
-          }
-          60% {
-            opacity:1;
-          }
-          90%{
-            top:20px;
-          }
-          100%{
-            opacity:0
-          }
-        }
-
-      
-        .load{position:relative;top:50%;left:50%;transform:translate(-50%, -50%);
-          /*change these sizes to fit into your project*/
-          /* width:50px;
-          height:50px; */
-        }
-        .load hr{border:0;margin:0;width:40%;height:40%;position:absolute;border-radius:50%;animation:spin 2s ease infinite}
-
-        .load :first-child{background:#12E37F;animation-delay:-1.5s}
-        .load :nth-child(2){background:#FF553E;animation-delay:-1s}
-        .load :nth-child(3){background:#FEC426;animation-delay:-0.5s}
-        .load :last-child{background:#316AFE}
-
-        @keyframes spin{
-          0%,100%{transform:translate(0)}
-          25%{transform:translate(160%)}
-          50%{transform:translate(160%, 160%)}
-          75%{transform:translate(0, 160%)}
-        }
         
         .kaungimg img {
           transition: all 0.2s ease-out;
@@ -253,63 +186,88 @@
           z-index: 9999;
           transform: translate(-50%, -50%);
         }
-        
-        /* #cursor {
-          position: fixed;
-          z-index: 9999;
-          transform: translate(-50%, 0%);
-          pointer-events: none;
-        } */
-        
-        .viewCase{
-          font-family: 'Alfa Slab One', serif;
+
+        /* Default state */
+        #testimonial1-1,
+        #testimonial1-2,
+        #testimonial2-1,
+        #testimonial2-2 {
+          animation-play-state: running;
         }
 
-        /* ----- Overlay ----- */
-
-      .grid {
-        width: 100%;
-        height: 600px;
-        overflow: hidden;
-        z-index: 10px;
-        perspective: 450px;
-      }
-
-      .grid-fade {
-        width: 100%;
-        height: 130%;
-        position: absolute;
-        z-index: 11;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.493) 0%, #ffffff 80%);
-      }
-
-      .grid-lines {
-        width: 100%;
-        height: 200%;
-        background-image: linear-gradient(to right, rgba(94, 115, 131, 0.644) 0.5px, transparent 0), linear-gradient(to bottom, rgba(94, 115, 131, 0.644) 0.5px, transparent 0);
-        background-size: 49.1px 45px;
-        background-repeat: repeat;
-        transform-origin: 100% 0 0;
-        animation: play 15s linear infinite;
-      }
-
-      @keyframes play {
-        0% {
-          transform: rotateX(45deg) translateY(-30%);
+        /* Pause on hover for testimonial1 */
+        #testimonial1:hover #testimonial1-1,
+        #testimonial1:hover #testimonial1-2 {
+          animation-play-state: paused;
         }
-        100% {
-          transform: rotateX(45deg) translateY(0);
+
+        /* Pause on hover for testimonial2 */
+        #testimonial2:hover #testimonial2-1,
+        #testimonial2:hover #testimonial2-2 {
+          animation-play-state: paused;
         }
-      }
+
+
+        /* spiderman modalbox */
+       /*modal*/
+/* Modal Overlay */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dimmed background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Modal Content */
+.modal-content {
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%; /* Adjust width as needed */
+  color: #ffffff;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transform: scale(0.5); /* Start small */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.modaltitle{
+  font-family: 'COCOGOOSE', sans-serif;
+}
+
+
+.close-button:hover {
+  background-color: #0056b3;
+}
+
+/* Show Modal */
+.modal.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal.show .modal-content {
+  transform: scale(1); /* Pop to full size */
+  opacity: 1;
+}
 
     </style>
 
 </head>
 
 
-<body class="wrapper" id="wrapper">
-<!-- <div id="cursor" class="hidden lg:block"><img src="./img/Pointer.svg" alt="" class=""> -->
-</div>
+<body class="wrapper bg-[#000000]" id="wrapper">
+
 
 <!-- <div id="loadingScreen" class="right-0 loading-screen z-50 fixed bg-dark mx-0 my-auto w-full h-screen flex flex-col justify-center items-center">
   <div class="almost-there">
@@ -322,31 +280,29 @@
 
     
     
-<nav class="navBar bg-transparent border-gray-200 w-full fixed px-6 md:px-9 lg:px-32 z-50">
-    <div class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto py-4 px-0">
-      <a href="#" class="flex items-center">
-        <img src="./img/logo_black.svg" class=" absolute logoblack" alt="Logo" />
-        <img src="./img/logo.svg" class=" logowhite" alt="Logo" />
+<nav class="navBar text-white bg-transparent border-gray-200 w-full mx-auto fixed right-0 left-0 z-50">
+    <div class="max-w-screen-2xl flex flex-wrap items-center justify-between w-full md:w-4/5 mx-auto py-4 px-5 md:px-0">
+      <a href="" class="flex items-center">
+        <!-- <img src="./img/logo_black.svg" class=" absolute logoblack" alt="Logo" /> -->
+        <img src="./img/logo.svg" class="logowhite" alt="Logo" />
       </a>
-      <button  type="button" class="burger inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+      <button  type="button" class="burger inline-flex items-center py-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
           <span class="sr-only">Open main menu</span>
-          <svg class="menuicon" width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0.773926" y="0.485382" width="31.0737" height="5.00974" rx="2" fill="#2B2B2B"/>
-            <rect x="0.773926" y="9.49512" width="31.0737" height="5.00974" rx="2" fill="#2B2B2B"/>
-            <rect x="0.773926" y="18.5049" width="31.0737" height="5.00974" rx="2" fill="#2B2B2B"/>
+          <svg class="menuicon" width="32" height="24" fill="none" viewBox="0 0 32 24" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.773926" y="0.485382" width="31.0737" height="5.00974" rx="2" fill="#909090"/>
+            <rect x="0.773926" y="9.49512" width="31.0737" height="5.00974" rx="2" fill="#909090"/>
+            <rect x="0.773926" y="18.5049" width="31.0737" height="5.00974" rx="2" fill="#909090"/>
           </svg>
-            
-          
       </button>
       
-      <div class="absolute overlay w-0 h-screen top-0 right-0 text-center" id="overlay">
+      <div class="absolute overlay w-0 h-screen top-0 right-0 text-center bg-dark bg-opacity-50 backdrop-blur-3xl" id="overlay">
         <div class="hidden opacity-0 close z-50 absolute top-5 right-5 p-2 w-10 h-10 items-center justify-center">
           <img class="" src="./img/close.svg" alt="">
         </div>
         <nav class="overlay-menu relative top-[20%] justify-center items-center">
           <ul id="mobilenav" class="mobilenav opacity-0 text-4xl text-center flex flex-col gap-[38px] text-white">
             <li>
-              <a href="#about" class="mobilenav block py-2 p-14">About</a>
+              <a href="#hello" class="mobilenav block py-2 p-14">Hello</a>
             </li>
             <li>
               <a href="#works" class="mobilenav block py-2 p-14">Works</a>
@@ -365,21 +321,21 @@
       </div>
       
       <div class=" hidden w-full lg:block lg:w-auto" id="navbar-default">
-        <ul id="navlist" class="navlist text-base flex">
+        <ul id="navlist" class="navlist text-sm font-light flex">
           <li>
-            <a href="#about" class=" navlist block py-2 p-4 text-dark">About</a>
+            <a href="#hello" class=" navlist block py-2 p-4 text-white">Hello</a>
           </li>
           <li>
-            <a href="#works" class=" navlist block py-2 p-4 text-dark">Works</a>
+            <a href="#works" class=" navlist block py-2 p-4 text-white">Works</a>
           </li>
           <li>
-            <a href="#experiences" class=" navlist block py-2 p-4 text-dark">Experiences</a>
+            <a href="#experiences" class=" navlist block py-2 p-4 text-white">Experiences</a>
           </li>
           <li>
-            <a href="#contact" class=" navlist block py-2 p-4 text-dark">Contact</a>
+            <a href="#contact" class=" navlist block py-2 p-4 text-white">Contact</a>
           </li>
           <li>
-            <a target="_blank" href="https://drive.google.com/file/d/1_BKU5i3Kdhafqi7utfyRFtI2Tcirhei3/view" class=" navlist block py-2 pl-3 text-dark">Resume</a>
+            <a target="_blank" href="https://drive.google.com/file/d/1_BKU5i3Kdhafqi7utfyRFtI2Tcirhei3/view" class=" navlist block py-2 pl-3 text-white">Resume</a>
           </li>
         </ul>
       </div>
@@ -388,64 +344,160 @@
 <!-- navigation bar end-->
 
 
-<!-- hero section start -->
-<div class="hero flex relative justify-center items-center h-fit md:h-screen">
-  <div class="hidden lg:block socialIcons z-40 absolute right-9">
-    <a href="https://www.linkedin.com/in/kmmh/" target="_blank"><img class="p-1" src="./img/linkedin.svg" alt="linkedin"></a>
-    <a href="https://www.behance.net/kaung16" target="_blank"><img class="p-1" src="./img/behance.svg" alt="behance"></a>
-    <a href="https://medium.com/@kaung16" target="_blank"><img class="p-1" src="./img/medium.svg" alt="medium"></a>
-  </div>
-  <canvas id="canvas" class="hidden z-30 md:block">
-
-  </canvas>
-
-  <canvas id="canvasMobile" class="block z-30 md:hidden h-[60vh] mt-16">
-
-  </canvas>
-
-  <div class="overlay w-full absolute bottom-0 z-0">
-    <div class="grid">
-        <div class="grid-fade"></div>
-        <div class="grid-lines"></div>
+<!-- Hero Section -->
+    <section id="section1" class="hero pb-16 bg-[#000000] flex flex-col relative justify-center h-fit">
+    
+      <div class="static w-full h-fit place-content-center top-0 z-30">
+        <div class="relative w-full">
+          <div class="relative flex flex-col items-center md:mx-auto z-10 w-full">
+            <!-- Canvas -->
+            <canvas id="canvas" class="hidden md:block relative top-24"></canvas>
+            <div class="px-5 pt-16">
+            <canvas id="canvasMobile" class="block z-30 md:hidden h-[50vh]"></canvas>
+            </div>
+    
+           
+          </div>
+            
+            <!-- Text Block -->
+            <div class="w-full px-5 md:px-0 text-base lg:text-lg text-white text-left md:text-center leading-normal -mt-16 md:mt-8">
+              <p class="font-light">
+                <span>I am a product and visual designer</span>
+                <span class="text-blue">based in Bangkok</span>
+                <span>with</span><br class="hidden md:block">
+                <span class="text-orange">6+ years of experience</span>
+                <span>who combines strategic thinking with <br class="hidden md:block"> creative execution to deliver high-impact digital experiences.</span>
+              </p>
+            </div>
+          </div>
+         
+          <!-- Background Image -->    
+        </div>
+        <img src="./img/Background.png" class="absolute hidden md:block -z-0 -top-[0px] left-1/2 transform -translate-x-1/2" alt="">
+        <!-- Embedded Video -->
+    <div class=" flex mt-10 mx-auto px-5 w-full md:w-4/5 z-10">
+      <div class="relative bg-dark rounded-lg md:rounded-3xl overflow-hidden w-full" style="aspect-ratio: 16 / 9;">
+        <iframe 
+        src="https://player.vimeo.com/video/1055503188?h=bbbe298314&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;loop=1&amp;autoplay=1&amp;muted=1&amp;controls=1"
+    frameborder="0" 
+    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
+    style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+    title="Showreel Dark">
+  </iframe>
+        
+    </iframe>
+       
     </div>
-  </div>
+      
+    
+    </section>
+      
+
+    
+
   
-  <div id="mousediv" class="z-40 mousediv hidden bottom-0 md:bottom-8 lg:bottom-5 md:flex flex-col gap-1">
-  <div class="mouse"></div>
-  <p class="text-dark">Scroll</p>
-  </div>
+  <!-- Hero Section End -->
 
-</div>
-<!-- hero section end -->
-
-<div id="section1"  class="about max-w-screen-2xl mx-auto px-5 md:px-9 lg:px-32 flex justify-center items-center h-fit lg:h-screen">
-  <div class="py-16 lg:py-32">
-    <div class="bodyTitle">
-      <h1 class="text-base lg:text-4xl text-orange text-left absolute z-10">
-        ABOUT ME
-    </h1>
-    <h1 class="text-3xl lg:text-7xl text-left text-grey/10 relative whitespace-nowrap">
-        ABOUT ME
-    </h1>
-    </div>
-    <!-- <p class="about text-4xl text-dark text-left pr-48 leading-relaxed mt-4 " id="about">
-        <span class="text-orange">Hey there!</span> I am an enthusiastic, passionate, and talented UI/UX designer extraordinaire, currently building experiences at Waso Tech! With my solid skills and unwavering passion, I create stunning designs that make hearts skip a beat. But wait, there's more! I also unleash my creativity through illustrations and motion graphics, adding that extra touch of magic. Let's bring your projects to life with a dash of excitement and a whole lot of design awesomeness!
-    </p> -->
-    <div class="text about text-xl lg:text-4xl text-dark text-left leading-normal mt-4 lg:mt-12">
-      <span>Hey there! I am an enthusiastic, passionate, and talented</span>
-      <span>UI/UX designer extraordinaire.</span>
-      <span>With my solid skills and</span>
-      <span>unwavering passion, I create stunning designs that make</span>
-      <span> hearts skip a beat. But wait, there's more. I also unleash</span>
-      <span>my creativity through illustrations and motion graphics,</span>
-      <span>adding that extra touch of magic. Let's bring your</span>
-      <span>projects to life with a dash of excitement and a whole</span>
-      <span>lot of design awesomeness!</p> 
-    </div>
+  
+  <div class="relative flex items-center justify-center py-10 md:py-24">
+    <div class="w-full absolute inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_40px,_black_calc(100%-40px),transparent_100%)] md:[mask-image:_linear-gradient(to_right,transparent_0,_black_300px,_black_calc(100%-300px),transparent_100%)]">
+      <ul class="flex items-center justify-center [&_img]:w-12 md:[&_img]:w-20 [&_li]:mx-4 md:[&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
+        <li>
+            <img src="./img/Photoshop Logomark.svg" alt="Photoshop" />
+        </li>
+        <li>
+            <img src="./img/Illustrator Logomark.svg" alt="Illustrator" />
+        </li>
+        <li>
+            <img src="./img/Figma.svg" alt="Figma" />
+        </li>
+        <li>
+            <img src="./img/notion.svg" alt="Notion" />
+        </li>
+        <li>
+            <img src="./img/sketch.svg" alt="Sketch" />
+        </li>
+        <li>
+            <img src="./img/Blender.svg" alt="Blender" />
+        </li>
+        <li>
+            <img src="./img/RIVE.svg" alt="Rive" />
+        </li>
+        <li>
+            <img src="./img/HTML.svg" alt="HTML" />
+        </li>
+        <li>
+          <img src="./img/CSS.svg" alt="CSS" />
+        </li>
+        <li>
+          <img src="./img/Tailwind.svg" alt="Tailwind" />
+        </li>
+        <li>
+          <img src="./img/JS.svg" alt="JavaScript" />
+        </li>
+      </ul>
+      <ul class="flex items-center justify-center [&_img]:w-12 md:[&_img]:w-20 [&_li]:mx-4 md:[&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll" aria-hidden="true">
+        <li>
+            <img src="./img/Photoshop Logomark.svg" alt="Photoshop" />
+        </li>
+        <li>
+            <img src="./img/Illustrator Logomark.svg" alt="Illustrator" />
+        </li>
+        <li>
+            <img src="./img/Figma.svg" alt="Figma" />
+        </li>
+        <li>
+            <img src="./img/notion.svg" alt="Notion" />
+        </li>
+        <li>
+            <img src="./img/sketch.svg" alt="Sketch" />
+        </li>
+        <li>
+            <img src="./img/Blender.svg" alt="Blender" />
+        </li>
+        <li>
+            <img src="./img/RIVE.svg" alt="Rive" />
+        </li>
+        <li>
+            <img src="./img/HTML.svg" alt="HTML" />
+        </li>
+        <li>
+          <img src="./img/CSS.svg" alt="CSS" />
+        </li>
+        <li>
+          <img src="./img/Tailwind.svg" alt="Tailwind" />
+        </li>
+        <li>
+          <img src="./img/JS.svg" alt="JavaScript" />
+        </li>
+      </ul>
   </div>
 </div>
-<!-- about me end -->
-<div class="bg-[url('./img/dots.png')] bg-repeat bg-cover flex justify-center items-center h-fit lg:h-screen">
+
+  <!-- Section 2 -->
+  <section id="section2" class="section2 py-16 px-5 md:px-0 relative">
+  <div id="projects"  class="static w-full md:w-4/5 about max-w-screen-2xl mx-auto h-fit">
+    <div class="pb-6 lg:pb-12">
+      <div class="bodyTitle relative w-full pb-6 border-b border-lightgrey">
+        <h1 class="text-base lg:text-2xl text-orange text-left left-0 top-4 absolute z-10">
+          Featured Projects
+      </h1>
+      <h1 class="text-3xl lg:text-5xl text-left text-dark relative whitespace-nowrap" style="-webkit-text-stroke: 1px #2A2A2A;">
+        Featured Projects
+      </h1>
+      </div>
+      <!-- <div class="text about text-xl lg:text-base text-white text-left leading-normal mt-4 lg:mt-6">
+        <p class="font-light">
+        <span>Explore the stories behind my designs, how I approach challenges, craft innovative solutions, and deliver impactful outcomes.</span>
+        <span>From detailed case studies to visually compelling projects, these stories showcase the creativity and functionality at the heart of</span>
+        <span>my work.</span>
+        </p>
+      </div> -->
+    </div>
+  </div>
+<!-- feature end -->
+
+<!-- <div class="bg-[url('./img/dots.png')] bg-repeat bg-cover flex justify-center items-center h-fit lg:h-screen">
 <div class="py-16">
   <div class="flex flex-wrap lg:grid grid-cols-2 gap-x-28 gap-y-16 lg:gap-y-40 justify-center items-center">
     <div class="bg-orange text-left w-[310px] md:w-[440px] lg:w-[500px] h-fit relative p-2 md:p-5 border-2 lg:border-4 border-dark shadow-bgDarkSm lg:shadow-bgDark">
@@ -466,430 +518,851 @@
     </div>
   </div>
 </div>
-</div>
+</div> -->
 <!-- personality end -->
-
-<div id="section2" class="max-w-screen-2xl mx-auto px-5 md:px-9 lg:px-32 flex justify-center items-center">
-  <div class="pt-16 lg:pt-32 w-full">
-    <div class="bodyTitle">
-      <h1 class="text-base lg:text-4xl text-orange text-left absolute z-10">
-      PROJECT SHOWCASE
-    </h1>
-    <h1 class="text-3xl lg:text-7xl text-left text-grey/10 relative whitespace-nowrap">
-      PROJECT SHOWCASE
-    </h1>
-    </div>
-<!-- <p class="about text-4xl text-dark text-left pr-48 leading-relaxed mt-4 " id="about">
-        <span class="text-orange">Hey there!</span> I am an enthusiastic, passionate, and talented UI/UX designer extraordinaire, currently building experiences at Waso Tech! With my solid skills and unwavering passion, I create stunning designs that make hearts skip a beat. But wait, there's more! I also unleash my creativity through illustrations and motion graphics, adding that extra touch of magic. Let's bring your projects to life with a dash of excitement and a whole lot of design awesomeness!
-    </p> -->
-    <div class="text2 about w-[100%] text-xl lg:text-4xl text-dark text-left leading-relaxed mt-4 lg:mt-12">
-      <span>Dive into a handpicked selection of my best work,</span>
-      <span>where exceptional design meets outstanding outcomes.</span>
-      <span>Experience the essence of my creativity, passion, and</span>
-      <span>unwavering commitment to exceeding expectations.</span>
-    </div>
-  </div>
-</div>
-<!-- showcase text end -->
-
 
 
 <!-- showcase -->
-<section class="pt-10 lg:pt-20">
-  <div class="flex flex-col md:grid grid-cols-2 gap-10 md:gap-16 px-5 md:px-9 lg:px-32 ">
+<section class="">
+  <div class="flex flex-col md:grid grid-cols-2 gap-4 md:gap-12 w-full md:w-4/5 mx-auto">
     <div id="wasoapp" class="cursor-none">
-      <div class="text-center md:text-left">
-        <img src="./img/wasocard.png" alt="">
-        <h1 class="mt-2 md:mt-6 text-dark font-bold text-xl lg:text-3xl leading-tight text-cap">Transforming traditional learning into dynamic experience with Waso Learn Mobile App</h1>
-        <!-- <p class="mt-2 md:mt-6 text-dark/80 text-base lg:text-xl leading-normal">
-          <i>
-            Transforming traditional learning into dynamic experience with Waso Learn
-          </i>
-        </p> -->
-        <div class="justify-center md:justify-normal flex flex-wrap gap-2 mt-2 md:mt-5 text-sm md:text-base">
-            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">UX</span>
-            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">UI</span>
-            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">Interaction</span>
-            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">Art Direction</span>
+      <div class="text-left">
+        <div class="group items-center justify-center lg:relative lg:border border-lightgrey h-[380px] md:h-auto">
+        <div class="overflow-hidden">
+         <img src="./img/wasocard.png" alt="" class="transition-transform duration-300 ease-in-out group-hover:scale-110 w-full  object-cover">
+        </div>
+         <div class="absolute hidden lg:block inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"></div>
+         <div class="lg:absolute lg:top-6 lg:left-6 lg:opacity-0 translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 transition-all duration-300 ease-in-out w-full lg:w-4/5">
+          <h1 class="text-white z-10 text-base lg:text-lg font-normal leading-tight">Waso Learn: EdTech Product</h1>
+          <p class="mt-1 md:mt-2 text-light text-sm font-light lg:text-base leading-normal">
+            Transforming traditional learning into a dynamic experience with Waso Learn
+          </p>
+        </div>
+        
         </div>
       </div>
-      <button id="cursorButton" class="viewCase hidden w-28 h-28 rounded-full bg-[#619B22] border-[6px] border-white text-center text-xl leading-none text-white drop-shadow">VIEW CASE</button>
+      <div class="bg-black flex items-center justify-center">
+        <button id="cursorButton" class="viewCase hidden w-28 h-28 rounded-full bg-dark/20 backdrop-blur-lg border border-white/30 text-center text-sm leading-none font-light text-white/80">
+          View Case
+        </button>
+      </div>
     </div>
-    
-    <div id="wasotv" class="cursor-none">
-      <div class="text-center md:text-left">
-        <img src="./img/wasotvcard.png" alt="">
-        <h1 class="mt-2 md:mt-6 text-dark font-bold text-xl lg:text-3xl leading-tight text-cap">Enhancing accessibility and engagement with Waso Learn TV Application</h1>
-        <div class="justify-center md:justify-normal flex flex-wrap gap-2 mt-2 md:mt-5 text-sm md:text-base">
-            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">UX</span>
-            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">UI</span>
-            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">Interaction</span>
-            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">Art Direction</span>
+    <div id="whisper" class="cursor-none">
+      <div class="text-left">
+        <div class="group items-center justify-center lg:relative lg:border border-lightgrey h-[380px] md:h-auto">
+        <div class="overflow-hidden">
+         <img src="./img/Whisper.png" alt="" class="transition-transform duration-300 ease-in-out group-hover:scale-110 w-full  object-cover">
+        </div>
+         <div class="absolute hidden lg:block inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"></div>
+         <div class="lg:absolute lg:top-6 lg:left-6 lg:opacity-0 translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 transition-all duration-300 ease-in-out w-full lg:w-4/5">
+          <h1 class="text-white z-10 text-base lg:text-lg font-normal leading-tight">Whisper: Mediate & Sleep</h1>
+          <p class="mt-1 md:mt-2 text-light text-sm font-light lg:text-base leading-normal">
+            Your daily companion for achieving restful sleep and mindful meditation
+          </p>
+        </div>
+        
         </div>
       </div>
-      <button id="cursorButton2" class="viewCase hidden w-28 h-28 rounded-full bg-[#9B6A1F] border-[6px] border-white text-center text-xl leading-none text-white drop-shadow">VIEW CASE</button>
+      <div class="bg-black flex items-center justify-center">
+        <button id="cursorButton2" class="viewCase hidden w-28 h-28 rounded-full bg-dark/20 backdrop-blur-lg border border-white/30 text-center text-sm leading-none font-light text-white/80">
+          View Case
+        </button>
+      </div>
     </div>
-
-    <div id="mdsapp" class="cursor-none">
-      <div class="text-center md:text-left">
-        <img src="./img/mdscard.png" alt="">
-        <h1 class="mt-2 md:mt-6 text-dark font-bold text-xl lg:text-3xl leading-tight text-cap">My Democracy School with enhanced user security and accessibility in political discourse </h1>
-        <div class="justify-center md:justify-normal flex flex-wrap gap-2 mt-2 md:mt-5 text-sm md:text-base">
-            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">UX</span>
-            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">UI</span>
-            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">Interaction</span>
-            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">Art Direction</span>
+    <div id="wego" class="cursor-none">
+      <div class="text-left">
+        <div class="group items-center justify-center lg:relative lg:border border-lightgrey h-[380px] md:h-auto">
+        <div class="overflow-hidden">
+         <img src="./img/wego.png" alt="" class="transition-transform duration-300 ease-in-out group-hover:scale-110 w-full  object-cover">
+        </div>
+         <div class="absolute hidden lg:block inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"></div>
+         <div class="lg:absolute lg:top-6 lg:left-6 lg:opacity-0 translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 transition-all duration-300 ease-in-out w-full lg:w-4/5">
+          <h1 class="text-white z-10 text-base lg:text-lg font-normal leading-tight">WeGo: Trip Planner</h1>
+          <p class="mt-1 md:mt-2 text-light text-sm font-light lg:text-base leading-normal">
+            Easily organize trips, collaborate with friends, and keep everything on track in one place
+          </p>
+        </div>
+        
         </div>
       </div>
-      <button id="cursorButton3" class="viewCase hidden w-28 h-28 rounded-full bg-[#EF7402] border-[6px] border-white text-center text-xl leading-none text-white drop-shadow">VIEW CASE</button>
+      <div class="bg-black flex items-center justify-center">
+        <button id="cursorButton3" class="viewCase hidden w-28 h-28 rounded-full bg-dark/20 backdrop-blur-lg border border-white/30 text-center text-sm leading-none font-light text-white/80">
+          View Case
+        </button>
+      </div>
     </div>
-
     <div id="sfulearn" class="cursor-none">
-      <div class="text-center md:text-left">
-        <img src="./img/sfulearncard.png" alt="">
-        <h1 class="mt-2 md:mt-6 text-dark font-bold text-xl lg:text-3xl leading-tight text-cap">SFU Learn application enhances academic life for students at Strategy First University</h1>
-        <div class="justify-center md:justify-normal flex flex-wrap gap-2 mt-2 md:mt-5 text-sm md:text-base">
-            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">UX</span>
-            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">UI</span>
-            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">Interaction</span>
-            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">Illustration</span>
-            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">Animation</span>
+      <div class="text-left">
+        <div class="group items-center justify-center lg:relative lg:border border-lightgrey h-[380px] md:h-auto">
+        <div class="overflow-hidden">
+         <img src="./img/sfulearn.png" alt="" class="transition-transform duration-300 ease-in-out group-hover:scale-110 w-full  object-cover">
+        </div>
+         <div class="absolute hidden lg:block inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"></div>
+         <div class="lg:absolute lg:top-6 lg:left-6 lg:opacity-0 translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 transition-all duration-300 ease-in-out w-full lg:w-4/5">
+          <h1 class="text-white z-10 text-base lg:text-lg font-normal leading-tight">SFU Learn Mobile Application</h1>
+          <p class="mt-1 md:mt-2 text-light text-sm font-light lg:text-base leading-normal">
+            Enhancing academic life and putting everything students need right at their fingertips
+          </p>
+        </div>
+        
         </div>
       </div>
-      <button id="cursorButton4" class="viewCase hidden w-28 h-28 rounded-full bg-[#F63042] border-[6px] border-white text-center text-xl leading-none text-white drop-shadow">VIEW CASE</button>
+      <div class="bg-black flex items-center justify-center">
+        <button id="cursorButton4" class="viewCase hidden w-28 h-28 rounded-full bg-dark/20 backdrop-blur-lg border border-white/30 text-center text-sm leading-none font-light text-white/80">
+          View Case
+        </button>
+      </div>
     </div>
-
-    <div id="slash" class="cursor-none">
-      <div class="text-center md:text-left">
-        <img src="./img/slashposcard.png" alt="">
-        <h1 class="mt-2 md:mt-6 text-dark font-bold text-xl lg:text-3xl leading-tight text-cap">Collaborative enhancements of Slash POS for seamless workflow and increased productivity</h1>
-        <div class="justify-center md:justify-normal flex flex-wrap gap-2 mt-2 md:mt-5 text-sm md:text-base">
-            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">UX</span>
-            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">Lead the UI Team</span>
-            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">Interaction</span>
+    <div id="digizenship" class="cursor-none">
+      <div class="text-left">
+        <div class="group items-center justify-center lg:relative lg:border border-lightgrey h-[380px] md:h-auto">
+        <div class="overflow-hidden">
+         <img src="./img/digizenship.png" alt="" class="transition-transform duration-300 ease-in-out group-hover:scale-110 w-full  object-cover">
+        </div>
+         <div class="absolute hidden lg:block inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"></div>
+         <div class="lg:absolute lg:top-6 lg:left-6 lg:opacity-0 translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 transition-all duration-300 ease-in-out w-full lg:w-4/5">
+          <h1 class="text-white z-10 text-base lg:text-lg font-normal leading-tight">Digizenship: Digital Platform</h1>
+          <p class="mt-1 md:mt-2 text-light text-sm font-light lg:text-base leading-normal">
+            A revolutionary social platform designed to bring digital citizens together
+          </p>
+        </div>
+        
         </div>
       </div>
-      <button id="cursorButton5" class="viewCase hidden w-28 h-28 rounded-full bg-[#6981EE] border-[6px] border-white text-center text-xl leading-none text-white drop-shadow">VIEW CASE</button>
+      <div class="bg-black flex items-center justify-center">
+        <button id="cursorButton5" class="viewCase hidden w-28 h-28 rounded-full bg-dark/20 backdrop-blur-lg border border-white/30 text-center text-sm leading-none font-light text-white/80">
+          View Case
+        </button>
+      </div>
     </div>
-
-    <div id="lycweb" class="cursor-none">
-      <div class="text-center md:text-left">
-        <img src="./img/lyccard.png" alt="">
-        <h1 class="mt-2 md:mt-6 text-dark font-bold text-xl lg:text-3xl leading-tight text-cap">Introducing Lin Yaung Chi Specialist Clinic Website for better appointment booking</h1>
-        <div class="justify-center md:justify-normal flex flex-wrap gap-2 mt-2 md:mt-5 text-sm md:text-base">
-            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">UX</span>
-            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">UI</span>
-            <span class="py-3 px-5 bg-[#e4e4e4]/25 font-light text-[#6f6f6f] rounded-lg w-fit">Interaction</span>
+    <div id="methodist" class="cursor-none">
+      <div class="text-left">
+        <div class="group items-center justify-center lg:relative lg:border border-lightgrey h-[380px] md:h-auto">
+        <div class="overflow-hidden">
+         <img src="./img/methodist.png" alt="" class="transition-transform duration-300 ease-in-out group-hover:scale-110 w-full  object-cover">
+        </div>
+         <div class="absolute hidden lg:block inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"></div>
+         <div class="lg:absolute lg:top-6 lg:left-6 lg:opacity-0 translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 transition-all duration-300 ease-in-out w-full lg:w-4/5">
+          <h1 class="text-white z-10 text-base lg:text-lg font-normal leading-tight">Interactive Animation for Methodist Centre</h1>
+          <p class="mt-1 md:mt-2 text-light text-sm font-light lg:text-base leading-normal">
+            Creating an interactive motion graphic animation for Methodist Centre HK's landing page
+          </p>
+        </div>
+        
         </div>
       </div>
-      <button id="cursorButton6" class="viewCase hidden w-28 h-28 rounded-full bg-[#10850E] border-[6px] border-white text-center text-xl leading-none text-white drop-shadow">VIEW CASE</button>
+      <div class="bg-black flex items-center justify-center">
+        <button id="cursorButton6" class="viewCase hidden w-28 h-28 rounded-full bg-dark/20 backdrop-blur-lg border border-white/30 text-center text-sm leading-none font-light text-white/80">
+          View Case
+        </button>
+      </div>
     </div>
-  </div>
+  </div>   
+  <!-- <img src="./img/Background2.png" alt="" class="absolute hidden md:block w-2/4 -z-10 right-0 -bottom-96"> -->
+</section>
 </section>
 
 
-
-<div class="max-w-screen-2xl mx-auto endpanel px-5 md:px-9 lg:px-32 flex justify-center items-center">
-  <div class="py-16 lg:py-32 w-full ">
-    <div class="bodyTitle">
-      <h1 class="text-base lg:text-4xl text-orange text-left absolute z-10">
-        SKILLS & EXPERTISE
-      </h1>
-      <h1 class=" text-3xl lg:text-7xl text-left text-grey/10 relative whitespace-nowrap">SKILLS & EXPERTISE</h1>
-    </div>
-    <!-- <p class="about text-4xl text-dark text-left pr-48 leading-relaxed mt-4 " id="about">
-        <span class="text-orange">Hey there!</span> I am an enthusiastic, passionate, and talented UI/UX designer extraordinaire, currently building experiences at Waso Tech! With my solid skills and unwavering passion, I create stunning designs that make hearts skip a beat. But wait, there's more! I also unleash my creativity through illustrations and motion graphics, adding that extra touch of magic. Let's bring your projects to life with a dash of excitement and a whole lot of design awesomeness!
-    </p> -->
-    <div class=" w-[90%] text-xl lg:text-4xl text-dark text-left leading-relaxed mt-4 lg:mt-12">
-      <p>Welcome to the mastery world! Apart from crafting
-      captivating visuals for websites and apps, I bring a diverse
-      skill set to the table. With a strong passion for learning and
-      a knack for picking up new skills, I've acquired proficiency
-      in various areas, including <span class="text-orange">Character Illustration, Digital
-      Painting, Motion Graphics, and Building Static Websites.</span></p>
-    </div>
-    <div class="softwareLogos w-full mt-4 flex flex-wrap gap-3">
-      <img class="w-14 lg:w-20" src="./img/Software icons/Photoshop Logomark.svg" alt="">
-      <img class="w-14 lg:w-20" src="./img/Software icons/Illustrator Logomark.svg" alt="">
-      <img class="w-14 lg:w-20" src="./img/Software icons/Figma.svg" alt="">
-      <img class="w-14 lg:w-20" src="./img/Software icons/Sketch.svg" alt="">
-      <img class="w-14 lg:w-20" src="./img/Software icons/Blender.svg" alt="">
-      <img class="w-14 lg:w-20" src="./img/Software icons/RIVE.svg" alt="">
-      <img class="w-14 lg:w-20" src="./img/Software icons/HTML.svg" alt="">
-      <img class="w-14 lg:w-20" src="./img/Software icons/CSS.svg" alt="">
-      <img class="w-14 lg:w-20" src="./img/Software icons/Tailwind.svg" alt="">
-      <img class="w-14 lg:w-20" src="./img/Software icons/JS.svg" alt="">
-    </div>
-  </div>
-</div>
-
-<!-- skill text end -->
-
-<div class="green bg-[#316AFE]">
-<div class="max-w-screen-2xl mx-auto px-5 md:px-9 lg:px-32 flex justify-center items-center">
-  <div id="section3" class="py-16 lg:py-32 w-full ">
-    <div class="bodyTitle">
-      <h1 class="text-base lg:text-4xl text-white text-left absolute z-10">
-        CAREER HISTORY
-      </h1>
-      <h1 class=" text-3xl lg:text-7xl text-left text-white/10 relative whitespace-nowrap">CAREER HISTORY</h1>
-    </div>
-    <div class=" w-[90%] text-xl lg:text-4xl text-white text-left leading-relaxed mt-4 lg:mt-12">
-      <p>In my career, I've had the chance to work on some amazing projects that allowed me to express my creativity and make a difference.</p>
-    </div>
-    <div class="flex flex-col md:grid grid-cols-2 gap-x-20 gap-y-0">
-      <div class="text-left flex flex-col gap-2 lg:gap-6">
-        <div class="mt-10 md:mt-24 text-white flex flex-col gap-0 lg:gap-4">
-         <h1 class="text-base lg:text-3xl">Dev Engine</h1>
-         <p class="text-sm lg:text-xl opacity-70">Co-Founder | Nov 2022 – Present</p>
-        </div>
-        <div class="text-white">
-          <p class="text-sm lg:text-xl opacity-70 leading-normal w-[90%]">
-            Co-founding Dev Engine, a digital agency with my friends, has been an exciting journey in my professional career. Our primary focus is to deliver innovative and customized digital solutions to our valued clients.
-          </p>
-        </div>
-      </div>
-
-      <div class="text-left flex flex-col gap-2 lg:gap-6">
-        <div class="mt-10 md:mt-24 text-white flex flex-col gap-0 lg:gap-4">
-         <h1 class="text-base lg:text-3xl">EDUSN Global</h1>
-         <p class="text-sm lg:text-xl opacity-70">Senior UI/UX Designer | Jun 2024 – Present</p>
-        </div>
-        <div class="text-white">
-          <p class="text-sm lg:text-xl opacity-70 leading-normal w-[90%]">
-            As the Senior UI/UX Designer at EDUSN Global, I lead the creation of the design system and oversee the entire design process. I communicate with stakeholders to align on goals and requirements, and manage junior designers to ensure cohesive and high-quality outcomes.
-          </p>
-        </div>
-      </div>
-
-      <div class="text-left flex flex-col gap-2 lg:gap-6">
-        <div class="mt-10 md:mt-24 text-white flex flex-col gap-0 lg:gap-4">
-         <h1 class="text-base lg:text-3xl">Visible One - HK</h1>
-         <p class="text-sm lg:text-xl opacity-70">UI/UX Designer | Sep 2023 – Jun 2024</p>
-        </div>
-        <div class="text-white">
-          <p class="text-sm lg:text-xl opacity-70 leading-normal w-[90%]">
-            Responsible for conducting comprehensive UX research to address design challenges, creating intuitive UI designs for websites and mobile applications, and translating conceptual ideas into user-centric interfaces.
-          </p>
-        </div>
-      </div>
-
-      <div class="text-left flex flex-col gap-2 lg:gap-6">
-        <div class="mt-10 md:mt-24 text-white flex flex-col gap-0 lg:gap-4">
-         <h1 class="text-base lg:text-3xl">Strategy First Education Group</h1>
-         <p class="text-sm lg:text-xl opacity-70">UI/UX Designer | Nov 2021 – Sep 2023</p>
-        </div>
-        <div class="text-white">
-          <p class="text-sm lg:text-xl opacity-70 leading-normal  w-[90%]">
-          As a UI/UX Designer at Strategy First Education Group, I create user-centered designs for apps and websites by understanding user needs through research and documentation.
-          </p>
-        </div>
-      </div>
-
-      <div class="text-left flex flex-col gap-2 lg:gap-6">
-        <div class="mt-10 md:mt-24 text-white flex flex-col gap-0 lg:gap-4">
-         <h1 class="text-base lg:text-3xl">Recycle Myanmar</h1>
-         <p class="text-sm lg:text-xl opacity-70">Lead Designer - Remote | Jun 2019 – Jan 2021</p>
-        </div>
-        <div class="text-white">
-          <p class="text-sm lg:text-xl opacity-70 leading-normal w-[90%]">
-            I took the lead in providing guidance and designing necessary components for app and web UI designs, social ads and branding materials. It was rewarding to contribute to their mission of promoting recycling and sustainability.
-        </div>
-      </div>
-
-      <div class="text-left flex flex-col gap-2 lg:gap-6">
-        <div class="mt-10 md:mt-24 text-white flex flex-col gap-0 lg:gap-4">
-         <h1 class="text-base lg:text-3xl">Sri Ksetra Student Exhibition Series</h1>
-         <p class="text-sm lg:text-xl opacity-70">Lead Designer - Volunteer | Nov 2017 – Feb 2020</p>
-        </div>
-        <div class="text-white">
-          <p class="text-sm lg:text-xl opacity-70 leading-normal  w-[90%]">
-            As a designer for the Sri Ksetra Student Exhibition Series, I created visually captivating designs and videos to promote the exhibition and engage the public, government, and donors with innovative ideas.
-          </p>
-        </div>
-      </div>
-  </div>
-  </div>
-</div>
-<!-- expreriences -->
-<div class="love max-w-screen-2xl mx-auto">
-  <div class="px-5 md:px-9 lg:px-32 flex justify-center items-center">
-    <div class="pt-16 lg:pt-32 pb-12 w-full">
-      <div class="bodyTitle">
-        <h1 class="lovetitle text-base lg:text-4xl text-white text-left absolute z-10">
-          WHAT I LOVE TO
+<!-- experience start -->
+  <section id="section3"  class="static w-full px-5 md:px-0 md:w-4/5 py-16 experience max-w-screen-2xl mx-auto justify-center items-center h-fit">
+    <div class="pb-7">
+      <div class="bodyTitle relative pb-6 border-b border-lightgrey">
+        <h1 class="text-base lg:text-2xl text-orange text-left left-0 top-4 absolute z-10">
+          Experience
         </h1>
-        <h1 class=" text-3xl lg:text-7xl text-left text-white/10 relative whitespace-nowrap">WHAT I LOVE TO</h1>
+        <h1 class="text-3xl lg:text-5xl text-left text-dark relative whitespace-nowrap" style="-webkit-text-stroke: 1px #2A2A2A;">
+          Experience
+        </h1>
       </div>
-      <!-- <p class="about text-4xl text-dark text-left pr-48 leading-relaxed mt-4 " id="about">
-          <span class="text-orange">Hey there!</span> I am an enthusiastic, passionate, and talented UI/UX designer extraordinaire, currently building experiences at Waso Tech! With my solid skills and unwavering passion, I create stunning designs that make hearts skip a beat. But wait, there's more! I also unleash my creativity through illustrations and motion graphics, adding that extra touch of magic. Let's bring your projects to life with a dash of excitement and a whole lot of design awesomeness!
-      </p> -->
-      <div class="text2 about w-[100%] text-xl lg:text-4xl text-white text-left leading-relaxed mt-4 lg:mt-12">
-        <p>I love storytelling for brands and products. And, I also have a passion for motion design, filmmaking, video editing, and creating stylized character portraits and illustrations. <span class="myarts">Here are some of my artworks.</span></p>
+
+      <div class="text text-sm lg:text-base text-white text-left leading-normal mt-4 lg:mt-6">
+        <p class="font-light">
+          <span>Throughout my career, I’ve had the privilege to work on impactful projects that showcased my creativity while making a meaningful difference.</span>
+        </p>
       </div>
+    </div>
+  
+  <div class="explist">
+    <div class="w-full mx-auto divide-y divide-lightgrey text-sm lg:text-base">
+      <ul class="flex gap-1 md:gap-0 flex-col md:flex-row items-start md:items-center item justify-start font-light py-3 md:py-5">
+        <li class="basis-2/6 text-left text-white">Co-Founder</li>
+        <li class="basis-2/6 text-left text-white">@ Dev Engine</li>
+        <li class="basis-2/6 text-right text-grey">Nov 2022 – Present</li>
+      </ul>
+      <ul class="flex gap-1 md:gap-0 flex-col md:flex-row items-start md:items-center justify-start font-light py-3 md:py-5">
+        <li class="basis-2/6 text-left text-white">Senior Product Designer</li>
+        <li class="basis-2/6 text-left text-white">@ Digizenship</li>
+        <li class="basis-2/6 text-right text-grey">Jun 2024 – Present</li>
+      </ul>
+      <ul class="flex gap-1 md:gap-0 flex-col md:flex-row items-start md:items-center justify-start font-light py-3 md:py-5">
+        <li class="basis-2/6 text-left text-white">UI/UX Designer</li>
+        <li class="basis-2/6 text-left text-white">@ Visible One - HK</li>
+        <li class="basis-2/6 text-right text-grey">Sep 2023 – Jun 2024</li>
+      </ul>
+      <ul class="flex gap-1 md:gap-0 flex-col md:flex-row items-start md:items-center justify-start font-light py-3 md:py-5">
+        <li class="basis-2/6 text-left text-white">UI/UX Designer</li>
+        <li class="basis-2/6 text-left text-white">@ Strategy First Education Group</li>
+        <li class="basis-2/6 text-right text-grey">Nov 2021 – Sep 2023</li>
+      </ul>
+      <ul class="flex gap-1 md:gap-0 flex-col md:flex-row items-start md:items-center justify-start font-light py-3 md:py-5">
+        <li class="basis-2/6 text-left text-white">Multimedia Designer</li>
+        <li class="basis-2/6 text-left text-white">@ Recycle Myanmar</li>
+        <li class="basis-2/6 text-right text-grey">Jun 2019 – Jan 2021</li>
+      </ul>
+      <ul class="flex gap-1 md:gap-0 flex-col md:flex-row items-start md:items-center justify-start font-light py-3 md:py-5">
+        <li class="basis-2/6 text-left text-white">Multimedia Designer</li>
+        <li class="basis-2/6 text-left text-white">@ Sri Ksetra Student Exhibition Series</li>
+        <li class="basis-2/6 text-right text-grey">Nov 2017 – Feb 2020</li>
+      </ul>
+    </div>  
+  </div>
+
+  </section>
+  <!-- experience end -->
+
+  <!-- testimonials -->
+  <div id="testimonial"  class="static w-full px-5 md:px-0 md:w-4/5 py-16 experience max-w-screen-2xl mx-auto justify-center items-center h-full">
+    <div class="pb-7 h-full ">
+    <div class="max-w-full overflow-hidden">
+      <div class="pb-2">
+        <img src="./img/Heart.svg" alt="" class="w-10 md:w-16">
+      </div>
+      <div class="bodyTitle relative pb-6 border-b border-lightgrey">
+        <h1 class="text-base lg:text-2xl text-orange text-left left-0 top-4 absolute z-10">
+          From My Colleagues' Hearts
+        </h1>
+        <h1 class="text-3xl lg:text-5xl text-left text-dark relative whitespace-nowrap" style="-webkit-text-stroke: 1px #2A2A2A;">
+          From My Colleagues' Hearts
+        </h1>
+      </div>
+    </div>
+
+    <div class="h-[36rem] md:h-[32rem]">
+      <div class="testimonialSlider -rotate-0 absolute inset-x-0 mx-auto mt-8">
+      <div id="testimonial1" class="inline-flex gap-0 w-full flex-nowrap overflow-hidden md:[mask-image:_linear-gradient(to_right,transparent_0,_black_200px,_black_calc(100%-200px),transparent_100%)]">
+        <ul id="testimonial1-1" class="flex items-center justify-center md:justify-start [&_li]:mx-2 [&_img]:max-w-none animate-infinite-scroll">
+          <li class="flex-shrink-0 w-48 h-full">
+            <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague1.png" alt="" />
+          </li>
+          <li class="flex-shrink-0 w-80 md:w-[34rem] h-full flex flex-col justify-between">
+            <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
+              <div class="flex flex-col items-start h-full">
+                <div class="info flex items-start md:items-center justify-center gap-2">
+                  <img src="./img/AvatarNWN.png" alt="" class="w-8 md:w-12">
+                  <div class="text-left">
+                    <h1 class="text-[#b5b5b5] text-sm md:text-base">Nyan Win Naing</h1>
+                    <p class="text-grey text-sm font-light">Flutter Developer @ SFEG</p>
+                  </div>
+                </div>
+                <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
+                  Ko Kaung Myat is an exceptionally talented UI/UX designer who consistently demonstrates creativity, a keen eye for detail, and a strong user-centric approach in his work. Collaborating with him on a lot of mobile app projects was both effortless and motivating, as his innovative designs significantly enhanced the overall quality and functionality of the product.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="flex-shrink-0 w-48 h-full">
+            <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague2.png" alt="" />
+          </li>
+        
+          <li class="flex-shrink-0 w-72 h-full">
+            <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague3.png" alt="" />
+          </li>      
+          <li class="flex-shrink-0 w-80 md:w-[30rem] h-full flex flex-col justify-between">
+            <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
+              <div class="flex flex-col items-start h-full">
+                <div class="info flex items-start md:items-center justify-center gap-2">
+                  <img src="./img/AvatarSZYH.png" alt="" class="w-8 md:w-12">
+                  <div class="text-left">
+                    <h1 class="text-[#b5b5b5] text-sm md:text-base">Sai Zayar Htet</h1>
+                    <p class="text-grey text-sm font-light">Senior Flutter Developer</p>
+                  </div>
+                </div>
+                <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
+                  I’m happy to write a testimonial for Ko Kaung Myat. He has great design thinking skills and can see things from different perspectives that others often miss. He is also very active and has excellent communication skills, making him a great team player. It’s always a pleasure to work with someone as creative and dedicated as him.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="flex-shrink-0 w-72 h-full">
+            <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague4.png" alt="" />
+          </li>
+          <li class="flex-shrink-0 w-80 md:w-96 h-full flex flex-col justify-between">
+            <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
+              <div class="flex flex-col items-start h-full">
+                <div class="info flex items-start md:items-center justify-center gap-2">
+                  <img src="./img/Avatar1.png" alt="" class="w-8 md:w-12">
+                  <div class="text-left">
+                    <h1 class="text-[#b5b5b5] text-sm md:text-base">Than Soe Oo</h1>
+                    <p class="text-grey text-sm font-light">Senior Frontend Developer @ BeyondSensor</p>
+                  </div>
+                </div>
+                <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
+                  Working with Ko Kaung Myat was an absolute pleasure. His exceptional designs, professionalism, and collaboration improved our user experience, boosting engagement and earning positive feedback. Highly recommended for his design skills.
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul id="testimonial1-2" class="flex items-center justify-center md:justify-start [&_li]:mx-2 [&_img]:max-w-none animate-infinite-scroll" aria-hidden="true">
+        <li class="flex-shrink-0 w-48 h-full">
+          <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague1.png" alt="" />
+        </li>
+        <li class="flex-shrink-0 w-80 md:w-[34rem] h-full flex flex-col justify-between">
+          <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
+            <div class="flex flex-col items-start h-full">
+              <div class="info flex items-start md:items-center justify-center gap-2">
+                <img src="./img/AvatarNWN.png" alt="" class="w-8 md:w-12">
+                <div class="text-left">
+                  <h1 class="text-[#b5b5b5] text-sm md:text-base">Nyan Win Naing</h1>
+                  <p class="text-grey text-sm font-light">Flutter Developer @ SFEG</p>
+                </div>
+              </div>
+              <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
+                Ko Kaung Myat is an exceptionally talented UI/UX designer who consistently demonstrates creativity, a keen eye for detail, and a strong user-centric approach in his work. Collaborating with him on a lot of mobile app projects was both effortless and motivating, as his innovative designs significantly enhanced the overall quality and functionality of the product.
+              </p>
+            </div>
+          </div>
+        </li>
+        <li class="flex-shrink-0 w-48 h-full">
+          <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague2.png" alt="" />
+        </li>
+      
+        <li class="flex-shrink-0 w-72 h-full">
+          <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague3.png" alt="" />
+        </li>    
+        <li class="flex-shrink-0 w-80 md:w-[30rem] h-full flex flex-col justify-between">
+          <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
+            <div class="flex flex-col items-start h-full">
+              <div class="info flex items-start md:items-center justify-center gap-2">
+                <img src="./img/AvatarSZYH.png" alt="" class="w-8 md:w-12">
+                <div class="text-left">
+                  <h1 class="text-[#b5b5b5] text-sm md:text-base">Sai Zayar Htet</h1>
+                  <p class="text-grey text-sm font-light">Senior Flutter Developer</p>
+                </div>
+              </div>
+              <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
+                I’m happy to write a testimonial for Ko Kaung Myat. He has great design thinking skills and can see things from different perspectives that others often miss. He is also very active and has excellent communication skills, making him a great team player. It’s always a pleasure to work with someone as creative and dedicated as him.
+              </p>
+            </div>
+          </div>
+        </li>
+        <li class="flex-shrink-0 w-72 h-full">
+          <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague4.png" alt="" />
+        </li>
+        <li class="flex-shrink-0 w-80 md:w-96 h-full flex flex-col justify-between">
+          <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
+            <div class="flex flex-col items-start h-full">
+              <div class="info flex items-start md:items-center justify-center gap-2">
+                <img src="./img/Avatar1.png" alt="" class="w-8 md:w-12">
+                <div class="text-left">
+                  <h1 class="text-[#b5b5b5] text-sm md:text-base">Than Soe Oo</h1>
+                  <p class="text-grey text-sm font-light">Senior Frontend Developer @ BeyondSensor</p>
+                </div>
+              </div>
+              <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
+                Working with Ko Kaung Myat was an absolute pleasure. His exceptional designs, professionalism, and collaboration improved our user experience, boosting engagement and earning positive feedback. Highly recommended for his design skills.
+              </p>
+            </div>
+          </div>
+        </li>
+        </ul>
+      </div>
+      <div id="testimonial2" class="inline-flex gap-0 mt-2 w-full flex-nowrap overflow-hidden md:[mask-image:_linear-gradient(to_right,transparent_0,_black_200px,_black_calc(100%-200px),transparent_100%)]">
+        <ul id="testimonial2-1" class="flex items-center justify-center md:justify-start [&_li]:mx-2 [&_img]:max-w-none animate-infinite-scroll2">
+          <!-- <li class="flex-shrink-0 w-80 md:w-96 h-full flex flex-col justify-between">
+            <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
+              <div class="flex flex-col items-start h-full">
+                <div class="info flex items-start md:items-center justify-center gap-2">
+                  <img src="./img/Avatar1.png" alt="" class="w-8 md:w-12">
+                  <div class="text-left">
+                    <h1 class="text-[#b5b5b5] text-sm md:text-base">Than Soe Oo</h1>
+                    <p class="text-grey text-sm font-light">Senior Frontend Developer @ BeyondSensor</p>
+                  </div>
+                </div>
+                <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
+                  Working with Ko Kaung Myat was an absolute pleasure. His exceptional designs, professionalism, and collaboration improved our user experience, boosting engagement and earning positive feedback. Highly recommended for his design skills.
+                </p>
+              </div>
+            </div>
+          </li> -->
+          <li class="flex-shrink-0 w-48 h-full">
+            <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague5.png" alt="" />
+          </li>
+          <li class="flex-shrink-0 w-48 h-full">
+            <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague6.png" alt="" />
+          </li>     
+          <li class="flex-shrink-0 w-80 md:w-96 h-full flex flex-col justify-between">
+            <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
+              <div class="flex flex-col items-start h-full">
+                <div class="info flex items-start md:items-center justify-center gap-2">
+                  <img src="./img/AvatarLT.png" alt="" class="w-8 md:w-12">
+                  <div class="text-left">
+                    <h1 class="text-[#b5b5b5] text-sm md:text-base">Lay Thein</h1>
+                    <p class="text-grey text-sm font-light">Chief Pet Officer & Mascot @ SFU</p>
+                  </div>
+                </div>
+                <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
+                  Meowww Meow Meow Meow Meow Meow Meow Meoww Meow Meow Meow Meow Meow Meowww... Meow Meoooow Meow Meow Meeeeeeow Meow Meow Meow Meow Meow Meow Meowwww Meow Meow Meow Meow Meoww Meow Meowwww.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="flex-shrink-0 w-80 md:w-96 h-full flex flex-col justify-between">
+            <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
+              <div class="flex flex-col items-start h-full">
+                <div class="info flex items-start md:items-center justify-center gap-2">
+                  <img src="./img/AvatarZTK.png" alt="" class="w-8 md:w-12">
+                  <div class="text-left">
+                    <h1 class="text-[#b5b5b5] text-sm md:text-base">Zaw Thet Khaing</h1>
+                    <p class="text-grey text-sm font-light">Mobile Application Developer @ A bank</p>
+                  </div>
+                </div>
+                <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
+                  As a developer, it has been an absolute honor to work with Ko Kaung Myat, such an innovative and talented designer. His creative designs and experience consistently create impactful experiences for users.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="flex-shrink-0 w-72 h-full">
+            <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague7.png" alt="" />
+          </li>
+          <!-- <li class="flex-shrink-0 w-80 md:w-96 h-full flex flex-col justify-between">
+            <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
+              <div class="flex flex-col items-start h-full">
+                <div class="info flex items-start md:items-center justify-center gap-2">
+                  <img src="./img/Avatar1.png" alt="" class="w-8 md:w-12">
+                  <div class="text-left">
+                    <h1 class="text-[#b5b5b5] text-sm md:text-base">Than Soe Oo</h1>
+                    <p class="text-grey text-sm font-light">Senior Frontend Developer @ BeyondSensor</p>
+                  </div>
+                </div>
+                <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
+                  Working with Ko Kaung Myat was an absolute pleasure. His exceptional designs, professionalism, and collaboration improved our user experience, boosting engagement and earning positive feedback. Highly recommended for his design skills.
+                </p>
+              </div>
+            </div>
+          </li> -->
+        </ul>
+        <ul id="testimonial2-2" class="flex items-center justify-center md:justify-start [&_li]:mx-2 [&_img]:max-w-none animate-infinite-scroll2" aria-hidden="true">
+          <!-- <li class="flex-shrink-0 w-80 md:w-96 h-full flex flex-col justify-between">
+            <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
+              <div class="flex flex-col items-start h-full">
+                <div class="info flex items-start md:items-center justify-center gap-2">
+                  <img src="./img/Avatar1.png" alt="" class="w-8 md:w-12">
+                  <div class="text-left">
+                    <h1 class="text-[#b5b5b5] text-sm md:text-base">Than Soe Oo</h1>
+                    <p class="text-grey text-sm font-light">Senior Frontend Developer @ BeyondSensor</p>
+                  </div>
+                </div>
+                <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
+                  Working with Ko Kaung Myat was an absolute pleasure. His exceptional designs, professionalism, and collaboration improved our user experience, boosting engagement and earning positive feedback. Highly recommended for his design skills.
+                </p>
+              </div>
+            </div>
+          </li> -->
+          <li class="flex-shrink-0 w-48 h-full">
+            <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague5.png" alt="" />
+          </li>
+          <li class="flex-shrink-0 w-48 h-full">
+            <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague6.png" alt="" />
+          </li>     
+          <li class="flex-shrink-0 w-80 md:w-96 h-full flex flex-col justify-between">
+            <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
+              <div class="flex flex-col items-start h-full">
+                <div class="info flex items-start md:items-center justify-center gap-2">
+                  <img src="./img/AvatarLT.png" alt="" class="w-8 md:w-12">
+                  <div class="text-left">
+                    <h1 class="text-[#b5b5b5] text-sm md:text-base">Lay Thein</h1>
+                    <p class="text-grey text-sm font-light">Chief Pet Officer & Mascot @ SFU</p>
+                  </div>
+                </div>
+                <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
+                  Meowww Meow Meow Meow Meow Meow Meow Meoww Meow Meow Meow Meow Meow Meowww... Meow Meoooow Meow Meow Meeeeeeow Meow Meow Meow Meow Meow Meow Meowwww Meow Meow Meow Meow Meoww Meow Meowwww.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="flex-shrink-0 w-80 md:w-96 h-full flex flex-col justify-between">
+            <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
+              <div class="flex flex-col items-start h-full">
+                <div class="info flex items-start md:items-center justify-center gap-2">
+                  <img src="./img/AvatarZTK.png" alt="" class="w-8 md:w-12">
+                  <div class="text-left">
+                    <h1 class="text-[#b5b5b5] text-sm md:text-base">Zaw Thet Khaing</h1>
+                    <p class="text-grey text-sm font-light">Mobile Application Developer @ A bank</p>
+                  </div>
+                </div>
+                <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
+                  As a developer, it has been an absolute honor to work with Ko Kaung Myat, such an innovative and talented designer. His creative designs and experience consistently create impactful experiences for users.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="flex-shrink-0 w-72 h-full">
+            <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague7.png" alt="" />
+          </li>
+          <!-- <li class="flex-shrink-0 w-80 md:w-96 h-full flex flex-col justify-between">
+            <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
+              <div class="flex flex-col items-start h-full">
+                <div class="info flex items-start md:items-center justify-center gap-2">
+                  <img src="./img/Avatar1.png" alt="" class="w-8 md:w-12">
+                  <div class="text-left">
+                    <h1 class="text-[#b5b5b5] text-sm md:text-base">Than Soe Oo</h1>
+                    <p class="text-grey text-sm font-light">Senior Frontend Developer @ BeyondSensor</p>
+                  </div>
+                </div>
+                <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
+                  Working with Ko Kaung Myat was an absolute pleasure. His exceptional designs, professionalism, and collaboration improved our user experience, boosting engagement and earning positive feedback. Highly recommended for his design skills.
+                </p>
+              </div>
+            </div>
+          </li> -->
+        </ul>
+      </div>
+      </div>
+    </div>
+
+    </div>
+  </div>
+
+<!-- loves to -->
+<div class="love static w-full px-5 md:px-0 md:w-4/5 py-16 experience max-w-screen-2xl mx-auto justify-center items-center h-fit">
+  <div class="pb-7">
+    <div class="bodyTitle relative pb-6 border-b border-lightgrey">
+      <h1 class="text-base lg:text-2xl text-orange text-left left-0 top-4 absolute z-10">
+        What I love to
+      </h1>
+      <h1 class="text-3xl lg:text-5xl text-left text-dark relative whitespace-nowrap" style="-webkit-text-stroke: 1px #2A2A2A;">
+        What I love to
+      </h1>
+    </div>
+
+    <div class="text text-sm lg:text-base text-white text-left leading-normal mt-4 lg:mt-6">
+      <p class="font-light">
+        <span>I love storytelling for brands and products. And, I also have a passion for motion design, filmmaking, video editing, and creating stylized character portraits and illustrations. Here are some of my artworks.</span>
+      </p>
     </div>
   </div>
   <!-- what I love to -->
-  <div class="px-5 md:px-9 lg:px-32 pb-16 lg:pb-32 flex flex-col md:grid grid-cols-3 gap-6">
-    <div class="overflow-hidden rounded-md lg:rounded-2xl lg:grayscale hover:grayscale-0 transition duration-500"><img class="object-cover w-full" src="./img/artworks/girl2.png" alt=""></div>
-    <div class="overflow-hidden rounded-md lg:rounded-2xl lg:grayscale hover:grayscale-0 transition duration-500 col-span-2"><img class="object-cover w-full" src="./img/artworks/moana.png" alt=""></div>
-    <div class="overflow-hidden rounded-md lg:rounded-2xl lg:grayscale hover:grayscale-0 transition duration-500"><img class="object-cover w-full" src="./img/artworks/girl1.png" alt=""></div>
-    <div class="overflow-hidden rounded-md lg:rounded-2xl lg:grayscale hover:grayscale-0 transition duration-500"><img class="object-cover w-full" src="./img/artworks/collapse.png" alt=""></div>
-    <div class="overflow-hidden rounded-md lg:rounded-2xl lg:grayscale hover:grayscale-0 transition duration-500"><img class="object-cover w-full" src="./img/artworks/dtiys.png" alt=""></div>
-    <div class="overflow-hidden rounded-md lg:rounded-2xl lg:grayscale hover:grayscale-0 transition duration-500 col-span-2"><img class="object-cover w-full" src="./img/artworks/loki.png" alt=""></div>
-    <div class="overflow-hidden rounded-md lg:rounded-2xl lg:grayscale hover:grayscale-0 transition duration-500"><img class="object-cover w-full" src="./img/artworks/love.png" alt=""></div>
+  <div class=" flex flex-col md:grid grid-cols-5 gap-6">
+    <div class="overflow-hidden rounded-md lg:rounded-2xl lg:grayscale hover:grayscale-0 transition duration-500"><img class="object-cover h-full w-full" src="./img/artworks/girl2.png" alt=""></div>
+    <div class="overflow-hidden rounded-md lg:rounded-2xl lg:grayscale hover:grayscale-0 transition duration-500 col-span-2"><img class="object-cover h-full w-full" src="./img/artworks/moana.png" alt=""></div>
+    <div class="overflow-hidden rounded-md lg:rounded-2xl lg:grayscale hover:grayscale-0 transition duration-500 col-span-2"><img class="object-cover h-full w-full" src="./img/artworks/collapse.png" alt=""></div>
+    <div class="overflow-hidden rounded-md lg:rounded-2xl lg:grayscale hover:grayscale-0 transition duration-500 col-span-2"><img class="object-cover h-full w-full" src="./img/artworks/loki.png" alt=""></div>
+    <div class="overflow-hidden rounded-md lg:rounded-2xl lg:grayscale hover:grayscale-0 transition duration-500"><img class="object-cover h-full w-full" src="./img/artworks/girl1.png" alt=""></div>
+    <div class="overflow-hidden rounded-md lg:rounded-2xl lg:grayscale hover:grayscale-0 transition duration-500 col-span-2"><img class="object-cover h-full w-full" src="./img/artworks/tumblingkellys.png" alt=""></div>
   </div>
 
 </div>
-<div id="section4" class="pt-32 pb-16 flex flex-col justify-center items-center">
+<div id="section4" class="pt-32 px-5 md:px-0 pb-16 flex flex-col justify-center items-center">
   <div class="group relative justify-center items-center">
   <div class="kaungimg my-0 mx-auto w-48 h-48 flex flex-col relative overflow-hidden">    
-    <img class="group-hover:rotate-[360deg] group-hover:scale-125 group-hover:opacity-0 w-full absolute z-10" src="./img/kaung.svg" alt="">
-    <img class="w-full absolute kaung2 opacity-0 group-hover:rotate-[360deg] group-hover:opacity-100 transform-gpu" src="./img/kaung3.png" alt="">
+    <img class="group-hover:rotate-[360deg] group-hover:scale-125 group-hover:opacity-0 w-full absolute z-10" src="./img/kaung2.svg" alt="">
+    <img class="w-full absolute kaung2 opacity-0 group-hover:rotate-[360deg] group-hover:opacity-100 transform-gpu" src="./img/kaung4.png" alt="">
   </div>
-  <div class="">
-    <h1 class="text-3xl group lg:text-6xl text-yellow leading-tight mt-5">Have an awesome idea?<br>
-    <span class="text-white">Well, here I am.</span></h1>
+  <div class="invite text-3xl lg:text-5xl">
+    <h1 class="group text-orange mt-5 leading-normal">Have an awesome idea?</h1>
+    <h1 class="text-white">Well, here I am.</h1>
   </div>
-  <div class="buttongroup flex flex-col md:flex-row gap-5 w-fit mx-auto mt-5">
-    <div class="group btn1 bg-yellow h-16 w-52 leading-[4rem] text-[#1d1d1d] text-base lg:text-xl text-center rounded-lg inline-block overflow-hidden relative transition-all duration-300">
-      <a class="btn  block relative h-full" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/kmmh/30min?hide_gdpr_banner=1&text_color=2B2B2B&primary_color=BDC7CF'});return false;">Schedule a meeting</a>
-      <a class="btn  block relative h-full" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/kmmh/30min?hide_gdpr_banner=1&text_color=2B2B2B&primary_color=BDC7CF'});return false;">Schedule a meeting</a>
+  <div class="buttongroup flex flex-col items-center justify-center gap-5 w-fit mx-auto mt-10">
+
+    <div class="group btn1 bg-lightgrey hover:bg-[#316AFE] rounded-full h-12 w-52 text-white text-sm lg:text-base text-center inline-block overflow-hidden relative transition-all"
+      data-cal-link="chatchat/meet"
+      data-cal-namespace="meet"
+      data-cal-config='{"layout":"month_view"}'>
+      <a class="btn flex justify-center items-center relative h-12 cursor-pointer">Schedule a meeting</a>
     </div>
-    
-    <div class="btn1 bg-transparent border-2 border-yellow leading-[4rem] h-16 w-52 text-yellow text-base lg:text-xl text-center rounded-lg inline-block overflow-hidden relative transition-all duration-300">
-      <a href="mailto:kaungmyatmoeehtoon@gmail.com" class="btn block relative h-full">Just email me</a>
-      <a href="mailto:kaungmyatmoeehtoon@gmail.com" class="btn block relative h-full">Just email me</a>
+    <div class="text-grey text-sm lg:text-base">
+      or just email me via: <a href="mailto:kaungmyatmoeehtoon@gmail.com" class="text-white hover:text-orange block relative h-full">kaungmyatmoeehtoon@gmail.com</a>
     </div>
 
   </div>
 </div>
 </div>
-<div class="text-white pt-10 lg:pt-32 pb-8 lg:pb-14">
-  <ul id="bottomnav" class="hidden bottomnav text-base md:flex justify-center items-center">
+<div class="text-white pt-10 lg:pt-20 pb-8 lg:pb-8">
+  <ul id="bottomnav" class="hidden bottomnav text-sm font-light md:flex justify-center items-center">
     <li>
-      <a href="#about" class="hover:text-green bottomnav block py-2 pl-3 pr-4">About</a>
+      <a href="#hello" class="hover:text-orange bottomnav block py-2 pl-3 pr-4">Hello</a>
     </li>
     <li>
-      <a href="#works" class="hover:text-green bottomnav block py-2 pl-3 pr-4">Works</a>
+      <a href="#works" class="hover:text-orange bottomnav block py-2 pl-3 pr-4">Works</a>
     </li>
     <li>
-      <a href="#experiences" class="hover:text-green bottomnav block py-2 pl-3 pr-4">Experiences</a>
+      <a href="#experiences" class="hover:text-orange bottomnav block py-2 pl-3 pr-4">Experiences</a>
     </li>
     <li>
-      <a href="#contact" class="hover:text-green bottomnav block py-2 pl-3 pr-4">Contact</a>
+      <a href="#contact" class="hover:text-orange bottomnav block py-2 pl-3 pr-4">Contact</a>
     </li>
     <li>
-      <a target="_blank" href="https://drive.google.com/file/d/1_BKU5i3Kdhafqi7utfyRFtI2Tcirhei3/view" class="hover:text-green block py-2 pl-3 pr-4">Resume</a>
+      <a target="_blank" href="https://drive.google.com/file/d/1_BKU5i3Kdhafqi7utfyRFtI2Tcirhei3/view" class="hover:text-orange block py-2 pl-3 pr-4">Resume</a>
     </li>
   </ul>
 
 
   
 
-  <p class="copyright text-[12px] px-6 mt-0 md:mt-8 lg:mt-16 text-white/60">Copyright © 2024. Developed by Kaung Myat Moee Htoon.<br class="block lg:hidden"> Made with ❤️ in Myanmar</p>
+  <p class="copyright text-[12px] px-6 mt-0 md:mt-4 lg:mt-8 text-white/60">Copyright © 2025. Developed by Kaung Myat Moee Htoon.<br class="block lg:hidden"> All rights reserved.</p>
 </div>
-</div>
+
 
 <!-- Medium article embed -->
 <!-- <div class='sk-ww-medium-publication-feed' data-embed-id='25389346'></div> -->
 
 
 <script>
+  
+  
+////////////////////////////////////////////////////////////////
+  (function (C, A, L) { 
+    let p = function (a, ar) { a.q.push(ar); }; 
+    let d = C.document; 
+    C.Cal = C.Cal || function () { 
+      let cal = C.Cal; 
+      let ar = arguments; 
+      if (!cal.loaded) { 
+        cal.ns = {}; 
+        cal.q = cal.q || []; 
+        let script = d.createElement("script");
+        script.src = A;
+        d.head.appendChild(script);
+        cal.loaded = true; 
+      } 
+      if (ar[0] === L) { 
+        const api = function () { p(api, arguments); }; 
+        const namespace = ar[1]; 
+        api.q = api.q || []; 
+        if (typeof namespace === "string") {
+          cal.ns[namespace] = cal.ns[namespace] || api;
+          p(cal.ns[namespace], ar);
+          p(cal, ["initNamespace", namespace]);
+        } else p(cal, ar); 
+        return;
+      } 
+      p(cal, ar); 
+    }; 
+  })(window, "https://app.cal.com/embed/embed.js", "init");
+
+  Cal("init", "meet", { origin: "https://cal.com" });
+  Cal.ns.meet("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
+
+
+  ////////////////////////////////////////////////////////////////
+  const r = new rive.Rive({
+  src: "friendly_neighborhood.riv",
+  canvas: document.getElementById("canvas"),
+  autoplay: true,
+  stateMachines: "Startanimate",
+  onLoad: () => {
+    r.resizeDrawingSurfaceToCanvas();
+  },
+});
+
+// Function to handle Rive events
+const onRiveEventReceived = (riveEvent) => {
+  const eventData = riveEvent.data;
+
+  if (eventData.type === rive.RiveEventType.General) {
+    console.log("Event name:", eventData.name);
+    console.log("Event properties:", eventData.properties);
+
+    let modalContent = "";
+
+    if (eventData.name === "Sipderman click event") {
+      modalContent = `
+        <div class="flex flex-row item-center justify-between p-4 bg-[#2A2F3A]">  
+          <div class="flex flex-row w-20 h-4 gap-2">
+            <div id="close" class="red rounded-full flex item-center justify-center w-4 h-4 bg-[#fd5e59] cursor-pointer"></div>
+            <div class="yellow rounded-full w-4 h-4 bg-[#ffbb3b]"></div>
+            <div class="green rounded-full w-4 h-4 bg-[#34c748]"></div>
+          </div>
+          <div class="text-sm w-20 text-white h-4 leading-none"> Fun Fact
+          </div>
+          <div class="text-base w-20 text-white h-4 leading-none">
+          </div>
+        </div>
+        <div class="content p-8 bg-[#2F343F]/80 backdrop-blur-3xl">
+        <h5 class="modaltitle text-left text-lg text-white">What's with "Your friendly neighborhood Digital Product Designer"?</h5>
+        <div class="modaltext text-left mt-4 font-light text-white  text-sm">
+        <p>
+          This phrase is <span class="text-[#24C6FF]">a playful nod to the famous tagline of Spider-Man</span>, the beloved comic book hero. 
+          Spider-Man often refers to himself as <a target="_blank" href="https://www.marvel.com/characters/friendly-neighborhood-spider-man" class="text-[#24C6FF] hover:text-blue">"your friendly neighborhood Spider-Man"</a> to show that, despite 
+          his superpowers, he's just a down-to-earth guy looking out for his community.
+        </p><br>
+        <p>
+          Similarly, I see myself as a friendly, approachable, and helpful designer who’s here to solve problems 
+          and create impactful digital experiences for your "neighborhood" — whether that's your team, company, or audience.
+        </p><br>
+        <p>
+          Just like Spider-Man swings in to save the day, I’m here to bring ideas to life and make your digital world a little better! 🚀
+        </p>
+        </div>
+        </div>
+      `;
+    } else if (eventData.name === "Kian click Event") {
+      modalContent = `
+        <div class="flex flex-row item-center justify-between p-4 bg-[#2F343F]">  
+          <div class="flex flex-row w-28 h-4 gap-2">
+            <div id="close" class="red rounded-full w-4 h-4 bg-[#fd5e59] cursor-pointer"></div>
+            <div class="yellow rounded-full w-4 h-4 bg-[#ffbb3b]"></div>
+            <div class="green rounded-full w-4 h-4 bg-[#34c748]"></div>
+          </div>
+          <div class="text-sm w-28 text-white h-4 leading-none"> Take Your Pick
+          </div>
+          <div class="text-base w-28 text-white h-4 leading-none">
+          </div>
+        </div>
+        <div class="content p-8 bg-[#2F343F]/50 backdrop-blur-3xl">
+        <h5 class="modaltitle text-left text-lg text-white">Kaung Myat Moee Htoon, Simply Kian</h5>
+        <div class="modaltext text-left mt-4 font-light text-white  text-sm">
+        <p>
+          My full name is Kaung Myat Moee Htoon, but you can also call me Kian. It’s not a direct translation or a hidden meaning. It’s simply a name that feels right.
+        </p><br>
+        <p>
+          Kaung is a name I’ve carried with pride, deeply tied to my roots and identity. But as I navigated different spaces and met people from diverse backgrounds, I wanted something that felt just as natural yet easier to connect with. That’s where Kian comes in. A shorter, more universal name that still feels like me.
+        </p><br>
+        <p>
+          Whether you call me Kaung or Kian, both represent the same person, the same passion, and the same drive to create and connect. So, take your pick. I answer to both.
+        </p>
+        </div>
+        </div>
+      `;
+    }
+
+    // Show the modal with the defined content
+    if (modalContent) {
+      showModal(modalContent);
+    }
+  }
+};
+
+// Attach the event listener to the Rive instance
+r.on(rive.EventType.RiveEvent, onRiveEventReceived);
+
+// Function to show the modal
+function showModal(contentHtml) {
+  const modal = document.createElement("div");
+  const modalContent = document.createElement("div");
+
+  modal.className = "modal";
+  modalContent.className = "modal-content";
+
+  modalContent.innerHTML = contentHtml;
+  modal.appendChild(modalContent);
+  document.body.appendChild(modal);
+
+  // Small delay to ensure modal is rendered before animation starts
+  setTimeout(() => modal.classList.add("show"), 10);
+
+  // Close modal when clicking the red close button
+  modal.addEventListener("click", (event) => {
+    if (event.target.id === "close") {
+      modal.classList.remove("show");
+      setTimeout(() => document.body.removeChild(modal), 300); // Matches animation duration
+    }
+  });
+}
+
+// Resize the drawing surface when the window resizes
+window.addEventListener("resize", () => {
+  r.resizeDrawingSurfaceToCanvas();
+});
+
+
+    // const riveMobile= new rive.Rive({
+    //     src: "friendly_neighborhood_mobile.riv",
+    //     // OR the path to a discoverable and public Rive asset
+    //     // src: '/public/example.riv',
+    //     canvas: document.getElementById("canvasMobile"),
+    //     autoplay: true,
+    //     stateMachines: "MobileStartanimate",
+    //     onLoad: () => {
+    //       r.resizeDrawingSurfaceToCanvas();
+    //     },
+    // });
+
     
-    const r= new rive.Rive({
-        src: "Neighborhood.riv",
-        // OR the path to a discoverable and public Rive asset
-        // src: '/public/example.riv',
-        canvas: document.getElementById("canvas"),
-        autoplay: true,
-        stateMachines: "State Machine 1",
-        onLoad: () => {
-          r.resizeDrawingSurfaceToCanvas();
-        },
-    });
 
 
     const riveMobile = new rive.Rive({
-        src: "Neighborhood_mobile.riv",
-        // OR the path to a discoverable and public Rive asset
-        // src: '/public/example.riv',
-        canvas: document.getElementById("canvasMobile"),
-        autoplay: true,
-        stateMachines: "State Machine 1",
-        onLoad: () => {
-          riveMobile.resizeDrawingSurfaceToCanvas();
-        },
-    });
-
-
-
-gsap.registerPlugin(ScrollTrigger);
-
-gsap.to(".text span", {
-  backgroundPositionX: "0%",
-  ease:"none",
-  stagger: 1,
-  scrollTrigger: {
-    trigger: ".text span",
-    markers: false,
-    scrub: 1,
-    start: "top 90%",
-    end: "400% 65%"
-  }
+    src: "friendly_neighborhood_mobile.riv",
+    canvas: document.getElementById("canvasMobile"),
+    autoplay: true,
+    stateMachines: "MobileStartanimate",
+    fit: rive.Fit.Cover, // Ensures the animation covers the canvas while maintaining aspect ratio
+    alignment: rive.Alignment.TopLeft, // Aligns the animation to the top-left corner of the canvas
+    onLoad: () => {
+        riveMobile.resizeDrawingSurfaceToCanvas();
+    },
 });
 
-gsap.to(".text2 span", {
-  backgroundPositionX: "0%",
-  ease:"none",
-  stagger: 1,
-  scrollTrigger: {
-    trigger: ".text2 span",
-    markers: false,
-    scrub: 1,
-    start: "top 90%",
-    end: "400% 65%"
-  }
-});
+
+
+// gsap.registerPlugin(ScrollTrigger);
+
+// gsap.to(".text span", {
+//   backgroundPositionX: "0%",
+//   ease:"none",
+//   stagger: 1,
+//   scrollTrigger: {
+//     trigger: ".text span",
+//     markers: false,
+//     scrub: 1,
+//     start: "top 90%",
+//     end: "400% 65%"
+//   }
+// });
+
+// gsap.to(".text2 span", {
+//   backgroundPositionX: "0%",
+//   ease:"none",
+//   stagger: 1,
+//   scrollTrigger: {
+//     trigger: ".text2 span",
+//     markers: false,
+//     scrub: 1,
+//     start: "top 90%",
+//     end: "400% 65%"
+//   }
+// });
 
 
 
 
 
   // backgroundColor change
-  ScrollTrigger.create({
+  // ScrollTrigger.create({
    
-   trigger: ".love",
-   start:"top 50%",
-   end:"bottom 0%", 
-   markers:false,
+  //  trigger: ".love",
+  //  start:"top 50%",
+  //  end:"bottom 0%", 
+  //  markers:false,
  
-   onEnter: () => {
-     gsap.to('.green', { duration: 0.5, backgroundColor: '#1D1D1D'});
-     gsap.to('.lovetitle', { duration: 0.5, color:'#FEC426'});
-     gsap.to('.navBar', { duration: 0.5, backgroundColor: '#1D1D1D'});
-     gsap.to('.navlist', { color:"#ffffff"});
-     gsap.to('.menuicon rect', { fill: "#ffffff"});
-     gsap.to('.myarts', { color: "#FEC425"});
-     gsap.to('.logowhite', { duration:0.5, opacity: 1});
-     gsap.to('.logoblack', { duration:0.5, opacity: 0});
-     gsap.to('.navlist', { duration: 0.5, "--hover-color": "#FEC426" });
-   },
+  //  onEnter: () => {
+    //  gsap.to('.green', { duration: 0.5, backgroundColor: '#1D1D1D'});
+    //  gsap.to('.lovetitle', { duration: 0.5, color:'#FEC426'});
+    //  gsap.to('.navBar', { duration: 0.5, backgroundColor: '#1D1D1D'});
+    //  gsap.to('.navlist', { color:"#ffffff"});
+    //  gsap.to('.menuicon rect', { fill: "#ffffff"});
+    //  gsap.to('.myarts', { color: "#FEC425"});
+    //  gsap.to('.logowhite', { duration:0.5, opacity: 1});
+    //  gsap.to('.logoblack', { duration:0.5, opacity: 0});
+    //  gsap.to('.navlist', { duration: 0.5, "--hover-color": "#FEC426" });
+  //  },
    
-   onLeaveBack: () => {
-     gsap.to('.green', { duration: 0.5, backgroundColor: '#316AFE'});
-     gsap.to('.lovetitle', { duration: 0.5, color:'white'})
-     gsap.to('.navBar', { duration: 0.5, backgroundColor: 'rgb(255,255,255)'});
-     gsap.to('.navlist', { color:"#2B2B2B"});
-     gsap.to('.menuicon rect', { fill: "#2B2B2B"});
-     gsap.to('.myarts', { color: "#ffffff"});
-     gsap.to('.logowhite', { duration:0.5, opacity: 0});
-     gsap.to('.logoblack', { duration:0.5, opacity: 1});
-     gsap.to('.navlist', { duration: 0.5, "--hover-color": "#FF553E" });
-   },
- })
+  //  onLeaveBack: () => {
+    //  gsap.to('.green', { duration: 0.5, backgroundColor: '#316AFE'});
+    //  gsap.to('.lovetitle', { duration: 0.5, color:'white'})
+    //  gsap.to('.navBar', { duration: 0.5, backgroundColor: 'rgb(255,255,255)'});
+    //  gsap.to('.navlist', { color:"#2B2B2B"});
+    //  gsap.to('.menuicon rect', { fill: "#2B2B2B"});
+    //  gsap.to('.myarts', { color: "#ffffff"});
+    //  gsap.to('.logowhite', { duration:0.5, opacity: 0});
+    //  gsap.to('.logoblack', { duration:0.5, opacity: 1});
+    //  gsap.to('.navlist', { duration: 0.5, "--hover-color": "#FF553E" });
+  //  },
+//  })
 
- // navbar change
+ // navbar color change on scroll
  ScrollTrigger.create({
    
    trigger: ".hero",
@@ -898,12 +1371,12 @@ gsap.to(".text2 span", {
    markers:false,
  
    onEnter: () => {
-     gsap.to('.navBar', { duration: 0.0, backgroundColor: '#ffffff'});
+     gsap.to('.navBar', { duration: 0.0, backgroundColor: '#000000'});
     //  gsap.to('.navBar', { duration: 0.1, borderBottom: '1px solid #E8EBED'});
    },
    
    onLeaveBack: () => {
-     gsap.to('.navBar', { duration: 0.1, backgroundColor: 'rgb(255,255,255/0.0)'});
+     gsap.to('.navBar', { duration: 0.1, backgroundColor: 'rgb(0,0,0/0.0)'});
     //  gsap.to('.navBar', { duration: 0.1, borderBottom: '0px solid #E8EBED'});
    },
  
@@ -914,23 +1387,22 @@ gsap.to(".text2 span", {
 
 
 
- document.querySelectorAll(".navlist a").forEach((btn, index) => {
-  btn.addEventListener("click", () => {
-    gsap.to(window, {duration: 0.5, scrollTo:{y:"#section" + (index + 1), offsetY:70}});
+ const navMenus = [".navlist a", ".bottomnav a", ".mobilenav a"];
+
+navMenus.forEach((selector) => {
+  document.querySelectorAll(selector).forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+      gsap.to(window, {
+        duration: 0.5,
+        scrollTo: {
+          y: "#section" + (index + 1),
+          offsetY: 70,
+        },
+      });
+    });
   });
 });
 
-document.querySelectorAll(".bottomnav a").forEach((btn, index) => {
-  btn.addEventListener("click", () => {
-    gsap.to(window, {duration: 0.5, scrollTo:{y:"#section" + (index + 1), offsetY:70}});
-  });
-});
-
-document.querySelectorAll(".mobilenav a").forEach((btn, index) => {
-  btn.addEventListener("click", () => {
-    gsap.to(window, {duration: 0.5, scrollTo:{y:"#section" + (index + 1), offsetY:70}});
-  });
-});
 
 
 
@@ -969,19 +1441,6 @@ mobilenav.addEventListener("click", function() {
 });
 
 
-gsap.to(".mousediv", {
-      scrollTrigger: {
-        trigger: ".wrapper",
-        start: "top top",
-        endTrigger: "#wrapper",
-        end: "bottom 10%",
-        toggleActions: "play reverse play reverse",
-        markers: false,
-      },
-      autoAlpha: 0,
-      duration: 0.2,
-      ease: "power4",
-    });
 
 
  // Function to hide the loading screen
@@ -1016,6 +1475,7 @@ gsap.to(".mousediv", {
   function showButton(event) {
   if (window.innerWidth >= 1280 && event.target === wasoapp) {
     cursorButton.classList.remove('hidden');
+    cursorButton.classList.add('noclick');
     moveButton(event);
   } else {
     cursorButton.classList.add('hidden');
@@ -1035,7 +1495,7 @@ gsap.to(".mousediv", {
   }
 
   function redirect(event) {
-    window.location.href = 'waso.html';
+    window.location.href = 'underconstruction.html';
   }
 
   function noclick(event) {
@@ -1055,8 +1515,9 @@ function moveButton(event) {
 ////////////////////////////////////////////////////////////////
 
 function showButton2(event) {
-  if (window.innerWidth >= 1280 && event.target === wasotv) {
+  if (window.innerWidth >= 1280 && event.target === whisper) {
     cursorButton2.classList.remove('hidden');
+    cursorButton2.classList.add('noclick');
     moveButton2(event);
   } else {
     cursorButton2.classList.add('hidden');
@@ -1074,7 +1535,7 @@ function showButton2(event) {
   }
 
   function redirect2(event) {
-    window.location.href = 'wasotv.html';
+    window.location.href = 'underconstruction.html';
   }
 
   function noclick2(event) {
@@ -1093,8 +1554,9 @@ function showButton2(event) {
   ////////////////////////////////////////////////////////////////
 
   function showButton3(event) {
-    if (window.innerWidth >= 1280 && event.target === mdsapp) {
+    if (window.innerWidth >= 1280 && event.target === wego) {
     cursorButton3.classList.remove('hidden');
+    cursorButton3.classList.add('noclick');
     moveButton3(event);
   } else {
     cursorButton3.classList.add('hidden');
@@ -1112,7 +1574,7 @@ function showButton2(event) {
   }
 
   function redirect3(event) {
-    window.location.href = 'mds.html';
+    window.location.href = 'underconstruction.html';
   }
 
   function noclick3(event) {
@@ -1134,6 +1596,7 @@ function showButton2(event) {
   function showButton4(event) {
     if (window.innerWidth >= 1280 && event.target === sfulearn) {
     cursorButton4.classList.remove('hidden');
+    cursorButton4.classList.add('noclick');
     moveButton4(event);
   } else {
     cursorButton4.classList.add('hidden');
@@ -1150,7 +1613,7 @@ function showButton2(event) {
   }
 
   function redirect4(event) {
-    window.location.href = 'sfulearn.html';
+    window.location.href = 'underconstruction.html';
   }
 
   function noclick4(event) {
@@ -1170,8 +1633,9 @@ function showButton2(event) {
   ////////////////////////////////////////////////////////////////
 
   function showButton5(event) {
-    if (window.innerWidth >= 1280 && event.target === slash) {
+    if (window.innerWidth >= 1280 && event.target === digizenship) {
     cursorButton5.classList.remove('hidden');
+    cursorButton5.classList.add('noclick');
     moveButton5(event);
   } else {
     cursorButton5.classList.add('hidden');
@@ -1188,7 +1652,7 @@ function showButton2(event) {
   }
   
   function redirect5(event) {
-    window.location.href = 'slash.html';
+    window.location.href = 'underconstruction.html';
   }
 
   function noclick5(event) {
@@ -1207,8 +1671,9 @@ function showButton2(event) {
   ////////////////////////////////////////////////////////////////
 
   function showButton6(event) {
-    if (window.innerWidth >= 1280 && event.target === lycweb) {
+    if (window.innerWidth >= 1280 && event.target === methodist) {
     cursorButton6.classList.remove('hidden');
+    cursorButton6.classList.add('noclick');
     moveButton6(event);
   } else {
     cursorButton6.classList.add('hidden');
@@ -1225,7 +1690,7 @@ function click6(event) {
 }
 
 function redirect6(event) {
-  window.location.href = 'lyc.html';
+  window.location.href = 'underconstruction.html';
   }
 
 function noclick6(event) {
@@ -1262,19 +1727,19 @@ function moveButton6(event) {
   wasoapp.addEventListener('click', redirect);
   wasoapp.addEventListener('mouseleave', noclick);
 
-  const wasotv = document.getElementById('wasotv');
-  wasotv.addEventListener('mouseenter', showButton2);
-  wasotv.addEventListener('mouseleave', hideButton2);
-  wasotv.addEventListener('click', click2);
-  wasotv.addEventListener('click', redirect2);
-  wasotv.addEventListener('mouseleave', noclick2);
+  const whisper = document.getElementById('whisper');
+  whisper.addEventListener('mouseenter', showButton2);
+  whisper.addEventListener('mouseleave', hideButton2);
+  whisper.addEventListener('click', click2);
+  whisper.addEventListener('click', redirect2);
+  whisper.addEventListener('mouseleave', noclick2);
 
-  const mdsapp = document.getElementById('mdsapp');
-  mdsapp.addEventListener('mouseenter', showButton3);
-  mdsapp.addEventListener('mouseleave', hideButton3);
-  mdsapp.addEventListener('click', click3);
-  mdsapp.addEventListener('click', redirect3);
-  mdsapp.addEventListener('mouseleave', noclick3);
+  const wego = document.getElementById('wego');
+  wego.addEventListener('mouseenter', showButton3);
+  wego.addEventListener('mouseleave', hideButton3);
+  wego.addEventListener('click', click3);
+  wego.addEventListener('click', redirect3);
+  wego.addEventListener('mouseleave', noclick3);
 
   const sfulearn = document.getElementById('sfulearn');
   sfulearn.addEventListener('mouseenter', showButton4);
@@ -1283,21 +1748,26 @@ function moveButton6(event) {
   sfulearn.addEventListener('click', redirect4);
   sfulearn.addEventListener('mouseleave', noclick4);
 
-  const slash = document.getElementById('slash');
-  slash.addEventListener('mouseenter', showButton5);
-  slash.addEventListener('mouseleave', hideButton5);
-  slash.addEventListener('click', click5);
-  slash.addEventListener('click', redirect5);
-  slash.addEventListener('mouseleave', noclick5);
-6
-  const lycweb = document.getElementById('lycweb');
-  lycweb.addEventListener('mouseenter', showButton6);
-  lycweb.addEventListener('mouseleave', hideButton6);
-  lycweb.addEventListener('click', click6);
-  lycweb.addEventListener('click', redirect6);
-  lycweb.addEventListener('mouseleave', noclick6);
+  const digizenship = document.getElementById('digizenship');
+  digizenship.addEventListener('mouseenter', showButton5);
+  digizenship.addEventListener('mouseleave', hideButton5);
+  digizenship.addEventListener('click', click5);
+  digizenship.addEventListener('click', redirect5);
+  digizenship.addEventListener('mouseleave', noclick5);
+
+  const methodist = document.getElementById('methodist');
+  methodist.addEventListener('mouseenter', showButton6);
+  methodist.addEventListener('mouseleave', hideButton6);
+  methodist.addEventListener('click', click6);
+  methodist.addEventListener('click', redirect6);
+  methodist.addEventListener('mouseleave', noclick6);
 
   ////////////////////////////////////////////////////////////////
+
+  
+ 
+
+
 
   // const cursor = document.getElementById('cursor');
   // cursor.style.left = '-100px';
@@ -1322,6 +1792,13 @@ function moveButton6(event) {
   window.addEventListener('mousemove', noclick4);
   window.addEventListener('mousemove', noclick5);
   window.addEventListener('mousemove', noclick6);
+
+
+
+  ////////////////////////////////////////////////////////////////
+
+    
+
 </script>
 
 <script src="rive.js"></script>

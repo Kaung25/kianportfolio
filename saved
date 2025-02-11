@@ -306,3 +306,217 @@
     </div>
   </div>
 </nav>
+
+
+
+<body class="wrapper bg-[#000000]" id="wrapper">
+  
+  
+  <div class="hero bg-[#000000] flex relative justify-center h-fit md:h-screen">
+    
+    <div class="static w-full h-fit place-content-center top-0 z-30">
+      <div class="relative w-full h-full">
+        <div class="relative flex flex-col items-center mx-auto z-10 w-full">
+          <!-- Canvas -->
+          <canvas id="canvas" class="hidden md:block relative top-24"></canvas>
+          
+          <!-- Text Block -->
+          <div class="w-full text-base lg:text-lg text-white text-center leading-normal mt-20">
+            <p class="font-light">
+              <span>I am a product and visual designer</span>
+              <span class="text-blue">based in Bangkok</span>
+              <span>with</span><br>
+              <span class="text-orange">6+ years of experience</span>
+              <span>who combines strategic thinking with <br> creative execution to deliver high-impact digital experiences.</span>
+            </p>
+          </div>
+        </div>
+        
+        <!-- Background Image -->
+        <img src="./img/Background.png" class="absolute -z-10 -top-[28rem] left-0" alt="">    
+      </div>
+    
+  
+    </div>
+    
+  
+    
+  
+    <canvas id="canvasMobile" class="block z-30 md:hidden h-[60vh] mt-16">
+  
+    </canvas>
+  
+  </div>
+  <!-- hero section end -->
+  
+  <div id="section1"  class="static about max-w-screen-2xl mx-auto px-5 md:px-9 lg:px-32 flex justify-center items-center h-fit lg:h-screen">
+    <div class="py-16 lg:py-32">
+      <div class="bodyTitle relative">
+        <h1 class="text-base lg:text-2xl text-orange text-left left-0 top-2 absolute z-10">
+          Featured Projects
+      </h1>
+      <h1 class="text-3xl lg:text-5xl text-left text-dark relative whitespace-nowrap" style="-webkit-text-stroke: 1px #2A2A2A;">
+        Featured Projects
+      </h1>
+      </div>
+      <div class="text about text-xl lg:text-base text-dark text-left leading-normal mt-4 lg:mt-12">
+        <span>Hey there! I am an enthusiastic, passionate, and talented</span>
+        <span>UI/UX designer extraordinaire.</span>
+        <span>With my solid skills and</span>
+        <span>unwavering passion, I create stunning designs that make</span>
+        <span> hearts skip a beat. But wait, there's more. I also unleash</span>
+        <span>my creativity through illustrations and motion graphics,</span>
+        <span>adding that extra touch of magic. Let's bring your</span>
+        <span>projects to life with a dash of excitement and a whole</span>
+        <span>lot of design awesomeness!</p> 
+      </div>
+    </div>
+  </div>
+
+
+
+  <ul class="flex mt-4 justify-start [&_li]:mx-2 animate-infinite-scroll w-auto bg-green">
+    <!-- First li with Image -->
+    <li class="flex-shrink-0 w-48 h-full">
+      <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague1.png" alt="" />
+    </li>
+  
+    <!-- Second li with Text Content -->
+    <li class="flex-shrink-0 w-2/6 h-full flex flex-col justify-between">
+      <div class="p-5 bg-[#141414] rounded-2xl stroke-1 stroke-lightgrey w-full h-full">
+        <div class="flex flex-col items-start h-full">
+          <div class="info flex items-center justify-center gap-2">
+            <img src="./img/Avatar1.png" alt="">
+            <div class="text-left">
+              <h1 class="text-[#b5b5b5] text-base">Than Soe Oo</h1>
+              <p class="text-grey text-sm font-light">Senior Frontend Developer @ BeyondSensor</p>
+            </div>
+          </div>
+          <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
+            Working with Kaung was an absolute pleasure. His exceptional designs, professionalism, and collaboration improved our user experience, boosting engagement and earning positive feedback. Highly recommended for his design skills.
+          </p>
+        </div>
+      </div>
+    </li>
+  
+    <!-- Additional li items -->
+    <li class="flex-shrink-0 w-48 h-full">
+      <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague2.png" alt="" />
+    </li>
+  
+    <li class="flex-shrink-0 w-72 h-full">
+      <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague3.png" alt="" />
+    </li>
+  
+    <li class="flex-shrink-0 w-2/6 h-full flex flex-col justify-between">
+      <div class="p-5 bg-[#141414] rounded-2xl stroke-1 stroke-lightgrey w-full h-full">
+        <div class="flex flex-col items-start h-full">
+          <div class="info flex items-center justify-center gap-2">
+            <img src="./img/Avatar1.png" alt="">
+            <div class="text-left">
+              <h1 class="text-[#b5b5b5] text-base">Than Soe Oo</h1>
+              <p class="text-grey text-sm font-light">Senior Frontend Developer @ BeyondSensor</p>
+            </div>
+          </div>
+          <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
+            Working with Kaung was an absolute pleasure. His exceptional designs, professionalism, and collaboration improved our user experience, boosting engagement and earning positive feedback. Highly recommended for his design skills.
+          </p>
+        </div>
+      </div>
+    </li>
+  
+    <li class="flex-shrink-0 w-72 h-full">
+      <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague4.png" alt="" />
+    </li>
+  
+    <li class="flex-shrink-0 w-2/6 h-full flex flex-col justify-between">
+      <div class="p-5 bg-[#141414] rounded-2xl stroke-1 stroke-lightgrey w-full h-full">
+        <div class="flex flex-col items-start h-full">
+          <div class="info flex items-center justify-center gap-2">
+            <img src="./img/Avatar1.png" alt="">
+            <div class="text-left">
+              <h1 class="text-[#b5b5b5] text-base">Than Soe Oo</h1>
+              <p class="text-grey text-sm font-light">Senior Frontend Developer @ BeyondSensor</p>
+            </div>
+          </div>
+          <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
+            Working with Kaung was an absolute pleasure. His exceptional designs, professionalism, and collaboration improved our user experience, boosting engagement and earning positive feedback. Highly recommended for his design skills.
+          </p>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <ul class="flex mt-4 justify-start [&_li]:mx-2 animate-infinite-scroll w-auto bg-yellow" aria-hidden="true">
+    <!-- First li with Image -->
+    <li class="flex-shrink-0 w-48 h-full">
+      <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague1.png" alt="" />
+    </li>
+  
+    <!-- Second li with Text Content -->
+    <li class="flex-shrink-0 w-2/6 h-full flex flex-col justify-between">
+      <div class="p-5 bg-[#141414] rounded-2xl stroke-1 stroke-lightgrey w-full h-full">
+        <div class="flex flex-col items-start h-full">
+          <div class="info flex items-center justify-center gap-2">
+            <img src="./img/Avatar1.png" alt="">
+            <div class="text-left">
+              <h1 class="text-[#b5b5b5] text-base">Than Soe Oo</h1>
+              <p class="text-grey text-sm font-light">Senior Frontend Developer @ BeyondSensor</p>
+            </div>
+          </div>
+          <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
+            Working with Kaung was an absolute pleasure. His exceptional designs, professionalism, and collaboration improved our user experience, boosting engagement and earning positive feedback. Highly recommended for his design skills.
+          </p>
+        </div>
+      </div>
+    </li>
+  
+    <!-- Additional li items -->
+    <li class="flex-shrink-0 w-48 h-full">
+      <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague2.png" alt="" />
+    </li>
+  
+    <li class="flex-shrink-0 w-72 h-full">
+      <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague3.png" alt="" />
+    </li>
+  
+    <li class="flex-shrink-0 w-2/6 h-full flex flex-col justify-between">
+      <div class="p-5 bg-[#141414] rounded-2xl stroke-1 stroke-lightgrey w-full h-full">
+        <div class="flex flex-col items-start h-full">
+          <div class="info flex items-center justify-center gap-2">
+            <img src="./img/Avatar1.png" alt="">
+            <div class="text-left">
+              <h1 class="text-[#b5b5b5] text-base">Than Soe Oo</h1>
+              <p class="text-grey text-sm font-light">Senior Frontend Developer @ BeyondSensor</p>
+            </div>
+          </div>
+          <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
+            Working with Kaung was an absolute pleasure. His exceptional designs, professionalism, and collaboration improved our user experience, boosting engagement and earning positive feedback. Highly recommended for his design skills.
+          </p>
+        </div>
+      </div>
+    </li>
+  
+    <li class="flex-shrink-0 w-72 h-full">
+      <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague4.png" alt="" />
+    </li>
+  
+    <li class="flex-shrink-0 w-2/6 h-full flex flex-col justify-between">
+      <div class="p-5 bg-[#141414] rounded-2xl stroke-1 stroke-lightgrey w-full h-full">
+        <div class="flex flex-col items-start h-full">
+          <div class="info flex items-center justify-center gap-2">
+            <img src="./img/Avatar1.png" alt="">
+            <div class="text-left">
+              <h1 class="text-[#b5b5b5] text-base">Than Soe Oo</h1>
+              <p class="text-grey text-sm font-light">Senior Frontend Developer @ BeyondSensor</p>
+            </div>
+          </div>
+          <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
+            Working with Kaung was an absolute pleasure. His exceptional designs, professionalism, and collaboration improved our user experience, boosting engagement and earning positive feedback. Highly recommended for his design skills.
+          </p>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+</body>

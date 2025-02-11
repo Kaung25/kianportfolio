@@ -50,8 +50,10 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
     
-        <!-- SF Pro Font -->
-        <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+        <!-- DM Sans font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/ScrollTrigger.min.js"></script>
@@ -80,15 +82,16 @@
               cursor:none;
             } */
             body {
-                color: #2B2B2B;
-                text-align: center;
-                font-family: 'SF Pro Display', sans-serif;
-                /* font-weight: 400; */
-                /* font-size: 16px; */
-                font-style: normal;
-                /* font-weight: 100; */
-                line-height: 112.336%;
-             }
+            color: #2B2B2B;
+            text-align: center;
+            font-family: "DM Sans", serif;
+            font-optical-sizing: auto;
+            /* font-weight: 400; */
+            /* font-size: 16px; */
+            font-style: normal;
+            /* font-weight: 100; */
+            line-height: 150%;
+         }
 
              .footer{
                 font-family: 'Skranji',serif;;
@@ -141,14 +144,14 @@
         </style>
     
     </head>
-    <body class="body">
+    <body class="body wrapper bg-[#000000]" id="wrapper">
       <!-- <div id="cursor" class="hidden lg:block"><img src="./img/Pointer.svg" alt="" class=""></div> -->
     <!-- navbar -->
     <section>
-    <nav class="navBar md:pt-6 w-full fixed px-6 md:px-9 lg:px-24 z-20 bg-grey/5 md:bg-white border-b-[1px] md:border-0 backdrop-blur-lg border-grey/20">
-        <div class="max-w-screen-2xl md:pl-8 md:pr-4 md:bg-grey/5 md:border-[1px] backdrop-blur-lg md:border-grey/20  md:rounded-full flex flex-wrap items-center justify-between mx-auto py-4 px-0">
+    <nav class="navBar md:pt-6 w-full fixed px-6 md:px-9 lg:px-24 z-20 bg-[#000000]/80 border-b-[1px] md:border-0 backdrop-blur-3xl border-grey/20">
+        <div class="max-w-screen-2xl md:pl-8 md:pr-4 bg-[#000000]/80 md:border-[1px] backdrop-blur-3xl md:border-grey/20  md:rounded-full flex flex-wrap items-center justify-between mx-auto py-4 px-0">
           <a href="./index.html" class="flex items-center">
-            <img src="./img/logo_black.svg" class=" absolute logoblack" alt="Logo" />
+            <!-- <img src="./img/logo_black.svg" class=" absolute logoblack" alt="Logo" /> -->
             <img src="./img/logo.svg" class=" logowhite" alt="Logo" />
           </a>
           
@@ -156,11 +159,11 @@
           <div class="w-auto" id="navbar-default">
             <ul id="navlist" class="navlist text-base flex">
               <li>
-                <a href="./index.html" class=" navlist block text-dark">
+                <a href="./index.html" class=" navlist block text-white">
                   <div class="flex flex-row gap-2 items-center">
                     <p class="hidden md:block">Close</p>
                     <div class="icon">
-                      <img class="w-6 absolute close" src="./img/closeCircle.svg" alt="">
+                      <!-- <img class="w-6 absolute close" src="./img/closeCircle.svg" alt=""> -->
                       <img class="w-6 closeWhite" src="./img/closeCircleWhite.svg" alt="">
                     </div>
                   </div>
@@ -422,60 +425,60 @@
 
 
     // backgroundColor change
-    ScrollTrigger.create({
+//     ScrollTrigger.create({
    
-   trigger: ".footer",
-   start:"top 50%",
-   end:"bottom 0%", 
-   markers:false,
+//    trigger: ".footer",
+//    start:"top 50%",
+//    end:"bottom 0%", 
+//    markers:false,
  
-   onEnter: () => {
-     gsap.to('.body', { duration: 0.5, backgroundColor: '#1D1D1D'});
-     gsap.to('.footertitle', { duration: 0.5, color:'#FEC426'});
-     gsap.to('.navBar', { duration: 0.5, backgroundColor: '#1D1D1D'});
-     gsap.to('.navlist', { color:'rgba(255, 255, 255, 0.6)'});
-     gsap.to('.menuicon rect', { fill: "#ffffff"});
-     gsap.to('.logowhite', { duration:0.5, opacity: 1});
-     gsap.to('.logoblack', { duration:0.5, opacity: 0});
-     gsap.to('.closeWhite', { duration:0.5, opacity: 1});
-     gsap.to('.close', { duration:0.5, opacity: 0});
+//    onEnter: () => {
+//      gsap.to('.body', { duration: 0.5, backgroundColor: '#1D1D1D'});
+//      gsap.to('.footertitle', { duration: 0.5, color:'#FEC426'});
+//      gsap.to('.navBar', { duration: 0.5, backgroundColor: '#1D1D1D'});
+//      gsap.to('.navlist', { color:'rgba(255, 255, 255, 0.6)'});
+//      gsap.to('.menuicon rect', { fill: "#ffffff"});
+//      gsap.to('.logowhite', { duration:0.5, opacity: 1});
+//      gsap.to('.logoblack', { duration:0.5, opacity: 0});
+//      gsap.to('.closeWhite', { duration:0.5, opacity: 1});
+//      gsap.to('.close', { duration:0.5, opacity: 0});
      
-   },
+//    },
    
-   onLeaveBack: () => {
-     gsap.to('.body', { duration: 0.5, backgroundColor: '#ffffff'});
-     gsap.to('.footertitle', { duration: 0.5, color:'white'})
-     gsap.to('.navBar', { duration: 0.5, backgroundColor: 'rgb(255,255,255)'});
-     gsap.to('.navlist', { color:"#2B2B2B"});
-     gsap.to('.menuicon rect', { fill: "#2B2B2B"});
-     gsap.to('.logowhite', { duration:0.5, opacity: 0});
-     gsap.to('.logoblack', { duration:0.5, opacity: 1});
-     gsap.to('.closeWhite', { duration:0.5, opacity: 0});
-     gsap.to('.close', { duration:0.5, opacity: 1});
+//    onLeaveBack: () => {
+//      gsap.to('.body', { duration: 0.5, backgroundColor: '#ffffff'});
+//      gsap.to('.footertitle', { duration: 0.5, color:'white'})
+//      gsap.to('.navBar', { duration: 0.5, backgroundColor: 'rgb(255,255,255)'});
+//      gsap.to('.navlist', { color:"#2B2B2B"});
+//      gsap.to('.menuicon rect', { fill: "#2B2B2B"});
+//      gsap.to('.logowhite', { duration:0.5, opacity: 0});
+//      gsap.to('.logoblack', { duration:0.5, opacity: 1});
+//      gsap.to('.closeWhite', { duration:0.5, opacity: 0});
+//      gsap.to('.close', { duration:0.5, opacity: 1});
      
-   },
- })
+//    },
+//  })
 
  // navbar change
- ScrollTrigger.create({
+//  ScrollTrigger.create({
    
-   trigger: ".hero",
-   start:"top 0%",
-   end:"bottom 20%", 
-   markers:false,
+//    trigger: ".hero",
+//    start:"top 0%",
+//    end:"bottom 20%", 
+//    markers:false,
  
-   onEnter: () => {
-     gsap.to('.navBar', { duration: 0.0, backgroundColor: '#ffffff'});
-    //  gsap.to('.navBar', { duration: 0.1, borderBottom: '1px solid #E8EBED'});
-   },
+//    onEnter: () => {
+//      gsap.to('.navBar', { duration: 0.0, backgroundColor: '#ffffff'});
+//     //  gsap.to('.navBar', { duration: 0.1, borderBottom: '1px solid #E8EBED'});
+//    },
    
-   onLeaveBack: () => {
-     gsap.to('.navBar', { duration: 0.1, backgroundColor: 'rgb(255,255,255/0.0)'});
-    //  gsap.to('.navBar', { duration: 0.1, borderBottom: '0px solid #E8EBED'});
-   },
+//    onLeaveBack: () => {
+//      gsap.to('.navBar', { duration: 0.1, backgroundColor: 'rgb(255,255,255/0.0)'});
+//     //  gsap.to('.navBar', { duration: 0.1, borderBottom: '0px solid #E8EBED'});
+//    },
  
    
- })
+//  })
 
 </script>
 
