@@ -1,275 +1,392 @@
 <!DOCTYPE html>
-<html lang="en"  class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
+
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-85Q9W9880B"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-85Q9W9880B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-      gtag('config', 'G-85Q9W9880B');
-    </script>
-    <!-- Google tag (gtag.js) -->
+    gtag('config', 'G-85Q9W9880B');
+  </script>
+  <!-- Google tag (gtag.js) -->
 
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaung-Portfolio</title>
-    <meta name="description" content="I am Kaung Myat Moee Htoon, an enthusiastic, passionate, and experienced UI/UX designer from Myanmar, currently building experiences at Waso Tech! I am currently offering web and mobile design services as a freelance UI/UX Designer. Explore my portfolio and contact me for your design needs.">
 
-    <!-- thumbs -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kaung-Portfolio</title>
+  <meta name="description"
+    content="I am Kaung Myat Moee Htoon, an enthusiastic, passionate, and experienced UI/UX designer from Myanmar, currently building experiences at Waso Tech! I am currently offering web and mobile design services as a freelance UI/UX Designer. Explore my portfolio and contact me for your design needs.">
 
-    <!-- Other meta tags and head content -->
+  <!-- thumbs -->
 
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Kaung - Digital product designer">
-    <meta property="og:description" content="The enthusiastic, passionate, and experienced designer">
-    <meta property="og:image" content="https://i.ibb.co/RSLc4L0/thumb.png">
-    <meta property="og:url" content="https://www.kaung.me">
-    <meta property="og:type" content="website">
+  <!-- Other meta tags and head content -->
 
-    <!-- Twitter Card Meta Tags (Optional but recommended) -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Kaung - Digital Product Designer">
-    <meta name="twitter:description" content="The enthusiastic, passionate, and experienced designer">
-    <meta name="twitter:image" content="https://i.ibb.co/RSLc4L0/thumb.png">
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Kaung - Digital product designer">
+  <meta property="og:description" content="The enthusiastic, passionate, and experienced designer">
+  <meta property="og:image" content="https://i.ibb.co/RSLc4L0/thumb.png">
+  <meta property="og:url" content="https://www.kaung.me">
+  <meta property="og:type" content="website">
 
-    <!-- thumbs -->
-    <link rel="icon" type="image/x-icon" href="./img/favicon.png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="../tailwind.config.js">
-    <!-- skranji font -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- Twitter Card Meta Tags (Optional but recommended) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kaung - Digital Product Designer">
+  <meta name="twitter:description" content="The enthusiastic, passionate, and experienced designer">
+  <meta name="twitter:image" content="https://i.ibb.co/RSLc4L0/thumb.png">
+
+  <!-- thumbs -->
+  <link rel="icon" type="image/x-icon" href="./img/favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../tailwind.config.js">
+  <!-- skranji font -->
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Skranji:wght@400;700&display=swap" rel="stylesheet"> -->
-    <!-- skranji font-->
+  <!-- skranji font-->
 
-    <!-- DM Sans font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <!-- DM Sans font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
 
-    <!-- Alfa Slab One font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+  <!-- Alfa Slab One font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
 
-    <!-- Cocogoosefont -->
-    <link href="https://fonts.cdnfonts.com/css/cocogoose" rel="stylesheet">
-                
+  <!-- Cocogoosefont -->
+  <link href="https://fonts.cdnfonts.com/css/cocogoose" rel="stylesheet">
 
-    <!-- SF Pro Font -->
-    <!-- <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet"> -->
 
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/jquery.gsap.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=cahcebustin"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollToPlugin3.min.js"></script>
-    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+  <!-- SF Pro Font -->
+  <!-- <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet"> -->
 
-    <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- rive -->
-    <script src="https://unpkg.com/@rive-app/canvas"></script>
-    
-    <!-- <script src="https://assets.codepen.io/16327/SplitText3.min.js"></script> -->
-    <!-- <script src="https://codepen.io/GreenSock/pen/7ba936b34824fefdccfe2c6d9f0b740b.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/jquery.gsap.min.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=cahcebustin"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollToPlugin3.min.js"></script>
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- rive -->
+  <script src="https://unpkg.com/@rive-app/canvas"></script>
+
+  <!-- <script src="https://assets.codepen.io/16327/SplitText3.min.js"></script> -->
+  <!-- <script src="https://codepen.io/GreenSock/pen/7ba936b34824fefdccfe2c6d9f0b740b.js"></script>
     <script src="https://assets.codepen.io/16327/gsap-latest-beta.min.js"></script>
     <script src="https://assets.codepen.io/16327/ScrollTrigger.min.js?v=40"></script> -->
 
-    <!-- Calendly link widget begin -->
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<!-- Calendly link widget end -->
+  <!-- Calendly link widget begin -->
+  <!-- <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script> -->
+  <!-- Calendly link widget end -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Noto+Sans+Myanmar:wght@700&family=Noto+Sans+Thai:wght@700&family=Noto+Sans+JP:wght@700&family=Noto+Sans+SC:wght@700&display=swap"
+    rel="stylesheet">
 
-    
 
-    <style>
-        /* *{
+
+  <style>
+    /* *{
           cursor:none;
         } */
-        
-        body {
-            color: #2B2B2B;
-            text-align: center;
-            font-family: "DM Sans", serif;
-            font-optical-sizing: auto;
-            /* font-weight: 400; */
-            /* font-size: 16px; */
-            font-style: normal;
-            /* font-weight: 100; */
-            line-height: 150%;
-         }
+
+    body {
+      color: #2B2B2B;
+      text-align: center;
+      font-family: "DM Sans", serif;
+      font-optical-sizing: auto;
+      /* font-weight: 400; */
+      /* font-size: 16px; */
+      font-style: normal;
+      /* font-weight: 100; */
+      line-height: 150%;
+    }
+
+    html,
+    body {
+      overflow: auto;
+      scrollbar-width: none;
+      /* Firefox */
+      -ms-overflow-style: none;
+      /* Internet Explorer & Edge */
+    }
+
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+      display: none;
+      /* Chrome, Safari, Edge */
+    }
 
 
-        .bodyTitle,.invite,.mobilenav{
-          font-family: 'COCOGOOSE', sans-serif;
-        }
+    .bodyTitle,
+    .invite,
+    .mobilenav {
+      font-family: 'COCOGOOSE', sans-serif;
+    }
 
-         #canvas {
-          width: 76%;
-          margin: 0;
-          padding: 0;
-         }
+    .invite {
+      animation: pulse 1s infinite alternate;
+    }
 
-         #canvasMobile{
-          width: 100%;
-          margin: 0;
-          padding: 0;
-         }
+    #canvas {
+      width: 76%;
+      margin: 0;
+      padding: 0;
+    }
 
-         .split-line {
-           overflow: hidden;
-         }
+    #canvasMobile {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
 
-        .split-parent {
-          overflow: hidden;
-        }
-        
-        .about > span {
-        	background: linear-gradient(
-	        to right,
-	      #ffffff 50%,
-	      #696969 50%
-	      );
-          font-family: 'DM Sans', sans-serif;
-	        background-size: 200% 100%;
-	        background-position-x: 100%;
-	        color: transparent;
-	        background-clip: text;
-	        -webkit-background-clip: text;
-          line-height: 150%;
-        }
+    .split-line {
+      overflow: hidden;
+    }
 
-        
+    .split-parent {
+      overflow: hidden;
+    }
 
-        .copyright{
-          font-family: 'DM Sans', sans-serif;
-        }
+    .about>span {
+      background: linear-gradient(to right,
+          #ffffff 50%,
+          #696969 50%);
+      font-family: 'DM Sans', sans-serif;
+      background-size: 200% 100%;
+      background-position-x: 100%;
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+      line-height: 150%;
+    }
 
-        
-        .kaungimg img {
-          transition: all 0.2s ease-out;
-          box-sizing: border-box;
-          max-width: 100%;
-        }
 
-        .kaungimg{
-          background-color: #26BBD3;
-          border-radius:50%;
-        }
-        
-        /* .kaung2 {
+
+    .copyright {
+      font-family: 'DM Sans', sans-serif;
+    }
+
+
+    .kaungimg img {
+      transition: all 0.2s ease-out;
+      box-sizing: border-box;
+      max-width: 100%;
+    }
+
+    .kaungimg {
+      background-color: #26BBD3;
+      border-radius: 50%;
+    }
+
+    /* .kaung2 {
           transition: all 0.2s ease-in-out;
         } */
 
-        .navlist:hover{
-          color: var(--hover-color, #FF553E) !important;
-        }
+    .navlist:hover {
+      color: var(--hover-color, #FF553E) !important;
+    }
 
-        .noclick{
-          pointer-events: none;
-        }
+    .noclick {
+      pointer-events: none;
+    }
 
-        #cursorButton,
-        #cursorButton2,
-        #cursorButton3,
-        #cursorButton4,
-        #cursorButton5,
-        #cursorButton6 {
-          position: fixed;
-          z-index: 9999;
-          transform: translate(-50%, -50%);
-        }
+    #cursorButton,
+    #cursorButton2,
+    #cursorButton3,
+    #cursorButton4,
+    #cursorButton5,
+    #cursorButton6 {
+      position: fixed;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+    }
 
-        /* Default state */
-        #testimonial1-1,
-        #testimonial1-2,
-        #testimonial2-1,
-        #testimonial2-2 {
-          animation-play-state: running;
-        }
+    /* Default state */
+    #testimonial1-1,
+    #testimonial1-2,
+    #testimonial2-1,
+    #testimonial2-2 {
+      animation-play-state: running;
+    }
 
-        /* Pause on hover for testimonial1 */
-        #testimonial1:hover #testimonial1-1,
-        #testimonial1:hover #testimonial1-2 {
-          animation-play-state: paused;
-        }
+    /* Pause on hover for testimonial1 */
+    #testimonial1:hover #testimonial1-1,
+    #testimonial1:hover #testimonial1-2 {
+      animation-play-state: paused;
+    }
 
-        /* Pause on hover for testimonial2 */
-        #testimonial2:hover #testimonial2-1,
-        #testimonial2:hover #testimonial2-2 {
-          animation-play-state: paused;
-        }
-
-
-        /* spiderman modalbox */
-       /*modal*/
-/* Modal Overlay */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Dimmed background */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-/* Modal Content */
-.modal-content {
-  border-radius: 12px;
-  overflow: hidden;
-  width: 100%; /* Adjust width as needed */
-  color: #ffffff;
-  max-width: 500px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  transform: scale(0.5); /* Start small */
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  opacity: 0;
-}
-
-.modaltitle{
-  font-family: 'COCOGOOSE', sans-serif;
-}
+    /* Pause on hover for testimonial2 */
+    #testimonial2:hover #testimonial2-1,
+    #testimonial2:hover #testimonial2-2 {
+      animation-play-state: paused;
+    }
 
 
-.close-button:hover {
-  background-color: #0056b3;
-}
+    /* spiderman modalbox */
+    /*modal*/
+    /* Modal Overlay */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      /* Dimmed background */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
 
-/* Show Modal */
-.modal.show {
-  visibility: visible;
-  opacity: 1;
-}
+    /* Modal Content */
+    .modal-content {
+      border-radius: 12px;
+      overflow: hidden;
+      width: 100%;
+      /* Adjust width as needed */
+      color: #ffffff;
+      max-width: 500px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      transform: scale(0.5);
+      /* Start small */
+      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      opacity: 0;
+    }
 
-.modal.show .modal-content {
-  transform: scale(1); /* Pop to full size */
-  opacity: 1;
-}
+    .modaltitle {
+      font-family: 'COCOGOOSE', sans-serif;
+    }
 
-    </style>
+
+    .close-button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Show Modal */
+    .modal.show {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .modal.show .modal-content {
+      transform: scale(1);
+      /* Pop to full size */
+      opacity: 1;
+    }
+
+    /*laoding css*/
+    /* Only lock scrolling when loading class is present */
+    .loading {
+      overflow: hidden;
+      height: 100vh;
+    }
+
+    .preloader {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      transition: clip-path 1s ease-in-out;
+      clip-path: circle(100% at center);
+      /* Initially covers the whole screen */
+    }
+
+    .counter {
+      font-family: "Padauk", sans-serif;
+      font-weight: 800;
+      /* font-size: 8rem; */
+      /* color: #fff; */
+      /* animation: subtleScale 1s infinite alternate; */
+    }
+
+    .digit-en {
+      font-family: 'Noto Sans', sans-serif;
+    }
+
+    .digit-my {
+      font-family: 'Noto Sans Myanmar', sans-serif;
+    }
+
+    .digit-th {
+      font-family: 'Noto Sans Thai', sans-serif;
+    }
+
+    .digit-jp {
+      font-family: 'Noto Sans JP', sans-serif;
+    }
+
+    .digit-zh {
+      font-family: 'Noto Sans SC', sans-serif;
+    }
+
+    @keyframes subtleScale {
+      from {
+        transform: scale(1);
+      }
+
+      to {
+        transform: scale(1.03);
+      }
+    }
+
+    .pagecontent {
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      padding: 20px;
+      color: white;
+      display: none;
+      min-height: 200vh;
+    }
+
+    .visible-content {
+      opacity: 1;
+      display: block;
+    }
+
+    .preloader-exit {
+      clip-path: circle(0% at center);
+      /* Shrinks into a tiny dot */
+    }
+
+    .wait_mm{
+      font-family: 'DM Sans', sans-serif;
+    }
+  </style>
 
 </head>
 
 
-<body class="wrapper bg-[#000000]" id="wrapper">
+<body class="wrapper loading bg-[#000000]" id="wrapper">
 
 
-<!-- <div id="loadingScreen" class="right-0 loading-screen z-50 fixed bg-dark mx-0 my-auto w-full h-screen flex flex-col justify-center items-center">
+
+  <div class="preloader">
+    <h1 class="counter text-blue text-8xl md:text-9xl">0</h1>
+    <p class="absolute percent text-orange text-4xl md:text-6xl">%</p>
+    <p class="wait_mm absolute block md:hidden text-grey text-base w-2/4 bottom-8">Trust me, it looks way cooler on a desktop.</p>
+  </div>
+
+  <!-- <div id="loadingScreen" class="right-0 loading-screen z-50 fixed bg-dark mx-0 my-auto w-full h-screen flex flex-col justify-center items-center">
   <div class="almost-there">
     <div class="load z-50 w-12 h-12 ">
       <hr/><hr/><hr/><hr/>
@@ -278,24 +395,27 @@
   </div>
 </div> -->
 
-    
-    
-<nav class="navBar text-white bg-transparent border-gray-200 w-full mx-auto fixed right-0 left-0 z-50">
+  <main class="pagecontent"></main>
+
+  <nav class="navBar text-white bg-transparent border-gray-200 w-full mx-auto fixed right-0 left-0 z-50">
     <div class="max-w-screen-2xl flex flex-wrap items-center justify-between w-full md:w-4/5 mx-auto py-4 px-5 md:px-0">
       <a href="" class="flex items-center">
         <!-- <img src="./img/logo_black.svg" class=" absolute logoblack" alt="Logo" /> -->
         <img src="./img/logo.svg" class="logowhite" alt="Logo" />
       </a>
-      <button  type="button" class="burger inline-flex items-center py-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
-          <span class="sr-only">Open main menu</span>
-          <svg class="menuicon" width="32" height="24" fill="none" viewBox="0 0 32 24" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0.773926" y="0.485382" width="31.0737" height="5.00974" rx="2" fill="#909090"/>
-            <rect x="0.773926" y="9.49512" width="31.0737" height="5.00974" rx="2" fill="#909090"/>
-            <rect x="0.773926" y="18.5049" width="31.0737" height="5.00974" rx="2" fill="#909090"/>
-          </svg>
+      <button type="button"
+        class="burger inline-flex items-center py-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        aria-controls="navbar-default" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="menuicon" width="32" height="24" fill="none" viewBox="0 0 32 24" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0.773926" y="0.485382" width="31.0737" height="5.00974" rx="2" fill="#909090" />
+          <rect x="0.773926" y="9.49512" width="31.0737" height="5.00974" rx="2" fill="#909090" />
+          <rect x="0.773926" y="18.5049" width="31.0737" height="5.00974" rx="2" fill="#909090" />
+        </svg>
       </button>
-      
-      <div class="absolute overlay w-0 h-screen top-0 right-0 text-center bg-dark bg-opacity-50 backdrop-blur-3xl" id="overlay">
+
+      <div class="absolute overlay w-0 h-screen top-0 right-0 text-center bg-dark bg-opacity-50 backdrop-blur-3xl"
+        id="overlay">
         <div class="hidden opacity-0 close z-50 absolute top-5 right-5 p-2 w-10 h-10 items-center justify-center">
           <img class="" src="./img/close.svg" alt="">
         </div>
@@ -314,12 +434,14 @@
               <a href="#contact" class="mobilenav block py-2 p-14">Contact</a>
             </li>
             <li>
-              <a target="_blank" href="https://drive.google.com/file/d/1rXvd4bMhf_CnHu4p5y4PPbJgDijJC5l-/view?usp=sharing" class="mobilenav block py-2 p-14">Resume</a>
+              <a target="_blank"
+                href="https://drive.google.com/file/d/1rXvd4bMhf_CnHu4p5y4PPbJgDijJC5l-/view?usp=sharing"
+                class="mobilenav block py-2 p-14">Resume</a>
             </li>
           </ul>
         </nav>
       </div>
-      
+
       <div class=" hidden w-full lg:block lg:w-auto" id="navbar-default">
         <ul id="navlist" class="navlist text-sm font-light flex">
           <li>
@@ -335,138 +457,108 @@
             <a href="#contact" class=" navlist block py-2 p-4 text-white">Contact</a>
           </li>
           <li>
-            <a target="_blank" href="https://drive.google.com/file/d/1rXvd4bMhf_CnHu4p5y4PPbJgDijJC5l-/view?usp=sharing" class=" navlist block py-2 pl-3 text-white">Resume</a>
+            <a target="_blank" href="https://drive.google.com/file/d/1rXvd4bMhf_CnHu4p5y4PPbJgDijJC5l-/view?usp=sharing"
+              class=" navlist block py-2 pl-3 text-white">Resume</a>
           </li>
         </ul>
       </div>
     </div>
-</nav>
-<!-- navigation bar end-->
+  </nav>
+  <!-- navigation bar end-->
 
 
-<!-- Hero Section -->
-    <section id="section1" class="hero pb-16 bg-[#000000] flex flex-col relative justify-center h-fit">
-    
-      <div class="relative md:static w-full h-fit place-content-center top-0 z-30">
-        <div class="relative w-full">
-          <div class="relative flex flex-col items-center md:mx-auto z-10 w-full">
-            <!-- Canvas -->
-            <canvas id="canvas" class="hidden md:block relative top-16"></canvas>
-          </div>
-            
-            <!-- Text Block -->
-            <div class="hidden md:block w-full px-5 md:px-0 text-base lg:text-lg text-white text-left md:text-center leading-normal -mt-16 md:mt-8">
-              <p class="font-light">
-                <span>I am a product and visual designer</span>
-                <span class="text-blue">based in Bangkok</span>
-                <span>with</span><br class="hidden md:block">
-                <span class="text-orange">6+ years of experience</span>
-                <span>who combines strategic thinking with <br class="hidden md:block"> creative execution to deliver high-impact digital experiences.</span>
-              </p>
-            </div>
-          </div>  
-      </div>
-      <div class="md:hidden static h-auto px-5 pt-24 overflow-hidden">
-      <div class="w-[170%]">
-        <canvas id="canvasMobile" class="block z-30 w-full h-full object-cover"></canvas>
-      </div>
-      </div>
+  <!-- Hero Section -->
+  <section id="section1" class="hero pb-16 bg-[#000000] flex flex-col relative justify-center h-fit">
 
-      <div class="block static md:hidden mt-4 w-full px-5 text-base text-white text-left leading-normal">
+    <div class="relative md:static w-full h-fit place-content-center top-0 z-30">
+      <div class="relative w-full">
+        <div class="relative flex flex-col items-center md:mx-auto z-10 w-full">
+          <!-- Canvas -->
+          <canvas id="canvas" class="hidden md:block relative top-16"></canvas>
+        </div>
+
+        <!-- Text Block -->
+        <div
+          class="hidden md:block w-full px-5 md:px-0 text-base lg:text-lg text-white text-left md:text-center leading-normal -mt-16 md:mt-8">
           <p class="font-light">
             <span>I am a product and visual designer</span>
             <span class="text-blue">based in Bangkok</span>
             <span>with</span><br class="hidden md:block">
             <span class="text-orange">6+ years of experience</span>
-            <span>who combines strategic thinking with <br class="hidden md:block"> creative execution to deliver high-impact digital experiences.</span>
+            <span>who combines strategic thinking with <br class="hidden md:block"> creative execution to deliver
+              high-impact digital experiences.</span>
           </p>
         </div>
-        <img src="./img/Background.png" class="absolute hidden md:block -z-0 -top-[0px] left-1/2 transform -translate-x-1/2" alt="">
-        <!-- Embedded Video -->
-    <div class=" flex mt-20 mx-auto px-5 w-full md:w-4/5 z-10">
-      <div class="relative bg-dark rounded-lg md:rounded-3xl overflow-hidden w-full" style="aspect-ratio: 16 / 9;">
-        <iframe 
-        src="https://player.vimeo.com/video/1055503188?h=bbbe298314&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;loop=1&amp;autoplay=1&amp;muted=1&amp;controls=1"
-    frameborder="0" 
-    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
-    style="position:absolute;top:0;left:0;width:100%;height:100%;" 
-    title="Showreel Dark">
-  </iframe>
-        
-       
+      </div>
     </div>
-      
-    
-    </section>
-      
+    <div class="md:hidden static h-auto px-5 pt-24 overflow-hidden">
+      <div class="w-[170%]">
+        <canvas id="canvasMobile" class="block z-30 w-full h-full object-cover"></canvas>
+      </div>
+    </div>
 
-    
+    <div class="block static md:hidden mt-4 w-full px-5 text-base text-white text-left leading-normal">
+      <p class="font-light">
+        <span>I am a product and visual designer</span>
+        <span class="text-blue">based in Bangkok</span>
+        <span>with</span><br class="hidden md:block">
+        <span class="text-orange">6+ years of experience</span>
+        <span>who combines strategic thinking with <br class="hidden md:block"> creative execution to deliver
+          high-impact digital experiences.</span>
+      </p>
+    </div>
+    <img src="./img/Background.png" class="absolute hidden md:block -z-0 -top-[0px] left-1/2 transform -translate-x-1/2"
+      alt="">
+    <!-- Embedded Video -->
+    <div class=" flex mt-12 md:mt-20 mx-auto px-5 w-full md:w-4/5 z-10">
+      <div class="relative bg-dark rounded-lg md:rounded-3xl overflow-hidden w-full" style="aspect-ratio: 16 / 9;">
+        <iframe
+          src="https://player.vimeo.com/video/1055503188?h=bbbe298314&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;loop=1&amp;autoplay=1&amp;muted=1&amp;controls=1"
+          frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+          style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Showreel Dark">
+        </iframe>
 
-  
+
+      </div>
+
+
+  </section>
+
+
+
+
+
   <!-- Hero Section End -->
 
-  
+
   <div class="relative flex items-center justify-center py-10 md:py-24">
-    <div class="w-full absolute inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_40px,_black_calc(100%-40px),transparent_100%)] md:[mask-image:_linear-gradient(to_right,transparent_0,_black_300px,_black_calc(100%-300px),transparent_100%)]">
-      <ul class="flex items-center justify-center [&_img]:w-12 md:[&_img]:w-20 [&_li]:mx-4 md:[&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
+    <div
+      class="w-full absolute inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_40px,_black_calc(100%-40px),transparent_100%)] md:[mask-image:_linear-gradient(to_right,transparent_0,_black_300px,_black_calc(100%-300px),transparent_100%)]">
+      <ul
+        class="flex items-center justify-center [&_img]:w-12 md:[&_img]:w-20 [&_li]:mx-4 md:[&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
         <li>
-            <img src="./img/Photoshop Logomark.svg" alt="Photoshop" />
+          <img src="./img/Photoshop Logomark.svg" alt="Photoshop" />
         </li>
         <li>
-            <img src="./img/Illustrator Logomark.svg" alt="Illustrator" />
+          <img src="./img/Illustrator Logomark.svg" alt="Illustrator" />
         </li>
         <li>
-            <img src="./img/Figma.svg" alt="Figma" />
+          <img src="./img/Figma.svg" alt="Figma" />
         </li>
         <li>
-            <img src="./img/notion.svg" alt="Notion" />
+          <img src="./img/notion.svg" alt="Notion" />
         </li>
         <li>
-            <img src="./img/sketch.svg" alt="Sketch" />
+          <img src="./img/sketch.svg" alt="Sketch" />
         </li>
         <li>
-            <img src="./img/Blender.svg" alt="Blender" />
+          <img src="./img/Blender.svg" alt="Blender" />
         </li>
         <li>
-            <img src="./img/RIVE.svg" alt="Rive" />
+          <img src="./img/RIVE.svg" alt="Rive" />
         </li>
         <li>
-            <img src="./img/HTML.svg" alt="HTML" />
-        </li>
-        <li>
-          <img src="./img/CSS.svg" alt="CSS" />
-        </li>
-        <li>
-          <img src="./img/Tailwind.svg" alt="Tailwind" />
-        </li>
-        <li>
-          <img src="./img/JS.svg" alt="JavaScript" />
-        </li>
-      </ul>
-      <ul class="flex items-center justify-center [&_img]:w-12 md:[&_img]:w-20 [&_li]:mx-4 md:[&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll" aria-hidden="true">
-        <li>
-            <img src="./img/Photoshop Logomark.svg" alt="Photoshop" />
-        </li>
-        <li>
-            <img src="./img/Illustrator Logomark.svg" alt="Illustrator" />
-        </li>
-        <li>
-            <img src="./img/Figma.svg" alt="Figma" />
-        </li>
-        <li>
-            <img src="./img/notion.svg" alt="Notion" />
-        </li>
-        <li>
-            <img src="./img/sketch.svg" alt="Sketch" />
-        </li>
-        <li>
-            <img src="./img/Blender.svg" alt="Blender" />
-        </li>
-        <li>
-            <img src="./img/RIVE.svg" alt="Rive" />
-        </li>
-        <li>
-            <img src="./img/HTML.svg" alt="HTML" />
+          <img src="./img/HTML.svg" alt="HTML" />
         </li>
         <li>
           <img src="./img/CSS.svg" alt="CSS" />
@@ -478,33 +570,71 @@
           <img src="./img/JS.svg" alt="JavaScript" />
         </li>
       </ul>
+      <ul
+        class="flex items-center justify-center [&_img]:w-12 md:[&_img]:w-20 [&_li]:mx-4 md:[&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
+        aria-hidden="true">
+        <li>
+          <img src="./img/Photoshop Logomark.svg" alt="Photoshop" />
+        </li>
+        <li>
+          <img src="./img/Illustrator Logomark.svg" alt="Illustrator" />
+        </li>
+        <li>
+          <img src="./img/Figma.svg" alt="Figma" />
+        </li>
+        <li>
+          <img src="./img/notion.svg" alt="Notion" />
+        </li>
+        <li>
+          <img src="./img/sketch.svg" alt="Sketch" />
+        </li>
+        <li>
+          <img src="./img/Blender.svg" alt="Blender" />
+        </li>
+        <li>
+          <img src="./img/RIVE.svg" alt="Rive" />
+        </li>
+        <li>
+          <img src="./img/HTML.svg" alt="HTML" />
+        </li>
+        <li>
+          <img src="./img/CSS.svg" alt="CSS" />
+        </li>
+        <li>
+          <img src="./img/Tailwind.svg" alt="Tailwind" />
+        </li>
+        <li>
+          <img src="./img/JS.svg" alt="JavaScript" />
+        </li>
+      </ul>
+    </div>
   </div>
-</div>
 
   <!-- Section 2 -->
   <section id="section2" class="section2 py-16 px-5 md:px-0 relative">
-  <div id="projects"  class="static w-full md:w-4/5 about max-w-screen-2xl mx-auto h-fit">
-    <div class="pb-6 lg:pb-12">
-      <div class="bodyTitle relative w-full pb-6 border-b border-lightgrey">
-        <h1 class="text-base lg:text-2xl text-orange text-left left-0 top-4 absolute z-10">
-          Featured Projects
-      </h1>
-      <h1 class="text-3xl lg:text-5xl text-left text-dark relative whitespace-nowrap" style="-webkit-text-stroke: 1px #2A2A2A;">
-        Featured Projects
-      </h1>
-      </div>
-      <!-- <div class="text about text-xl lg:text-base text-white text-left leading-normal mt-4 lg:mt-6">
+    <div id="projects" class="static w-full md:w-4/5 about max-w-screen-2xl mx-auto h-fit">
+      <div class="pb-6 lg:pb-12">
+        <div class="bodyTitle relative w-full pb-6 border-b border-lightgrey">
+          <h1 class="text-base lg:text-2xl text-orange text-left left-0 top-4 absolute z-10">
+            Featured Projects
+          </h1>
+          <h1 class="text-3xl lg:text-5xl text-left text-dark relative whitespace-nowrap"
+            style="-webkit-text-stroke: 1px #2A2A2A;">
+            Featured Projects
+          </h1>
+        </div>
+        <!-- <div class="text about text-xl lg:text-base text-white text-left leading-normal mt-4 lg:mt-6">
         <p class="font-light">
         <span>Explore the stories behind my designs, how I approach challenges, craft innovative solutions, and deliver impactful outcomes.</span>
         <span>From detailed case studies to visually compelling projects, these stories showcase the creativity and functionality at the heart of</span>
         <span>my work.</span>
         </p>
       </div> -->
+      </div>
     </div>
-  </div>
-<!-- feature end -->
+    <!-- feature end -->
 
-<!-- <div class="bg-[url('./img/dots.png')] bg-repeat bg-cover flex justify-center items-center h-fit lg:h-screen">
+    <!-- <div class="bg-[url('./img/dots.png')] bg-repeat bg-cover flex justify-center items-center h-fit lg:h-screen">
 <div class="py-16">
   <div class="flex flex-wrap lg:grid grid-cols-2 gap-x-28 gap-y-16 lg:gap-y-40 justify-center items-center">
     <div class="bg-orange text-left w-[310px] md:w-[440px] lg:w-[500px] h-fit relative p-2 md:p-5 border-2 lg:border-4 border-dark shadow-bgDarkSm lg:shadow-bgDark">
@@ -526,656 +656,810 @@
   </div>
 </div>
 </div> -->
-<!-- personality end -->
+    <!-- personality end -->
 
 
-<!-- showcase -->
-<section class="">
-  <div class="flex flex-col md:grid grid-cols-2 gap-4 md:gap-12 w-full md:w-4/5 mx-auto">
-    <div id="wasoapp" class="cursor-none">
-      <div class="text-left">
-        <div class="group items-center justify-center lg:relative lg:border border-lightgrey h-[380px] md:h-auto">
-        <div class="overflow-hidden">
-         <img src="./img/wasocard.png" alt="" class="transition-transform duration-300 ease-in-out group-hover:scale-110 w-full  object-cover">
+    <!-- showcase -->
+    <section class="">
+      <div class="flex flex-col md:grid grid-cols-2 gap-4 md:gap-12 w-full md:w-4/5 mx-auto">
+        <div id="wasoapp" class="cursor-none">
+          <div class="text-left">
+            <div class="group items-center justify-center lg:relative lg:border border-lightgrey h-[380px] md:h-auto">
+              <div class="overflow-hidden">
+                <img src="./img/wasocard.png" alt=""
+                  class="transition-transform duration-300 ease-in-out group-hover:scale-110 w-full  object-cover">
+              </div>
+              <div
+                class="absolute hidden lg:block inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+              </div>
+              <div
+                class="lg:absolute lg:top-6 lg:left-6 lg:opacity-0 translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 transition-all duration-300 ease-in-out w-full lg:w-4/5">
+                <h1 class="text-white z-10 text-base lg:text-lg font-normal leading-tight">Waso Learn: EdTech Product
+                </h1>
+                <p class="mt-1 md:mt-2 text-light text-sm font-light lg:text-base leading-normal">
+                  Transforming traditional learning into a dynamic experience with Waso Learn
+                </p>
+              </div>
+
+            </div>
+          </div>
+          <div class="bg-black flex items-center justify-center">
+            <button id="cursorButton"
+              class="viewCase hidden w-28 h-28 rounded-full bg-dark/20 backdrop-blur-lg border border-white/30 text-center text-sm leading-none font-light text-white/80">
+              View Case
+            </button>
+          </div>
         </div>
-         <div class="absolute hidden lg:block inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"></div>
-         <div class="lg:absolute lg:top-6 lg:left-6 lg:opacity-0 translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 transition-all duration-300 ease-in-out w-full lg:w-4/5">
-          <h1 class="text-white z-10 text-base lg:text-lg font-normal leading-tight">Waso Learn: EdTech Product</h1>
-          <p class="mt-1 md:mt-2 text-light text-sm font-light lg:text-base leading-normal">
-            Transforming traditional learning into a dynamic experience with Waso Learn
-          </p>
+        <div id="whisper" class="cursor-none">
+          <div class="text-left">
+            <div class="group items-center justify-center lg:relative lg:border border-lightgrey h-[380px] md:h-auto">
+              <div class="overflow-hidden">
+                <img src="./img/Whisper.png" alt=""
+                  class="transition-transform duration-300 ease-in-out group-hover:scale-110 w-full  object-cover">
+              </div>
+              <div
+                class="absolute hidden lg:block inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+              </div>
+              <div
+                class="lg:absolute lg:top-6 lg:left-6 lg:opacity-0 translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 transition-all duration-300 ease-in-out w-full lg:w-4/5">
+                <h1 class="text-white z-10 text-base lg:text-lg font-normal leading-tight">Whisper: Mediate & Sleep</h1>
+                <p class="mt-1 md:mt-2 text-light text-sm font-light lg:text-base leading-normal">
+                  Your daily companion for achieving restful sleep and mindful meditation
+                </p>
+              </div>
+
+            </div>
+          </div>
+          <div class="bg-black flex items-center justify-center">
+            <button id="cursorButton2"
+              class="viewCase hidden w-28 h-28 rounded-full bg-dark/20 backdrop-blur-lg border border-white/30 text-center text-sm leading-none font-light text-white/80">
+              View Case
+            </button>
+          </div>
         </div>
-        
+        <div id="wego" class="cursor-none">
+          <div class="text-left">
+            <div class="group items-center justify-center lg:relative lg:border border-lightgrey h-[380px] md:h-auto">
+              <div class="overflow-hidden">
+                <img src="./img/wego.png" alt=""
+                  class="transition-transform duration-300 ease-in-out group-hover:scale-110 w-full  object-cover">
+              </div>
+              <div
+                class="absolute hidden lg:block inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+              </div>
+              <div
+                class="lg:absolute lg:top-6 lg:left-6 lg:opacity-0 translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 transition-all duration-300 ease-in-out w-full lg:w-4/5">
+                <h1 class="text-white z-10 text-base lg:text-lg font-normal leading-tight">WeGo: Trip Planner</h1>
+                <p class="mt-1 md:mt-2 text-light text-sm font-light lg:text-base leading-normal">
+                  Easily organize trips, collaborate with friends, and keep everything on track in one place
+                </p>
+              </div>
+
+            </div>
+          </div>
+          <div class="bg-black flex items-center justify-center">
+            <button id="cursorButton3"
+              class="viewCase hidden w-28 h-28 rounded-full bg-dark/20 backdrop-blur-lg border border-white/30 text-center text-sm leading-none font-light text-white/80">
+              View Case
+            </button>
+          </div>
+        </div>
+        <div id="sfulearn" class="cursor-none">
+          <div class="text-left">
+            <div class="group items-center justify-center lg:relative lg:border border-lightgrey h-[380px] md:h-auto">
+              <div class="overflow-hidden">
+                <img src="./img/sfulearn.png" alt=""
+                  class="transition-transform duration-300 ease-in-out group-hover:scale-110 w-full  object-cover">
+              </div>
+              <div
+                class="absolute hidden lg:block inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+              </div>
+              <div
+                class="lg:absolute lg:top-6 lg:left-6 lg:opacity-0 translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 transition-all duration-300 ease-in-out w-full lg:w-4/5">
+                <h1 class="text-white z-10 text-base lg:text-lg font-normal leading-tight">SFU Learn Mobile Application
+                </h1>
+                <p class="mt-1 md:mt-2 text-light text-sm font-light lg:text-base leading-normal">
+                  Enhancing academic life and putting everything students need right at their fingertips
+                </p>
+              </div>
+
+            </div>
+          </div>
+          <div class="bg-black flex items-center justify-center">
+            <button id="cursorButton4"
+              class="viewCase hidden w-28 h-28 rounded-full bg-dark/20 backdrop-blur-lg border border-white/30 text-center text-sm leading-none font-light text-white/80">
+              View Case
+            </button>
+          </div>
+        </div>
+        <div id="digizenship" class="cursor-none">
+          <div class="text-left">
+            <div class="group items-center justify-center lg:relative lg:border border-lightgrey h-[380px] md:h-auto">
+              <div class="overflow-hidden">
+                <img src="./img/digizenship.png" alt=""
+                  class="transition-transform duration-300 ease-in-out group-hover:scale-110 w-full  object-cover">
+              </div>
+              <div
+                class="absolute hidden lg:block inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+              </div>
+              <div
+                class="lg:absolute lg:top-6 lg:left-6 lg:opacity-0 translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 transition-all duration-300 ease-in-out w-full lg:w-4/5">
+                <h1 class="text-white z-10 text-base lg:text-lg font-normal leading-tight">Digizenship: Digital Platform
+                </h1>
+                <p class="mt-1 md:mt-2 text-light text-sm font-light lg:text-base leading-normal">
+                  A revolutionary social platform designed to bring digital citizens together
+                </p>
+              </div>
+
+            </div>
+          </div>
+          <div class="bg-black flex items-center justify-center">
+            <button id="cursorButton5"
+              class="viewCase hidden w-28 h-28 rounded-full bg-dark/20 backdrop-blur-lg border border-white/30 text-center text-sm leading-none font-light text-white/80">
+              View Case
+            </button>
+          </div>
+        </div>
+        <div id="methodist" class="cursor-none">
+          <div class="text-left">
+            <div class="group items-center justify-center lg:relative lg:border border-lightgrey h-[380px] md:h-auto">
+              <div class="overflow-hidden">
+                <img src="./img/methodist.png" alt=""
+                  class="transition-transform duration-300 ease-in-out group-hover:scale-110 w-full  object-cover">
+              </div>
+              <div
+                class="absolute hidden lg:block inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+              </div>
+              <div
+                class="lg:absolute lg:top-6 lg:left-6 lg:opacity-0 translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 transition-all duration-300 ease-in-out w-full lg:w-4/5">
+                <h1 class="text-white z-10 text-base lg:text-lg font-normal leading-tight">Interactive Animation for
+                  Methodist Centre</h1>
+                <p class="mt-1 md:mt-2 text-light text-sm font-light lg:text-base leading-normal">
+                  Creating an interactive motion graphic animation for Methodist Centre HK's landing page
+                </p>
+              </div>
+
+            </div>
+          </div>
+          <div class="bg-black flex items-center justify-center">
+            <button id="cursorButton6"
+              class="viewCase hidden w-28 h-28 rounded-full bg-dark/20 backdrop-blur-lg border border-white/30 text-center text-sm leading-none font-light text-white/80">
+              View Case
+            </button>
+          </div>
         </div>
       </div>
-      <div class="bg-black flex items-center justify-center">
-        <button id="cursorButton" class="viewCase hidden w-28 h-28 rounded-full bg-dark/20 backdrop-blur-lg border border-white/30 text-center text-sm leading-none font-light text-white/80">
-          View Case
-        </button>
-      </div>
-    </div>
-    <div id="whisper" class="cursor-none">
-      <div class="text-left">
-        <div class="group items-center justify-center lg:relative lg:border border-lightgrey h-[380px] md:h-auto">
-        <div class="overflow-hidden">
-         <img src="./img/Whisper.png" alt="" class="transition-transform duration-300 ease-in-out group-hover:scale-110 w-full  object-cover">
-        </div>
-         <div class="absolute hidden lg:block inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"></div>
-         <div class="lg:absolute lg:top-6 lg:left-6 lg:opacity-0 translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 transition-all duration-300 ease-in-out w-full lg:w-4/5">
-          <h1 class="text-white z-10 text-base lg:text-lg font-normal leading-tight">Whisper: Mediate & Sleep</h1>
-          <p class="mt-1 md:mt-2 text-light text-sm font-light lg:text-base leading-normal">
-            Your daily companion for achieving restful sleep and mindful meditation
-          </p>
-        </div>
-        
-        </div>
-      </div>
-      <div class="bg-black flex items-center justify-center">
-        <button id="cursorButton2" class="viewCase hidden w-28 h-28 rounded-full bg-dark/20 backdrop-blur-lg border border-white/30 text-center text-sm leading-none font-light text-white/80">
-          View Case
-        </button>
-      </div>
-    </div>
-    <div id="wego" class="cursor-none">
-      <div class="text-left">
-        <div class="group items-center justify-center lg:relative lg:border border-lightgrey h-[380px] md:h-auto">
-        <div class="overflow-hidden">
-         <img src="./img/wego.png" alt="" class="transition-transform duration-300 ease-in-out group-hover:scale-110 w-full  object-cover">
-        </div>
-         <div class="absolute hidden lg:block inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"></div>
-         <div class="lg:absolute lg:top-6 lg:left-6 lg:opacity-0 translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 transition-all duration-300 ease-in-out w-full lg:w-4/5">
-          <h1 class="text-white z-10 text-base lg:text-lg font-normal leading-tight">WeGo: Trip Planner</h1>
-          <p class="mt-1 md:mt-2 text-light text-sm font-light lg:text-base leading-normal">
-            Easily organize trips, collaborate with friends, and keep everything on track in one place
-          </p>
-        </div>
-        
-        </div>
-      </div>
-      <div class="bg-black flex items-center justify-center">
-        <button id="cursorButton3" class="viewCase hidden w-28 h-28 rounded-full bg-dark/20 backdrop-blur-lg border border-white/30 text-center text-sm leading-none font-light text-white/80">
-          View Case
-        </button>
-      </div>
-    </div>
-    <div id="sfulearn" class="cursor-none">
-      <div class="text-left">
-        <div class="group items-center justify-center lg:relative lg:border border-lightgrey h-[380px] md:h-auto">
-        <div class="overflow-hidden">
-         <img src="./img/sfulearn.png" alt="" class="transition-transform duration-300 ease-in-out group-hover:scale-110 w-full  object-cover">
-        </div>
-         <div class="absolute hidden lg:block inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"></div>
-         <div class="lg:absolute lg:top-6 lg:left-6 lg:opacity-0 translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 transition-all duration-300 ease-in-out w-full lg:w-4/5">
-          <h1 class="text-white z-10 text-base lg:text-lg font-normal leading-tight">SFU Learn Mobile Application</h1>
-          <p class="mt-1 md:mt-2 text-light text-sm font-light lg:text-base leading-normal">
-            Enhancing academic life and putting everything students need right at their fingertips
-          </p>
-        </div>
-        
-        </div>
-      </div>
-      <div class="bg-black flex items-center justify-center">
-        <button id="cursorButton4" class="viewCase hidden w-28 h-28 rounded-full bg-dark/20 backdrop-blur-lg border border-white/30 text-center text-sm leading-none font-light text-white/80">
-          View Case
-        </button>
-      </div>
-    </div>
-    <div id="digizenship" class="cursor-none">
-      <div class="text-left">
-        <div class="group items-center justify-center lg:relative lg:border border-lightgrey h-[380px] md:h-auto">
-        <div class="overflow-hidden">
-         <img src="./img/digizenship.png" alt="" class="transition-transform duration-300 ease-in-out group-hover:scale-110 w-full  object-cover">
-        </div>
-         <div class="absolute hidden lg:block inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"></div>
-         <div class="lg:absolute lg:top-6 lg:left-6 lg:opacity-0 translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 transition-all duration-300 ease-in-out w-full lg:w-4/5">
-          <h1 class="text-white z-10 text-base lg:text-lg font-normal leading-tight">Digizenship: Digital Platform</h1>
-          <p class="mt-1 md:mt-2 text-light text-sm font-light lg:text-base leading-normal">
-            A revolutionary social platform designed to bring digital citizens together
-          </p>
-        </div>
-        
-        </div>
-      </div>
-      <div class="bg-black flex items-center justify-center">
-        <button id="cursorButton5" class="viewCase hidden w-28 h-28 rounded-full bg-dark/20 backdrop-blur-lg border border-white/30 text-center text-sm leading-none font-light text-white/80">
-          View Case
-        </button>
-      </div>
-    </div>
-    <div id="methodist" class="cursor-none">
-      <div class="text-left">
-        <div class="group items-center justify-center lg:relative lg:border border-lightgrey h-[380px] md:h-auto">
-        <div class="overflow-hidden">
-         <img src="./img/methodist.png" alt="" class="transition-transform duration-300 ease-in-out group-hover:scale-110 w-full  object-cover">
-        </div>
-         <div class="absolute hidden lg:block inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"></div>
-         <div class="lg:absolute lg:top-6 lg:left-6 lg:opacity-0 translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 transition-all duration-300 ease-in-out w-full lg:w-4/5">
-          <h1 class="text-white z-10 text-base lg:text-lg font-normal leading-tight">Interactive Animation for Methodist Centre</h1>
-          <p class="mt-1 md:mt-2 text-light text-sm font-light lg:text-base leading-normal">
-            Creating an interactive motion graphic animation for Methodist Centre HK's landing page
-          </p>
-        </div>
-        
-        </div>
-      </div>
-      <div class="bg-black flex items-center justify-center">
-        <button id="cursorButton6" class="viewCase hidden w-28 h-28 rounded-full bg-dark/20 backdrop-blur-lg border border-white/30 text-center text-sm leading-none font-light text-white/80">
-          View Case
-        </button>
-      </div>
-    </div>
-  </div>   
-  <!-- <img src="./img/Background2.png" alt="" class="absolute hidden md:block w-2/4 -z-10 right-0 -bottom-96"> -->
-</section>
-</section>
+      <!-- <img src="./img/Background2.png" alt="" class="absolute hidden md:block w-2/4 -z-10 right-0 -bottom-96"> -->
+    </section>
+  </section>
 
 
-<!-- experience start -->
-  <section id="section3"  class="static w-full px-5 md:px-0 md:w-4/5 py-16 experience max-w-screen-2xl mx-auto justify-center items-center h-fit">
+  <!-- experience start -->
+  <section id="section3"
+    class="static w-full px-5 md:px-0 md:w-4/5 py-16 experience max-w-screen-2xl mx-auto justify-center items-center h-fit">
     <div class="pb-7">
       <div class="bodyTitle relative pb-6 border-b border-lightgrey">
         <h1 class="text-base lg:text-2xl text-orange text-left left-0 top-4 absolute z-10">
           Experience
         </h1>
-        <h1 class="text-3xl lg:text-5xl text-left text-dark relative whitespace-nowrap" style="-webkit-text-stroke: 1px #2A2A2A;">
+        <h1 class="text-3xl lg:text-5xl text-left text-dark relative whitespace-nowrap"
+          style="-webkit-text-stroke: 1px #2A2A2A;">
           Experience
         </h1>
       </div>
 
       <div class="text text-sm lg:text-base text-white text-left leading-normal mt-4 lg:mt-6">
         <p class="font-light">
-          <span>Throughout my career, I’ve had the privilege to work on impactful projects that showcased my creativity while making a meaningful difference.</span>
+          <span>Throughout my career, I’ve had the privilege to work on impactful projects that showcased my creativity
+            while making a meaningful difference.</span>
         </p>
       </div>
     </div>
-  
-  <div class="explist">
-    <div class="w-full mx-auto divide-y divide-lightgrey text-sm lg:text-base">
-      <ul class="flex gap-1 md:gap-0 flex-col md:flex-row items-start md:items-center item justify-start font-light py-3 md:py-5">
-        <li class="basis-2/6 text-left text-white">Co-Founder</li>
-        <li class="basis-2/6 text-left text-white">@ Dev Engine</li>
-        <li class="basis-2/6 text-right text-grey">Nov 2022 – Present</li>
-      </ul>
-      <ul class="flex gap-1 md:gap-0 flex-col md:flex-row items-start md:items-center justify-start font-light py-3 md:py-5">
-        <li class="basis-2/6 text-left text-white">Senior Product Designer</li>
-        <li class="basis-2/6 text-left text-white">@ Digizenship</li>
-        <li class="basis-2/6 text-right text-grey">Jun 2024 – Present</li>
-      </ul>
-      <ul class="flex gap-1 md:gap-0 flex-col md:flex-row items-start md:items-center justify-start font-light py-3 md:py-5">
-        <li class="basis-2/6 text-left text-white">UI/UX Designer</li>
-        <li class="basis-2/6 text-left text-white">@ Visible One - HK</li>
-        <li class="basis-2/6 text-right text-grey">Sep 2023 – Jun 2024</li>
-      </ul>
-      <ul class="flex gap-1 md:gap-0 flex-col md:flex-row items-start md:items-center justify-start font-light py-3 md:py-5">
-        <li class="basis-2/6 text-left text-white">UI/UX Designer</li>
-        <li class="basis-2/6 text-left text-white">@ Strategy First Education Group</li>
-        <li class="basis-2/6 text-right text-grey">Nov 2021 – Sep 2023</li>
-      </ul>
-      <ul class="flex gap-1 md:gap-0 flex-col md:flex-row items-start md:items-center justify-start font-light py-3 md:py-5">
-        <li class="basis-2/6 text-left text-white">Multimedia Designer</li>
-        <li class="basis-2/6 text-left text-white">@ Recycle Myanmar</li>
-        <li class="basis-2/6 text-right text-grey">Jun 2019 – Jan 2021</li>
-      </ul>
-      <ul class="flex gap-1 md:gap-0 flex-col md:flex-row items-start md:items-center justify-start font-light py-3 md:py-5">
-        <li class="basis-2/6 text-left text-white">Multimedia Designer</li>
-        <li class="basis-2/6 text-left text-white">@ Sri Ksetra Student Exhibition Series</li>
-        <li class="basis-2/6 text-right text-grey">Nov 2017 – Feb 2020</li>
-      </ul>
-    </div>  
-  </div>
+
+    <div class="explist">
+      <div class="w-full mx-auto divide-y divide-lightgrey text-sm lg:text-base">
+        <ul
+          class="flex gap-1 md:gap-0 flex-col md:flex-row items-start md:items-center item justify-start font-light py-3 md:py-5">
+          <li class="basis-2/6 text-left text-white">Co-Founder</li>
+          <li class="basis-2/6 text-left text-white">@ Dev Engine</li>
+          <li class="basis-2/6 text-right text-grey">Nov 2022 – Present</li>
+        </ul>
+        <ul
+          class="flex gap-1 md:gap-0 flex-col md:flex-row items-start md:items-center justify-start font-light py-3 md:py-5">
+          <li class="basis-2/6 text-left text-white">Senior Product Designer</li>
+          <li class="basis-2/6 text-left text-white">@ Digizenship</li>
+          <li class="basis-2/6 text-right text-grey">Jun 2024 – Present</li>
+        </ul>
+        <ul
+          class="flex gap-1 md:gap-0 flex-col md:flex-row items-start md:items-center justify-start font-light py-3 md:py-5">
+          <li class="basis-2/6 text-left text-white">UI/UX Designer</li>
+          <li class="basis-2/6 text-left text-white">@ Visible One - HK</li>
+          <li class="basis-2/6 text-right text-grey">Sep 2023 – Jun 2024</li>
+        </ul>
+        <ul
+          class="flex gap-1 md:gap-0 flex-col md:flex-row items-start md:items-center justify-start font-light py-3 md:py-5">
+          <li class="basis-2/6 text-left text-white">UI/UX Designer</li>
+          <li class="basis-2/6 text-left text-white">@ Strategy First Education Group</li>
+          <li class="basis-2/6 text-right text-grey">Nov 2021 – Sep 2023</li>
+        </ul>
+        <ul
+          class="flex gap-1 md:gap-0 flex-col md:flex-row items-start md:items-center justify-start font-light py-3 md:py-5">
+          <li class="basis-2/6 text-left text-white">Multimedia Designer</li>
+          <li class="basis-2/6 text-left text-white">@ Recycle Myanmar</li>
+          <li class="basis-2/6 text-right text-grey">Jun 2019 – Jan 2021</li>
+        </ul>
+        <ul
+          class="flex gap-1 md:gap-0 flex-col md:flex-row items-start md:items-center justify-start font-light py-3 md:py-5">
+          <li class="basis-2/6 text-left text-white">Multimedia Designer</li>
+          <li class="basis-2/6 text-left text-white">@ Sri Ksetra Student Exhibition Series</li>
+          <li class="basis-2/6 text-right text-grey">Nov 2017 – Feb 2020</li>
+        </ul>
+      </div>
+    </div>
 
   </section>
   <!-- experience end -->
 
   <!-- testimonials -->
-  <div id="testimonial"  class="static w-full px-5 md:px-0 md:w-4/5 py-16 experience max-w-screen-2xl mx-auto justify-center items-center h-full">
+  <div id="testimonial"
+    class="static w-full px-5 md:px-0 md:w-4/5 py-16 experience max-w-screen-2xl mx-auto justify-center items-center h-full">
     <div class="pb-7 h-full ">
-    <div class="max-w-full overflow-hidden">
-      <div class="pb-2">
-        <img src="./img/Heart.svg" alt="" class="w-10 md:w-16">
+      <div class="max-w-full overflow-hidden">
+        <div class="pb-2">
+          <img src="./img/Heart.svg" alt="" class="w-10 md:w-16">
+        </div>
+        <div class="bodyTitle relative pb-6 border-b border-lightgrey">
+          <h1 class="text-base lg:text-2xl text-orange text-left left-0 top-4 absolute z-10">
+            From My Colleagues' Hearts
+          </h1>
+          <h1 class="text-3xl lg:text-5xl text-left text-dark relative whitespace-nowrap"
+            style="-webkit-text-stroke: 1px #2A2A2A;">
+            From My Colleagues' Hearts
+          </h1>
+        </div>
       </div>
+
+      <div class="h-[36rem] md:h-[32rem]">
+        <div class="testimonialSlider -rotate-0 absolute inset-x-0 mx-auto mt-8">
+          <div id="testimonial1"
+            class="inline-flex gap-0 w-full flex-nowrap overflow-hidden md:[mask-image:_linear-gradient(to_right,transparent_0,_black_200px,_black_calc(100%-200px),transparent_100%)]">
+            <ul id="testimonial1-1"
+              class="flex items-center justify-center md:justify-start [&_li]:mx-2 [&_img]:max-w-none animate-infinite-scroll">
+              <li class="flex-shrink-0 w-48 h-full">
+                <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague1.png" alt="" />
+              </li>
+              <li class="flex-shrink-0 w-80 md:w-[34rem] h-full flex flex-col justify-between">
+                <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
+                  <div class="flex flex-col items-start h-full">
+                    <div class="info flex items-start md:items-center justify-center gap-2">
+                      <img src="./img/AvatarNWN.png" alt="" class="w-8 md:w-12">
+                      <div class="text-left">
+                        <h1 class="text-[#b5b5b5] text-sm md:text-base">Nyan Win Naing</h1>
+                        <p class="text-grey text-sm font-light">Flutter Developer @ SFEG</p>
+                      </div>
+                    </div>
+                    <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
+                      Ko Kaung Myat is an exceptionally talented UI/UX designer who consistently demonstrates
+                      creativity, a keen eye for detail, and a strong user-centric approach in his work. Collaborating
+                      with him on a lot of mobile app projects was both effortless and motivating, as his innovative
+                      designs significantly enhanced the overall quality and functionality of the product.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="flex-shrink-0 w-48 h-full">
+                <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague2.png" alt="" />
+              </li>
+
+              <li class="flex-shrink-0 w-72 h-full">
+                <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague3.png" alt="" />
+              </li>
+              <li class="flex-shrink-0 w-80 md:w-[30rem] h-full flex flex-col justify-between">
+                <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
+                  <div class="flex flex-col items-start h-full">
+                    <div class="info flex items-start md:items-center justify-center gap-2">
+                      <img src="./img/AvatarSZYH.png" alt="" class="w-8 md:w-12">
+                      <div class="text-left">
+                        <h1 class="text-[#b5b5b5] text-sm md:text-base">Sai Zayar Htet</h1>
+                        <p class="text-grey text-sm font-light">Senior Flutter Developer</p>
+                      </div>
+                    </div>
+                    <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
+                      I’m happy to write a testimonial for Ko Kaung Myat. He has great design thinking skills and can
+                      see things from different perspectives that others often miss. He is also very active and has
+                      excellent communication skills, making him a great team player. It’s always a pleasure to work
+                      with someone as creative and dedicated as him.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="flex-shrink-0 w-72 h-full">
+                <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague4.png" alt="" />
+              </li>
+              <li class="flex-shrink-0 w-80 md:w-96 h-full flex flex-col justify-between">
+                <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
+                  <div class="flex flex-col items-start h-full">
+                    <div class="info flex items-start md:items-center justify-center gap-2">
+                      <img src="./img/Avatar1.png" alt="" class="w-8 md:w-12">
+                      <div class="text-left">
+                        <h1 class="text-[#b5b5b5] text-sm md:text-base">Than Soe Oo</h1>
+                        <p class="text-grey text-sm font-light">Senior Frontend Developer @ BeyondSensor</p>
+                      </div>
+                    </div>
+                    <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
+                      Working with Ko Kaung Myat was an absolute pleasure. His exceptional designs, professionalism, and
+                      collaboration improved our user experience, boosting engagement and earning positive feedback.
+                      Highly recommended for his design skills.
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <ul id="testimonial1-2"
+              class="flex items-center justify-center md:justify-start [&_li]:mx-2 [&_img]:max-w-none animate-infinite-scroll"
+              aria-hidden="true">
+              <li class="flex-shrink-0 w-48 h-full">
+                <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague1.png" alt="" />
+              </li>
+              <li class="flex-shrink-0 w-80 md:w-[34rem] h-full flex flex-col justify-between">
+                <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
+                  <div class="flex flex-col items-start h-full">
+                    <div class="info flex items-start md:items-center justify-center gap-2">
+                      <img src="./img/AvatarNWN.png" alt="" class="w-8 md:w-12">
+                      <div class="text-left">
+                        <h1 class="text-[#b5b5b5] text-sm md:text-base">Nyan Win Naing</h1>
+                        <p class="text-grey text-sm font-light">Flutter Developer @ SFEG</p>
+                      </div>
+                    </div>
+                    <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
+                      Ko Kaung Myat is an exceptionally talented UI/UX designer who consistently demonstrates
+                      creativity, a keen eye for detail, and a strong user-centric approach in his work. Collaborating
+                      with him on a lot of mobile app projects was both effortless and motivating, as his innovative
+                      designs significantly enhanced the overall quality and functionality of the product.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="flex-shrink-0 w-48 h-full">
+                <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague2.png" alt="" />
+              </li>
+
+              <li class="flex-shrink-0 w-72 h-full">
+                <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague3.png" alt="" />
+              </li>
+              <li class="flex-shrink-0 w-80 md:w-[30rem] h-full flex flex-col justify-between">
+                <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
+                  <div class="flex flex-col items-start h-full">
+                    <div class="info flex items-start md:items-center justify-center gap-2">
+                      <img src="./img/AvatarSZYH.png" alt="" class="w-8 md:w-12">
+                      <div class="text-left">
+                        <h1 class="text-[#b5b5b5] text-sm md:text-base">Sai Zayar Htet</h1>
+                        <p class="text-grey text-sm font-light">Senior Flutter Developer</p>
+                      </div>
+                    </div>
+                    <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
+                      I’m happy to write a testimonial for Ko Kaung Myat. He has great design thinking skills and can
+                      see things from different perspectives that others often miss. He is also very active and has
+                      excellent communication skills, making him a great team player. It’s always a pleasure to work
+                      with someone as creative and dedicated as him.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="flex-shrink-0 w-72 h-full">
+                <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague4.png" alt="" />
+              </li>
+              <li class="flex-shrink-0 w-80 md:w-96 h-full flex flex-col justify-between">
+                <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
+                  <div class="flex flex-col items-start h-full">
+                    <div class="info flex items-start md:items-center justify-center gap-2">
+                      <img src="./img/Avatar1.png" alt="" class="w-8 md:w-12">
+                      <div class="text-left">
+                        <h1 class="text-[#b5b5b5] text-sm md:text-base">Than Soe Oo</h1>
+                        <p class="text-grey text-sm font-light">Senior Frontend Developer @ BeyondSensor</p>
+                      </div>
+                    </div>
+                    <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
+                      Working with Ko Kaung Myat was an absolute pleasure. His exceptional designs, professionalism, and
+                      collaboration improved our user experience, boosting engagement and earning positive feedback.
+                      Highly recommended for his design skills.
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="testimonial2"
+            class="inline-flex gap-0 mt-2 w-full flex-nowrap overflow-hidden md:[mask-image:_linear-gradient(to_right,transparent_0,_black_200px,_black_calc(100%-200px),transparent_100%)]">
+            <ul id="testimonial2-1"
+              class="flex items-center justify-center md:justify-start [&_li]:mx-2 [&_img]:max-w-none animate-infinite-scroll2">
+              <!-- <li class="flex-shrink-0 w-80 md:w-96 h-full flex flex-col justify-between">
+            <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
+              <div class="flex flex-col items-start h-full">
+                <div class="info flex items-start md:items-center justify-center gap-2">
+                  <img src="./img/Avatar1.png" alt="" class="w-8 md:w-12">
+                  <div class="text-left">
+                    <h1 class="text-[#b5b5b5] text-sm md:text-base">Than Soe Oo</h1>
+                    <p class="text-grey text-sm font-light">Senior Frontend Developer @ BeyondSensor</p>
+                  </div>
+                </div>
+                <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
+                  Working with Ko Kaung Myat was an absolute pleasure. His exceptional designs, professionalism, and collaboration improved our user experience, boosting engagement and earning positive feedback. Highly recommended for his design skills.
+                </p>
+              </div>
+            </div>
+          </li> -->
+              <li class="flex-shrink-0 w-48 h-full">
+                <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague5.png" alt="" />
+              </li>
+              <li class="flex-shrink-0 w-48 h-full">
+                <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague6.png" alt="" />
+              </li>
+              <li class="flex-shrink-0 w-80 md:w-96 h-full flex flex-col justify-between">
+                <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
+                  <div class="flex flex-col items-start h-full">
+                    <div class="info flex items-start md:items-center justify-center gap-2">
+                      <img src="./img/AvatarLT.png" alt="" class="w-8 md:w-12">
+                      <div class="text-left">
+                        <h1 class="text-[#b5b5b5] text-sm md:text-base">Lay Thein</h1>
+                        <p class="text-grey text-sm font-light">Chief Pet Officer & Mascot @ SFU</p>
+                      </div>
+                    </div>
+                    <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
+                      Meowww Meow Meow Meow Meow Meow Meow Meoww Meow Meow Meow Meow Meow Meowww... Meow Meoooow Meow
+                      Meow Meeeeeeow Meow Meow Meow Meow Meow Meow Meowwww Meow Meow Meow Meow Meoww Meow Meowwww.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="flex-shrink-0 w-80 md:w-96 h-full flex flex-col justify-between">
+                <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
+                  <div class="flex flex-col items-start h-full">
+                    <div class="info flex items-start md:items-center justify-center gap-2">
+                      <img src="./img/AvatarZTK.png" alt="" class="w-8 md:w-12">
+                      <div class="text-left">
+                        <h1 class="text-[#b5b5b5] text-sm md:text-base">Zaw Thet Khaing</h1>
+                        <p class="text-grey text-sm font-light">Mobile Application Developer @ A bank</p>
+                      </div>
+                    </div>
+                    <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
+                      As a developer, it has been an absolute honor to work with Ko Kaung Myat, such an innovative and
+                      talented designer. His creative designs and experience consistently create impactful experiences
+                      for users.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="flex-shrink-0 w-72 h-full">
+                <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague7.png" alt="" />
+              </li>
+              <!-- <li class="flex-shrink-0 w-80 md:w-96 h-full flex flex-col justify-between">
+            <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
+              <div class="flex flex-col items-start h-full">
+                <div class="info flex items-start md:items-center justify-center gap-2">
+                  <img src="./img/Avatar1.png" alt="" class="w-8 md:w-12">
+                  <div class="text-left">
+                    <h1 class="text-[#b5b5b5] text-sm md:text-base">Than Soe Oo</h1>
+                    <p class="text-grey text-sm font-light">Senior Frontend Developer @ BeyondSensor</p>
+                  </div>
+                </div>
+                <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
+                  Working with Ko Kaung Myat was an absolute pleasure. His exceptional designs, professionalism, and collaboration improved our user experience, boosting engagement and earning positive feedback. Highly recommended for his design skills.
+                </p>
+              </div>
+            </div>
+          </li> -->
+            </ul>
+            <ul id="testimonial2-2"
+              class="flex items-center justify-center md:justify-start [&_li]:mx-2 [&_img]:max-w-none animate-infinite-scroll2"
+              aria-hidden="true">
+              <!-- <li class="flex-shrink-0 w-80 md:w-96 h-full flex flex-col justify-between">
+            <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
+              <div class="flex flex-col items-start h-full">
+                <div class="info flex items-start md:items-center justify-center gap-2">
+                  <img src="./img/Avatar1.png" alt="" class="w-8 md:w-12">
+                  <div class="text-left">
+                    <h1 class="text-[#b5b5b5] text-sm md:text-base">Than Soe Oo</h1>
+                    <p class="text-grey text-sm font-light">Senior Frontend Developer @ BeyondSensor</p>
+                  </div>
+                </div>
+                <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
+                  Working with Ko Kaung Myat was an absolute pleasure. His exceptional designs, professionalism, and collaboration improved our user experience, boosting engagement and earning positive feedback. Highly recommended for his design skills.
+                </p>
+              </div>
+            </div>
+          </li> -->
+              <li class="flex-shrink-0 w-48 h-full">
+                <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague5.png" alt="" />
+              </li>
+              <li class="flex-shrink-0 w-48 h-full">
+                <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague6.png" alt="" />
+              </li>
+              <li class="flex-shrink-0 w-80 md:w-96 h-full flex flex-col justify-between">
+                <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
+                  <div class="flex flex-col items-start h-full">
+                    <div class="info flex items-start md:items-center justify-center gap-2">
+                      <img src="./img/AvatarLT.png" alt="" class="w-8 md:w-12">
+                      <div class="text-left">
+                        <h1 class="text-[#b5b5b5] text-sm md:text-base">Lay Thein</h1>
+                        <p class="text-grey text-sm font-light">Chief Pet Officer & Mascot @ SFU</p>
+                      </div>
+                    </div>
+                    <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
+                      Meowww Meow Meow Meow Meow Meow Meow Meoww Meow Meow Meow Meow Meow Meowww... Meow Meoooow Meow
+                      Meow Meeeeeeow Meow Meow Meow Meow Meow Meow Meowwww Meow Meow Meow Meow Meoww Meow Meowwww.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="flex-shrink-0 w-80 md:w-96 h-full flex flex-col justify-between">
+                <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
+                  <div class="flex flex-col items-start h-full">
+                    <div class="info flex items-start md:items-center justify-center gap-2">
+                      <img src="./img/AvatarZTK.png" alt="" class="w-8 md:w-12">
+                      <div class="text-left">
+                        <h1 class="text-[#b5b5b5] text-sm md:text-base">Zaw Thet Khaing</h1>
+                        <p class="text-grey text-sm font-light">Mobile Application Developer @ A bank</p>
+                      </div>
+                    </div>
+                    <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
+                      As a developer, it has been an absolute honor to work with Ko Kaung Myat, such an innovative and
+                      talented designer. His creative designs and experience consistently create impactful experiences
+                      for users.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="flex-shrink-0 w-72 h-full">
+                <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague7.png" alt="" />
+              </li>
+              <!-- <li class="flex-shrink-0 w-80 md:w-96 h-full flex flex-col justify-between">
+            <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
+              <div class="flex flex-col items-start h-full">
+                <div class="info flex items-start md:items-center justify-center gap-2">
+                  <img src="./img/Avatar1.png" alt="" class="w-8 md:w-12">
+                  <div class="text-left">
+                    <h1 class="text-[#b5b5b5] text-sm md:text-base">Than Soe Oo</h1>
+                    <p class="text-grey text-sm font-light">Senior Frontend Developer @ BeyondSensor</p>
+                  </div>
+                </div>
+                <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
+                  Working with Ko Kaung Myat was an absolute pleasure. His exceptional designs, professionalism, and collaboration improved our user experience, boosting engagement and earning positive feedback. Highly recommended for his design skills.
+                </p>
+              </div>
+            </div>
+          </li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- loves to -->
+  <div
+    class="love static w-full px-5 md:px-0 md:w-4/5 py-16 experience max-w-screen-2xl mx-auto justify-center items-center h-fit">
+    <div class="pb-7">
       <div class="bodyTitle relative pb-6 border-b border-lightgrey">
         <h1 class="text-base lg:text-2xl text-orange text-left left-0 top-4 absolute z-10">
-          From My Colleagues' Hearts
+          What I love to
         </h1>
-        <h1 class="text-3xl lg:text-5xl text-left text-dark relative whitespace-nowrap" style="-webkit-text-stroke: 1px #2A2A2A;">
-          From My Colleagues' Hearts
+        <h1 class="text-3xl lg:text-5xl text-left text-dark relative whitespace-nowrap"
+          style="-webkit-text-stroke: 1px #2A2A2A;">
+          What I love to
         </h1>
       </div>
-    </div>
 
-    <div class="h-[36rem] md:h-[32rem]">
-      <div class="testimonialSlider -rotate-0 absolute inset-x-0 mx-auto mt-8">
-      <div id="testimonial1" class="inline-flex gap-0 w-full flex-nowrap overflow-hidden md:[mask-image:_linear-gradient(to_right,transparent_0,_black_200px,_black_calc(100%-200px),transparent_100%)]">
-        <ul id="testimonial1-1" class="flex items-center justify-center md:justify-start [&_li]:mx-2 [&_img]:max-w-none animate-infinite-scroll">
-          <li class="flex-shrink-0 w-48 h-full">
-            <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague1.png" alt="" />
-          </li>
-          <li class="flex-shrink-0 w-80 md:w-[34rem] h-full flex flex-col justify-between">
-            <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
-              <div class="flex flex-col items-start h-full">
-                <div class="info flex items-start md:items-center justify-center gap-2">
-                  <img src="./img/AvatarNWN.png" alt="" class="w-8 md:w-12">
-                  <div class="text-left">
-                    <h1 class="text-[#b5b5b5] text-sm md:text-base">Nyan Win Naing</h1>
-                    <p class="text-grey text-sm font-light">Flutter Developer @ SFEG</p>
-                  </div>
-                </div>
-                <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
-                  Ko Kaung Myat is an exceptionally talented UI/UX designer who consistently demonstrates creativity, a keen eye for detail, and a strong user-centric approach in his work. Collaborating with him on a lot of mobile app projects was both effortless and motivating, as his innovative designs significantly enhanced the overall quality and functionality of the product.
-                </p>
-              </div>
-            </div>
-          </li>
-          <li class="flex-shrink-0 w-48 h-full">
-            <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague2.png" alt="" />
-          </li>
-        
-          <li class="flex-shrink-0 w-72 h-full">
-            <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague3.png" alt="" />
-          </li>      
-          <li class="flex-shrink-0 w-80 md:w-[30rem] h-full flex flex-col justify-between">
-            <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
-              <div class="flex flex-col items-start h-full">
-                <div class="info flex items-start md:items-center justify-center gap-2">
-                  <img src="./img/AvatarSZYH.png" alt="" class="w-8 md:w-12">
-                  <div class="text-left">
-                    <h1 class="text-[#b5b5b5] text-sm md:text-base">Sai Zayar Htet</h1>
-                    <p class="text-grey text-sm font-light">Senior Flutter Developer</p>
-                  </div>
-                </div>
-                <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
-                  I’m happy to write a testimonial for Ko Kaung Myat. He has great design thinking skills and can see things from different perspectives that others often miss. He is also very active and has excellent communication skills, making him a great team player. It’s always a pleasure to work with someone as creative and dedicated as him.
-                </p>
-              </div>
-            </div>
-          </li>
-          <li class="flex-shrink-0 w-72 h-full">
-            <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague4.png" alt="" />
-          </li>
-          <li class="flex-shrink-0 w-80 md:w-96 h-full flex flex-col justify-between">
-            <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
-              <div class="flex flex-col items-start h-full">
-                <div class="info flex items-start md:items-center justify-center gap-2">
-                  <img src="./img/Avatar1.png" alt="" class="w-8 md:w-12">
-                  <div class="text-left">
-                    <h1 class="text-[#b5b5b5] text-sm md:text-base">Than Soe Oo</h1>
-                    <p class="text-grey text-sm font-light">Senior Frontend Developer @ BeyondSensor</p>
-                  </div>
-                </div>
-                <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
-                  Working with Ko Kaung Myat was an absolute pleasure. His exceptional designs, professionalism, and collaboration improved our user experience, boosting engagement and earning positive feedback. Highly recommended for his design skills.
-                </p>
-              </div>
-            </div>
-          </li>
-        </ul>
-        <ul id="testimonial1-2" class="flex items-center justify-center md:justify-start [&_li]:mx-2 [&_img]:max-w-none animate-infinite-scroll" aria-hidden="true">
-        <li class="flex-shrink-0 w-48 h-full">
-          <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague1.png" alt="" />
-        </li>
-        <li class="flex-shrink-0 w-80 md:w-[34rem] h-full flex flex-col justify-between">
-          <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
-            <div class="flex flex-col items-start h-full">
-              <div class="info flex items-start md:items-center justify-center gap-2">
-                <img src="./img/AvatarNWN.png" alt="" class="w-8 md:w-12">
-                <div class="text-left">
-                  <h1 class="text-[#b5b5b5] text-sm md:text-base">Nyan Win Naing</h1>
-                  <p class="text-grey text-sm font-light">Flutter Developer @ SFEG</p>
-                </div>
-              </div>
-              <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
-                Ko Kaung Myat is an exceptionally talented UI/UX designer who consistently demonstrates creativity, a keen eye for detail, and a strong user-centric approach in his work. Collaborating with him on a lot of mobile app projects was both effortless and motivating, as his innovative designs significantly enhanced the overall quality and functionality of the product.
-              </p>
-            </div>
-          </div>
-        </li>
-        <li class="flex-shrink-0 w-48 h-full">
-          <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague2.png" alt="" />
-        </li>
-      
-        <li class="flex-shrink-0 w-72 h-full">
-          <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague3.png" alt="" />
-        </li>    
-        <li class="flex-shrink-0 w-80 md:w-[30rem] h-full flex flex-col justify-between">
-          <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
-            <div class="flex flex-col items-start h-full">
-              <div class="info flex items-start md:items-center justify-center gap-2">
-                <img src="./img/AvatarSZYH.png" alt="" class="w-8 md:w-12">
-                <div class="text-left">
-                  <h1 class="text-[#b5b5b5] text-sm md:text-base">Sai Zayar Htet</h1>
-                  <p class="text-grey text-sm font-light">Senior Flutter Developer</p>
-                </div>
-              </div>
-              <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
-                I’m happy to write a testimonial for Ko Kaung Myat. He has great design thinking skills and can see things from different perspectives that others often miss. He is also very active and has excellent communication skills, making him a great team player. It’s always a pleasure to work with someone as creative and dedicated as him.
-              </p>
-            </div>
-          </div>
-        </li>
-        <li class="flex-shrink-0 w-72 h-full">
-          <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague4.png" alt="" />
-        </li>
-        <li class="flex-shrink-0 w-80 md:w-96 h-full flex flex-col justify-between">
-          <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
-            <div class="flex flex-col items-start h-full">
-              <div class="info flex items-start md:items-center justify-center gap-2">
-                <img src="./img/Avatar1.png" alt="" class="w-8 md:w-12">
-                <div class="text-left">
-                  <h1 class="text-[#b5b5b5] text-sm md:text-base">Than Soe Oo</h1>
-                  <p class="text-grey text-sm font-light">Senior Frontend Developer @ BeyondSensor</p>
-                </div>
-              </div>
-              <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
-                Working with Ko Kaung Myat was an absolute pleasure. His exceptional designs, professionalism, and collaboration improved our user experience, boosting engagement and earning positive feedback. Highly recommended for his design skills.
-              </p>
-            </div>
-          </div>
-        </li>
-        </ul>
-      </div>
-      <div id="testimonial2" class="inline-flex gap-0 mt-2 w-full flex-nowrap overflow-hidden md:[mask-image:_linear-gradient(to_right,transparent_0,_black_200px,_black_calc(100%-200px),transparent_100%)]">
-        <ul id="testimonial2-1" class="flex items-center justify-center md:justify-start [&_li]:mx-2 [&_img]:max-w-none animate-infinite-scroll2">
-          <!-- <li class="flex-shrink-0 w-80 md:w-96 h-full flex flex-col justify-between">
-            <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
-              <div class="flex flex-col items-start h-full">
-                <div class="info flex items-start md:items-center justify-center gap-2">
-                  <img src="./img/Avatar1.png" alt="" class="w-8 md:w-12">
-                  <div class="text-left">
-                    <h1 class="text-[#b5b5b5] text-sm md:text-base">Than Soe Oo</h1>
-                    <p class="text-grey text-sm font-light">Senior Frontend Developer @ BeyondSensor</p>
-                  </div>
-                </div>
-                <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
-                  Working with Ko Kaung Myat was an absolute pleasure. His exceptional designs, professionalism, and collaboration improved our user experience, boosting engagement and earning positive feedback. Highly recommended for his design skills.
-                </p>
-              </div>
-            </div>
-          </li> -->
-          <li class="flex-shrink-0 w-48 h-full">
-            <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague5.png" alt="" />
-          </li>
-          <li class="flex-shrink-0 w-48 h-full">
-            <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague6.png" alt="" />
-          </li>     
-          <li class="flex-shrink-0 w-80 md:w-96 h-full flex flex-col justify-between">
-            <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
-              <div class="flex flex-col items-start h-full">
-                <div class="info flex items-start md:items-center justify-center gap-2">
-                  <img src="./img/AvatarLT.png" alt="" class="w-8 md:w-12">
-                  <div class="text-left">
-                    <h1 class="text-[#b5b5b5] text-sm md:text-base">Lay Thein</h1>
-                    <p class="text-grey text-sm font-light">Chief Pet Officer & Mascot @ SFU</p>
-                  </div>
-                </div>
-                <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
-                  Meowww Meow Meow Meow Meow Meow Meow Meoww Meow Meow Meow Meow Meow Meowww... Meow Meoooow Meow Meow Meeeeeeow Meow Meow Meow Meow Meow Meow Meowwww Meow Meow Meow Meow Meoww Meow Meowwww.
-                </p>
-              </div>
-            </div>
-          </li>
-          <li class="flex-shrink-0 w-80 md:w-96 h-full flex flex-col justify-between">
-            <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
-              <div class="flex flex-col items-start h-full">
-                <div class="info flex items-start md:items-center justify-center gap-2">
-                  <img src="./img/AvatarZTK.png" alt="" class="w-8 md:w-12">
-                  <div class="text-left">
-                    <h1 class="text-[#b5b5b5] text-sm md:text-base">Zaw Thet Khaing</h1>
-                    <p class="text-grey text-sm font-light">Mobile Application Developer @ A bank</p>
-                  </div>
-                </div>
-                <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
-                  As a developer, it has been an absolute honor to work with Ko Kaung Myat, such an innovative and talented designer. His creative designs and experience consistently create impactful experiences for users.
-                </p>
-              </div>
-            </div>
-          </li>
-          <li class="flex-shrink-0 w-72 h-full">
-            <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague7.png" alt="" />
-          </li>
-          <!-- <li class="flex-shrink-0 w-80 md:w-96 h-full flex flex-col justify-between">
-            <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
-              <div class="flex flex-col items-start h-full">
-                <div class="info flex items-start md:items-center justify-center gap-2">
-                  <img src="./img/Avatar1.png" alt="" class="w-8 md:w-12">
-                  <div class="text-left">
-                    <h1 class="text-[#b5b5b5] text-sm md:text-base">Than Soe Oo</h1>
-                    <p class="text-grey text-sm font-light">Senior Frontend Developer @ BeyondSensor</p>
-                  </div>
-                </div>
-                <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
-                  Working with Ko Kaung Myat was an absolute pleasure. His exceptional designs, professionalism, and collaboration improved our user experience, boosting engagement and earning positive feedback. Highly recommended for his design skills.
-                </p>
-              </div>
-            </div>
-          </li> -->
-        </ul>
-        <ul id="testimonial2-2" class="flex items-center justify-center md:justify-start [&_li]:mx-2 [&_img]:max-w-none animate-infinite-scroll2" aria-hidden="true">
-          <!-- <li class="flex-shrink-0 w-80 md:w-96 h-full flex flex-col justify-between">
-            <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
-              <div class="flex flex-col items-start h-full">
-                <div class="info flex items-start md:items-center justify-center gap-2">
-                  <img src="./img/Avatar1.png" alt="" class="w-8 md:w-12">
-                  <div class="text-left">
-                    <h1 class="text-[#b5b5b5] text-sm md:text-base">Than Soe Oo</h1>
-                    <p class="text-grey text-sm font-light">Senior Frontend Developer @ BeyondSensor</p>
-                  </div>
-                </div>
-                <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
-                  Working with Ko Kaung Myat was an absolute pleasure. His exceptional designs, professionalism, and collaboration improved our user experience, boosting engagement and earning positive feedback. Highly recommended for his design skills.
-                </p>
-              </div>
-            </div>
-          </li> -->
-          <li class="flex-shrink-0 w-48 h-full">
-            <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague5.png" alt="" />
-          </li>
-          <li class="flex-shrink-0 w-48 h-full">
-            <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague6.png" alt="" />
-          </li>     
-          <li class="flex-shrink-0 w-80 md:w-96 h-full flex flex-col justify-between">
-            <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
-              <div class="flex flex-col items-start h-full">
-                <div class="info flex items-start md:items-center justify-center gap-2">
-                  <img src="./img/AvatarLT.png" alt="" class="w-8 md:w-12">
-                  <div class="text-left">
-                    <h1 class="text-[#b5b5b5] text-sm md:text-base">Lay Thein</h1>
-                    <p class="text-grey text-sm font-light">Chief Pet Officer & Mascot @ SFU</p>
-                  </div>
-                </div>
-                <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
-                  Meowww Meow Meow Meow Meow Meow Meow Meoww Meow Meow Meow Meow Meow Meowww... Meow Meoooow Meow Meow Meeeeeeow Meow Meow Meow Meow Meow Meow Meowwww Meow Meow Meow Meow Meoww Meow Meowwww.
-                </p>
-              </div>
-            </div>
-          </li>
-          <li class="flex-shrink-0 w-80 md:w-96 h-full flex flex-col justify-between">
-            <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
-              <div class="flex flex-col items-start h-full">
-                <div class="info flex items-start md:items-center justify-center gap-2">
-                  <img src="./img/AvatarZTK.png" alt="" class="w-8 md:w-12">
-                  <div class="text-left">
-                    <h1 class="text-[#b5b5b5] text-sm md:text-base">Zaw Thet Khaing</h1>
-                    <p class="text-grey text-sm font-light">Mobile Application Developer @ A bank</p>
-                  </div>
-                </div>
-                <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
-                  As a developer, it has been an absolute honor to work with Ko Kaung Myat, such an innovative and talented designer. His creative designs and experience consistently create impactful experiences for users.
-                </p>
-              </div>
-            </div>
-          </li>
-          <li class="flex-shrink-0 w-72 h-full">
-            <img class="rounded-2xl w-full h-full object-cover" src="./img/colleague7.png" alt="" />
-          </li>
-          <!-- <li class="flex-shrink-0 w-80 md:w-96 h-full flex flex-col justify-between">
-            <div class="p-5 bg-[#141414] rounded-2xl border-[1px] border-lightgrey w-full h-full">
-              <div class="flex flex-col items-start h-full">
-                <div class="info flex items-start md:items-center justify-center gap-2">
-                  <img src="./img/Avatar1.png" alt="" class="w-8 md:w-12">
-                  <div class="text-left">
-                    <h1 class="text-[#b5b5b5] text-sm md:text-base">Than Soe Oo</h1>
-                    <p class="text-grey text-sm font-light">Senior Frontend Developer @ BeyondSensor</p>
-                  </div>
-                </div>
-                <p class="text-left text-grey text-sm font-light mt-4 leading-normal">
-                  Working with Ko Kaung Myat was an absolute pleasure. His exceptional designs, professionalism, and collaboration improved our user experience, boosting engagement and earning positive feedback. Highly recommended for his design skills.
-                </p>
-              </div>
-            </div>
-          </li> -->
-        </ul>
-      </div>
+      <div class="text text-sm lg:text-base text-white text-left leading-normal mt-4 lg:mt-6">
+        <p class="font-light">
+          <span>I love storytelling for brands and products. And, I also have a passion for motion design, filmmaking,
+            video editing, and creating stylized character portraits and illustrations. Here are some of my
+            artworks.</span>
+        </p>
       </div>
     </div>
-
-    </div>
-  </div>
-
-<!-- loves to -->
-<div class="love static w-full px-5 md:px-0 md:w-4/5 py-16 experience max-w-screen-2xl mx-auto justify-center items-center h-fit">
-  <div class="pb-7">
-    <div class="bodyTitle relative pb-6 border-b border-lightgrey">
-      <h1 class="text-base lg:text-2xl text-orange text-left left-0 top-4 absolute z-10">
-        What I love to
-      </h1>
-      <h1 class="text-3xl lg:text-5xl text-left text-dark relative whitespace-nowrap" style="-webkit-text-stroke: 1px #2A2A2A;">
-        What I love to
-      </h1>
-    </div>
-
-    <div class="text text-sm lg:text-base text-white text-left leading-normal mt-4 lg:mt-6">
-      <p class="font-light">
-        <span>I love storytelling for brands and products. And, I also have a passion for motion design, filmmaking, video editing, and creating stylized character portraits and illustrations. Here are some of my artworks.</span>
-      </p>
-    </div>
-  </div>
-  <!-- what I love to -->
-  <div class=" flex flex-col md:grid grid-cols-5 gap-6">
-    <div class="overflow-hidden rounded-md lg:rounded-2xl lg:grayscale hover:grayscale-0 transition duration-500"><img class="object-cover h-full w-full" src="./img/artworks/girl2.png" alt=""></div>
-    <div class="overflow-hidden rounded-md lg:rounded-2xl lg:grayscale hover:grayscale-0 transition duration-500 col-span-2"><img class="object-cover h-full w-full" src="./img/artworks/moana.png" alt=""></div>
-    <div class="overflow-hidden rounded-md lg:rounded-2xl lg:grayscale hover:grayscale-0 transition duration-500 col-span-2"><img class="object-cover h-full w-full" src="./img/artworks/collapse.png" alt=""></div>
-    <div class="overflow-hidden rounded-md lg:rounded-2xl lg:grayscale hover:grayscale-0 transition duration-500 col-span-2"><img class="object-cover h-full w-full" src="./img/artworks/loki.png" alt=""></div>
-    <div class="overflow-hidden rounded-md lg:rounded-2xl lg:grayscale hover:grayscale-0 transition duration-500"><img class="object-cover h-full w-full" src="./img/artworks/girl1.png" alt=""></div>
-    <div class="overflow-hidden rounded-md lg:rounded-2xl lg:grayscale hover:grayscale-0 transition duration-500 col-span-2"><img class="object-cover h-full w-full" src="./img/artworks/tumblingkellys.png" alt=""></div>
-  </div>
-
-</div>
-<div id="section4" class="pt-32 px-5 md:px-0 pb-16 flex flex-col justify-center items-center">
-  <div class="group relative justify-center items-center">
-  <div class="kaungimg my-0 mx-auto w-48 h-48 flex flex-col relative overflow-hidden">    
-    <img class="group-hover:rotate-[360deg] group-hover:scale-125 group-hover:opacity-0 w-full absolute z-10" src="./img/kaung2.svg" alt="">
-    <img class="w-full absolute kaung2 opacity-0 group-hover:rotate-[360deg] group-hover:opacity-100 transform-gpu" src="./img/kaung4.png" alt="">
-  </div>
-  <div class="invite text-3xl lg:text-5xl">
-    <h1 class="group text-orange mt-5 leading-normal">Have an awesome idea?</h1>
-    <h1 class="text-white">Well, here I am.</h1>
-  </div>
-  <div class="buttongroup flex flex-col items-center justify-center gap-5 w-fit mx-auto mt-10">
-
-    <div class="group btn1 bg-lightgrey hover:bg-[#316AFE] rounded-full h-12 w-52 text-white text-sm lg:text-base text-center inline-block overflow-hidden relative transition-all"
-      data-cal-link="chatchat/meet"
-      data-cal-namespace="meet"
-      data-cal-config='{"layout":"month_view"}'>
-      <a class="btn flex justify-center items-center relative h-12 cursor-pointer">Schedule a meeting</a>
-    </div>
-    <div class="text-grey text-sm lg:text-base">
-      or just email me via: <a href="mailto:kaungmyatmoeehtoon@gmail.com" class="text-white hover:text-orange block relative h-full">kaungmyatmoeehtoon@gmail.com</a>
+    <!-- what I love to -->
+    <div class=" flex flex-col md:grid grid-cols-5 gap-6">
+      <div class="overflow-hidden rounded-md lg:rounded-2xl lg:grayscale hover:grayscale-0 transition duration-500"><img
+          class="object-cover h-full w-full" src="./img/artworks/girl2.png" alt=""></div>
+      <div
+        class="overflow-hidden rounded-md lg:rounded-2xl lg:grayscale hover:grayscale-0 transition duration-500 col-span-2">
+        <img class="object-cover h-full w-full" src="./img/artworks/moana.png" alt=""></div>
+      <div
+        class="overflow-hidden rounded-md lg:rounded-2xl lg:grayscale hover:grayscale-0 transition duration-500 col-span-2">
+        <img class="object-cover h-full w-full" src="./img/artworks/collapse.png" alt=""></div>
+      <div
+        class="overflow-hidden rounded-md lg:rounded-2xl lg:grayscale hover:grayscale-0 transition duration-500 col-span-2">
+        <img class="object-cover h-full w-full" src="./img/artworks/loki.png" alt=""></div>
+      <div class="overflow-hidden rounded-md lg:rounded-2xl lg:grayscale hover:grayscale-0 transition duration-500"><img
+          class="object-cover h-full w-full" src="./img/artworks/girl1.png" alt=""></div>
+      <div
+        class="overflow-hidden rounded-md lg:rounded-2xl lg:grayscale hover:grayscale-0 transition duration-500 col-span-2">
+        <img class="object-cover h-full w-full" src="./img/artworks/tumblingkellys.png" alt=""></div>
     </div>
 
   </div>
-</div>
-</div>
-<div class="text-white pt-10 lg:pt-20 pb-8 lg:pb-8">
-  <ul id="bottomnav" class="hidden bottomnav text-sm font-light md:flex justify-center items-center">
-    <li>
-      <a href="#hello" class="hover:text-orange bottomnav block py-2 pl-3 pr-4">Hello</a>
-    </li>
-    <li>
-      <a href="#works" class="hover:text-orange bottomnav block py-2 pl-3 pr-4">Works</a>
-    </li>
-    <li>
-      <a href="#experiences" class="hover:text-orange bottomnav block py-2 pl-3 pr-4">Experiences</a>
-    </li>
-    <li>
-      <a href="#contact" class="hover:text-orange bottomnav block py-2 pl-3 pr-4">Contact</a>
-    </li>
-    <li>
-      <a target="_blank" href="https://drive.google.com/file/d/1rXvd4bMhf_CnHu4p5y4PPbJgDijJC5l-/view?usp=sharing" class="hover:text-orange block py-2 pl-3 pr-4">Resume</a>
-    </li>
-  </ul>
+  <div id="section4" class="pt-32 px-5 md:px-0 pb-16 flex flex-col justify-center items-center">
+    <div class="group relative justify-center items-center">
+      <div class="kaungimg my-0 mx-auto w-48 h-48 flex flex-col relative overflow-hidden">
+        <img class="group-hover:rotate-[360deg] group-hover:scale-125 group-hover:opacity-0 w-full absolute z-10"
+          src="./img/kaung2.svg" alt="">
+        <img class="w-full absolute kaung2 opacity-0 group-hover:rotate-[360deg] group-hover:opacity-100 transform-gpu"
+          src="./img/kaung4.png" alt="">
+      </div>
+      <div class="invite text-3xl lg:text-5xl">
+        <h1 class="group text-orange mt-5 leading-normal">Have an awesome idea?</h1>
+        <h1 class="text-white">Well, here I am.</h1>
+      </div>
+      <div class="buttongroup flex flex-col items-center justify-center gap-5 w-fit mx-auto mt-10">
+
+        <div
+          class="group btn1 bg-lightgrey hover:bg-[#316AFE] rounded-full h-12 w-52 text-white text-sm lg:text-base text-center inline-block overflow-hidden relative transition-all"
+          data-cal-link="chatchat/meet" data-cal-namespace="meet" data-cal-config='{"layout":"month_view"}'>
+          <a class="btn flex justify-center items-center relative h-12 cursor-pointer">Schedule a meeting</a>
+        </div>
+        <div class="text-grey text-sm lg:text-base">
+          or just email me via: <a href="mailto:kaungmyatmoeehtoon@gmail.com"
+            class="text-white hover:text-orange block relative h-full">kaungmyatmoeehtoon@gmail.com</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="text-white pt-10 lg:pt-20 pb-8 lg:pb-8">
+    <ul id="bottomnav" class="hidden bottomnav text-sm font-light md:flex justify-center items-center">
+      <li>
+        <a href="#hello" class="hover:text-orange bottomnav block py-2 pl-3 pr-4">Hello</a>
+      </li>
+      <li>
+        <a href="#works" class="hover:text-orange bottomnav block py-2 pl-3 pr-4">Works</a>
+      </li>
+      <li>
+        <a href="#experiences" class="hover:text-orange bottomnav block py-2 pl-3 pr-4">Experiences</a>
+      </li>
+      <li>
+        <a href="#contact" class="hover:text-orange bottomnav block py-2 pl-3 pr-4">Contact</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://drive.google.com/file/d/1rXvd4bMhf_CnHu4p5y4PPbJgDijJC5l-/view?usp=sharing"
+          class="hover:text-orange block py-2 pl-3 pr-4">Resume</a>
+      </li>
+    </ul>
 
 
-  
-
-  <p class="copyright text-[12px] px-6 mt-0 md:mt-4 lg:mt-8 text-white/60">Copyright © 2025. Developed by Kaung Myat Moee Htoon.<br class="block lg:hidden"> All rights reserved.</p>
-</div>
 
 
-<!-- Medium article embed -->
-<!-- <div class='sk-ww-medium-publication-feed' data-embed-id='25389346'></div> -->
+    <p class="copyright text-[12px] px-6 mt-0 md:mt-4 lg:mt-8 text-white/60">Copyright © 2025. Developed by Kaung Myat
+      Moee Htoon.<br class="block lg:hidden"> All rights reserved.</p>
+  </div>
+  </main>
 
 
-<script>
-  
-  
-////////////////////////////////////////////////////////////////
-  (function (C, A, L) { 
-    let p = function (a, ar) { a.q.push(ar); }; 
-    let d = C.document; 
-    C.Cal = C.Cal || function () { 
-      let cal = C.Cal; 
-      let ar = arguments; 
-      if (!cal.loaded) { 
-        cal.ns = {}; 
-        cal.q = cal.q || []; 
-        let script = d.createElement("script");
-        script.src = A;
-        d.head.appendChild(script);
-        cal.loaded = true; 
-      } 
-      if (ar[0] === L) { 
-        const api = function () { p(api, arguments); }; 
-        const namespace = ar[1]; 
-        api.q = api.q || []; 
-        if (typeof namespace === "string") {
-          cal.ns[namespace] = cal.ns[namespace] || api;
-          p(cal.ns[namespace], ar);
-          p(cal, ["initNamespace", namespace]);
-        } else p(cal, ar); 
-        return;
-      } 
-      p(cal, ar); 
-    }; 
-  })(window, "https://app.cal.com/embed/embed.js", "init");
-
-  Cal("init", "meet", { origin: "https://cal.com" });
-  Cal.ns.meet("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
+  <!-- Medium article embed -->
+  <!-- <div class='sk-ww-medium-publication-feed' data-embed-id='25389346'></div> -->
 
 
-  ////////////////////////////////////////////////////////////////
-  const r = new rive.Rive({
-  src: "friendly_neighborhood.riv",
-  canvas: document.getElementById("canvas"),
-  autoplay: true,
-  stateMachines: "Startanimate",
-  onLoad: () => {
-    r.resizeDrawingSurfaceToCanvas();
-  },
-});
+  <script>
 
-// Function to handle Rive events
-const onRiveEventReceived = (riveEvent) => {
-  const eventData = riveEvent.data;
+    //preloader
 
-  if (eventData.type === rive.RiveEventType.General) {
-    console.log("Event name:", eventData.name);
-    console.log("Event properties:", eventData.properties);
+    const preloader = document.querySelector('.preloader');
+    const counter = document.querySelector('.counter');
+    const pagecontent = document.querySelector('.pagecontent');
+    let count = 0;
 
-    let modalContent = "";
+    const numberSystems = {
+      en: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
+      my: ['၀', '၁', '၂', '၃', '၄', '၅', '၆', '၇', '၈', '၉'],
+      th: ['๐', '๑', '๒', '๓', '๔', '๕', '๖', '๗', '๘', '๙'],
+      jp: ['０', '１', '２', '３', '４', '５', '６', '７', '８', '９'],
+      zh: ['零', '一', '二', '三', '四', '五', '六', '七', '八', '九']
+    };
 
-    if (eventData.name === "Sipderman click event") {
-      modalContent = `
+    const languages = ['en', 'my', 'th', 'jp', 'zh'];
+
+    const toLanguageNumber = (num, lang) => {
+      return num.toString().split('')
+        .map(digit => `<span class="digit-${lang}">${numberSystems[lang][parseInt(digit)]}</span>`)
+        .join('');
+    };
+
+    const enableScroll = () => {
+      document.body.classList.remove('loading');
+      document.documentElement.style.overflow = '';
+      document.body.style.overflow = '';
+      document.body.style.height = '';
+    };
+
+    const updateCounter = () => {
+      if (count < 99) {
+        count++;
+        // Pick a random language for the entire number
+        const randomLang = languages[Math.floor(Math.random() * languages.length)];
+        counter.innerHTML = toLanguageNumber(count, randomLang);
+
+        setTimeout(() => {
+          requestAnimationFrame(updateCounter);
+        }, 50); // Adjust this delay to control speed (higher = slower)
+
+      } else if (count === 99) {
+        count++;
+        // Show 100% in English
+        counter.innerHTML = toLanguageNumber(count, 'en');
+        preloader.classList.add('preloader-exit');
+
+        setTimeout(() => {
+          // content.classList.add('visible-content');
+          preloader.remove();
+          enableScroll();
+        }, 1000);
+      }
+    };
+
+
+    setTimeout(() => {
+      requestAnimationFrame(updateCounter);
+    }, 500);
+
+
+    ////////////////////////////////////////////////////////////////Cal embedding
+    (function (C, A, L) {
+      let p = function (a, ar) { a.q.push(ar); };
+      let d = C.document;
+      C.Cal = C.Cal || function () {
+        let cal = C.Cal;
+        let ar = arguments;
+        if (!cal.loaded) {
+          cal.ns = {};
+          cal.q = cal.q || [];
+          let script = d.createElement("script");
+          script.src = A;
+          d.head.appendChild(script);
+          cal.loaded = true;
+        }
+        if (ar[0] === L) {
+          const api = function () { p(api, arguments); };
+          const namespace = ar[1];
+          api.q = api.q || [];
+          if (typeof namespace === "string") {
+            cal.ns[namespace] = cal.ns[namespace] || api;
+            p(cal.ns[namespace], ar);
+            p(cal, ["initNamespace", namespace]);
+          } else p(cal, ar);
+          return;
+        }
+        p(cal, ar);
+      };
+    })(window, "https://app.cal.com/embed/embed.js", "init");
+
+    Cal("init", "meet", { origin: "https://cal.com" });
+    Cal.ns.meet("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
+
+
+    ////////////////////////////////////////////////////////////////
+    const r = new rive.Rive({
+      src: "friendly_neighborhood.riv",
+      canvas: document.getElementById("canvas"),
+      autoplay: true,
+      stateMachines: "Startanimate",
+      onLoad: () => {
+        r.resizeDrawingSurfaceToCanvas();
+      },
+    });
+
+    // Function to handle Rive events
+    const onRiveEventReceived = (riveEvent) => {
+      const eventData = riveEvent.data;
+
+      if (eventData.type === rive.RiveEventType.General) {
+        console.log("Event name:", eventData.name);
+        console.log("Event properties:", eventData.properties);
+
+        let modalContent = "";
+
+        if (eventData.name === "Sipderman click event") {
+          modalContent = `
         <div class="flex flex-row item-center justify-between p-4 bg-[#2A2F3A]">  
           <div class="flex flex-row w-20 h-4 gap-2">
             <div id="close" class="red rounded-full flex item-center justify-center w-4 h-4 bg-[#fd5e59] cursor-pointer"></div>
@@ -1205,8 +1489,8 @@ const onRiveEventReceived = (riveEvent) => {
         </div>
         </div>
       `;
-    } else if (eventData.name === "Kian click Event") {
-      modalContent = `
+        } else if (eventData.name === "Kian click Event") {
+          modalContent = `
         <div class="flex flex-row item-center justify-between p-4 bg-[#2F343F]">  
           <div class="flex flex-row w-28 h-4 gap-2">
             <div id="close" class="red rounded-full w-4 h-4 bg-[#fd5e59] cursor-pointer"></div>
@@ -1233,46 +1517,46 @@ const onRiveEventReceived = (riveEvent) => {
         </div>
         </div>
       `;
+        }
+
+        // Show the modal with the defined content
+        if (modalContent) {
+          showModal(modalContent);
+        }
+      }
+    };
+
+    // Attach the event listener to the Rive instance
+    r.on(rive.EventType.RiveEvent, onRiveEventReceived);
+
+    // Function to show the modal
+    function showModal(contentHtml) {
+      const modal = document.createElement("div");
+      const modalContent = document.createElement("div");
+
+      modal.className = "modal";
+      modalContent.className = "modal-content";
+
+      modalContent.innerHTML = contentHtml;
+      modal.appendChild(modalContent);
+      document.body.appendChild(modal);
+
+      // Small delay to ensure modal is rendered before animation starts
+      setTimeout(() => modal.classList.add("show"), 10);
+
+      // Close modal when clicking the red close button
+      modal.addEventListener("click", (event) => {
+        if (event.target.id === "close") {
+          modal.classList.remove("show");
+          setTimeout(() => document.body.removeChild(modal), 300); // Matches animation duration
+        }
+      });
     }
 
-    // Show the modal with the defined content
-    if (modalContent) {
-      showModal(modalContent);
-    }
-  }
-};
-
-// Attach the event listener to the Rive instance
-r.on(rive.EventType.RiveEvent, onRiveEventReceived);
-
-// Function to show the modal
-function showModal(contentHtml) {
-  const modal = document.createElement("div");
-  const modalContent = document.createElement("div");
-
-  modal.className = "modal";
-  modalContent.className = "modal-content";
-
-  modalContent.innerHTML = contentHtml;
-  modal.appendChild(modalContent);
-  document.body.appendChild(modal);
-
-  // Small delay to ensure modal is rendered before animation starts
-  setTimeout(() => modal.classList.add("show"), 10);
-
-  // Close modal when clicking the red close button
-  modal.addEventListener("click", (event) => {
-    if (event.target.id === "close") {
-      modal.classList.remove("show");
-      setTimeout(() => document.body.removeChild(modal), 300); // Matches animation duration
-    }
-  });
-}
-
-// Resize the drawing surface when the window resizes
-window.addEventListener("resize", () => {
-  r.resizeDrawingSurfaceToCanvas();
-});
+    // Resize the drawing surface when the window resizes
+    window.addEventListener("resize", () => {
+      r.resizeDrawingSurfaceToCanvas();
+    });
 
 
     // const riveMobile= new rive.Rive({
@@ -1287,64 +1571,64 @@ window.addEventListener("resize", () => {
     //     },
     // });
 
-    
+
 
 
     const riveMobile = new rive.Rive({
-    src: "friendly_neighborhood2.riv",
-    canvas: document.getElementById("canvasMobile"),
-    autoplay: true,
-    stateMachines: "MobileStartanimate",
-    fit: rive.Fit.Contain, // Ensures the animation fits within the canvas
-    alignment: rive.Alignment.TopLeft, // Aligns the animation to the top-left corner
-    onLoad: () => {
+      src: "friendly_neighborhood2.riv",
+      canvas: document.getElementById("canvasMobile"),
+      autoplay: true,
+      stateMachines: "MobileStartanimate",
+      fit: rive.Fit.Contain, // Ensures the animation fits within the canvas
+      alignment: rive.Alignment.TopLeft, // Aligns the animation to the top-left corner
+      onLoad: () => {
         riveMobile.resizeDrawingSurfaceToCanvas();
-    },
-});
+      },
+    });
 
 
 
-// gsap.registerPlugin(ScrollTrigger);
+    // gsap.registerPlugin(ScrollTrigger);
 
-// gsap.to(".text span", {
-//   backgroundPositionX: "0%",
-//   ease:"none",
-//   stagger: 1,
-//   scrollTrigger: {
-//     trigger: ".text span",
-//     markers: false,
-//     scrub: 1,
-//     start: "top 90%",
-//     end: "400% 65%"
-//   }
-// });
+    // gsap.to(".text span", {
+    //   backgroundPositionX: "0%",
+    //   ease:"none",
+    //   stagger: 1,
+    //   scrollTrigger: {
+    //     trigger: ".text span",
+    //     markers: false,
+    //     scrub: 1,
+    //     start: "top 90%",
+    //     end: "400% 65%"
+    //   }
+    // });
 
-// gsap.to(".text2 span", {
-//   backgroundPositionX: "0%",
-//   ease:"none",
-//   stagger: 1,
-//   scrollTrigger: {
-//     trigger: ".text2 span",
-//     markers: false,
-//     scrub: 1,
-//     start: "top 90%",
-//     end: "400% 65%"
-//   }
-// });
-
-
+    // gsap.to(".text2 span", {
+    //   backgroundPositionX: "0%",
+    //   ease:"none",
+    //   stagger: 1,
+    //   scrollTrigger: {
+    //     trigger: ".text2 span",
+    //     markers: false,
+    //     scrub: 1,
+    //     start: "top 90%",
+    //     end: "400% 65%"
+    //   }
+    // });
 
 
 
-  // backgroundColor change
-  // ScrollTrigger.create({
-   
-  //  trigger: ".love",
-  //  start:"top 50%",
-  //  end:"bottom 0%", 
-  //  markers:false,
- 
-  //  onEnter: () => {
+
+
+    // backgroundColor change
+    // ScrollTrigger.create({
+
+    //  trigger: ".love",
+    //  start:"top 50%",
+    //  end:"bottom 0%", 
+    //  markers:false,
+
+    //  onEnter: () => {
     //  gsap.to('.green', { duration: 0.5, backgroundColor: '#1D1D1D'});
     //  gsap.to('.lovetitle', { duration: 0.5, color:'#FEC426'});
     //  gsap.to('.navBar', { duration: 0.5, backgroundColor: '#1D1D1D'});
@@ -1354,9 +1638,9 @@ window.addEventListener("resize", () => {
     //  gsap.to('.logowhite', { duration:0.5, opacity: 1});
     //  gsap.to('.logoblack', { duration:0.5, opacity: 0});
     //  gsap.to('.navlist', { duration: 0.5, "--hover-color": "#FEC426" });
-  //  },
-   
-  //  onLeaveBack: () => {
+    //  },
+
+    //  onLeaveBack: () => {
     //  gsap.to('.green', { duration: 0.5, backgroundColor: '#316AFE'});
     //  gsap.to('.lovetitle', { duration: 0.5, color:'white'})
     //  gsap.to('.navBar', { duration: 0.5, backgroundColor: 'rgb(255,255,255)'});
@@ -1366,449 +1650,449 @@ window.addEventListener("resize", () => {
     //  gsap.to('.logowhite', { duration:0.5, opacity: 0});
     //  gsap.to('.logoblack', { duration:0.5, opacity: 1});
     //  gsap.to('.navlist', { duration: 0.5, "--hover-color": "#FF553E" });
-  //  },
-//  })
+    //  },
+    //  })
 
- // navbar color change on scroll
- ScrollTrigger.create({
-   
-   trigger: ".hero",
-   start:"top 0%",
-   end:"bottom 20%", 
-   markers:false,
- 
-   onEnter: () => {
-     gsap.to('.navBar', { duration: 0.0, backgroundColor: '#000000'});
-    //  gsap.to('.navBar', { duration: 0.1, borderBottom: '1px solid #E8EBED'});
-   },
-   
-   onLeaveBack: () => {
-     gsap.to('.navBar', { duration: 0.1, backgroundColor: 'rgb(0,0,0/0.0)'});
-    //  gsap.to('.navBar', { duration: 0.1, borderBottom: '0px solid #E8EBED'});
-   },
- 
-   
- })
+    // navbar color change on scroll
+    ScrollTrigger.create({
+
+      trigger: ".hero",
+      start: "top 0%",
+      end: "bottom 20%",
+      markers: false,
+
+      onEnter: () => {
+        gsap.to('.navBar', { duration: 0.0, backgroundColor: '#000000' });
+        //  gsap.to('.navBar', { duration: 0.1, borderBottom: '1px solid #E8EBED'});
+      },
+
+      onLeaveBack: () => {
+        gsap.to('.navBar', { duration: 0.1, backgroundColor: 'rgb(0,0,0/0.0)' });
+        //  gsap.to('.navBar', { duration: 0.1, borderBottom: '0px solid #E8EBED'});
+      },
 
 
+    })
 
 
 
- const navMenus = [".navlist a", ".bottomnav a", ".mobilenav a"];
 
-navMenus.forEach((selector) => {
-  document.querySelectorAll(selector).forEach((btn, index) => {
-    btn.addEventListener("click", () => {
-      gsap.to(window, {
-        duration: 0.5,
-        scrollTo: {
-          y: "#section" + (index + 1),
-          offsetY: 70,
-        },
+
+    const navMenus = [".navlist a", ".bottomnav a", ".mobilenav a"];
+
+    navMenus.forEach((selector) => {
+      document.querySelectorAll(selector).forEach((btn, index) => {
+        btn.addEventListener("click", () => {
+          gsap.to(window, {
+            duration: 0.5,
+            scrollTo: {
+              y: "#section" + (index + 1),
+              offsetY: 70,
+            },
+          });
+        });
       });
     });
-  });
-});
 
 
 
-
-
-
-
-
-const burger = document.querySelector(".burger");
-const overlay = document.querySelector(".overlay");
-const closebtn = document.querySelector(".close");
-const mobilenav = document.querySelector(".mobilenav");
-// const loading = document.querySelector(".loading-screen");
-
-burger.addEventListener("click", function() {
-  gsap.to(overlay, { width: "100%", height: "100vh", top: "0", right: "0", duration: 0.5,ease: "power2.inOut" });
-  gsap.to(mobilenav, { delay:0.3, opacity:1, duration: 1,ease: "power2.inOut" });
-  gsap.to(closebtn, { delay:0.3, display:"block", opacity:1, duration: 1,ease: "power2.inOut" });
-    // closebtn.classList.remove("hidden");
-    // overlay.classList.remove("rounded-full");
-    overlay.classList.add("bg-dark");
-    // overlay.classList.add("open");
-});
-
-closebtn.addEventListener("click", function() {
-  gsap.to(overlay, { width: "0px", height: "100vh", duration: 0.5,ease: "power2.inOut" });
-  gsap.to(mobilenav, { opacity:0, duration: 1 });
-  gsap.to(closebtn, { display:"none", opacity:0});
-    // closebtn.classList.add("hidden");
-});
-
-mobilenav.addEventListener("click", function() {
-  gsap.to(overlay, { width: "0px", height: "100vh", duration: 0.5,ease: "power2.inOut" });
-  gsap.to(mobilenav, { opacity:0, duration: 1 });
-  gsap.to(closebtn, { display:"none", opacity:0});
-    // closebtn.classList.add("hidden");
-});
-
-
-
-
- // Function to hide the loading screen
-//  function hideLoadingScreen() {
-//      gsap.to(".loading-screen", {
-//        autoAlpha: 0, // Fades the loading screen out by setting its opacity to 0
-//        duration: 0, // Duration of the fade-out animation (in seconds)
-//        onComplete: function() {
-//        // After the animation is complete, hide the loading screen
-//          gsap.to(".loading-screen", {delay:0.3, width: "0px", height: "100vh", duration: 1,ease: "power2.inOut",backgroundColor:"#2B2B2B" });
-//          gsap.to(".almost-there", {opacity:0});
-//        }
-//      });
-//    }
-
-//   // Wait for the page to fully load
-//    window.addEventListener("load", function () {
-//      //Show the loading screen for 2 seconds (2000 milliseconds)
-//      setTimeout(hideLoadingScreen, 1000);
-//    });
-
-
-  //  cursorButton
-  const cursorButton = document.getElementById('cursorButton');
-  const cursorButton2 = document.getElementById('cursorButton2');
-  const cursorButton3 = document.getElementById('cursorButton3');
-  const cursorButton4 = document.getElementById('cursorButton4');
-  const cursorButton5 = document.getElementById('cursorButton5');
-  const cursorButton6 = document.getElementById('cursorButton6');
-  
-
-  function showButton(event) {
-  if (window.innerWidth >= 1280 && event.target === wasoapp) {
-    cursorButton.classList.remove('hidden');
-    cursorButton.classList.add('noclick');
-    moveButton(event);
-  } else {
-    cursorButton.classList.add('hidden');
-  }
-  }
-
-
-  function hideButton() {
-    cursorButton.classList.add('hidden');
-    // cursorButton.classList.remove('hidden lg:block');
-
-  }
-
-  function click(event) {
-    cursorButton.classList.remove('noclick');
-    cursorButton.classList.add('hidden');
-  }
-
-  function redirect(event) {
-    window.location.href = 'underconstruction.html';
-  }
-
-  function noclick(event) {
-    cursorButton.classList.add('noclick');
-  }
-
-  
-function moveButton(event) {
-  if (window.innerWidth >= 1280) {
-    const x = event.clientX;
-    const y = event.clientY;
-    cursorButton.style.left = x + 'px';
-    cursorButton.style.top = y + 'px';
-  }
-}
-
-////////////////////////////////////////////////////////////////
-
-function showButton2(event) {
-  if (window.innerWidth >= 1280 && event.target === whisper) {
-    cursorButton2.classList.remove('hidden');
-    cursorButton2.classList.add('noclick');
-    moveButton2(event);
-  } else {
-    cursorButton2.classList.add('hidden');
-  }
-  }
-
-
-  function hideButton2() {
-    cursorButton2.classList.add('hidden');
-  }
-
-  function click2(event) {
-    cursorButton2.classList.remove('noclick');
-    cursorButton2.classList.add('hidden');
-  }
-
-  function redirect2(event) {
-    window.location.href = 'underconstruction.html';
-  }
-
-  function noclick2(event) {
-    cursorButton2.classList.add('noclick');
-  }
-
-  function moveButton2(event) {
-    if (window.innerWidth >= 1280) {
-    const x = event.clientX;
-    const y = event.clientY;
-    cursorButton2.style.left = x + 'px';
-    cursorButton2.style.top = y + 'px';
-  }
-}
-
-  ////////////////////////////////////////////////////////////////
-
-  function showButton3(event) {
-    if (window.innerWidth >= 1280 && event.target === wego) {
-    cursorButton3.classList.remove('hidden');
-    cursorButton3.classList.add('noclick');
-    moveButton3(event);
-  } else {
-    cursorButton3.classList.add('hidden');
-  }
-  }
-
-
-  function hideButton3() {
-    cursorButton3.classList.add('hidden');
-  }
-
-  function click3(event) {
-    cursorButton3.classList.remove('noclick');
-    cursorButton3.classList.add('hidden');
-  }
-
-  function redirect3(event) {
-    window.location.href = 'underconstruction.html';
-  }
-
-  function noclick3(event) {
-    cursorButton3.classList.add('noclick');
-  }
-
-  function moveButton3(event) {
-    if (window.innerWidth >= 1280) {
-    const x = event.clientX;
-    const y = event.clientY;
-    cursorButton3.style.left = x + 'px';
-    cursorButton3.style.top = y + 'px';
-  }
-}
-
-  ////////////////////////////////////////////////////////////////
-
-
-  function showButton4(event) {
-    if (window.innerWidth >= 1280 && event.target === sfulearn) {
-    cursorButton4.classList.remove('hidden');
-    cursorButton4.classList.add('noclick');
-    moveButton4(event);
-  } else {
-    cursorButton4.classList.add('hidden');
-  }
-  }
-
-  function hideButton4() {
-    cursorButton4.classList.add('hidden');
-  }
-
-  function click4(event) {
-    cursorButton4.classList.remove('noclick');
-    cursorButton4.classList.add('hidden');
-  }
-
-  function redirect4(event) {
-    window.location.href = 'underconstruction.html';
-  }
-
-  function noclick4(event) {
-    cursorButton4.classList.add('noclick');
-  }
-
-  function moveButton4(event) {
-    if (window.innerWidth >= 1280) {
-    const x = event.clientX;
-    const y = event.clientY;
-    cursorButton4.style.left = x + 'px';
-    cursorButton4.style.top = y + 'px';
-  }
-}
-
-
-  ////////////////////////////////////////////////////////////////
-
-  function showButton5(event) {
-    if (window.innerWidth >= 1280 && event.target === digizenship) {
-    cursorButton5.classList.remove('hidden');
-    cursorButton5.classList.add('noclick');
-    moveButton5(event);
-  } else {
-    cursorButton5.classList.add('hidden');
-  }
-  }
-
-  function hideButton5() {
-    cursorButton5.classList.add('hidden');
-  }
-
-  function click5(event) {
-    cursorButton5.classList.remove('noclick');
-    cursorButton5.classList.add('hidden');
-  }
-  
-  function redirect5(event) {
-    window.location.href = 'underconstruction.html';
-  }
-
-  function noclick5(event) {
-    cursorButton5.classList.add('noclick');
-  }
-
-  function moveButton5(event) {
-    if (window.innerWidth >= 1280) {
-    const x = event.clientX;
-    const y = event.clientY;
-    cursorButton5.style.left = x + 'px';
-    cursorButton5.style.top = y + 'px';
-  }
-}
-
-  ////////////////////////////////////////////////////////////////
-
-  function showButton6(event) {
-    if (window.innerWidth >= 1280 && event.target === methodist) {
-    cursorButton6.classList.remove('hidden');
-    cursorButton6.classList.add('noclick');
-    moveButton6(event);
-  } else {
-    cursorButton6.classList.add('hidden');
-  }
-  }
-
-function hideButton6() {
-    cursorButton6.classList.add('hidden');
-}
-
-function click6(event) {
-    cursorButton6.classList.remove('noclick');
-    cursorButton6.classList.add('hidden');
-}
-
-function redirect6(event) {
-  window.location.href = 'underconstruction.html';
-  }
-
-function noclick6(event) {
-    cursorButton6.classList.add('noclick');
-}
-
-function moveButton6(event) {
-  if (window.innerWidth >= 1280) {
-    const x = event.clientX;
-    const y = event.clientY;
-    cursorButton6.style.left = x + 'px';
-    cursorButton6.style.top = y + 'px';
-  }
-}
-
-////////////////////////////////////////////////////////////////
-
-
- 
- 
-
-  document.addEventListener('mousemove', moveButton);
-  document.addEventListener('mousemove', moveButton2);
-  document.addEventListener('mousemove', moveButton3);
-  document.addEventListener('mousemove', moveButton4);
-  document.addEventListener('mousemove', moveButton5);
-  document.addEventListener('mousemove', moveButton6);
-
-
-  const wasoapp = document.getElementById('wasoapp');
-  wasoapp.addEventListener('mouseenter', showButton);
-  wasoapp.addEventListener('mouseleave', hideButton);
-  wasoapp.addEventListener('click', click);
-  wasoapp.addEventListener('click', redirect);
-  wasoapp.addEventListener('mouseleave', noclick);
-
-  const whisper = document.getElementById('whisper');
-  whisper.addEventListener('mouseenter', showButton2);
-  whisper.addEventListener('mouseleave', hideButton2);
-  whisper.addEventListener('click', click2);
-  whisper.addEventListener('click', redirect2);
-  whisper.addEventListener('mouseleave', noclick2);
-
-  const wego = document.getElementById('wego');
-  wego.addEventListener('mouseenter', showButton3);
-  wego.addEventListener('mouseleave', hideButton3);
-  wego.addEventListener('click', click3);
-  wego.addEventListener('click', redirect3);
-  wego.addEventListener('mouseleave', noclick3);
-
-  const sfulearn = document.getElementById('sfulearn');
-  sfulearn.addEventListener('mouseenter', showButton4);
-  sfulearn.addEventListener('mouseleave', hideButton4);
-  sfulearn.addEventListener('click', click4);
-  sfulearn.addEventListener('click', redirect4);
-  sfulearn.addEventListener('mouseleave', noclick4);
-
-  const digizenship = document.getElementById('digizenship');
-  digizenship.addEventListener('mouseenter', showButton5);
-  digizenship.addEventListener('mouseleave', hideButton5);
-  digizenship.addEventListener('click', click5);
-  digizenship.addEventListener('click', redirect5);
-  digizenship.addEventListener('mouseleave', noclick5);
-
-  const methodist = document.getElementById('methodist');
-  methodist.addEventListener('mouseenter', showButton6);
-  methodist.addEventListener('mouseleave', hideButton6);
-  methodist.addEventListener('click', click6);
-  methodist.addEventListener('click', redirect6);
-  methodist.addEventListener('mouseleave', noclick6);
-
-  ////////////////////////////////////////////////////////////////
-
-  
- 
-
-
-
-  // const cursor = document.getElementById('cursor');
-  // cursor.style.left = '-100px';
-  // cursor.style.top = '-100px';
-
-  // function moveCursor(event) {
-  //   const x = event.clientX;
-  //   const y = event.clientY;
-  //   cursor.style.left = x + 'px';
-  //   cursor.style.top = y + 'px';
-  // }
-  
-
-  // window.addEventListener('mousemove', moveCursor);
-
-
-  ////////////////////////////////////////////////////////////////
-
-  window.addEventListener('mousemove', noclick);
-  window.addEventListener('mousemove', noclick2);
-  window.addEventListener('mousemove', noclick3);
-  window.addEventListener('mousemove', noclick4);
-  window.addEventListener('mousemove', noclick5);
-  window.addEventListener('mousemove', noclick6);
-
-
-
-  ////////////////////////////////////////////////////////////////
-
-    
-
-</script>
-
-<script src="rive.js"></script>
+
+
+
+
+
+    const burger = document.querySelector(".burger");
+    const overlay = document.querySelector(".overlay");
+    const closebtn = document.querySelector(".close");
+    const mobilenav = document.querySelector(".mobilenav");
+    // const loading = document.querySelector(".loading-screen");
+
+    burger.addEventListener("click", function () {
+      gsap.to(overlay, { width: "100%", height: "100vh", top: "0", right: "0", duration: 0.5, ease: "power2.inOut" });
+      gsap.to(mobilenav, { delay: 0.3, opacity: 1, duration: 1, ease: "power2.inOut" });
+      gsap.to(closebtn, { delay: 0.3, display: "block", opacity: 1, duration: 1, ease: "power2.inOut" });
+      // closebtn.classList.remove("hidden");
+      // overlay.classList.remove("rounded-full");
+      overlay.classList.add("bg-dark");
+      // overlay.classList.add("open");
+    });
+
+    closebtn.addEventListener("click", function () {
+      gsap.to(overlay, { width: "0px", height: "100vh", duration: 0.5, ease: "power2.inOut" });
+      gsap.to(mobilenav, { opacity: 0, duration: 1 });
+      gsap.to(closebtn, { display: "none", opacity: 0 });
+      // closebtn.classList.add("hidden");
+    });
+
+    mobilenav.addEventListener("click", function () {
+      gsap.to(overlay, { width: "0px", height: "100vh", duration: 0.5, ease: "power2.inOut" });
+      gsap.to(mobilenav, { opacity: 0, duration: 1 });
+      gsap.to(closebtn, { display: "none", opacity: 0 });
+      // closebtn.classList.add("hidden");
+    });
+
+
+
+
+    // Function to hide the loading screen
+    //  function hideLoadingScreen() {
+    //      gsap.to(".loading-screen", {
+    //        autoAlpha: 0, // Fades the loading screen out by setting its opacity to 0
+    //        duration: 0, // Duration of the fade-out animation (in seconds)
+    //        onComplete: function() {
+    //        // After the animation is complete, hide the loading screen
+    //          gsap.to(".loading-screen", {delay:0.3, width: "0px", height: "100vh", duration: 1,ease: "power2.inOut",backgroundColor:"#2B2B2B" });
+    //          gsap.to(".almost-there", {opacity:0});
+    //        }
+    //      });
+    //    }
+
+    //   // Wait for the page to fully load
+    //    window.addEventListener("load", function () {
+    //      //Show the loading screen for 2 seconds (2000 milliseconds)
+    //      setTimeout(hideLoadingScreen, 1000);
+    //    });
+
+
+    //  cursorButton
+    const cursorButton = document.getElementById('cursorButton');
+    const cursorButton2 = document.getElementById('cursorButton2');
+    const cursorButton3 = document.getElementById('cursorButton3');
+    const cursorButton4 = document.getElementById('cursorButton4');
+    const cursorButton5 = document.getElementById('cursorButton5');
+    const cursorButton6 = document.getElementById('cursorButton6');
+
+
+    function showButton(event) {
+      if (window.innerWidth >= 1280 && event.target === wasoapp) {
+        cursorButton.classList.remove('hidden');
+        cursorButton.classList.add('noclick');
+        moveButton(event);
+      } else {
+        cursorButton.classList.add('hidden');
+      }
+    }
+
+
+    function hideButton() {
+      cursorButton.classList.add('hidden');
+      // cursorButton.classList.remove('hidden lg:block');
+
+    }
+
+    function click(event) {
+      cursorButton.classList.remove('noclick');
+      cursorButton.classList.add('hidden');
+    }
+
+    function redirect(event) {
+      window.location.href = 'underconstruction.html';
+    }
+
+    function noclick(event) {
+      cursorButton.classList.add('noclick');
+    }
+
+
+    function moveButton(event) {
+      if (window.innerWidth >= 1280) {
+        const x = event.clientX;
+        const y = event.clientY;
+        cursorButton.style.left = x + 'px';
+        cursorButton.style.top = y + 'px';
+      }
+    }
+
+    ////////////////////////////////////////////////////////////////
+
+    function showButton2(event) {
+      if (window.innerWidth >= 1280 && event.target === whisper) {
+        cursorButton2.classList.remove('hidden');
+        cursorButton2.classList.add('noclick');
+        moveButton2(event);
+      } else {
+        cursorButton2.classList.add('hidden');
+      }
+    }
+
+
+    function hideButton2() {
+      cursorButton2.classList.add('hidden');
+    }
+
+    function click2(event) {
+      cursorButton2.classList.remove('noclick');
+      cursorButton2.classList.add('hidden');
+    }
+
+    function redirect2(event) {
+      window.location.href = 'underconstruction.html';
+    }
+
+    function noclick2(event) {
+      cursorButton2.classList.add('noclick');
+    }
+
+    function moveButton2(event) {
+      if (window.innerWidth >= 1280) {
+        const x = event.clientX;
+        const y = event.clientY;
+        cursorButton2.style.left = x + 'px';
+        cursorButton2.style.top = y + 'px';
+      }
+    }
+
+    ////////////////////////////////////////////////////////////////
+
+    function showButton3(event) {
+      if (window.innerWidth >= 1280 && event.target === wego) {
+        cursorButton3.classList.remove('hidden');
+        cursorButton3.classList.add('noclick');
+        moveButton3(event);
+      } else {
+        cursorButton3.classList.add('hidden');
+      }
+    }
+
+
+    function hideButton3() {
+      cursorButton3.classList.add('hidden');
+    }
+
+    function click3(event) {
+      cursorButton3.classList.remove('noclick');
+      cursorButton3.classList.add('hidden');
+    }
+
+    function redirect3(event) {
+      window.location.href = 'underconstruction.html';
+    }
+
+    function noclick3(event) {
+      cursorButton3.classList.add('noclick');
+    }
+
+    function moveButton3(event) {
+      if (window.innerWidth >= 1280) {
+        const x = event.clientX;
+        const y = event.clientY;
+        cursorButton3.style.left = x + 'px';
+        cursorButton3.style.top = y + 'px';
+      }
+    }
+
+    ////////////////////////////////////////////////////////////////
+
+
+    function showButton4(event) {
+      if (window.innerWidth >= 1280 && event.target === sfulearn) {
+        cursorButton4.classList.remove('hidden');
+        cursorButton4.classList.add('noclick');
+        moveButton4(event);
+      } else {
+        cursorButton4.classList.add('hidden');
+      }
+    }
+
+    function hideButton4() {
+      cursorButton4.classList.add('hidden');
+    }
+
+    function click4(event) {
+      cursorButton4.classList.remove('noclick');
+      cursorButton4.classList.add('hidden');
+    }
+
+    function redirect4(event) {
+      window.location.href = 'underconstruction.html';
+    }
+
+    function noclick4(event) {
+      cursorButton4.classList.add('noclick');
+    }
+
+    function moveButton4(event) {
+      if (window.innerWidth >= 1280) {
+        const x = event.clientX;
+        const y = event.clientY;
+        cursorButton4.style.left = x + 'px';
+        cursorButton4.style.top = y + 'px';
+      }
+    }
+
+
+    ////////////////////////////////////////////////////////////////
+
+    function showButton5(event) {
+      if (window.innerWidth >= 1280 && event.target === digizenship) {
+        cursorButton5.classList.remove('hidden');
+        cursorButton5.classList.add('noclick');
+        moveButton5(event);
+      } else {
+        cursorButton5.classList.add('hidden');
+      }
+    }
+
+    function hideButton5() {
+      cursorButton5.classList.add('hidden');
+    }
+
+    function click5(event) {
+      cursorButton5.classList.remove('noclick');
+      cursorButton5.classList.add('hidden');
+    }
+
+    function redirect5(event) {
+      window.location.href = 'underconstruction.html';
+    }
+
+    function noclick5(event) {
+      cursorButton5.classList.add('noclick');
+    }
+
+    function moveButton5(event) {
+      if (window.innerWidth >= 1280) {
+        const x = event.clientX;
+        const y = event.clientY;
+        cursorButton5.style.left = x + 'px';
+        cursorButton5.style.top = y + 'px';
+      }
+    }
+
+    ////////////////////////////////////////////////////////////////
+
+    function showButton6(event) {
+      if (window.innerWidth >= 1280 && event.target === methodist) {
+        cursorButton6.classList.remove('hidden');
+        cursorButton6.classList.add('noclick');
+        moveButton6(event);
+      } else {
+        cursorButton6.classList.add('hidden');
+      }
+    }
+
+    function hideButton6() {
+      cursorButton6.classList.add('hidden');
+    }
+
+    function click6(event) {
+      cursorButton6.classList.remove('noclick');
+      cursorButton6.classList.add('hidden');
+    }
+
+    function redirect6(event) {
+      window.location.href = 'underconstruction.html';
+    }
+
+    function noclick6(event) {
+      cursorButton6.classList.add('noclick');
+    }
+
+    function moveButton6(event) {
+      if (window.innerWidth >= 1280) {
+        const x = event.clientX;
+        const y = event.clientY;
+        cursorButton6.style.left = x + 'px';
+        cursorButton6.style.top = y + 'px';
+      }
+    }
+
+    ////////////////////////////////////////////////////////////////
+
+
+
+
+
+    document.addEventListener('mousemove', moveButton);
+    document.addEventListener('mousemove', moveButton2);
+    document.addEventListener('mousemove', moveButton3);
+    document.addEventListener('mousemove', moveButton4);
+    document.addEventListener('mousemove', moveButton5);
+    document.addEventListener('mousemove', moveButton6);
+
+
+    const wasoapp = document.getElementById('wasoapp');
+    wasoapp.addEventListener('mouseenter', showButton);
+    wasoapp.addEventListener('mouseleave', hideButton);
+    wasoapp.addEventListener('click', click);
+    wasoapp.addEventListener('click', redirect);
+    wasoapp.addEventListener('mouseleave', noclick);
+
+    const whisper = document.getElementById('whisper');
+    whisper.addEventListener('mouseenter', showButton2);
+    whisper.addEventListener('mouseleave', hideButton2);
+    whisper.addEventListener('click', click2);
+    whisper.addEventListener('click', redirect2);
+    whisper.addEventListener('mouseleave', noclick2);
+
+    const wego = document.getElementById('wego');
+    wego.addEventListener('mouseenter', showButton3);
+    wego.addEventListener('mouseleave', hideButton3);
+    wego.addEventListener('click', click3);
+    wego.addEventListener('click', redirect3);
+    wego.addEventListener('mouseleave', noclick3);
+
+    const sfulearn = document.getElementById('sfulearn');
+    sfulearn.addEventListener('mouseenter', showButton4);
+    sfulearn.addEventListener('mouseleave', hideButton4);
+    sfulearn.addEventListener('click', click4);
+    sfulearn.addEventListener('click', redirect4);
+    sfulearn.addEventListener('mouseleave', noclick4);
+
+    const digizenship = document.getElementById('digizenship');
+    digizenship.addEventListener('mouseenter', showButton5);
+    digizenship.addEventListener('mouseleave', hideButton5);
+    digizenship.addEventListener('click', click5);
+    digizenship.addEventListener('click', redirect5);
+    digizenship.addEventListener('mouseleave', noclick5);
+
+    const methodist = document.getElementById('methodist');
+    methodist.addEventListener('mouseenter', showButton6);
+    methodist.addEventListener('mouseleave', hideButton6);
+    methodist.addEventListener('click', click6);
+    methodist.addEventListener('click', redirect6);
+    methodist.addEventListener('mouseleave', noclick6);
+
+    ////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+    // const cursor = document.getElementById('cursor');
+    // cursor.style.left = '-100px';
+    // cursor.style.top = '-100px';
+
+    // function moveCursor(event) {
+    //   const x = event.clientX;
+    //   const y = event.clientY;
+    //   cursor.style.left = x + 'px';
+    //   cursor.style.top = y + 'px';
+    // }
+
+
+    // window.addEventListener('mousemove', moveCursor);
+
+
+    ////////////////////////////////////////////////////////////////
+
+    window.addEventListener('mousemove', noclick);
+    window.addEventListener('mousemove', noclick2);
+    window.addEventListener('mousemove', noclick3);
+    window.addEventListener('mousemove', noclick4);
+    window.addEventListener('mousemove', noclick5);
+    window.addEventListener('mousemove', noclick6);
+
+
+
+    ////////////////////////////////////////////////////////////////
+
+
+
+  </script>
+
+  <script src="rive.js"></script>
 
 
 
