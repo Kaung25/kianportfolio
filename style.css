@@ -840,6 +840,10 @@ video {
   width: 7rem;
 }
 
+.w-3\/5 {
+  width: 60%;
+}
+
 .w-32 {
   width: 8rem;
 }
