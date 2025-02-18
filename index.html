@@ -301,7 +301,7 @@
       position: fixed;
       width: 100%;
       height: 100%;
-      background: #000;
+      background: #000000;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -368,7 +368,7 @@
       /* Shrinks into a tiny dot */
     }
 
-    .wait_mm{
+    .wait_mm {
       font-family: 'DM Sans', sans-serif;
     }
   </style>
@@ -380,10 +380,15 @@
 
 
 
-  <div class="preloader">
-    <h1 class="counter text-blue text-8xl md:text-9xl">0</h1>
-    <p class="absolute percent text-orange text-4xl md:text-6xl">%</p>
-    <p class="wait_mm absolute block md:hidden text-grey text-base w-3/5 bottom-8">Trust me, it looks way cooler on a desktop.</p>
+  <div class="preloader flex justify-center content-center">
+    <div class="relative flex justify-center content-center">
+      <h1 class="counter text-blue text-8xl md:text-9xl">0</h1>
+      <p class="percent absolute place-self-center text-orange text-4xl md:text-6xl">%</p>
+    </div>
+    <div class="w-[80%]">
+    <p class="wait_mm mx-auto absolute block lg:hidden text-center text-grey text-base w-full bottom-8">Trust me, it
+      looks way cooler on a desktop.</p>
+    </div>
   </div>
 
   <!-- <div id="loadingScreen" class="right-0 loading-screen z-50 fixed bg-dark mx-0 my-auto w-full h-screen flex flex-col justify-center items-center">
@@ -398,7 +403,8 @@
   <main class="pagecontent"></main>
 
   <nav class="navBar text-white bg-transparent border-gray-200 w-full mx-auto fixed right-0 left-0 z-50">
-    <div class="max-w-screen-2xl flex flex-wrap items-center justify-between w-full md:w-4/5 mx-auto py-4 px-5 md:px-0">
+    <div
+      class="max-w-screen-2xl flex flex-wrap items-center justify-between w-full md:w-[85%] mx-auto py-4 px-5 md:px-0">
       <a href="" class="flex items-center">
         <!-- <img src="./img/logo_black.svg" class=" absolute logoblack" alt="Logo" /> -->
         <img src="./img/logo.svg" class="logowhite" alt="Logo" />
@@ -531,7 +537,7 @@
   <!-- Hero Section End -->
 
 
-  <div class="relative flex items-center justify-center py-10 md:py-24">
+  <div class="relative flex items-center justify-center py-10 md:py-16 lg:py-24">
     <div
       class="w-full absolute inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_40px,_black_calc(100%-40px),transparent_100%)] md:[mask-image:_linear-gradient(to_right,transparent_0,_black_300px,_black_calc(100%-300px),transparent_100%)]">
       <ul
@@ -612,7 +618,7 @@
 
   <!-- Section 2 -->
   <section id="section2" class="section2 py-16 px-5 md:px-0 relative">
-    <div id="projects" class="static w-full md:w-4/5 about max-w-screen-2xl mx-auto h-fit">
+    <div id="projects" class="static w-full md:w-[85%] about max-w-screen-2xl mx-auto h-fit">
       <div class="pb-6 lg:pb-12">
         <div class="bodyTitle relative w-full pb-6 border-b border-lightgrey">
           <h1 class="text-base lg:text-2xl text-orange text-left left-0 top-4 absolute z-10">
@@ -623,48 +629,16 @@
             Featured Projects
           </h1>
         </div>
-        <!-- <div class="text about text-xl lg:text-base text-white text-left leading-normal mt-4 lg:mt-6">
-        <p class="font-light">
-        <span>Explore the stories behind my designs, how I approach challenges, craft innovative solutions, and deliver impactful outcomes.</span>
-        <span>From detailed case studies to visually compelling projects, these stories showcase the creativity and functionality at the heart of</span>
-        <span>my work.</span>
-        </p>
-      </div> -->
       </div>
     </div>
-    <!-- feature end -->
-
-    <!-- <div class="bg-[url('./img/dots.png')] bg-repeat bg-cover flex justify-center items-center h-fit lg:h-screen">
-<div class="py-16">
-  <div class="flex flex-wrap lg:grid grid-cols-2 gap-x-28 gap-y-16 lg:gap-y-40 justify-center items-center">
-    <div class="bg-orange text-left w-[310px] md:w-[440px] lg:w-[500px] h-fit relative p-2 md:p-5 border-2 lg:border-4 border-dark shadow-bgDarkSm lg:shadow-bgDark">
-      <div class="ml-4 md:ml-0 text-sm lg:text-2xl text-white leading-normal w-[270px] md:w-[400px]">I am a lively and energetic person who brings excitement and creativity to everything I do, making life more fun and vibrant.</div>
-      <img class="absolute -top-[55%] right-[284px] md:-right-8 lg:-right-20 w-14 lg:w-36 transform -scale-x-1 md:scale-100" src="./img/char-orange.svg" alt="">
-    </div>
-    <div class="bg-yellow text-left w-[310px] md:w-[440px] lg:w-[500px] h-fit relative p-2 md:p-5 border-2 lg:border-4 border-dark shadow-bgDarkSm lg:shadow-bgDark">
-      <div class="ml-4 md:ml-0 text-sm lg:text-2xl text-dark leading-normal w-[270px] md:w-[400px]">My positive and joyful nature uplifts those around me, spreading happiness and optimism wherever I go.</div>
-      <img class="absolute -top-[55%] right-[284px] md:-right-8 lg:-right-20 w-14 lg:w-36 transform -scale-x-1 md:scale-100" src="./img/char-yellow.svg" alt="">
-    </div>
-    <div class="bg-blue text-left w-[310px] md:w-[440px] lg:w-[500px] h-fit relative p-2 md:p-5 border-2 lg:border-4 border-dark shadow-bgDarkSm lg:shadow-bgDark">
-      <div class="ml-4 md:ml-0 text-sm lg:text-2xl text-white leading-normal  w-[270px] md:w-[400px]">As a reliable individual, I provide thoughtful and intelligent insights, earning the trust of others as a dependable friend and confidant.</div>
-      <img class="absolute -top-[55%] right-[284px] md:-right-8 lg:-right-20 w-14 lg:w-36 transform -scale-x-1 md:scale-100" src="./img/char-blue.svg" alt="">
-    </div>
-    <div class="bg-green text-left w-[310px] md:w-[440px] lg:w-[500px] h-fit relative p-2 md:p-5 border-2 lg:border-4 border-dark shadow-bgDarkSm lg:shadow-bgDark">
-      <div class="ml-4 md:ml-0 text-sm lg:text-2xl text-dark leading-normal w-[270px] md:w-[400px]">Plus, I am also an environmentalist who values growth and harmony in my personal and professional life.</div>
-      <img class="absolute -top-[55%] right-[284px] md:-right-8 lg:-right-20 w-14 lg:w-36 transform -scale-x-1 md:scale-100" src="./img/char-green.svg" alt="">
-    </div>
-  </div>
-</div>
-</div> -->
-    <!-- personality end -->
 
 
     <!-- showcase -->
     <section class="">
-      <div class="flex flex-col md:grid grid-cols-2 gap-4 md:gap-12 w-full md:w-4/5 mx-auto">
+      <div class="flex flex-col md:grid grid-cols-2 gap-4 md:gap-8 w-full md:w-[85%] mx-auto">
         <div id="wasoapp" class="cursor-none">
           <div class="text-left">
-            <div class="group items-center justify-center lg:relative lg:border border-lightgrey h-[380px] md:h-auto">
+            <div class="group items-center justify-center lg:relative lg:border border-lightgrey h-[370px] md:h-auto">
               <div class="overflow-hidden">
                 <img src="./img/wasocard.png" alt=""
                   class="transition-transform duration-300 ease-in-out group-hover:scale-110 w-full  object-cover">
@@ -692,7 +666,7 @@
         </div>
         <div id="whisper" class="cursor-none">
           <div class="text-left">
-            <div class="group items-center justify-center lg:relative lg:border border-lightgrey h-[380px] md:h-auto">
+            <div class="group items-center justify-center lg:relative lg:border border-lightgrey h-[370px] md:h-auto">
               <div class="overflow-hidden">
                 <img src="./img/Whisper.png" alt=""
                   class="transition-transform duration-300 ease-in-out group-hover:scale-110 w-full  object-cover">
@@ -719,7 +693,7 @@
         </div>
         <div id="wego" class="cursor-none">
           <div class="text-left">
-            <div class="group items-center justify-center lg:relative lg:border border-lightgrey h-[380px] md:h-auto">
+            <div class="group items-center justify-center lg:relative lg:border border-lightgrey h-[370px] md:h-auto">
               <div class="overflow-hidden">
                 <img src="./img/wego.png" alt=""
                   class="transition-transform duration-300 ease-in-out group-hover:scale-110 w-full  object-cover">
@@ -746,7 +720,7 @@
         </div>
         <div id="sfulearn" class="cursor-none">
           <div class="text-left">
-            <div class="group items-center justify-center lg:relative lg:border border-lightgrey h-[380px] md:h-auto">
+            <div class="group items-center justify-center lg:relative lg:border border-lightgrey h-[370px] md:h-auto">
               <div class="overflow-hidden">
                 <img src="./img/sfulearn.png" alt=""
                   class="transition-transform duration-300 ease-in-out group-hover:scale-110 w-full  object-cover">
@@ -774,7 +748,7 @@
         </div>
         <div id="digizenship" class="cursor-none">
           <div class="text-left">
-            <div class="group items-center justify-center lg:relative lg:border border-lightgrey h-[380px] md:h-auto">
+            <div class="group items-center justify-center lg:relative lg:border border-lightgrey h-[370px] md:h-auto">
               <div class="overflow-hidden">
                 <img src="./img/digizenship.png" alt=""
                   class="transition-transform duration-300 ease-in-out group-hover:scale-110 w-full  object-cover">
@@ -802,7 +776,7 @@
         </div>
         <div id="methodist" class="cursor-none">
           <div class="text-left">
-            <div class="group items-center justify-center lg:relative lg:border border-lightgrey h-[380px] md:h-auto">
+            <div class="group items-center justify-center lg:relative lg:border border-lightgrey h-[370px] md:h-auto">
               <div class="overflow-hidden">
                 <img src="./img/methodist.png" alt=""
                   class="transition-transform duration-300 ease-in-out group-hover:scale-110 w-full  object-cover">
@@ -836,7 +810,7 @@
 
   <!-- experience start -->
   <section id="section3"
-    class="static w-full px-5 md:px-0 md:w-4/5 py-16 experience max-w-screen-2xl mx-auto justify-center items-center h-fit">
+    class="static w-full px-5 md:px-0 md:w-[85%] py-0 lg:py-16 experience max-w-screen-2xl mx-auto justify-center items-center h-fit">
     <div class="pb-7">
       <div class="bodyTitle relative pb-6 border-b border-lightgrey">
         <h1 class="text-base lg:text-2xl text-orange text-left left-0 top-4 absolute z-10">
@@ -902,8 +876,8 @@
 
   <!-- testimonials -->
   <div id="testimonial"
-    class="static w-full px-5 md:px-0 md:w-4/5 py-16 experience max-w-screen-2xl mx-auto justify-center items-center h-full">
-    <div class="pb-7 h-full ">
+    class="static w-full px-5 md:px-0 md:w-[85%] pt-16 pb-16 experience max-w-screen-2xl mx-auto justify-center items-center h-full">
+    <div class="pb-0 h-full ">
       <div class="max-w-full overflow-hidden">
         <div class="pb-2">
           <img src="./img/Heart.svg" alt="" class="w-10 md:w-16">
@@ -919,7 +893,7 @@
         </div>
       </div>
 
-      <div class="h-[36rem] md:h-[32rem]">
+      <div class="h-[36rem] md:h-[30rem]">
         <div class="testimonialSlider -rotate-0 absolute inset-x-0 mx-auto mt-8">
           <div id="testimonial1"
             class="inline-flex gap-0 w-full flex-nowrap overflow-hidden md:[mask-image:_linear-gradient(to_right,transparent_0,_black_200px,_black_calc(100%-200px),transparent_100%)]">
@@ -1239,7 +1213,7 @@
 
   <!-- loves to -->
   <div
-    class="love static w-full px-5 md:px-0 md:w-4/5 py-16 experience max-w-screen-2xl mx-auto justify-center items-center h-fit">
+    class="love static w-full px-5 md:px-0 md:w-[85%] py-0 lg:py-16 experience max-w-screen-2xl mx-auto justify-center items-center h-fit">
     <div class="pb-7">
       <div class="bodyTitle relative pb-6 border-b border-lightgrey">
         <h1 class="text-base lg:text-2xl text-orange text-left left-0 top-4 absolute z-10">
@@ -1265,18 +1239,22 @@
           class="object-cover h-full w-full" src="./img/artworks/girl2.png" alt=""></div>
       <div
         class="overflow-hidden rounded-md lg:rounded-2xl lg:grayscale hover:grayscale-0 transition duration-500 col-span-2">
-        <img class="object-cover h-full w-full" src="./img/artworks/moana.png" alt=""></div>
+        <img class="object-cover h-full w-full" src="./img/artworks/moana.png" alt="">
+      </div>
       <div
         class="overflow-hidden rounded-md lg:rounded-2xl lg:grayscale hover:grayscale-0 transition duration-500 col-span-2">
-        <img class="object-cover h-full w-full" src="./img/artworks/collapse.png" alt=""></div>
+        <img class="object-cover h-full w-full" src="./img/artworks/collapse.png" alt="">
+      </div>
       <div
         class="overflow-hidden rounded-md lg:rounded-2xl lg:grayscale hover:grayscale-0 transition duration-500 col-span-2">
-        <img class="object-cover h-full w-full" src="./img/artworks/loki.png" alt=""></div>
+        <img class="object-cover h-full w-full" src="./img/artworks/loki.png" alt="">
+      </div>
       <div class="overflow-hidden rounded-md lg:rounded-2xl lg:grayscale hover:grayscale-0 transition duration-500"><img
           class="object-cover h-full w-full" src="./img/artworks/girl1.png" alt=""></div>
       <div
         class="overflow-hidden rounded-md lg:rounded-2xl lg:grayscale hover:grayscale-0 transition duration-500 col-span-2">
-        <img class="object-cover h-full w-full" src="./img/artworks/tumblingkellys.png" alt=""></div>
+        <img class="object-cover h-full w-full" src="./img/artworks/tumblingkellys.png" alt="">
+      </div>
     </div>
 
   </div>
@@ -1330,7 +1308,8 @@
 
 
 
-    <p class="copyright text-[12px] px-6 mt-0 md:mt-4 lg:mt-8 text-white/60">Copyright © 2025. Developed by Kaung Myat
+    <p class="copyright font-light text-[12px] px-6 mt-0 md:mt-4 lg:mt-8 text-white/60">Copyright © 2025. Developed by
+      Kaung Myat
       Moee Htoon.<br class="block lg:hidden"> All rights reserved.</p>
   </div>
   </main>
@@ -1347,7 +1326,11 @@
     const preloader = document.querySelector('.preloader');
     const counter = document.querySelector('.counter');
     const pagecontent = document.querySelector('.pagecontent');
-    let count = 0;
+
+    // Add console log to check if elements are found
+    console.log('Preloader element:', preloader);
+    console.log('Counter element:', counter);
+    console.log('Page content:', pagecontent);
 
     const numberSystems = {
       en: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
@@ -1372,35 +1355,52 @@
       document.body.style.height = '';
     };
 
+    let count = 0;  // Moved back to global scope
+
     const updateCounter = () => {
+      console.log('UpdateCounter called, current count:', count);
+
       if (count < 99) {
         count++;
-        // Pick a random language for the entire number
         const randomLang = languages[Math.floor(Math.random() * languages.length)];
         counter.innerHTML = toLanguageNumber(count, randomLang);
-
         setTimeout(() => {
           requestAnimationFrame(updateCounter);
-        }, 50); // Adjust this delay to control speed (higher = slower)
-
+        }, 50);
       } else if (count === 99) {
         count++;
-        // Show 100% in English
         counter.innerHTML = toLanguageNumber(count, 'en');
         preloader.classList.add('preloader-exit');
-
+        console.log('Animation complete, removing preloader');
         setTimeout(() => {
-          // content.classList.add('visible-content');
           preloader.remove();
           enableScroll();
+          sessionStorage.setItem('hasVisited', 'true');
+          console.log('Session storage set:', sessionStorage.getItem('hasVisited'));
         }, 1000);
       }
     };
 
+    // Initialize immediately without DOMContentLoaded
+    console.log('Script starting, checking session storage');
+    const hasVisited = sessionStorage.getItem('hasVisited');
+    console.log('Has visited:', hasVisited);
 
-    setTimeout(() => {
-      requestAnimationFrame(updateCounter);
-    }, 500);
+    if (!hasVisited) {
+      console.log('First visit - showing preloader');
+      if (preloader) {
+        preloader.style.display = 'block';
+        setTimeout(() => {
+          requestAnimationFrame(updateCounter);
+        }, 500);
+      }
+    } else {
+      console.log('Return visit - hiding preloader');
+      if (preloader) {
+        preloader.style.display = 'none';
+        enableScroll();
+      }
+    }
 
 
     ////////////////////////////////////////////////////////////////Cal embedding
@@ -1786,7 +1786,7 @@
     }
 
     function redirect(event) {
-      window.location.href = 'underconstruction.html';
+      window.location.href = 'wasolearn.html';
     }
 
     function noclick(event) {
