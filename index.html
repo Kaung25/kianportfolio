@@ -376,7 +376,7 @@
 </head>
 
 
-<body class="wrapper loading bg-[#000000]" id="wrapper">
+<body class="wrapper loading bg-[#000]" id="wrapper">
 
 
 
@@ -386,8 +386,8 @@
       <p class="percent absolute place-self-center text-orange text-4xl md:text-6xl">%</p>
     </div>
     <div class="w-[80%]">
-    <p class="wait_mm mx-auto absolute block lg:hidden text-center text-grey text-base w-full bottom-8">Trust me, it
-      looks way cooler on a desktop.</p>
+      <p class="wait_mm mx-auto absolute block lg:hidden text-center text-grey text-base w-full bottom-8">Trust me, it
+        looks way cooler on a desktop.</p>
     </div>
   </div>
 
@@ -664,6 +664,34 @@
             </button>
           </div>
         </div>
+        <div id="sfulearn" class="cursor-none">
+          <div class="text-left">
+            <div class="group items-center justify-center lg:relative lg:border border-lightgrey h-[370px] md:h-auto">
+              <div class="overflow-hidden">
+                <img src="./img/sfulearn.png" alt=""
+                  class="transition-transform duration-300 ease-in-out group-hover:scale-110 w-full  object-cover">
+              </div>
+              <div
+                class="absolute hidden lg:block inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+              </div>
+              <div
+                class="lg:absolute lg:top-6 lg:left-6 lg:opacity-0 translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 transition-all duration-300 ease-in-out w-full lg:w-4/5">
+                <h1 class="text-white z-10 text-base lg:text-lg font-normal leading-tight">SFU Learn Mobile Application
+                </h1>
+                <p class="mt-1 md:mt-2 text-light text-sm font-light lg:text-base leading-normal">
+                  Enhancing academic life and putting everything students need right at their fingertips
+                </p>
+              </div>
+
+            </div>
+          </div>
+          <div class="bg-black flex items-center justify-center">
+            <button id="cursorButton2"
+              class="viewCase hidden w-28 h-28 rounded-full bg-dark/20 backdrop-blur-lg border border-white/30 text-center text-sm leading-none font-light text-white/80">
+              View Case
+            </button>
+          </div>
+        </div>
         <div id="whisper" class="cursor-none">
           <div class="text-left">
             <div class="group items-center justify-center lg:relative lg:border border-lightgrey h-[370px] md:h-auto">
@@ -685,7 +713,7 @@
             </div>
           </div>
           <div class="bg-black flex items-center justify-center">
-            <button id="cursorButton2"
+            <button id="cursorButton3"
               class="viewCase hidden w-28 h-28 rounded-full bg-dark/20 backdrop-blur-lg border border-white/30 text-center text-sm leading-none font-light text-white/80">
               View Case
             </button>
@@ -706,34 +734,6 @@
                 <h1 class="text-white z-10 text-base lg:text-lg font-normal leading-tight">WeGo: Trip Planner</h1>
                 <p class="mt-1 md:mt-2 text-light text-sm font-light lg:text-base leading-normal">
                   Easily organize trips, collaborate with friends, and keep everything on track in one place
-                </p>
-              </div>
-
-            </div>
-          </div>
-          <div class="bg-black flex items-center justify-center">
-            <button id="cursorButton3"
-              class="viewCase hidden w-28 h-28 rounded-full bg-dark/20 backdrop-blur-lg border border-white/30 text-center text-sm leading-none font-light text-white/80">
-              View Case
-            </button>
-          </div>
-        </div>
-        <div id="sfulearn" class="cursor-none">
-          <div class="text-left">
-            <div class="group items-center justify-center lg:relative lg:border border-lightgrey h-[370px] md:h-auto">
-              <div class="overflow-hidden">
-                <img src="./img/sfulearn.png" alt=""
-                  class="transition-transform duration-300 ease-in-out group-hover:scale-110 w-full  object-cover">
-              </div>
-              <div
-                class="absolute hidden lg:block inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-              </div>
-              <div
-                class="lg:absolute lg:top-6 lg:left-6 lg:opacity-0 translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 transition-all duration-300 ease-in-out w-full lg:w-4/5">
-                <h1 class="text-white z-10 text-base lg:text-lg font-normal leading-tight">SFU Learn Mobile Application
-                </h1>
-                <p class="mt-1 md:mt-2 text-light text-sm font-light lg:text-base leading-normal">
-                  Enhancing academic life and putting everything students need right at their fingertips
                 </p>
               </div>
 
@@ -1826,7 +1826,7 @@
     }
 
     function redirect2(event) {
-      window.location.href = 'underconstruction.html';
+      window.location.href = 'sfulearn.html';
     }
 
     function noclick2(event) {
@@ -2018,21 +2018,21 @@
     wasoapp.addEventListener('click', redirect);
     wasoapp.addEventListener('mouseleave', noclick);
 
-    const whisper = document.getElementById('whisper');
+    const whisper = document.getElementById('sfulearn');
     whisper.addEventListener('mouseenter', showButton2);
     whisper.addEventListener('mouseleave', hideButton2);
     whisper.addEventListener('click', click2);
     whisper.addEventListener('click', redirect2);
     whisper.addEventListener('mouseleave', noclick2);
 
-    const wego = document.getElementById('wego');
+    const wego = document.getElementById('whisper');
     wego.addEventListener('mouseenter', showButton3);
     wego.addEventListener('mouseleave', hideButton3);
     wego.addEventListener('click', click3);
     wego.addEventListener('click', redirect3);
     wego.addEventListener('mouseleave', noclick3);
 
-    const sfulearn = document.getElementById('sfulearn');
+    const sfulearn = document.getElementById('wego');
     sfulearn.addEventListener('mouseenter', showButton4);
     sfulearn.addEventListener('mouseleave', hideButton4);
     sfulearn.addEventListener('click', click4);

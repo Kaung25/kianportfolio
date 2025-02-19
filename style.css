@@ -643,10 +643,6 @@ video {
   grid-column: span 2 / span 2;
 }
 
-.row-span-2 {
-  grid-row: span 2 / span 2;
-}
-
 .mx-0 {
   margin-left: 0px;
   margin-right: 0px;
@@ -669,10 +665,6 @@ video {
 
 .-mt-16 {
   margin-top: -4rem;
-}
-
-.mb-2 {
-  margin-bottom: 0.5rem;
 }
 
 .ml-5 {
@@ -717,10 +709,6 @@ video {
 
 .mt-6 {
   margin-top: 1.5rem;
-}
-
-.mt-7 {
-  margin-top: 1.75rem;
 }
 
 .mt-8 {
@@ -842,10 +830,6 @@ video {
 
 .w-2\/4 {
   width: 50%;
-}
-
-.w-2\/5 {
-  width: 40%;
 }
 
 .w-20 {
@@ -998,14 +982,6 @@ video {
 
 .resize {
   resize: both;
-}
-
-.list-inside {
-  list-style-position: inside;
-}
-
-.list-decimal {
-  list-style-type: decimal;
 }
 
 .grid-cols-2 {
@@ -1165,10 +1141,6 @@ video {
   border-bottom-width: 1px;
 }
 
-.border-b-2 {
-  border-bottom-width: 2px;
-}
-
 .border-b-\[1px\] {
   border-bottom-width: 1px;
 }
@@ -1202,10 +1174,6 @@ video {
 .bg-\[\#000000\] {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#000000\]\/80 {
-  background-color: rgb(0 0 0 / 0.8);
 }
 
 .bg-\[\#000\] {
@@ -1293,6 +1261,10 @@ video {
 
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
+}
+
+.bg-\[url\(\.\/img\/sfulearn\/sfulearnCover\.png\)\] {
+  background-image: url(./img/sfulearn/sfulearnCover.png);
 }
 
 .bg-\[url\(\.\/img\/wasocard\.png\)\] {
@@ -1511,10 +1483,6 @@ video {
 
 .font-light {
   font-weight: 300;
-}
-
-.font-medium {
-  font-weight: 500;
 }
 
 .font-normal {
@@ -1832,10 +1800,6 @@ video {
 
   .md\:w-\[85\%\] {
     width: 85%;
-  }
-
-  .md\:w-full {
-    width: 100%;
   }
 
   .md\:flex-row {

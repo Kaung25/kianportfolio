@@ -1,351 +1,469 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-85Q9W9880B"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-    
-          gtag('config', 'G-85Q9W9880B');
-        </script>
-        <!-- Google tag (gtag.js) -->
-    
-        
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Kaung-Portfolio</title>
-        <meta name="description" content="I am Kaung Myat Moee Htoon, an enthusiastic, passionate, and experienced UI/UX designer from Myanmar, currently building experiences at Waso Tech! I am currently offering web and mobile design services as a freelance UI/UX Designer. Explore my portfolio and contact me for your design needs.">
-    
-        <!-- thumbs -->
-    
-        <!-- Other meta tags and head content -->
-    
-        <!-- Open Graph Meta Tags -->
-        <meta property="og:title" content="Kaung - Digital product designer">
-        <meta property="og:description" content="The enthusiastic, passionate, and experienced designer">
-        <meta property="og:image" content="https://i.ibb.co/RSLc4L0/thumb.png">
-        <meta property="og:url" content="https://www.kaung.me">
-        <meta property="og:type" content="website">
-    
-        <!-- Twitter Card Meta Tags (Optional but recommended) -->
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Kaung - Digital Product Designer">
-        <meta name="twitter:description" content="The enthusiastic, passionate, and experienced designer">
-        <meta name="twitter:image" content="https://i.ibb.co/RSLc4L0/thumb.png">
-    
-        <!-- thumbs -->
-        <link rel="icon" type="image/x-icon" href="./img/favicon.png">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="../tailwind.config.js">
-        <!-- skranji font -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Skranji:wght@400;700&display=swap" rel="stylesheet">
-        <!-- skranji font-->
-    
-        <!-- Alfa Slab One font -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
-    
-        <!-- SF Pro Font -->
-        <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/ScrollTrigger.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/jquery.gsap.min.js"></script>
-        <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=cahcebustin"></script>
-        <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
-        <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
-        <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollToPlugin3.min.js"></script>
-        <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
-        <script src="https://unpkg.com/@rive-app/canvas@2.9.1"></script>
-        
-        <!-- <script src="https://assets.codepen.io/16327/SplitText3.min.js"></script> -->
-        <!-- <script src="https://codepen.io/GreenSock/pen/7ba936b34824fefdccfe2c6d9f0b740b.js"></script>
-        <script src="https://assets.codepen.io/16327/gsap-latest-beta.min.js"></script>
-        <script src="https://assets.codepen.io/16327/ScrollTrigger.min.js?v=40"></script> -->
-    
-        <!-- Calendly link widget begin -->
-        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-        <!-- Calendly link widget end -->
-    
-        
-    
-        <style>
-            /* *{
-              cursor:none;
-            } */
-            body {
-                color: #2B2B2B;
-                text-align: center;
-                font-family: 'SF Pro Display', sans-serif;
-                /* font-weight: 400; */
-                /* font-size: 16px; */
-                font-style: normal;
-                /* font-weight: 100; */
-                line-height: 112.336%;
-             }
 
-             .footer{
-                font-family: 'Skranji',serif;;
-             }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SFU Learn</title>
+  <meta name="description"
+    content="Enhancing academic life and putting everything students need right at their fingertips">
 
-             .kaungimg img {
-                transition: all 0.2s ease-out;
-                box-sizing: border-box;
-                max-width: 100%;
-              }
+  <!-- thumbs -->
 
-            .kaungimg{
-              background-color: #26BBD3;
-              border-radius:50%;
-            }
+  <!-- Other meta tags and head content -->
 
-            .copyright{
-              font-family: 'SF Pro Display',sans-serif;
-            }
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="SFU Learn Mobile Application">
+  <meta property="og:description"
+    content="Enhancing academic life and putting everything students need right at their fingertips">
+  <meta property="og:image" content="https://i.ibb.co/QFr3p5Gg/sfulearn.png">
+  <meta property="og:url" content="https://www.kaung.me">
+  <meta property="og:type" content="website">
 
-            .btn {
-          top:0%;
-          transition:0.3s;
-        }
+  <!-- Twitter Card Meta Tags (Optional but recommended) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SFU Learn Mobile Application">
+  <meta name="twitter:description"
+    content="Enhancing academic life and putting everything students need right at their fingertips">
+  <meta name="twitter:image" content="https://i.ibb.co/QFr3p5Gg/sfulearn.png">
 
-        .btn1 {
-          transition:0.3s;
-        }
+  <!-- thumbs -->
+  <link rel="icon" type="image/x-icon" href="./img/favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../tailwind.config.js">
 
-        .btn1:hover .btn{
-          top: -100%;
-        }
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-85Q9W9880B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-        .icon {
-    position: relative; /* Ensure the absolute positioning works correctly */
-    transition: transform 0.3s ease; /* Smooth transition for rotation */
-}
+    gtag('config', 'G-85Q9W9880B');
+  </script>
+  <!-- Google tag (gtag.js) -->
 
-.navlist:hover .icon {
-    transform: rotate(180deg); /* Rotate the icon 360 degrees on hover */
-}
 
-        /* #cursor {
-          position: fixed;
-          z-index: 9999;
-          transform: translate(-50%, 0%);
-          pointer-events: none;
-        } */
 
-        </style>
-    
-    </head>
-    <body class="body">
-      <!-- <div id="cursor" class="hidden lg:block"><img src="./img/Pointer.svg" alt="" class=""></div> -->
-    <!-- navbar -->
-    <section>
-    <nav class="navBar md:pt-6 w-full fixed px-6 md:px-9 lg:px-24 z-20 bg-grey/5 md:bg-white border-b-[1px] md:border-0 backdrop-blur-lg border-grey/20">
-        <div class="max-w-screen-2xl md:pl-8 md:pr-4 md:bg-grey/5 md:border-[1px] backdrop-blur-lg md:border-grey/20  md:rounded-full flex flex-wrap items-center justify-between mx-auto py-4 px-0">
+  <!-- DM Sans font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Alfa Slab One font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+
+  <!-- Cocogoosefont -->
+  <link href="https://fonts.cdnfonts.com/css/cocogoose" rel="stylesheet">
+
+
+  <!-- SF Pro Font -->
+  <!-- <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet"> -->
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/jquery.gsap.min.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=cahcebustin"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollToPlugin3.min.js"></script>
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+
+  <style>
+    body {
+      text-align: center;
+      font-family: "DM Sans", serif;
+      font-optical-sizing: auto;
+      /* font-weight: 400; */
+      /* font-size: 16px; */
+      font-style: normal;
+      /* font-weight: 100; */
+      line-height: 150%;
+    }
+
+    html,
+    body {
+      overflow: auto;
+      scrollbar-width: none;
+      /* Firefox */
+      -ms-overflow-style: none;
+      /* Internet Explorer & Edge */
+    }
+
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+      display: none;
+      /* Chrome, Safari, Edge */
+    }
+
+
+    .bodyTitle,
+    .invite,
+    .mobilenav {
+      font-family: 'COCOGOOSE', sans-serif;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body class="bg-[#000]">
+  <!-- header -->
+  <section class="header w-full h-48 md:h-64 lg:h-96 bg-[url(./img/sfulearn/sfulearnCover.png)] bg-cover bg-center">
+    <nav class="navBar flex text-white bg-transparent border-gray-200 w-full mx-auto fixed right-0 left-0 z-50">
+      <div class="max-w-screen-2xl px-5 md:px-0 w-full md:w-[85%] mx-auto py-4">
+        <div class="flex items-center justify-between">
           <a href="./index.html" class="flex items-center">
-            <img src="./img/logo_black.svg" class=" absolute logoblack" alt="Logo" />
-            <img src="./img/logo.svg" class=" logowhite" alt="Logo" />
+            <img src="./img/logo.svg" class="logowhite" alt="Logo" />
           </a>
-          
-          
-          <div class="w-auto" id="navbar-default">
-            <ul id="navlist" class="navlist text-base flex">
-              <li>
-                <a href="./index.html" class=" navlist block text-dark">
-                  <div class="flex flex-row gap-2 items-center">
-                    <p class="hidden md:block">Close</p>
-                    <div class="icon">
-                      <img class="w-6 absolute close" src="./img/closeCircle.svg" alt="">
-                      <img class="w-6 closeWhite" src="./img/closeCircleWhite.svg" alt="">
-                    </div>
-                  </div>
-                </a>
-              </li>
-            </ul>
+          <a href="./index.html" class="group navlist block text-white">
+            <div class="flex flex-row gap-2 items-center">
+              <!-- <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="group-hover:fill-grey transition-colors duration-300 ease-in-out"
+                                d="M16 4C13.5277 4 11.111 4.73311 9.05538 6.10663C6.99976 7.48015 5.39761 9.43238 4.45151 11.7165C3.50542 14.0005 3.25787 16.5139 3.74019 18.9386C4.2225 21.3634 5.41301 23.5907 7.16117 25.3388C8.90933 27.087 11.1366 28.2775 13.5614 28.7598C15.9861 29.2421 18.4995 28.9946 20.7835 28.0485C23.0676 27.1024 25.0199 25.5002 26.3934 23.4446C27.7669 21.389 28.5 18.9723 28.5 16.5C28.4964 13.1859 27.1782 10.0086 24.8348 7.66518C22.4914 5.32177 19.3141 4.00364 16 4ZM16 28C13.7255 28 11.5021 27.3255 9.61095 26.0619C7.71978 24.7983 6.2458 23.0022 5.37539 20.9009C4.50498 18.7995 4.27724 16.4872 4.72097 14.2565C5.1647 12.0257 6.25997 9.97658 7.86828 8.36827C9.47658 6.75997 11.5257 5.6647 13.7565 5.22097C15.9872 4.77724 18.2995 5.00498 20.4009 5.87539C22.5022 6.74579 24.2983 8.21978 25.5619 10.1109C26.8255 12.0021 27.5 14.2255 27.5 16.5C27.4967 19.549 26.284 22.4721 24.1281 24.6281C21.9721 26.784 19.049 27.9967 16 28ZM21.5 16.5C21.5 16.6326 21.4473 16.7598 21.3536 16.8536C21.2598 16.9473 21.1326 17 21 17H12.2075L15.3538 20.1462C15.4476 20.2401 15.5003 20.3673 15.5003 20.5C15.5003 20.6327 15.4476 20.7599 15.3538 20.8538C15.2599 20.9476 15.1327 21.0003 15 21.0003C14.8673 21.0003 14.7401 20.9476 14.6463 20.8538L10.6463 16.8538C10.5998 16.8073 10.5629 16.7522 10.5377 16.6915C10.5126 16.6308 10.4996 16.5657 10.4996 16.5C10.4996 16.4343 10.5126 16.3692 10.5377 16.3085C10.5629 16.2478 10.5998 16.1927 10.6463 16.1462L14.6463 12.1462C14.7401 12.0524 14.8673 11.9997 15 11.9997C15.1327 11.9997 15.2599 12.0524 15.3538 12.1462C15.4476 12.2401 15.5003 12.3673 15.5003 12.5C15.5003 12.6327 15.4476 12.7599 15.3538 12.8538L12.2075 16H21C21.1326 16 21.2598 16.0527 21.3536 16.1464C21.4473 16.2402 21.5 16.3674 21.5 16.5Z"
+                                fill="#FFFFFF" />
+                        </svg> -->
+              <p class="font-light text-sm md:block group-hover:text-grey">Back to home</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </section>
+  <!-- header end -->
+
+  <section class="intro w-full mt-8 lg:mt-16 pb-8 lg:pb-16 border-b border-lightgrey">
+    <div class="px-5 md:px-0 w-full md:w-[85%] mx-auto">
+      <div class="bodyTitle relative">
+        <h1 class="text-lg lg:text-4xl text-orange text-left left-0 top-4 absolute z-10">
+          SFU Learn Mobile Application
+        </h1>
+        <h1 class="text-2xl lg:text-5xl text-left text-dark relative whitespace-nowrap"
+          style="-webkit-text-stroke: 1px #2A2A2A;">
+          SFU Learn Mobile Application
+        </h1>
+      </div>
+
+      <div class="relative">
+        <p class="text-sm md:text-base lg:text-lg w-full lg:w-[60%] text-white font-light text-left mt-4 lg:mt-7">
+          The SFU Learn application is a comprehensive all-in-one platform designed for students of Strategy First
+          University. It aims to provide students with access to nearly all essential tools and resources required for
+          their daily academic life through a single application. The app was developed with the intention of enabling
+          students to manage almost every aspect of their student needs digitally.
+        </p>
+      </div>
+      <div class="flex lg:flex-row flex-col w-full gap-6 lg:gap-4 mt-8 lg:mt-16 justify-start content-end">
+        <div class="responsibilities">
+          <h1 class="text-white text-left font-light text-xs">RESPONSIBILITIES</h1>
+          <div class="flex flex-wrap gap-2 mt-3 justify-start text-xs">
+            <span class="py-2 px-3 border border-lightgrey font-light text-white rounded-lg w-fit">UX</span>
+            <span class="py-2 px-3 border border-lightgrey font-light text-white rounded-lg w-fit">UI</span>
+            <span class="py-2 px-3 border border-lightgrey font-light text-white rounded-lg w-fit">Interaction</span>
+            <!-- <span class="py-2 px-3 border border-lightgrey font-light text-white rounded-lg w-fit">Art
+                            Direction</span> -->
           </div>
         </div>
-    </nav>
-    </section>
-    <!-- navbar End -->
 
-    <section class="w-full px-6 md:px-9 lg:px-32 pt-44 justify-center items-center">
-        <div>
-            <h1 class="text-dark leading-tight font-bold text-2xl lg:text-3xl">SFU Learn Application</h1>
-            <div class="flex gap-2 mt-5 justify-center text-sm lg:text-base">
-                <span class="py-2 px-3 lg:py-3  lg:px-5 bg-grey/10 font-light text-[#6f6f6f] rounded-lg w-fit">UX</span>
-                <span class="py-2 px-3 lg:py-3  lg:px-5 bg-grey/10 font-light text-[#6f6f6f] rounded-lg w-fit">UI</span>
-                <span class="py-2 px-3 lg:py-3  lg:px-5 bg-grey/10 font-light text-[#6f6f6f] rounded-lg w-fit">Interaction</span>
-                <span class="py-2 px-3 lg:py-3  lg:px-5 bg-grey/10 font-light text-[#6f6f6f] rounded-lg w-fit">Illustration</span>
-                <span class="py-2 px-3 lg:py-3  lg:px-5 bg-grey/10 font-light text-[#6f6f6f] rounded-lg w-fit">Animation</span>
-            </div>
+        <div class="sperator hidden lg:block w-1 border-r border-lightgrey">
+          <!-- <span class="w-0 h-7"></span>
+                    <div class="py-1 h-9 flex content-center">
+                        <span class="w-1 border-r border-lightgrey"></span>
+                    </div> -->
         </div>
-        <div class="mt-8 relative">
-            <img class="rounded-xl h-64 object-cover md:h-full" src="./img/Sfulearn/banner.png" alt="banner image">
-        </div>
-    </section>
 
-    <section class="w-full py-20 px-6 md:px-9 lg:px-32">
-        <div class="text-left">
-                <h1 class="text-dark font-bold text-xl">About</h1>
-                <p class="mt-4 text-lightgrey leading-normal text-base font-normal">
-                  SFU Learn is like a super app for students at Strategy First University. It's super handy because it puts everything students need right at their fingertips. They can easily check their digital ID card, see their payment info, and check their grades without any trouble. Students can also access articles published by the university through SFU Learn. Additionally, students can track their activities at the university like attending the seminars or participating the event and even get activity points. And here's a cool bonus: students can use SFU Learn as a digital wallet at the university canteen. Isn't that convenient? It's like having a Swiss Army knife for university life—it makes everything easier and more fun!
+        <div class="platform">
+          <h1 class="text-white text-left font-light text-xs">PLATFORM</h1>
+          <div class="flex flex-wrap gap-2 mt-3 justify-start text-xs">
+            <span class="py-2 px-3 border border-lightgrey font-light text-white rounded-lg w-fit">Android
+            </span>
+            <span class="py-2 px-3 border border-lightgrey font-light text-white rounded-lg w-fit">iOS
+            </span>
+          </div>
+        </div>
+
+        <div class="sperator hidden lg:block w-1 border-r border-lightgrey">
+          <!-- <span class="w-0 h-7"></span>
+                    <div class="py-1 h-9 flex content-center">
+                        <span class="w-1 border-r border-lightgrey"></span>
+                    </div> -->
+        </div>
+
+        <div class="team">
+          <h1 class="text-white text-left font-light text-xs">THE TEAM</h1>
+          <div class="flex flex-wrap gap-2 mt-3 justify-start text-xs">
+            <span class="py-2 px-3 border border-lightgrey font-light text-white rounded-lg w-fit">1
+              Department Head
+            </span>
+            <span class="py-2 px-3 border border-lightgrey font-light text-white rounded-lg w-fit">1 Project
+              Manager
+            </span>
+            <span class="py-2 px-3 border border-lightgrey font-light text-white rounded-lg w-fit">1 Product
+              Designer
+            </span>
+            <span class="py-2 px-3 border border-lightgrey font-light text-white rounded-lg w-fit">7
+              Developers
+            </span>
+            <!-- <span class="py-2 px-3 border border-lightgrey font-light text-white rounded-lg w-fit">1
+                            Illustrator
+                        </span> -->
+          </div>
+        </div>
+
+      </div>
+  </section>
+
+  <!-- content -->
+  <section class="intro w-full mt-8 lg:mt-16 pb-8 lg:pb-16 border-b border-lightgrey">
+    <div class="px-5 md:px-0 w-full md:w-[85%] mx-auto">
+      <div>
+        <div class="fade-up flex items-center gap-2">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.761719" y="0.0722656" width="18.1582" height="18.1582" fill="#A5A5A5" />
+          </svg>
+
+          <h1 class="text-grey text-left font-light text-xs">CHALLENGES, SOLUTIONS, AND IMPACT</h1>
+        </div>
+        <p
+          class="fade-up text-sm md:text-base lg:text-lg w-full lg:w-[60%] text-white font-light text-left mt-4 lg:mt-7">
+          During our research with students, we identified several challenges they commonly face: missing out on
+          entitled benefits due to forgotten student ID cards, repeatedly visiting student affairs offices to check fee
+          payment statuses, having to inquire about class-related information through administrative channels, and
+          delays in accessing real-time updates on assignment grades and exam results. Additionally, students often
+          missed seminars and events due to lack of awareness, leading to reduced participation in extracurricular
+          activities, which is a critical area requiring attention.
+        </p>
+      </div>
+
+      <div class=" fade-up mt-8 lg:mt-16">
+        <img class="w-full" src="./img/Sfulearn/sfulearn1.png" alt="The initial design of Waso Learn">
+        <p class="text-xs w-full text-white font-light text-left mt-2 lg:mt-4">
+          <span class="text-grey">Image:</span> Initial design of SFU Learn Application
+        </p>
+      </div>
+
+      <div class="fade-up mt-8 lg:mt-16">
+        <p class="text-sm md:text-base lg:text-lg w-full lg:w-[60%] text-white font-light text-left">
+          After discussions with stakeholders, we resolved to develop a comprehensive application tailored for Strategy
+          First University (SFU) students. While forgetting physical ID cards was a frequent issue, students rarely left
+          their mobile phones behind. This insight led us to integrate a Digital ID Card into the app. We also
+          prioritized features such as easy access to payment information, historical and current class details,
+          and real-time updates on assignments and exam results.
+        </p>
+      </div>
+
+      <div class="fade-up mt-8 lg:mt-16">
+        <img class="w-full" src="./img/Sfulearn/sfulearn2.png" alt="Redesigned version of Waso Learn">
+        <p class="text-xs w-full text-white font-light text-left mt-2 lg:mt-4">
+          <span class="text-grey">Image:</span> Initial design of SFU Learn Application
+        </p>
+      </div>
+
+      <div class="fade-up mt-8 lg:mt-16">
+        <p class="text-sm md:text-base lg:text-lg w-full lg:w-[60%] text-white font-light text-left">
+          To further motivate participation in campus activities, we introduced a points-based reward system. Students
+          earn points for attending seminars, workshops, and university events, which are tracked directly within the
+          app. These points contribute to their academic profiles and can be leveraged for university recommendations,
+          scholarship eligibility, or priority access to future opportunities.
+          <br><br>Furthermore, we incorporated a monthly newsletter called Strategy First Time to streamline campus news
+          and updates. Partnering with select businesses, we included exclusive student benefits accessible via the
+          Digital ID. Additionally, we integrated a payment system for seamless transactions at SFU canteens and campus
+          stores.
+        </p>
+      </div>
+
+      <div class="fade-up mt-8 lg:mt-16">
+        <img class="w-full" src="./img/Sfulearn/sfulearn3.png" alt="Redesigned version of Waso Learn 2">
+        <p class="text-xs w-full text-white font-light text-left mt-2 lg:mt-4">
+          <span class="text-grey">Image:</span> Initial design of SFU Learn Application
+        </p>
+      </div>
+
+      <div class="fade-up mt-8 lg:mt-16">
+        <p class="text-sm md:text-base lg:text-lg w-full lg:w-[60%] text-white font-light text-left">
+          The initial design of the SFU Learn app remained largely unchanged for its first few versions, and this design
+          was used extensively for some time. Later, after I left SFU to pursue better opportunities, maintenance of the
+          app was transferred to SFEG’s developer and product teams, who continue to manage it today.
+          <br><br>This case study primarily outlines the design considerations and decision-making process behind the
+          SFU Learn application. While the initial design had areas requiring refinement, I did not have the opportunity
+          to implement further updates due to my departure. As a result, this overview focuses on the foundational
+          design choices and insights from the app’s development journey.
+        </p>
+      </div>
+
+      <!-- <div class="fade-up mt-8 lg:mt-16">
+                <img class="w-full" src="./img/wasolearn/wasoCSR.png" alt="Redesigned version of Waso Learn 2">
+                <p class="text-xs w-full text-white font-light text-left mt-2 lg:mt-4">
+                    <span class="text-grey">Image:</span> Little nuns using the Waso Learn TV app at a monastic school
+                    as part of CSR initiative
                 </p>
-        </div>
-        <div class="flex flex-col md:grid grid-cols-2 gap-10 md:gap-16 mt-10">
-            <div class="text-left">
-                <h1 class="text-dark font-bold text-xl">Problem Statement</h1>
-                <p class="mt-4 text-lightgrey leading-normal text-base font-normal">
-                  Students at Strategy First University encounter difficulties in effectively managing key aspects of their academic life. These challenges include accessing and organizing their Student ID cards, payment information, class details, and grades, resulting in inconvenience and potential confusion. Moreover, students often miss important university announcements and events, such as seminars, leading to missed opportunities and reduced engagement.
+            </div>
+
+            <div class="fade-up mt-8 lg:mt-16">
+                <p class="text-sm md:text-base lg:text-lg w-full lg:w-[60%] text-white font-light text-left">
+                    Although the Waso Learn mobile app successfully meets user needs, it still faces limitations in
+                    classroom settings, particularly due to screen size and usability constraints. The small screen
+                    restricts content visibility, while navigation challenges make it harder for students to engage
+                    effectively with lessons. These factors hinder the overall learning experience, especially when
+                    multiple students are involved.<br><br>
+                    To address this, we proposed developing a Waso Learn TV application as a strategic solution.
+                    Leveraging larger screens, this platform offers a more immersive and interactive learning
+                    experience. It enhances visual content, optimizes navigation, and improves interactivity, making
+                    lessons more accessible and engaging. By tapping into television interfaces, the TV app aims to
+                    create a seamless and enriched educational experience tailored to students' needs.
                 </p>
             </div>
-            <div class="text-left">
-                <h1 class="text-dark font-bold text-xl">My Responsibility</h1>
-                <p class="mt-4 text-lightgrey leading-normal text-base font-normal">
-                  I'm responsible for making sure the app is easy and enjoyable to use. My roles are coordinating with stakeholders, conducting user research, and designing user flows. My responsibility involves leading research efforts and co-operating the development direction. Moreover, I managed the creation of wireframes, prototypes, and define the visual aesthetics of the application, ensuring a unified and captivating university life.
+
+            <div class="fade-up mt-8 lg:mt-16">
+                <img class="w-full" src="./img/wasolearn/wasoTV.png" alt="Redesigned version of Waso Learn 2">
+                <p class="text-xs w-full text-white font-light text-left mt-2 lg:mt-4">
+                    <span class="text-grey">Image:</span> Waso Learn for Android TVs
                 </p>
             </div>
-        </div>
-    </section>
 
-    <section class="w-full px-6 md:px-9 lg:px-32 justify-center items-center ">
-        <div class="">
-            <img class="rounded-xl h-64 object-cover md:h-full" src="./img/Sfulearn/photo.png" alt="banner image">
-        </div>
-    </section>
-
-
-  <section class="w-full py-10 md:py-20 px-6 md:px-9 lg:px-32">
-    <div class="text-left">
-            <h1 class="text-dark font-bold text-xl">Solution</h1>
-            <p class="mt-4 flex flex-col space-y-2 text-lightgrey leading-normal text-base font-normal">
-              SFU Learn addresses these challenges by providing a comprehensive platform that centralizes all necessary information and functionalities in one place. It offers easy access to digital ID cards, payment information, grades, and published articles from the university. This consolidation reduces the hassle of navigating multiple systems or physical documents, enhancing convenience for students. Moreover, SFU Learn partners with businesses to provide discounts, helping students save money and manage their expenses more effectively. Additionally, the app encourages student engagement by allowing them to earn points by attending seminars or events, contributing to their recognition as active participants in university activities. Furthermore, SFU Learn serves as a digital wallet at the university canteen, streamlining transactions and further enhancing convenience during students' daily activities on campus.
-            </p>
+            <div class="fade-up mt-8 lg:mt-16">
+                <p class="text-sm md:text-base lg:text-lg w-full lg:w-[60%] text-white font-light text-left">
+                    At present, the relevant product designers and the development team of the Waso Learn continue to
+                    work on refining the product.
+                </p>
+            </div> -->
     </div>
   </section>
 
-  <section class="w-full px-6 md:px-9 lg:px-32 justify-center items-center ">
-    <div class="">
-        <img class="rounded-xl object-cover " src="./img/Sfulearn/flow.png" alt="banner image">
-    </div>
-  </section>
+  <section class="flex flex-col lg:flex-row w-full justify-center items-center">
+    <div class="flex px-5 md:px-0 w-full md:w-[85%]">
+      <div class="flex py-8 lg:py-16 flex-col justify-between w-full border-r border-lightgrey">
+        <a href="./index.html">
+          <div class="group flex gap-2 justify-start items-center h-auto">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="group-hover:fill-white transition-colors duration-300 ease-in-out"
+                d="M16 4C13.5277 4 11.111 4.73311 9.05538 6.10663C6.99976 7.48015 5.39761 9.43238 4.45151 11.7165C3.50542 14.0005 3.25787 16.5139 3.74019 18.9386C4.2225 21.3634 5.41301 23.5907 7.16117 25.3388C8.90933 27.087 11.1366 28.2775 13.5614 28.7598C15.9861 29.2421 18.4995 28.9946 20.7835 28.0485C23.0676 27.1024 25.0199 25.5002 26.3934 23.4446C27.7669 21.389 28.5 18.9723 28.5 16.5C28.4964 13.1859 27.1782 10.0086 24.8348 7.66518C22.4914 5.32177 19.3141 4.00364 16 4ZM16 28C13.7255 28 11.5021 27.3255 9.61095 26.0619C7.71978 24.7983 6.2458 23.0022 5.37539 20.9009C4.50498 18.7995 4.27724 16.4872 4.72097 14.2565C5.1647 12.0257 6.25997 9.97658 7.86828 8.36827C9.47658 6.75997 11.5257 5.6647 13.7565 5.22097C15.9872 4.77724 18.2995 5.00498 20.4009 5.87539C22.5022 6.74579 24.2983 8.21978 25.5619 10.1109C26.8255 12.0021 27.5 14.2255 27.5 16.5C27.4967 19.549 26.284 22.4721 24.1281 24.6281C21.9721 26.784 19.049 27.9967 16 28ZM21.5 16.5C21.5 16.6326 21.4473 16.7598 21.3536 16.8536C21.2598 16.9473 21.1326 17 21 17H12.2075L15.3538 20.1462C15.4476 20.2401 15.5003 20.3673 15.5003 20.5C15.5003 20.6327 15.4476 20.7599 15.3538 20.8538C15.2599 20.9476 15.1327 21.0003 15 21.0003C14.8673 21.0003 14.7401 20.9476 14.6463 20.8538L10.6463 16.8538C10.5998 16.8073 10.5629 16.7522 10.5377 16.6915C10.5126 16.6308 10.4996 16.5657 10.4996 16.5C10.4996 16.4343 10.5126 16.3692 10.5377 16.3085C10.5629 16.2478 10.5998 16.1927 10.6463 16.1462L14.6463 12.1462C14.7401 12.0524 14.8673 11.9997 15 11.9997C15.1327 11.9997 15.2599 12.0524 15.3538 12.1462C15.4476 12.2401 15.5003 12.3673 15.5003 12.5C15.5003 12.6327 15.4476 12.7599 15.3538 12.8538L12.2075 16H21C21.1326 16 21.2598 16.0527 21.3536 16.1464C21.4473 16.2402 21.5 16.3674 21.5 16.5Z"
+                fill="#909090" />
+            </svg>
 
-  <section class="w-full py-10 md:py-20 px-6 md:px-9 lg:px-32 justify-center items-center ">
-    <div class="">
-        <img class="rounded-xl object-cover " src="./img/Sfulearn/screen.png" alt="banner image">
-    </div>
-  </section>
+            <p
+              class="text-grey text-left font-light text-xs group-hover:text-white transition-colors duration-300 ease-in-out">
+              BACK TO HOME</p>
+          </div>
+        </a>
+        <p class="copyright hidden lg:block font-light text-left text-[12px] text-white/60">Copyright © 2025. Developed
+          by Kaung
+          Myat
+          Moee Htoon.<br> All rights reserved.</p>
 
+        <!-- <div class="flex flex-col justify-start gap-2">
+            <h1 class="text-grey text-left font-light text-xs">NEXT PROJECT</h1>
+            <img src="./img/Whisper.png" class="w-80" alt="">
+            <h1 class="text-2xl text-left text-white font-light">Whisper: Mediate & Sleep</h1>
+        </div> -->
 
-
-<section class="footer">
-  
-    <div id="section4" class="pt-32 pb-16 flex flex-col justify-center items-center">
-      <div class="group relative justify-center items-center">
-      <div class="kaungimg my-0 mx-auto w-48 h-48 flex flex-col relative overflow-hidden">
-        <img class="group-hover:rotate-[360deg] group-hover:scale-125 group-hover:opacity-0 w-full absolute z-10" src="./img/kaung.svg" alt="">
-        <img class="w-full absolute kaung2 opacity-0 group-hover:rotate-[360deg] group-hover:opacity-100 transform-gpu" src="./img/kaung3.png" alt="">
       </div>
-      <div class="">
-        <h1 class="text-3xl group lg:text-6xl text-yellow leading-tight mt-5">Have an awesome idea?<br>
-        <span class="text-white">Well, here I am.</span></h1>
+      <div class="flex lg:hidden py-8 flex-col justify-between w-full ">
+        <a href="./underconstruction.html">
+          <div class="group flex flex-row-reverse gap-2 justify-start items-center h-auto">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="group-hover:fill-white transition-colors duration-300 ease-in-out"
+                d="M16 3.5C13.5277 3.5 11.111 4.23311 9.05538 5.60663C6.99976 6.98015 5.39761 8.93238 4.45151 11.2165C3.50542 13.5005 3.25787 16.0139 3.74019 18.4386C4.2225 20.8634 5.41301 23.0907 7.16117 24.8388C8.90933 26.587 11.1366 27.7775 13.5614 28.2598C15.9861 28.7421 18.4995 28.4946 20.7835 27.5485C23.0676 26.6024 25.0199 25.0002 26.3934 22.9446C27.7669 20.889 28.5 18.4723 28.5 16C28.4964 12.6859 27.1782 9.5086 24.8348 7.16518C22.4914 4.82177 19.3141 3.50364 16 3.5ZM16 27.5C13.7255 27.5 11.5021 26.8255 9.61095 25.5619C7.71978 24.2983 6.2458 22.5022 5.37539 20.4009C4.50498 18.2995 4.27724 15.9872 4.72097 13.7565C5.1647 11.5257 6.25997 9.47658 7.86828 7.86827C9.47658 6.25997 11.5257 5.1647 13.7565 4.72097C15.9872 4.27724 18.2995 4.50498 20.4009 5.37539C22.5022 6.24579 24.2983 7.71978 25.5619 9.61094C26.8255 11.5021 27.5 13.7255 27.5 16C27.4967 19.049 26.284 21.9721 24.1281 24.1281C21.9721 26.284 19.049 27.4967 16 27.5ZM21.3538 15.6462C21.4002 15.6927 21.4371 15.7478 21.4623 15.8085C21.4874 15.8692 21.5004 15.9343 21.5004 16C21.5004 16.0657 21.4874 16.1308 21.4623 16.1915C21.4371 16.2522 21.4002 16.3073 21.3538 16.3538L17.3538 20.3538C17.2599 20.4476 17.1327 20.5003 17 20.5003C16.8673 20.5003 16.7401 20.4476 16.6463 20.3538C16.5524 20.2599 16.4997 20.1327 16.4997 20C16.4997 19.8673 16.5524 19.7401 16.6463 19.6462L19.7925 16.5H11C10.8674 16.5 10.7402 16.4473 10.6465 16.3536C10.5527 16.2598 10.5 16.1326 10.5 16C10.5 15.8674 10.5527 15.7402 10.6465 15.6464C10.7402 15.5527 10.8674 15.5 11 15.5H19.7925L16.6463 12.3538C16.5524 12.2599 16.4997 12.1327 16.4997 12C16.4997 11.8673 16.5524 11.7401 16.6463 11.6462C16.7401 11.5524 16.8673 11.4997 17 11.4997C17.1327 11.4997 17.2599 11.5524 17.3538 11.6462L21.3538 15.6462Z"
+                fill="#909090" />
+            </svg>
+            <p
+              class="text-grey text-left font-light text-xs group-hover:text-white transition-colors duration-300 ease-in-out">
+              NEXT PROJECT</p>
+
+          </div>
+        </a>
+
       </div>
-      <div class="buttongroup flex flex-col md:flex-row gap-5 w-fit mx-auto mt-5">
-        <div class="group btn1 bg-yellow h-16 w-52 leading-[4rem] text-dark text-base lg:text-xl text-center rounded-lg inline-block overflow-hidden relative transition-all duration-300">
-          <a class="btn  block relative h-full" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/kmmh/30min?hide_gdpr_banner=1&text_color=2B2B2B&primary_color=BDC7CF'});return false;">Schedule a meeting</a>
-          <a class="btn  block relative h-full" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/kmmh/30min?hide_gdpr_banner=1&text_color=2B2B2B&primary_color=BDC7CF'});return false;">Schedule a meeting</a>
+
+      <a href="./underconstruction.html" id="" class="group hidden lg:flex py-16 flex-col w-full ml-5 lg:ml-16">
+        <div class="group flex gap-2 justify-start items-center h-auto">
+          <p
+            class="text-grey text-left font-light text-xs group-hover:text-white transition-colors duration-300 ease-in-out">
+            NEXT PROJECT</p>
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="group-hover:fill-white transition-colors duration-300 ease-in-out"
+              d="M16 3.5C13.5277 3.5 11.111 4.23311 9.05538 5.60663C6.99976 6.98015 5.39761 8.93238 4.45151 11.2165C3.50542 13.5005 3.25787 16.0139 3.74019 18.4386C4.2225 20.8634 5.41301 23.0907 7.16117 24.8388C8.90933 26.587 11.1366 27.7775 13.5614 28.2598C15.9861 28.7421 18.4995 28.4946 20.7835 27.5485C23.0676 26.6024 25.0199 25.0002 26.3934 22.9446C27.7669 20.889 28.5 18.4723 28.5 16C28.4964 12.6859 27.1782 9.5086 24.8348 7.16518C22.4914 4.82177 19.3141 3.50364 16 3.5ZM16 27.5C13.7255 27.5 11.5021 26.8255 9.61095 25.5619C7.71978 24.2983 6.2458 22.5022 5.37539 20.4009C4.50498 18.2995 4.27724 15.9872 4.72097 13.7565C5.1647 11.5257 6.25997 9.47658 7.86828 7.86827C9.47658 6.25997 11.5257 5.1647 13.7565 4.72097C15.9872 4.27724 18.2995 4.50498 20.4009 5.37539C22.5022 6.24579 24.2983 7.71978 25.5619 9.61094C26.8255 11.5021 27.5 13.7255 27.5 16C27.4967 19.049 26.284 21.9721 24.1281 24.1281C21.9721 26.284 19.049 27.4967 16 27.5ZM21.3538 15.6462C21.4002 15.6927 21.4371 15.7478 21.4623 15.8085C21.4874 15.8692 21.5004 15.9343 21.5004 16C21.5004 16.0657 21.4874 16.1308 21.4623 16.1915C21.4371 16.2522 21.4002 16.3073 21.3538 16.3538L17.3538 20.3538C17.2599 20.4476 17.1327 20.5003 17 20.5003C16.8673 20.5003 16.7401 20.4476 16.6463 20.3538C16.5524 20.2599 16.4997 20.1327 16.4997 20C16.4997 19.8673 16.5524 19.7401 16.6463 19.6462L19.7925 16.5H11C10.8674 16.5 10.7402 16.4473 10.6465 16.3536C10.5527 16.2598 10.5 16.1326 10.5 16C10.5 15.8674 10.5527 15.7402 10.6465 15.6464C10.7402 15.5527 10.8674 15.5 11 15.5H19.7925L16.6463 12.3538C16.5524 12.2599 16.4997 12.1327 16.4997 12C16.4997 11.8673 16.5524 11.7401 16.6463 11.6462C16.7401 11.5524 16.8673 11.4997 17 11.4997C17.1327 11.4997 17.2599 11.5524 17.3538 11.6462L21.3538 15.6462Z"
+              fill="#909090" />
+          </svg>
+
         </div>
-  
-        <div class="btn1 bg-transparent border-2 border-yellow leading-[4rem] h-16 w-52 text-yellow text-base lg:text-xl text-center rounded-lg inline-block overflow-hidden relative transition-all duration-300">
-          <a href="mailto:kaungmyatmoeehtoon@gmail.com" class="btn block relative h-full">Just email me</a>
-          <a href="mailto:kaungmyatmoeehtoon@gmail.com" class="btn block relative h-full">Just email me</a>
+        <div class="flex flex-col justify-start gap-6 mt-16">
+          <!-- <h1 class="text-grey text-left font-light text-xs">NEXT PROJECT</h1> -->
+          <!-- <img src="./img/Whisper.png" class="w-96 h-60 object-cover" alt=""> -->
+          <div class="w-64 lg:w-96 h-32 lg:h-60 overflow-hidden flex justify-start items-center">
+            <img src="./img/Whisper.png"
+              class="transition-transform duration-300 ease-in-out group-hover:scale-110 w-full lg:w-full  object-cover"
+              alt="">
+          </div>
+          <h1 class="text-2xl lg:text-4xl text-left text-white font-light">Whisper: Mediate & Sleep</h1>
         </div>
-  
-      </div>
+      </a>
     </div>
-    </div>
-    <div class="text-white/60 py-8">
-      <p class="copyright text-[12px] px-6 mt-0 md:mt-8 lg:mt-16 ">Copyright © 2024. Developed by Kaung Myat Moee Htoon.<br class="block lg:hidden"> Made with ❤️ in Myanmar</p>
-    </div>
-</section>
 
-<script>
-  // const cursor = document.getElementById('cursor');
-  // cursor.style.left = '-100px';
-  // cursor.style.top = '-100px';
+    <p
+      class="copyright block lg:hidden w-full px-5 py-4 font-light text-center text-[12px] text-grey border-t border-lightgrey">
+      Copyright © 2025. Developed by Kaung
+      Myat
+      Moee Htoon.<br class="block lg:hidden"> All rights reserved.</p>
 
-  // function moveCursor(event) {
-  //   const x = event.clientX;
-  //   const y = event.clientY;
-  //   cursor.style.left = x + 'px';
-  //   cursor.style.top = y + 'px';
-  // }
+  </section>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const fadeUpElements = document.querySelectorAll('.fade-up');
 
-  // window.addEventListener('mousemove', moveCursor);
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            // Optional: Unobserve after animation if you only want it once
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1 // Trigger when 10% of element is visible
+      });
 
+      fadeUpElements.forEach(element => {
+        observer.observe(element);
+      });
+    });
 
-    // backgroundColor change
+    // navbar color change on scroll
     ScrollTrigger.create({
-   
-   trigger: ".footer",
-   start:"top 50%",
-   end:"bottom 0%", 
-   markers:false,
- 
-   onEnter: () => {
-     gsap.to('.body', { duration: 0.5, backgroundColor: '#1D1D1D'});
-     gsap.to('.footertitle', { duration: 0.5, color:'#FEC426'});
-     gsap.to('.navBar', { duration: 0.5, backgroundColor: '#1D1D1D'});
-     gsap.to('.navlist', { color:'rgba(255, 255, 255, 0.6)'});
-     gsap.to('.menuicon rect', { fill: "#ffffff"});
-     gsap.to('.logowhite', { duration:0.5, opacity: 1});
-     gsap.to('.logoblack', { duration:0.5, opacity: 0});
-     gsap.to('.closeWhite', { duration:0.5, opacity: 1});
-     gsap.to('.close', { duration:0.5, opacity: 0});
-     
-   },
-   
-   onLeaveBack: () => {
-     gsap.to('.body', { duration: 0.5, backgroundColor: '#ffffff'});
-     gsap.to('.footertitle', { duration: 0.5, color:'white'})
-     gsap.to('.navBar', { duration: 0.5, backgroundColor: 'rgb(255,255,255)'});
-     gsap.to('.navlist', { color:"#2B2B2B"});
-     gsap.to('.menuicon rect', { fill: "#2B2B2B"});
-     gsap.to('.logowhite', { duration:0.5, opacity: 0});
-     gsap.to('.logoblack', { duration:0.5, opacity: 1});
-     gsap.to('.closeWhite', { duration:0.5, opacity: 0});
-     gsap.to('.close', { duration:0.5, opacity: 1});
-     
-   },
- })
 
- // navbar change
- ScrollTrigger.create({
-   
-   trigger: ".hero",
-   start:"top 0%",
-   end:"bottom 20%", 
-   markers:false,
- 
-   onEnter: () => {
-     gsap.to('.navBar', { duration: 0.0, backgroundColor: '#ffffff'});
-    //  gsap.to('.navBar', { duration: 0.1, borderBottom: '1px solid #E8EBED'});
-   },
-   
-   onLeaveBack: () => {
-     gsap.to('.navBar', { duration: 0.1, backgroundColor: 'rgb(255,255,255/0.0)'});
-    //  gsap.to('.navBar', { duration: 0.1, borderBottom: '0px solid #E8EBED'});
-   },
- 
-   
- })
+      trigger: ".intro",
+      start: "top 4%",
+      end: "bottom 20%",
+      markers: false,
 
-</script>
+      onEnter: () => {
+        gsap.to('.navBar', { duration: 0.0, backgroundColor: '#000000', borderBottom: '1px solid #2A2A2A' });
+        //  gsap.to('.navBar', { duration: 0.1, borderBottom: '1px solid #E8EBED'});
+      },
 
-    
+      onLeaveBack: () => {
+        gsap.to('.navBar', { duration: 0.1, backgroundColor: 'rgb(0,0,0/0.0)', borderBottom: '0px solid #2A2A2A' });
+        //  gsap.to('.navBar', { duration: 0.1, borderBottom: '0px solid #E8EBED'});
+      },
+
+
+    })
+  </script>
 </body>
+
 </html>
