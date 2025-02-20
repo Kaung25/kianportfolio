@@ -1263,8 +1263,8 @@ video {
   --tw-bg-opacity: 0.5;
 }
 
-.bg-\[url\(\.\/img\/sfulearn\/sfulearnCover\.png\)\] {
-  background-image: url(./img/sfulearn/sfulearnCover.png);
+.bg-\[url\(\.\/img\/sfulearnCover\.png\)\] {
+  background-image: url(./img/sfulearnCover.png);
 }
 
 .bg-\[url\(\.\/img\/wasocard\.png\)\] {
