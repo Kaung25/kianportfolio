@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methodist Centre</title>
+    <meta name="description"
+        content="Creating an interactive motion graphic animation for Methodist Centre HK's landing page">
+
+    <!-- thumbs -->
+
+    <!-- Other meta tags and head content -->
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Methodist Centre">
+    <meta property="og:description"
+        content="Creating an interactive motion graphic animation for Methodist Centre HK's landing page">
+    <meta property="og:image" content="https://i.ibb.co/7xDPs4JZ/methodistcentre.png">
+    <meta property="og:url" content="https://www.kaung.me">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags (Optional but recommended) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Methodist Centre">
+    <meta name="twitter:description"
+        content="Creating an interactive motion graphic animation for Methodist Centre HK's landing page">
+    <meta name="twitter:image" content="https://i.ibb.co/7xDPs4JZ/methodistcentre.png">
+
+    <!-- thumbs -->
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../tailwind.config.js">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-85Q9W9880B"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-85Q9W9880B');
+    </script>
+    <!-- Google tag (gtag.js) -->
+
+    <!-- DM Sans font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Alfa Slab One font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+
+    <!-- Cocogoosefont -->
+    <link href="https://fonts.cdnfonts.com/css/cocogoose" rel="stylesheet">
+
+
+    <!-- SF Pro Font -->
+    <!-- <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet"> -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/jquery.gsap.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=cahcebustin"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollToPlugin3.min.js"></script>
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <style>
+        body {
+            text-align: center;
+            font-family: "DM Sans", serif;
+            font-optical-sizing: auto;
+            /* font-weight: 400; */
+            /* font-size: 16px; */
+            font-style: normal;
+            /* font-weight: 100; */
+            line-height: 150%;
+        }
+
+        html,
+        body {
+            overflow: auto;
+            scrollbar-width: none;
+            /* Firefox */
+            -ms-overflow-style: none;
+            /* Internet Explorer & Edge */
+        }
+
+        html::-webkit-scrollbar,
+        body::-webkit-scrollbar {
+            display: none;
+            /* Chrome, Safari, Edge */
+        }
+
+
+        .bodyTitle,
+        .invite,
+        .mobilenav {
+            font-family: 'COCOGOOSE', sans-serif;
+        }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .fade-up.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-[#000]">
+    <!-- header -->
+    <section class="header w-full h-48 md:h-64 lg:h-96 bg-[url(./img/mccover.png)] bg-cover bg-center">
+        <nav class="navBar flex text-white bg-transparent border-gray-200 w-full mx-auto fixed right-0 left-0 z-50">
+            <div class="max-w-screen-2xl px-5 md:px-0 w-full md:w-[85%] mx-auto py-4">
+                <div class="flex items-center justify-between">
+                    <a href="./index.html" class="flex items-center">
+                        <img src="./img/logo.svg" class="logowhite" alt="Logo" />
+                    </a>
+                    <a href="./index.html" class="group navlist block text-white">
+                        <div class="flex flex-row gap-2 items-center">
+                            <!-- <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="group-hover:fill-grey transition-colors duration-300 ease-in-out"
+                                d="M16 4C13.5277 4 11.111 4.73311 9.05538 6.10663C6.99976 7.48015 5.39761 9.43238 4.45151 11.7165C3.50542 14.0005 3.25787 16.5139 3.74019 18.9386C4.2225 21.3634 5.41301 23.5907 7.16117 25.3388C8.90933 27.087 11.1366 28.2775 13.5614 28.7598C15.9861 29.2421 18.4995 28.9946 20.7835 28.0485C23.0676 27.1024 25.0199 25.5002 26.3934 23.4446C27.7669 21.389 28.5 18.9723 28.5 16.5C28.4964 13.1859 27.1782 10.0086 24.8348 7.66518C22.4914 5.32177 19.3141 4.00364 16 4ZM16 28C13.7255 28 11.5021 27.3255 9.61095 26.0619C7.71978 24.7983 6.2458 23.0022 5.37539 20.9009C4.50498 18.7995 4.27724 16.4872 4.72097 14.2565C5.1647 12.0257 6.25997 9.97658 7.86828 8.36827C9.47658 6.75997 11.5257 5.6647 13.7565 5.22097C15.9872 4.77724 18.2995 5.00498 20.4009 5.87539C22.5022 6.74579 24.2983 8.21978 25.5619 10.1109C26.8255 12.0021 27.5 14.2255 27.5 16.5C27.4967 19.549 26.284 22.4721 24.1281 24.6281C21.9721 26.784 19.049 27.9967 16 28ZM21.5 16.5C21.5 16.6326 21.4473 16.7598 21.3536 16.8536C21.2598 16.9473 21.1326 17 21 17H12.2075L15.3538 20.1462C15.4476 20.2401 15.5003 20.3673 15.5003 20.5C15.5003 20.6327 15.4476 20.7599 15.3538 20.8538C15.2599 20.9476 15.1327 21.0003 15 21.0003C14.8673 21.0003 14.7401 20.9476 14.6463 20.8538L10.6463 16.8538C10.5998 16.8073 10.5629 16.7522 10.5377 16.6915C10.5126 16.6308 10.4996 16.5657 10.4996 16.5C10.4996 16.4343 10.5126 16.3692 10.5377 16.3085C10.5629 16.2478 10.5998 16.1927 10.6463 16.1462L14.6463 12.1462C14.7401 12.0524 14.8673 11.9997 15 11.9997C15.1327 11.9997 15.2599 12.0524 15.3538 12.1462C15.4476 12.2401 15.5003 12.3673 15.5003 12.5C15.5003 12.6327 15.4476 12.7599 15.3538 12.8538L12.2075 16H21C21.1326 16 21.2598 16.0527 21.3536 16.1464C21.4473 16.2402 21.5 16.3674 21.5 16.5Z"
+                                fill="#FFFFFF" />
+                        </svg> -->
+                            <p class="font-light text-sm md:block group-hover:text-grey">Back to home</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <!-- header end -->
+
+    <section class="intro w-full mt-8 lg:mt-16 pb-8 lg:pb-16 border-b border-lightgrey">
+        <div class="px-5 md:px-0 w-full md:w-[85%] mx-auto">
+            <div class="bodyTitle relative">
+                <h1 class="text-lg lg:text-4xl text-orange text-left left-0 top-4 absolute z-10">
+                    Interactive Animation for Methodist Centre
+                </h1>
+                <h1 class="text-2xl lg:text-5xl text-left text-dark relative whitespace-nowrap"
+                    style="-webkit-text-stroke: 1px #2A2A2A;">
+                    Interactive Animation for Methodist Centre
+                </h1>
+            </div>
+
+            <div class="relative">
+                <p
+                    class="text-sm md:text-base lg:text-lg w-full lg:w-[60%] text-white font-light text-left mt-4 lg:mt-7">
+                    The Methodist Centre (MC) provides social services to many groups, including children, youth,
+                    adults, families, elderly people, ethnic minorities, schools, and companies. Their services include
+                    child and family support, youth programs, elderly health care, community help, counseling, special
+                    education needs (SEN) support, school partnerships, continuing education, and job training. MC works
+                    closely with communities to adapt their services and meet changing needs over time.
+                </p>
+            </div>
+            <div class="flex lg:flex-row flex-col w-full gap-6 lg:gap-4 mt-8 lg:mt-16 justify-start content-end">
+                <div class="responsibilities">
+                    <h1 class="text-white text-left font-light text-xs">RESPONSIBILITIES</h1>
+                    <div class="flex flex-wrap gap-2 mt-3 justify-start text-xs">
+                        <span class="py-2 px-3 border border-lightgrey font-light text-white rounded-lg w-fit">UI</span>
+                        <span
+                            class="py-2 px-3 border border-lightgrey font-light text-white rounded-lg w-fit">Animation</span>
+                        <span
+                            class="py-2 px-3 border border-lightgrey font-light text-white rounded-lg w-fit">Interaction</span>
+                        <span
+                            class="py-2 px-3 border border-lightgrey font-light text-white rounded-lg w-fit">Illustrations
+                        </span>
+                    </div>
+                </div>
+
+                <div class="sperator hidden lg:block w-1 border-r border-lightgrey">
+                    <!-- <span class="w-0 h-7"></span>
+                    <div class="py-1 h-9 flex content-center">
+                        <span class="w-1 border-r border-lightgrey"></span>
+                    </div> -->
+                </div>
+
+                <div class="platform">
+                    <h1 class="text-white text-left font-light text-xs">PLATFORM</h1>
+                    <div class="flex flex-wrap gap-2 mt-3 justify-start text-xs">
+                        <span class="py-2 px-3 border border-lightgrey font-light text-white rounded-lg w-fit">Website
+                        </span>
+                    </div>
+                </div>
+
+                <div class="sperator hidden lg:block w-1 border-r border-lightgrey">
+                    <!-- <span class="w-0 h-7"></span>
+                    <div class="py-1 h-9 flex content-center">
+                        <span class="w-1 border-r border-lightgrey"></span>
+                    </div> -->
+                </div>
+
+                <div class="team">
+                    <h1 class="text-white text-left font-light text-xs">THE TEAM</h1>
+                    <div class="flex flex-wrap gap-2 mt-3 justify-start text-xs">
+                        <span class="py-2 px-3 border border-lightgrey font-light text-white rounded-lg w-fit">3 Project
+                            Managers
+                        </span>
+                        <span class="py-2 px-3 border border-lightgrey font-light text-white rounded-lg w-fit">3 Product
+                            Designer
+                        </span>
+                        <span class="py-2 px-3 border border-lightgrey font-light text-white rounded-lg w-fit">8
+                            Developers
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+    </section>
+
+    <!-- content -->
+    <section class="intro w-full mt-8 lg:mt-16 pb-8 lg:pb-16 border-b border-lightgrey">
+        <div class="px-5 md:px-0 w-full md:w-[85%] mx-auto">
+            <div>
+                <div class="fade-up flex items-center gap-2">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.761719" y="0.0722656" width="18.1582" height="18.1582" fill="#A5A5A5" />
+                    </svg>
+
+                    <h1 class="text-grey text-left font-light text-xs">CHALLENGES AND SOLUTIONS</h1>
+                </div>
+                <p
+                    class="fade-up text-sm md:text-base lg:text-lg w-full lg:w-[60%] text-white font-light text-left mt-4 lg:mt-7">
+                    This is more than just a product design case study. I want to share how I used Rive to create an
+                    interactive animation for the Methodist Centre (MC) project. For the MC website, another team member
+                    was primarily responsible for the UI, while I handled animations and some minor UI elements. The
+                    client requested an animation for the landing page, and the team lead showed me a reference
+                    animation, asking, "Can you create something similar for the client?"
+                </p>
+            </div>
+
+            <div class=" fade-up mt-8 lg:mt-16">
+                <img class="w-full" src="./img/Methodist/01.png"
+                    alt="Initial vector illustration before animation creation.">
+                <p class="text-xs w-full text-white font-light text-left mt-2 lg:mt-4">
+                    <span class="text-grey">Image:</span> Initial vector illustration before animation creation.
+                </p>
+            </div>
+
+            <div class="fade-up mt-8 lg:mt-16">
+                <p class="text-sm md:text-base lg:text-lg w-full lg:w-[60%] text-white font-light text-left">
+                    At first, I was tasked with creating the animation in SVGator. But after reviewing the reference, I
+                    realized it required interactive triggers, not just animation. As you may know, SVGator allows you
+                    to create animations within its editor, but developers need to use JavaScript event listeners during
+                    the coding stage to add interactions. This meant extra work because the animation had to be created
+                    first, then the triggers had to be implemented separately.
+                    <br><br>I started looking for a tool that could handle both SVG animation and interaction triggers
+                    efficiently in one place. That was when I thought of Rive, a tool that uses State Machine logic. I
+                    explained to the team that using SVGator would make the process more complicated and presented Rive
+                    as a better alternative. After discussing the pros and cons, we decided to use Rive.
+                </p>
+            </div>
+
+            <div class="fade-up mt-8 lg:mt-16">
+                <img class="w-full" src="./img/Methodist/05.png" alt="Supported Platforms for Rive Runtimes">
+                <p class="text-xs w-full text-white font-light text-left mt-2 lg:mt-4">
+                    <span class="text-grey">Image:</span> Supported Platforms for Rive Runtimes
+                </p>
+            </div>
+
+            <div class="fade-up mt-8 lg:mt-16">
+                <p class="text-sm md:text-base lg:text-lg w-full lg:w-[60%] text-white font-light text-left">
+                    Let me explain a bit about Rive. It has a timeline-based animation system and supports both vector
+                    and raster graphics. For vectors, you can animate basic properties like position, scale, and
+                    rotation, and even edit vertices for morphing animations. For raster graphics, meshes are used for
+                    morphing effects.<br><br>
+                    Animation timelines in Rive are called States, and you can create multiple ones, such as Idle,
+                    Jumping, or Running for a character. These states are placed into the State Machine and connected
+                    with transitions. To control state transitions, you use inputs like numbers, booleans, and triggers.
+                    For example, setting isRunning to true allows you to transition from Idle to Running. You can also
+                    set conditions, such as "If isJumping is true, transition from Running to Jumping." Additionally,
+                    Rive has an Event feature that can send signals outside the animation. All these elements, including
+                    States, Transitions, Inputs, Conditions, and Events, are managed within the State Machine.
+                </p>
+            </div>
+
+            <div class="fade-up mt-8 lg:mt-16">
+                <img class="w-full" src="./img/Methodist/02.png" alt="Animated timeline for Buildings">
+                <p class="text-xs w-full text-white font-light text-left mt-2 lg:mt-4">
+                    <span class="text-grey">Image:</span> Animated timeline for Buildings
+                </p>
+            </div>
+
+            <div class="fade-up mt-8 lg:mt-16">
+                <p class="text-sm md:text-base lg:text-lg w-full lg:w-[60%] text-white font-light text-left">
+                    For the MC animation, we used all these concepts. The main requirement was to represent MC's four
+                    main services, which are Health Care, Youth, Family and Community Care, Talent Care, and Elder Care,
+                    as four buildings. The buildings needed to highlight on mouse hover and direct users to external
+                    links when clicked. The animation also included additional elements to enhance the experience.
+                </p>
+            </div>
+
+            <div class="fade-up mt-8 lg:mt-16">
+                <img class="w-full" src="./img/Methodist/03.png" alt="State Machine setup for MC Animation">
+                <p class="text-xs w-full text-white font-light text-left mt-2 lg:mt-4">
+                    <span class="text-grey">Image:</span> State Machine setup for MC Animation
+                </p>
+            </div>
+
+            <div class="fade-up mt-8 lg:mt-16">
+                <p class="text-sm md:text-base lg:text-lg w-full lg:w-[60%] text-white font-light text-left">
+                    One of the biggest challenges was handling the highlighted layer of service buildings during mouse
+                    hover. When highlighted, the layer would move to the top, causing vehicles in the animation to
+                    appear as if they were driving underneath the buildings. This looked unnatural, so we had to take
+                    additional steps to fix it. After troubleshooting different layering techniques, we finally found a
+                    solution that maintained the intended animation effect without visual inconsistencies.
+                    <br><br>Another interesting aspect of this project was implementing external links when clicking on
+                    service buildings. At the time, Rive did not have an events function, so I was unsure how to achieve
+                    this. Fortunately, just a few days after starting the project, Rive released a new version that
+                    introduced the events function with three types: General, Open URL, and Audio. This update allowed
+                    us to add external link triggers directly within the animation, making implementation much smoother.
+                </p>
+            </div>
+
+            <div class="fade-up mt-8 lg:mt-16">
+                <img class="w-full" src="./img/Methodist/04.png" alt="Web (JS) Runtime">
+                <p class="text-xs w-full text-white font-light text-left mt-2 lg:mt-4">
+                    <span class="text-grey">Image:</span> Web (JS) Runtime
+                </p>
+            </div>
+
+            <div class="fade-up mt-8 lg:mt-16">
+                <p class="text-sm md:text-base lg:text-lg w-full lg:w-[60%] text-white font-light text-left">
+                    Unlike SVG animations, Rive animations cannot run directly when embedded. Instead, Rive provides an
+                    open-source library called Rive Runtime, which can be integrated with various platforms. The
+                    website's hero section animation was also created using Rive.
+                    <br><br>You can view and interact with the MC animation, which is the main subject of this case
+                    study, at this link: <a class="text-[#2885ff]" target="_blank" href="https://vv7n94.csb.app/. ">https://vv7n94.csb.app/. </a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="flex flex-col lg:flex-row w-full justify-center items-center">
+        <div class="flex px-5 md:px-0 w-full md:w-[85%]">
+            <div class="flex py-8 lg:py-16 flex-col justify-between w-full border-r border-lightgrey">
+                <a href="./index.html">
+                    <div class="group flex gap-2 justify-start items-center h-auto">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="group-hover:fill-white transition-colors duration-300 ease-in-out"
+                                d="M16 4C13.5277 4 11.111 4.73311 9.05538 6.10663C6.99976 7.48015 5.39761 9.43238 4.45151 11.7165C3.50542 14.0005 3.25787 16.5139 3.74019 18.9386C4.2225 21.3634 5.41301 23.5907 7.16117 25.3388C8.90933 27.087 11.1366 28.2775 13.5614 28.7598C15.9861 29.2421 18.4995 28.9946 20.7835 28.0485C23.0676 27.1024 25.0199 25.5002 26.3934 23.4446C27.7669 21.389 28.5 18.9723 28.5 16.5C28.4964 13.1859 27.1782 10.0086 24.8348 7.66518C22.4914 5.32177 19.3141 4.00364 16 4ZM16 28C13.7255 28 11.5021 27.3255 9.61095 26.0619C7.71978 24.7983 6.2458 23.0022 5.37539 20.9009C4.50498 18.7995 4.27724 16.4872 4.72097 14.2565C5.1647 12.0257 6.25997 9.97658 7.86828 8.36827C9.47658 6.75997 11.5257 5.6647 13.7565 5.22097C15.9872 4.77724 18.2995 5.00498 20.4009 5.87539C22.5022 6.74579 24.2983 8.21978 25.5619 10.1109C26.8255 12.0021 27.5 14.2255 27.5 16.5C27.4967 19.549 26.284 22.4721 24.1281 24.6281C21.9721 26.784 19.049 27.9967 16 28ZM21.5 16.5C21.5 16.6326 21.4473 16.7598 21.3536 16.8536C21.2598 16.9473 21.1326 17 21 17H12.2075L15.3538 20.1462C15.4476 20.2401 15.5003 20.3673 15.5003 20.5C15.5003 20.6327 15.4476 20.7599 15.3538 20.8538C15.2599 20.9476 15.1327 21.0003 15 21.0003C14.8673 21.0003 14.7401 20.9476 14.6463 20.8538L10.6463 16.8538C10.5998 16.8073 10.5629 16.7522 10.5377 16.6915C10.5126 16.6308 10.4996 16.5657 10.4996 16.5C10.4996 16.4343 10.5126 16.3692 10.5377 16.3085C10.5629 16.2478 10.5998 16.1927 10.6463 16.1462L14.6463 12.1462C14.7401 12.0524 14.8673 11.9997 15 11.9997C15.1327 11.9997 15.2599 12.0524 15.3538 12.1462C15.4476 12.2401 15.5003 12.3673 15.5003 12.5C15.5003 12.6327 15.4476 12.7599 15.3538 12.8538L12.2075 16H21C21.1326 16 21.2598 16.0527 21.3536 16.1464C21.4473 16.2402 21.5 16.3674 21.5 16.5Z"
+                                fill="#909090" />
+                        </svg>
+
+                        <p
+                            class="text-grey text-left font-light text-xs group-hover:text-white transition-colors duration-300 ease-in-out">
+                            BACK TO HOME</p>
+                    </div>
+                </a>
+                <p class="copyright hidden lg:block font-light text-left text-[12px] text-white/60">Copyright © 2025.
+                    Developed by Kaung
+                    Myat
+                    Moee Htoon.<br> All rights reserved.</p>
+
+                <!-- <div class="flex flex-col justify-start gap-2">
+            <h1 class="text-grey text-left font-light text-xs">NEXT PROJECT</h1>
+            <img src="./img/Whisper.png" class="w-80" alt="">
+            <h1 class="text-2xl text-left text-white font-light">Whisper: Mediate & Sleep</h1>
+        </div> -->
+
+            </div>
+            <div class="flex lg:hidden py-8 flex-col justify-between w-full ">
+                <a href="./underconstruction.html">
+                    <div class="group flex flex-row-reverse gap-2 justify-start items-center h-auto">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="group-hover:fill-white transition-colors duration-300 ease-in-out"
+                                d="M16 3.5C13.5277 3.5 11.111 4.23311 9.05538 5.60663C6.99976 6.98015 5.39761 8.93238 4.45151 11.2165C3.50542 13.5005 3.25787 16.0139 3.74019 18.4386C4.2225 20.8634 5.41301 23.0907 7.16117 24.8388C8.90933 26.587 11.1366 27.7775 13.5614 28.2598C15.9861 28.7421 18.4995 28.4946 20.7835 27.5485C23.0676 26.6024 25.0199 25.0002 26.3934 22.9446C27.7669 20.889 28.5 18.4723 28.5 16C28.4964 12.6859 27.1782 9.5086 24.8348 7.16518C22.4914 4.82177 19.3141 3.50364 16 3.5ZM16 27.5C13.7255 27.5 11.5021 26.8255 9.61095 25.5619C7.71978 24.2983 6.2458 22.5022 5.37539 20.4009C4.50498 18.2995 4.27724 15.9872 4.72097 13.7565C5.1647 11.5257 6.25997 9.47658 7.86828 7.86827C9.47658 6.25997 11.5257 5.1647 13.7565 4.72097C15.9872 4.27724 18.2995 4.50498 20.4009 5.37539C22.5022 6.24579 24.2983 7.71978 25.5619 9.61094C26.8255 11.5021 27.5 13.7255 27.5 16C27.4967 19.049 26.284 21.9721 24.1281 24.1281C21.9721 26.284 19.049 27.4967 16 27.5ZM21.3538 15.6462C21.4002 15.6927 21.4371 15.7478 21.4623 15.8085C21.4874 15.8692 21.5004 15.9343 21.5004 16C21.5004 16.0657 21.4874 16.1308 21.4623 16.1915C21.4371 16.2522 21.4002 16.3073 21.3538 16.3538L17.3538 20.3538C17.2599 20.4476 17.1327 20.5003 17 20.5003C16.8673 20.5003 16.7401 20.4476 16.6463 20.3538C16.5524 20.2599 16.4997 20.1327 16.4997 20C16.4997 19.8673 16.5524 19.7401 16.6463 19.6462L19.7925 16.5H11C10.8674 16.5 10.7402 16.4473 10.6465 16.3536C10.5527 16.2598 10.5 16.1326 10.5 16C10.5 15.8674 10.5527 15.7402 10.6465 15.6464C10.7402 15.5527 10.8674 15.5 11 15.5H19.7925L16.6463 12.3538C16.5524 12.2599 16.4997 12.1327 16.4997 12C16.4997 11.8673 16.5524 11.7401 16.6463 11.6462C16.7401 11.5524 16.8673 11.4997 17 11.4997C17.1327 11.4997 17.2599 11.5524 17.3538 11.6462L21.3538 15.6462Z"
+                                fill="#909090" />
+                        </svg>
+                        <p
+                            class="text-grey text-left font-light text-xs group-hover:text-white transition-colors duration-300 ease-in-out">
+                            NEXT PROJECT</p>
+
+                    </div>
+                </a>
+
+            </div>
+
+            <a href="./underconstruction.html" id="" class="group hidden lg:flex py-16 flex-col w-full ml-5 lg:ml-16">
+                <div class="group flex gap-2 justify-start items-center h-auto">
+                    <p
+                        class="text-grey text-left font-light text-xs group-hover:text-white transition-colors duration-300 ease-in-out">
+                        NEXT PROJECT</p>
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="group-hover:fill-white transition-colors duration-300 ease-in-out"
+                            d="M16 3.5C13.5277 3.5 11.111 4.23311 9.05538 5.60663C6.99976 6.98015 5.39761 8.93238 4.45151 11.2165C3.50542 13.5005 3.25787 16.0139 3.74019 18.4386C4.2225 20.8634 5.41301 23.0907 7.16117 24.8388C8.90933 26.587 11.1366 27.7775 13.5614 28.2598C15.9861 28.7421 18.4995 28.4946 20.7835 27.5485C23.0676 26.6024 25.0199 25.0002 26.3934 22.9446C27.7669 20.889 28.5 18.4723 28.5 16C28.4964 12.6859 27.1782 9.5086 24.8348 7.16518C22.4914 4.82177 19.3141 3.50364 16 3.5ZM16 27.5C13.7255 27.5 11.5021 26.8255 9.61095 25.5619C7.71978 24.2983 6.2458 22.5022 5.37539 20.4009C4.50498 18.2995 4.27724 15.9872 4.72097 13.7565C5.1647 11.5257 6.25997 9.47658 7.86828 7.86827C9.47658 6.25997 11.5257 5.1647 13.7565 4.72097C15.9872 4.27724 18.2995 4.50498 20.4009 5.37539C22.5022 6.24579 24.2983 7.71978 25.5619 9.61094C26.8255 11.5021 27.5 13.7255 27.5 16C27.4967 19.049 26.284 21.9721 24.1281 24.1281C21.9721 26.284 19.049 27.4967 16 27.5ZM21.3538 15.6462C21.4002 15.6927 21.4371 15.7478 21.4623 15.8085C21.4874 15.8692 21.5004 15.9343 21.5004 16C21.5004 16.0657 21.4874 16.1308 21.4623 16.1915C21.4371 16.2522 21.4002 16.3073 21.3538 16.3538L17.3538 20.3538C17.2599 20.4476 17.1327 20.5003 17 20.5003C16.8673 20.5003 16.7401 20.4476 16.6463 20.3538C16.5524 20.2599 16.4997 20.1327 16.4997 20C16.4997 19.8673 16.5524 19.7401 16.6463 19.6462L19.7925 16.5H11C10.8674 16.5 10.7402 16.4473 10.6465 16.3536C10.5527 16.2598 10.5 16.1326 10.5 16C10.5 15.8674 10.5527 15.7402 10.6465 15.6464C10.7402 15.5527 10.8674 15.5 11 15.5H19.7925L16.6463 12.3538C16.5524 12.2599 16.4997 12.1327 16.4997 12C16.4997 11.8673 16.5524 11.7401 16.6463 11.6462C16.7401 11.5524 16.8673 11.4997 17 11.4997C17.1327 11.4997 17.2599 11.5524 17.3538 11.6462L21.3538 15.6462Z"
+                            fill="#909090" />
+                    </svg>
+
+                </div>
+                <div class="flex flex-col justify-start gap-6 mt-16">
+                    <!-- <h1 class="text-grey text-left font-light text-xs">NEXT PROJECT</h1> -->
+                    <!-- <img src="./img/Whisper.png" class="w-96 h-60 object-cover" alt=""> -->
+                    <div class="w-64 lg:w-96 h-32 lg:h-60 overflow-hidden flex justify-start items-center">
+                        <img src="./img/Whisper.png"
+                            class="transition-transform duration-300 ease-in-out group-hover:scale-110 w-full lg:w-full  object-cover"
+                            alt="">
+                    </div>
+                    <h1 class="text-2xl lg:text-4xl text-left text-white font-light">
+                        Whisper: Mediate & Sleep</h1>
+                </div>
+            </a>
+        </div>
+
+        <p
+            class="copyright block lg:hidden w-full px-5 py-4 font-light text-center text-[12px] text-grey border-t border-lightgrey">
+            Copyright © 2025. Developed by Kaung
+            Myat
+            Moee Htoon.<br class="block lg:hidden"> All rights reserved.</p>
+
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const fadeUpElements = document.querySelectorAll('.fade-up');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                        // Optional: Unobserve after animation if you only want it once
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1 // Trigger when 10% of element is visible
+            });
+
+            fadeUpElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+
+        // navbar color change on scroll
+        ScrollTrigger.create({
+
+            trigger: ".intro",
+            start: "top 4%",
+            end: "bottom 20%",
+            markers: false,
+
+            onEnter: () => {
+                gsap.to('.navBar', { duration: 0.0, backgroundColor: '#000000', borderBottom: '1px solid #2A2A2A' });
+                //  gsap.to('.navBar', { duration: 0.1, borderBottom: '1px solid #E8EBED'});
+            },
+
+            onLeaveBack: () => {
+                gsap.to('.navBar', { duration: 0.1, backgroundColor: 'rgb(0,0,0/0.0)', borderBottom: '0px solid #2A2A2A' });
+                //  gsap.to('.navBar', { duration: 0.1, borderBottom: '0px solid #E8EBED'});
+            },
+
+
+        })
+    </script>
+</body>
+
+</html>

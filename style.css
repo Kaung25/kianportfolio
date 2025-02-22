@@ -1263,6 +1263,10 @@ video {
   --tw-bg-opacity: 0.5;
 }
 
+.bg-\[url\(\.\/img\/mccover\.png\)\] {
+  background-image: url(./img/mccover.png);
+}
+
 .bg-\[url\(\.\/img\/sfulearnCover\.png\)\] {
   background-image: url(./img/sfulearnCover.png);
 }
@@ -1508,6 +1512,11 @@ video {
 .text-\[\#24C6FF\] {
   --tw-text-opacity: 1;
   color: rgb(36 198 255 / var(--tw-text-opacity));
+}
+
+.text-\[\#2885ff\] {
+  --tw-text-opacity: 1;
+  color: rgb(40 133 255 / var(--tw-text-opacity));
 }
 
 .text-\[\#6f6f6f\] {
