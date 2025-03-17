@@ -196,14 +196,14 @@
                         if (numFiles === 1) {
                             // Single image styling
                             if (aspectRatio > 2) {
-                                wrapper.style.width = '480px';
+                                wrapper.style.width = 'calc(100% - 16px)'; // Fix applied here
                                 wrapper.style.height = '280px';
                                 displayImg.style.width = '100%';
                                 displayImg.style.height = '100%';
                                 displayImg.style.objectFit = 'cover';
                             } else if (aspectRatio < 0.5) {
-                                wrapper.style.width = '480px';
-                                wrapper.style.height = '280px';
+                                wrapper.style.width = '320px';
+                                wrapper.style.height = '430px';
                                 displayImg.style.width = '100%';
                                 displayImg.style.height = '100%';
                                 displayImg.style.objectFit = 'cover';
@@ -214,10 +214,10 @@
                                 displayImg.style.width = '100%';
                                 displayImg.style.height = 'auto';
                             } else {
-                                wrapper.style.width = '100%';
+                                wrapper.style.width = 'auto';
                                 wrapper.style.height = 'auto';
                                 displayImg.style.height = '430px';
-                                displayImg.style.width = 'auto';
+                                displayImg.style.width = '100%';
                                 displayImg.style.display = 'block';
                                 // displayImg.style.margin = '0 auto';
                             }
@@ -230,7 +230,7 @@
                                 displayImg.style.height = '100%';
                                 displayImg.style.objectFit = 'cover';
                             } else if (aspectRatio < 0.5) {
-                                wrapper.style.width = '480px';
+                                wrapper.style.width = '200px';
                                 wrapper.style.height = '280px';
                                 displayImg.style.width = '100%';
                                 displayImg.style.height = '100%';
